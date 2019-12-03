@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>数据挖掘下的一般步骤与套路 | 路痴大魔王</title>
+  <meta name="keywords" content=" 数据挖掘 ">
+  <meta name="description" content="数据挖掘下的一般步骤与套路 | 路痴大魔王">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="页面未找到！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.monsteryu.top&#x2F;404.html">
+<meta property="og:site_name" content="路痴大魔王">
+<meta property="og:description" content="页面未找到！">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-01T14:55:52.181Z">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar4.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/github.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>郁明敏</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/luch1monster" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="csdn" href="https://blog.csdn.net/LuCh1Monster" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-csdn"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:yu_mingm623@163.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=442523981&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(4)</small></div></li>
+    
+        
+            
+            <li><div data-rel="数据挖掘"><i class="fold iconfont icon-right"></i>数据挖掘<small>(2)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="LR">LR<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="文献阅读"><i class="fold iconfont icon-right"></i>文献阅读<small>(1)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="随机过程">随机过程<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="前端"><i class="fold iconfont icon-right"></i>前端<small>(1)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="hexo">hexo<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    </div>
+    <div><a class="about  site_url"  href="/about">关于</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="4">
+<input type="hidden" id="yelog_site_word_count" value="6.7k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="#">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a class="color5">Logistic Regression</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">随机过程</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">3-hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">数据挖掘</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="数据挖掘 LR "
+           href="/2019/12/01/build-LR-model-steps/"
+           data-tag="Logistic Regression"
+           data-author="郁明敏" >
+            <span class="post-title" title="LR 建模的一般步骤">LR 建模的一般步骤</span>
+            <span class="post-date" title="2019-12-01 22:59:25">2019/12/01</span>
+        </a>
+        
+        <a  class="文献阅读 随机过程 "
+           href="/2019/12/01/literature-num1-on-debt-collection-stochastic-process/"
+           data-tag="随机过程"
+           data-author="郁明敏" >
+            <span class="post-title" title="Dynamic Valuation of Delinquent Credit-Card Accounts">Dynamic Valuation of Delinquent Credit-Card Accounts</span>
+            <span class="post-date" title="2019-12-01 23:45:46">2019/12/01</span>
+        </a>
+        
+        <a id="top" class="前端 hexo "
+           href="/2019/11/27/3-hexo-usage/"
+           data-tag="3-hexo,hexo"
+           data-author="郁明敏" >
+            <span class="post-title" title="3-hexo主题使用补充">3-hexo主题使用补充</span>
+            <span class="post-date" title="2019-11-27 16:53:35">2019/11/27</span>
+        </a>
+        
+        <a  class="数据挖掘 "
+           href="/2019/12/03/data-mining-common-steps-routines/"
+           data-tag="数据挖掘"
+           data-author="郁明敏" >
+            <span class="post-title" title="数据挖掘下的一般步骤与套路">数据挖掘下的一般步骤与套路</span>
+            <span class="post-date" title="2019-12-03 14:59:37">2019/12/03</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first">
+                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+            </div>
+            <div class="brackets">
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-data-mining-common-steps-routines" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">数据挖掘下的一般步骤与套路</h1>
+    
+    <div class="article-meta">
+        
+        
+        <span class="author"><a>郁明敏</a></span>
+        
+        
+        <span class="book">
+            
+                <a  data-rel="数据挖掘">数据挖掘</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color5">数据挖掘</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-12-03 17:28:38'>2019-12-03 14:59</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:3.7k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-前言"><span class="toc-text">1. 前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-一般步骤"><span class="toc-text">2. 一般步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-1-明确问题的类型"><span class="toc-text">Step 1: 明确问题的类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-2-数据准备"><span class="toc-text">Step 2: 数据准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步-时间窗口-Time-Window"><span class="toc-text">第一步: 时间窗口(Time Window)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步-特征工程"><span class="toc-text">第二步: 特征工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步-变量评价和筛选"><span class="toc-text">第三步: 变量评价和筛选</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四步-数据处理-Optial"><span class="toc-text">第四步: 数据处理(Optial)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-3-模型训练"><span class="toc-text">Step 3: 模型训练</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#样本切分"><span class="toc-text">样本切分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#模型参数调优"><span class="toc-text">模型参数调优</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不同模型的比较"><span class="toc-text">不同模型的比较</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-4-模型评估"><span class="toc-text">Step 4: 模型评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#KS-和-AUC"><span class="toc-text">KS 和 AUC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模型过拟合"><span class="toc-text">模型过拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模型回溯"><span class="toc-text">模型回溯</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-前言"><span class="toc-text">1. 前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-一般步骤"><span class="toc-text">2. 一般步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-1-明确问题的类型"><span class="toc-text">Step 1: 明确问题的类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-2-数据准备"><span class="toc-text">Step 2: 数据准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步-时间窗口-Time-Window"><span class="toc-text">第一步: 时间窗口(Time Window)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步-特征工程"><span class="toc-text">第二步: 特征工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步-变量评价和筛选"><span class="toc-text">第三步: 变量评价和筛选</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四步-数据处理-Optial"><span class="toc-text">第四步: 数据处理(Optial)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-3-模型训练"><span class="toc-text">Step 3: 模型训练</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#样本切分"><span class="toc-text">样本切分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#模型参数调优"><span class="toc-text">模型参数调优</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不同模型的比较"><span class="toc-text">不同模型的比较</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step-4-模型评估"><span class="toc-text">Step 4: 模型评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#KS-和-AUC"><span class="toc-text">KS 和 AUC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模型过拟合"><span class="toc-text">模型过拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模型回溯"><span class="toc-text">模型回溯</span></a></li></ol></li></ol></li></ol></div></p>
+<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>数据挖掘是当下十分火热的一个职业，几乎各行各业都需要这方面的人才。博主是刚从事数据挖掘工作的一枚小白，此专栏用来记录学习数据挖掘的点点滴滴，希望有助于和我一样小白选手快速入门和避坑，同时欢迎大神指出博文中的错误。</p>
+<p>根据博主目前已经参加过的几个建模项目，以及向公司大牛们的请教，愈发发现数据建模工作存在着一些固定的套路，学会这些套路有助于新手更快更好地完成数据挖掘的项目，并能让你在数据挖掘道路上走得更远。</p>
+<p>在开始数据建模工作之前，博主其实看了蛮多关于数据挖掘的书籍，以为自己可以 hold 这个职位。但是，真正从事数据建模工作后，可以说只能用 “纸上谈兵” 来形容自己，我甚至搞不清楚在数据建模分为几个阶段，要先做什么后做什么，模型原理更是一知半解。随着自我的学习以及大佬们的指教，慢慢懂得数据挖掘工作一般步骤与套路，熟记这些建模的步骤与讨论，能让你明确当前任务是什么，下一步任务又是什么，每一步任务中应该注意的一些问题。</p>
+<h1 id="2-一般步骤"><a href="#2-一般步骤" class="headerlink" title="2. 一般步骤"></a>2. 一般步骤</h1><h2 id="Step-1-明确问题的类型"><a href="#Step-1-明确问题的类型" class="headerlink" title="Step 1: 明确问题的类型"></a>Step 1: 明确问题的类型</h2><p>机器学习中最常见的两类问题是有监督学习和无监督学习，关于其概念这里不做非常详细的解释，百度上有很好的博客解释这个概念，后续会有专门一篇博客讲解有监督学习和无监督学习的相关概念，以及都有哪些模型属于有监督学习，哪些模型属于无监督学习，请参考 <a href="https://blog.csdn.net/LuCh1Monster/article/details/92249925" target="_blank" rel="noopener">有监督学习和无监督学习</a>。<br>首先，需要明确的是需要解决的问题是属于哪一类问题，是有监督学习下的分类问题还是回归问题？还是无监督学习下的聚类问题等。接下来，需要先确定模型的 Target (即 $y$ )，也就是你最终想要预测的东西是什么。</p>
+<p>本篇博客以最常见的二分类问题，讲述一下建模的一般步骤。</p>
+<h2 id="Step-2-数据准备"><a href="#Step-2-数据准备" class="headerlink" title="Step 2: 数据准备"></a>Step 2: 数据准备</h2><p>在明确了我们需要解决的问题属于哪一类问题之后，我们就可以基本确定使用哪些模型来解决这个问题。既然模型已经确定了，那么我们下一步就需要准备相应的数据来让模型进行训练。</p>
+<h3 id="第一步-时间窗口-Time-Window"><a href="#第一步-时间窗口-Time-Window" class="headerlink" title="第一步: 时间窗口(Time Window)"></a>第一步: 时间窗口(Time Window)</h3><p>首先需要确定数据的时间窗口，我们并不需要拿全部的数据进行模型训练，只需要挑选某些月份的数据来预测下一个月的结果(或者下一天)，在进行<strong>时间窗口</strong>的选择，需要注意哪些月份的数据存在异常，避免模型开发进入到后期阶段，才被别人指出所选择时间窗口的数据在业务上存在着明显的异常，这样就就显得非常尴尬了。</p>
+<p>在确定了时间窗口之后，我们需要确定 In-Time(IT) 和 Out-of-Time(OOT) ，以及 Validation(val，也可以看作是 oot2) 数据集。这里以 20181001 ~ 20190430 作为我们模型的时间窗口，那么 In-Time 数据集时间窗口可以选用 20181001~20190228，OOT 数据集的时间窗口为 20190301 ~ 20190331，Validation 数据集的时间窗口可以选用 20190401 ~ 20190430。</p>
+<p>这里只是初步拟定各个数据集下的时间窗口，在后边变量创建完之后，还需要回过头来填写各个时间窗口下数据集的详细信息(数据量、Target Rate 等)，保持一个良好的记录习惯，能让你在初步完成模型开发任务之后，能够很好地回溯整个过程以及发现其中的不足。</p>
+<h3 id="第二步-特征工程"><a href="#第二步-特征工程" class="headerlink" title="第二步: 特征工程"></a>第二步: 特征工程</h3><p>各个时间窗口被确定下来之后，接下来就是创建模型所需要的变量。创建模型的变量也是有迹可循的，一般是<strong>常规套路</strong>+<strong>头脑风暴</strong>。</p>
+<p><strong>常规套路</strong>指的是，通过全方面能描述对象的变量。以<strong>用户是否会购买网站会员为例</strong>，我们可以将所要创建的变量分为几个大类:</p>
+<ul>
+<li>用户自身属性(年龄、性别、职业、省份等)</li>
+<li>用户行为信息(登陆次数、页面停留时长、登陆时间、是否查看过会员页面等)</li>
+<li>产品信息(产品类型、产品使用时长等)</li>
+<li>历史信息(历史购买会员次数、上次购买会员的时间等)</li>
+<li>其他(天气、是否是周末、这个月的第几天等)</li>
+</ul>
+<p>根据实际不同的问题，所归纳出来的大类也是不同，但是<strong>规则</strong>是能通过这些大类的变量能够将对象全面描述出来，<strong>并对适当的变量进行向下拆分</strong>。此外你可能还需要构建一些<strong>衍生变量</strong>，衍生变量的创建一般可以通过 RFM(Recency、Frequency、Monetary)、WOE 等方面来构建:</p>
+<ul>
+<li><strong>时间变量(R)</strong> : 近三天、近一周、近1个月、近3个月、近6个月、近12个月 等</li>
+<li><strong>(频)率变量(F)</strong> : 接通率、覆盖率、查看率 等</li>
+<li><strong>大小变量(M)</strong> : 次数(sum)、最大值(max)、最小值(min)、平均值(avg) 等</li>
+<li><strong>编码变量(WOE)</strong> : 金额为连续型变量，可以通过 WOE 编码转换为类别变量，将其映射为 <strong>大、中、小</strong> 金额段。</li>
+</ul>
+<p><strong>头脑风暴</strong>则指的是，跳出一般的套路之外，构建一些脑洞大开的变量，这些变量应在业务上就有着非常重要的可能性，并期盼这些变量能够在模型中起到好的效果。</p>
+<h3 id="第三步-变量评价和筛选"><a href="#第三步-变量评价和筛选" class="headerlink" title="第三步: 变量评价和筛选"></a>第三步: 变量评价和筛选</h3><p>变量的工作完成后，需要来评价你所创建的变量效果如何，通常有以下几个手段来进行评价:</p>
+<ol>
+<li><strong>Profiling</strong> : 通过查看变量下的 Target Rate(目标响应率)，来检验该变量是否具有区分度。有时单变量的分析并不能让你直观地看出该变量与 Target 的关系，这时你需要<strong>多变量的交叉分析</strong>，即固定某一个变量的类型，查看其他变量与 Target 的关系。</li>
+<li><strong>EDD</strong> : 通过 EDD 查看变量整体的表现，可以有效地避免在创建变量时出现人为的错误，还可以检测变量中出现的异常值。常见的 EDD 指标包括: TYPE、VALUE_COUNT、NOMISS、MISS、UNIQUE、MEAN、STD、MIN/TOP1、P1/TOP2、P2/TOP3、P10/TOP4、P25/TOP5、MEDIAN、P75/BOT5、P90/BOT4、P95/BOT3、P99/BOT2、MAX/BOT1。</li>
+<li><strong>相关性分析</strong> :  有很大可能创建出来的变量中，部分变量存在很强的相关性。对于某些模型你可能并不需要进行变量的相关性分析，例如 LightGBM、XGBoost 等 boosting 算法，但是对于 LR(Logistic Regression)模型，相关性分析确实比不可少的。通过相关性分析，可以减少变量的共线性问题，这也是<strong>特征选择</strong>中最常见的筛变量的手段，可以通过<strong>相关性矩阵( correlation matrics)</strong> 来查看该变量与哪些变量具有相关性，其相关系数如何。</li>
+<li><strong>VIF</strong>(多重共线性) : 变量之间可能存在多重共线性问题，即一个变量可能与多个变量有关系。比如 v1 变量与 v2~v10 的相关系数值为 value2 ~ value10，你可以将 v1 的 VIF 值理解为 value2 ~ value10 的总和，但其实 VIF 值并不是简简单单的加减，而是有其内在的一套计算逻辑的。一般 <strong>VIF &lt;= 2</strong> 表示变量的多重共线性不强，但其实 <strong>5 $\leq$ VIF $\leq$ 10</strong> 也是可选的，也是需要具体问题具体分析。</li>
+<li><strong>IV 值</strong> :  变量的 iv 值是通过对该变量进行 WOE 变量，评价每个分区内 Target 响应率。一般 <strong>iv $\leq$ 0.02</strong> 就表明该变量在模型中并不会其中很大的作用。</li>
+<li><strong>Missing Rate</strong> : 缺失值会对某些模型造成很大的影响，对于缺失率的选择需要根据具体情况具体分析。一般该变量的 Target Rate 还不错，其 Missing Rate 一般取 80% 左右；如果变量的 Target Rate 比较低，Missing Rate 一般取 95% 。对于通过缺失率来进行变量的筛选比较灵活，没有什么特别固定的筛选方法，需要结合变量的变现具体分析。</li>
+<li><strong>FI(Feature Importance，特征重要性)</strong> : 评价一个变量在模型中是否重要，可以用过一些集算法来得到，比如 LightGBM 和 XGBoost。比如你有100 个变量，可以先通过 XGBoost 训练得到各变量的 FI，再取 FI 前 Top20 的变量分析其<strong>相关性、VIF、IV</strong> 等。</li>
+<li><strong>L1(lasso)</strong> : 通过 Lasso 训练可以得出变量的一个稀疏矩阵，不重要变量的系数经过训练后得到结果会是 0 ，如果你有 100 个变量经过 Lasso 训练后，可能其中有 40个变量的系数为 0，那么你就可以跳出 60个变量出来。当然，L1 并不是很好用。</li>
+<li><strong>RFE(递归特征消除)</strong> : Scikit-Learn 提供了 RFE 包，同时还提供了 RFECV ，通过交叉验证来对特征进行排序。</li>
+</ol>
+<p>我们最终的期望是，通过尽可能少的变量来训练模型，并且能让模型达到较好的预测精度。</p>
+<h3 id="第四步-数据处理-Optial"><a href="#第四步-数据处理-Optial" class="headerlink" title="第四步: 数据处理(Optial)"></a>第四步: 数据处理(Optial)</h3><p>完成第三步工作之后，有些模型需要对数据进行一定的正则化处理，这一步是可选的，因为有些模型并不需要。常见的正则化操作有以下几种，且 Scikit-Learn 中也提供了相应的包来使用:</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>功能</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>StandardScaler</td>
+<td>标准化</td>
+<td>均值-标准差化数据标准化</td>
+</tr>
+<tr>
+<td>MaxMinScaler</td>
+<td>标准化</td>
+<td>极值化法数据标准化</td>
+</tr>
+<tr>
+<td>Normalizer</td>
+<td>归一化</td>
+<td>行记录单位化</td>
+</tr>
+<tr>
+<td>Binaizer</td>
+<td>二值化</td>
+<td>连续变量离散化</td>
+</tr>
+<tr>
+<td>OneHotEncoder</td>
+<td>分类编码</td>
+<td>将定性数据编码为定量数据</td>
+</tr>
+<tr>
+<td>Imputer</td>
+<td>缺失值填补</td>
+<td>缺失值插补</td>
+</tr>
+<tr>
+<td>PolynomialFeatures</td>
+<td>多项式变换</td>
+<td>多项式数据变换</td>
+</tr>
+</tbody></table>
+<h2 id="Step-3-模型训练"><a href="#Step-3-模型训练" class="headerlink" title="Step 3: 模型训练"></a>Step 3: 模型训练</h2><h3 id="样本切分"><a href="#样本切分" class="headerlink" title="样本切分"></a>样本切分</h3><p>为了提高模型的<strong>准确度</strong>和<strong>泛化能力</strong>，需要对 In-Time 数据集进行切分。</p>
+<ul>
+<li><strong>训练数据(training dataset)</strong> : 用于训练模型，IS(In-Sample)</li>
+<li><strong>验证数据(validation dataset)</strong> : 数据对象与训练集相同，用于模型效果评估和调优，OOS(Out-of-Sample)</li>
+<li><strong>测试数据(test dataset)</strong>: 数据对象与训练集相同，仅用于模型效果评估</li>
+</ul>
+<h4 id="模型参数调优"><a href="#模型参数调优" class="headerlink" title="模型参数调优"></a>模型参数调优</h4><p>模型训练的结果与参数的设置也存在很大的关系，合适的参数才能让模型得出接近于最好的效果。如果每次通过人工手动调整模型参数，会花费大量的时间，幸好 Scikit-Learn 提供了 GridSearch(网格搜索)，可以一次性设置参数的范围，模型会自动这些参数依次带入模型中进行训练，并得出每组参数组合下的结果，简直就是一神器。</p>
+<p>有兴趣的同学可以参考: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html" target="_blank" rel="noopener">https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html</a> </p>
+<h4 id="不同模型的比较"><a href="#不同模型的比较" class="headerlink" title="不同模型的比较"></a>不同模型的比较</h4><p>正常来说，不同模型应该分开训练和调优，但是 Scikit-Learn 中也提供了 Pipeline 来一次训练多个模型，并得出不同模型下的预测结果，从而将不同模型一次性进行对比。</p>
+<p>有兴趣的同学，可以参考: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html" target="_blank" rel="noopener">https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html</a><br>值得一提的是，在 SparkML 中也有 Pipeline 组件，非常好用。但是目前自己在真实建模项目中，还没有用到。</p>
+<h2 id="Step-4-模型评估"><a href="#Step-4-模型评估" class="headerlink" title="Step 4: 模型评估"></a>Step 4: 模型评估</h2><ul>
+<li><strong>召回率(Recall)</strong> ：样本中的正例有多少被预测准确了，预测对的正例数占真正的正例数的比率，TP / (TP+FN)</li>
+<li><strong>精准率(Precision)</strong> ：针对预测结果而言，预测为正的样本有多少是真正的正样本，预测正确的正例数占预测为正例总量的比率， TP / (TP+FP)</li>
+<li><strong>准确率(Accuracy)</strong> ：Accuracy=(TP+TN) / (TP+FP+TN+FN)</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/2019061716572590.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt="AUC曲线"><br><img src="https://img-blog.csdnimg.cn/20190617165740273.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt="精确率与召回率图解"></p>
+<h3 id="KS-和-AUC"><a href="#KS-和-AUC" class="headerlink" title="KS 和 AUC"></a>KS 和 AUC</h3><ul>
+<li><strong>AUC(Area Under the ROC Curve)</strong> : AUC 值一般在 0.5 到 1之间，值越大模型效果越好。AUC=0.5 表示模型的预测能力与随机结果没有差别。</li>
+<li><strong>KS(Kolmogorov-Smirnov)</strong> : KS 表示模型将正负样本区分开来的能力。值越大表示模型的预测能力越好。一般来讲，KS $\ge$ 0.2 即可认为模型有较好的预测准确性。</li>
+</ul>
+<h3 id="模型过拟合"><a href="#模型过拟合" class="headerlink" title="模型过拟合"></a>模型过拟合</h3><p>模型过拟合在模型开发中很常见，可以采取一些手段和方法来避免过拟合:</p>
+<ul>
+<li>丰富样本</li>
+<li>减少选取特征的数量</li>
+<li>模型参数调优</li>
+</ul>
+<h3 id="模型回溯"><a href="#模型回溯" class="headerlink" title="模型回溯"></a>模型回溯</h3><p>当完成最终模型的开发，你需要填写如下的表格，作为模型开发的文档。</p>
+<p>1) SetUp 分析</p>
+<table>
+<thead>
+<tr>
+<th>月份</th>
+<th>总样本</th>
+<th>正样本</th>
+<th>目标响应率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2018-10</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2018-11</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2018-12</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2019-01</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>总计</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>2) 变量评估</p>
+<table>
+<thead>
+<tr>
+<th>var_name_orig</th>
+<th>var_name_woe</th>
+<th>变量说明</th>
+<th>coef</th>
+<th>std err</th>
+<th>z</th>
+<th><code>P&gt;abs(z)</code></th>
+<th>[0.025</th>
+<th>0.975]</th>
+<th>missrate</th>
+<th>IV</th>
+<th>VIF</th>
+<th>corr</th>
+<th>FI</th>
+<th>类别</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nwoe_buy_times</td>
+<td>buy_times</td>
+<td>购买次数</td>
+<td>0.7123</td>
+<td>0.0345</td>
+<td>82</td>
+<td>0</td>
+<td>0.11</td>
+<td>0.18</td>
+<td>0.2%</td>
+<td>0.31</td>
+<td>1.34</td>
+<td>-0.04</td>
+<td>600</td>
+<td>历史行为</td>
+</tr>
+</tbody></table>
+<p>关于表格的几点解释，以 LR 模型为例:</p>
+<ul>
+<li><code>coef</code> : 变量的系数</li>
+<li><code>std err</code>: 变量的一种方差，不是我们通常认为的方差</li>
+<li><code>z</code> : 变量没有标准化时，表示变量的特征重要性，即 feature importance；当变量标准化时，<code>coef</code> 则表示特征重要性</li>
+<li><code>[0.025</code> : 该变量在训练过程中的 2.5% 分位值</li>
+<li><code>0.975]</code> : 该变量在训练过程中的 97.5% 分位值</li>
+<li><code>P &gt; |z|</code> : 置信区间，如果变量的 <code>coef</code> 落在 <code>[0.025, 0.975]</code> 区间内则为 0；否则大于 0</li>
+<li>missrate : 缺失率</li>
+<li>IV : 变量的 IV(Information Value)，一般情况下 IV 至少大于等于 0.01，否则不具有参考意义；根据实际情况需要</li>
+<li>VIF : 变量共线性值，一般要求小于 2</li>
+<li>FI :  通过 LGBM 或者 XGB 得出的特征重要性</li>
+</ul>
+<p>3) 模型效果图</p>
+<p>最后应该模型效果图包括分别在 In-Time(train 和 test) 和OOT 的预测表现。<br><img src="https://img-blog.csdnimg.cn/20190617172716285.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>4) 模型变量在 train、test 和 oot 的表现(图)</p>
+<p>5)  重要变量的 WOE 和 IV 值(图)</p>
+<p>6) woe 分 bin 后的矩阵表</p>
+<p>7) 变量 EDD 结果</p>
+<p>8) 数据字典</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yu_mingm623@163.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>数据挖掘下的一般步骤与套路</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">3.8k</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-12-03, 14:59:37</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-03, 17:28:38</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/03/data-mining-common-steps-routines/" title="数据挖掘下的一般步骤与套路">http://www.monsteryu.top/2019/12/03/data-mining-common-steps-routines/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2019.11 路痴大魔王</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['@郁明敏','#Logistic Regression','#随机过程','#3-hexo','#hexo','#数据挖掘',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

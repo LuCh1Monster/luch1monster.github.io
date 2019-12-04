@@ -107,7 +107,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(4)</small></div></li>
+    <li><div class="all active">全部文章<small>(5)</small></div></li>
     
         
             
@@ -138,6 +138,26 @@
                     </ul>
                 
             </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="后端"><i class="fold iconfont icon-right"></i>后端<small>(1)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Python">Python<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
             
         
     
@@ -177,7 +197,7 @@
     </div>
     <div><a class="about  site_url"  href="/about">关于</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="4">
+<input type="hidden" id="yelog_site_posts_number" value="5">
 <input type="hidden" id="yelog_site_word_count" value="8.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -220,6 +240,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a class="color5">Python小技巧</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a class="color2">3-hexo</a>
     </li>
     
@@ -245,7 +269,7 @@
            href="/2019/12/01/build-LR-model-steps/"
            data-tag="Logistic Regression"
            data-author="郁明敏" >
-            <span class="post-title" title="LR 建模的一般步骤">LR 建模的一般步骤</span>
+            <span class="post-title" title="LR 建模总结">LR 建模总结</span>
             <span class="post-date" title="2019-12-01 22:59:25">2019/12/01</span>
         </a>
         
@@ -255,6 +279,14 @@
            data-author="郁明敏" >
             <span class="post-title" title="Dynamic Valuation of Delinquent Credit-Card Accounts">Dynamic Valuation of Delinquent Credit-Card Accounts</span>
             <span class="post-date" title="2019-12-01 23:45:46">2019/12/01</span>
+        </a>
+        
+        <a  class="后端 Python "
+           href="/2019/12/04/python-common-tips/"
+           data-tag="Python小技巧"
+           data-author="郁明敏" >
+            <span class="post-title" title="Python常用技巧">Python常用技巧</span>
+            <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
         </a>
         
         <a id="top" class="前端 hexo "
@@ -452,7 +484,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['@郁明敏','#Logistic Regression','#随机过程','#3-hexo','#hexo','#数据挖掘',],
+            'data': ['@郁明敏','#Logistic Regression','#随机过程','#Python小技巧','#3-hexo','#hexo','#数据挖掘',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

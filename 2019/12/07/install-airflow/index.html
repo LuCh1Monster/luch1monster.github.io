@@ -107,7 +107,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(10)</small></div></li>
+    <li><div class="all active">全部文章<small>(11)</small></div></li>
     
         
             
@@ -167,6 +167,26 @@
     
         
             
+            <li><div data-rel="工具"><i class="fold iconfont icon-right"></i>工具<small>(1)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="xshell">xshell<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
         
     
         
@@ -197,8 +217,8 @@
     </div>
     <div><a class="about  site_url"  href="/about">关于</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="10">
-<input type="hidden" id="yelog_site_word_count" value="15.4k">
+<input type="hidden" id="yelog_site_posts_number" value="11">
+<input type="hidden" id="yelog_site_word_count" value="20k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -256,6 +276,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a class="color2">xshell</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a class="color2">3-hexo</a>
     </li>
     
@@ -264,15 +288,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color3">AirFlow</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a class="color5">Python关键字</a>
     </li>
     
     <li class="article-tag-list-item">
         <a class="color5">数据挖掘</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">AirFlow</a>
     </li>
     
     <div class="clearfix"></div>
@@ -333,20 +357,20 @@
             <span class="post-date" title="2019-12-01 23:45:46">2019/12/01</span>
         </a>
         
+        <a  class="工具 xshell "
+           href="/2019/12/07/xshell-connect-docker-server/"
+           data-tag="xshell"
+           data-author="郁明敏" >
+            <span class="post-title" title="XShell连接Docker服务器下Centos终端">XShell连接Docker服务器下Centos终端</span>
+            <span class="post-date" title="2019-12-07 23:40:55">2019/12/07</span>
+        </a>
+        
         <a id="top" class="前端 hexo "
            href="/2019/11/27/3-hexo-usage/"
            data-tag="3-hexo,hexo"
            data-author="郁明敏" >
             <span class="post-title" title="3-hexo主题使用补充">3-hexo主题使用补充</span>
             <span class="post-date" title="2019-11-27 16:53:35">2019/11/27</span>
-        </a>
-        
-        <a  class="后端 Python "
-           href="/2019/12/07/install-airflow/"
-           data-tag="AirFlow"
-           data-author="郁明敏" >
-            <span class="post-title" title="AirFlow安装">AirFlow安装</span>
-            <span class="post-date" title="2019-12-07 13:52:21">2019/12/07</span>
         </a>
         
         <a  class="后端 Python "
@@ -363,6 +387,14 @@
            data-author="郁明敏" >
             <span class="post-title" title="数据挖掘下的一般步骤与套路">数据挖掘下的一般步骤与套路</span>
             <span class="post-date" title="2019-12-03 14:59:37">2019/12/03</span>
+        </a>
+        
+        <a  class="后端 Python "
+           href="/2019/12/07/install-airflow/"
+           data-tag="AirFlow"
+           data-author="郁明敏" >
+            <span class="post-title" title="AirFlow安装">AirFlow安装</span>
+            <span class="post-date" title="2019-12-07 13:52:21">2019/12/07</span>
         </a>
         
     </nav>
@@ -409,12 +441,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-07 14:02:46'>2019-12-07 13:52</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-07 23:38:46'>2019-12-07 13:52</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.9k</span>
+        <span>字数:5.5k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -433,7 +465,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-设定临时环境变量"><span class="toc-text">1. 设定临时环境变量:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建-airflow-数据库"><span class="toc-text">2. 创建 airflow 数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-初始化airflow"><span class="toc-text">3. 初始化airflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-修改-airflow-cfg-配置文件"><span class="toc-text">4. 修改 airflow.cfg 配置文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-启动-airflow"><span class="toc-text">5. 启动 airflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-启动和停止脚本"><span class="toc-text">6. 启动和停止脚本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-添加-airflow-用户"><span class="toc-text">7. 添加 airflow 用户</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-设定临时环境变量"><span class="toc-text">1. 设定临时环境变量:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建-airflow-数据库"><span class="toc-text">2. 创建 airflow 数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-初始化airflow"><span class="toc-text">3. 初始化airflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-修改-airflow-cfg-配置文件"><span class="toc-text">4. 修改 airflow.cfg 配置文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-启动-airflow"><span class="toc-text">5. 启动 airflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-启动和停止脚本"><span class="toc-text">6. 启动和停止脚本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-添加-airflow-用户"><span class="toc-text">7. 添加 airflow 用户</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-设置右上角不显示UTC时间格式"><span class="toc-text">8. 设置右上角不显示UTC时间格式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-修改时区"><span class="toc-text">8.1 修改时区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-修改-HTML-文件"><span class="toc-text">8.2 修改 HTML 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-修改-jqClock-文件源码"><span class="toc-text">8.3 修改 jqClock 文件源码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-Mac安装AirFlow的问题总结"><span class="toc-text">9. Mac安装AirFlow的问题总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1-库之间不兼容"><span class="toc-text">9.1 库之间不兼容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-2-安装-setproctitle-和-mysqlclient"><span class="toc-text">9.2 安装 setproctitle 和 mysqlclient</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-3-运行-initdb-初始化数据时报错"><span class="toc-text">9.3 运行 initdb 初始化数据时报错</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -449,7 +481,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-设定临时环境变量"><span class="toc-text">1. 设定临时环境变量:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建-airflow-数据库"><span class="toc-text">2. 创建 airflow 数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-初始化airflow"><span class="toc-text">3. 初始化airflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-修改-airflow-cfg-配置文件"><span class="toc-text">4. 修改 airflow.cfg 配置文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-启动-airflow"><span class="toc-text">5. 启动 airflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-启动和停止脚本"><span class="toc-text">6. 启动和停止脚本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-添加-airflow-用户"><span class="toc-text">7. 添加 airflow 用户</span></a></li></ol></div></p>
+        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-设定临时环境变量"><span class="toc-text">1. 设定临时环境变量:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建-airflow-数据库"><span class="toc-text">2. 创建 airflow 数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-初始化airflow"><span class="toc-text">3. 初始化airflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-修改-airflow-cfg-配置文件"><span class="toc-text">4. 修改 airflow.cfg 配置文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-启动-airflow"><span class="toc-text">5. 启动 airflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-启动和停止脚本"><span class="toc-text">6. 启动和停止脚本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-添加-airflow-用户"><span class="toc-text">7. 添加 airflow 用户</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-设置右上角不显示UTC时间格式"><span class="toc-text">8. 设置右上角不显示UTC时间格式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-修改时区"><span class="toc-text">8.1 修改时区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-修改-HTML-文件"><span class="toc-text">8.2 修改 HTML 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-修改-jqClock-文件源码"><span class="toc-text">8.3 修改 jqClock 文件源码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-Mac安装AirFlow的问题总结"><span class="toc-text">9. Mac安装AirFlow的问题总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1-库之间不兼容"><span class="toc-text">9.1 库之间不兼容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-2-安装-setproctitle-和-mysqlclient"><span class="toc-text">9.2 安装 setproctitle 和 mysqlclient</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-3-运行-initdb-初始化数据时报错"><span class="toc-text">9.3 运行 initdb 初始化数据时报错</span></a></li></ol></li></ol></div></p>
 <h1 id="1-设定临时环境变量"><a href="#1-设定临时环境变量" class="headerlink" title="1. 设定临时环境变量:"></a>1. 设定临时环境变量:</h1><pre><code class="bash">→ export SLUGIFY_USES_TEXT_UNIDECODE=yes
 → export AIRFLOW_HOME=~/airflow
 → pip install apache-airflow
@@ -784,11 +816,13 @@ smtp_ssl = False
 smtp_user = 
 smtp_password = 
 smtp_port = 25
-smtp_mail_from = </code></pre>
+smtp_mail_from = 
+</code></pre>
 <p><strong>注意</strong>: 如果需要启动用户面访问，下面这个地方一定要设置成这样:</p>
 <pre><code class="bash">[webserver]
 authenticate = true
-auth_backend = airflow.contrib.auth.backends.password_auth</code></pre>
+auth_backend = airflow.contrib.auth.backends.password_auth
+</code></pre>
 <p>修改 <code>airflow.cfg</code> 文件过后，再执行一遍 <code>airflow initdb</code>，因为之前 mysql 数据库中的 airflow库里面是没有表的。</p>
 <h1 id="5-启动-airflow"><a href="#5-启动-airflow" class="headerlink" title="5. 启动 airflow"></a>5. 启动 airflow</h1><p>执行以下命令，如果终端不报错，能访问 <a href="http://ip:9000" target="_blank" rel="noopener">http://ip:9000</a> 能看到界面就表示安装成功了。</p>
 <pre><code class="bash">→ airflow webserver -p 9000</code></pre>
@@ -802,7 +836,8 @@ nohup airflow webserver &gt;&gt; airflow.log &amp;
 
 nohup airflow scheduler &gt;&gt; airflow.log &amp;
 
-nohup airflow worker &gt;&gt; airflow.log &amp;</code></pre>
+nohup airflow worker &gt;&gt; airflow.log &amp;
+</code></pre>
 <ul>
 <li>停止脚本 : stop-airflow-all.sh</li>
 </ul>
@@ -810,11 +845,13 @@ nohup airflow worker &gt;&gt; airflow.log &amp;</code></pre>
 
 nohup ps -ef|grep -Ei &#39;(airflow-webserver)&#39;| grep master | awk &#39;{print $2}&#39;|xargs -i kill {} &gt; log1.txt &amp;
 
-nohup ps -ef|grep -Ei &#39;(airflow-scheduler)&#39;| grep master | awk &#39;{print $2}&#39;|xargs -i kill {} &gt; log1.txt &amp;</code></pre>
-<h1 id="7-添加-airflow-用户"><a href="#7-添加-airflow-用户" class="headerlink" title="7. 添加 airflow 用户"></a>7. 添加 airflow 用户</h1><p>编写一个 add_user.py 文件:</p>
+nohup ps -ef|grep -Ei &#39;(airflow-scheduler)&#39;| grep master | awk &#39;{print $2}&#39;|xargs -i kill {} &gt; log1.txt &amp;
+</code></pre>
+<h1 id="7-添加-airflow-用户"><a href="#7-添加-airflow-用户" class="headerlink" title="7. 添加 airflow 用户"></a>7. 添加 airflow 用户</h1><p>编写一个 add_user.py 文件，用来添加 AirFlow 用户:</p>
 <pre><code class="python">import airflow, sys
 from airflow import models, settings
 from airflow.contrib.auth.backends.password_auth import PasswordUser
+
 user = PasswordUser(models.User())
 user.username = sys.argv[1]
 user.email = sys.argv[2]
@@ -823,9 +860,131 @@ session = settings.Session()
 session.add(user)
 session.commit()
 session.close()
-exit()</code></pre>
-<p>在终端下运行:</p>
+exit()
+</code></pre>
+<p>在终端下运行以下代码来添加管理员用户，至少添加一个用户，不然即使启动了AirFlow 后也会报错:</p>
 <pre><code class="bash">→ python add_user.py admin airflow@airflow.com admin</code></pre>
+<h1 id="8-设置右上角不显示UTC时间格式"><a href="#8-设置右上角不显示UTC时间格式" class="headerlink" title="8. 设置右上角不显示UTC时间格式"></a>8. 设置右上角不显示UTC时间格式</h1><h2 id="8-1-修改时区"><a href="#8-1-修改时区" class="headerlink" title="8.1 修改时区"></a>8.1 修改时区</h2><p>airflow 默认使用 UTC 时间，在中国时区需要用+8小时就是本地时间，下面把 airflow 全面修改为中国时区。</p>
+<p>首先需要修改 <code>airflow.cfg</code> 文件，定位到 <code>default_timezone</code> 代码处，修改为 <code>Asia/Shanghai</code></p>
+<pre><code class="python">[core]
+...
+default_timezone = Asia/Shanghai
+</code></pre>
+<p>单单修改 ariflow.cfg 文件是不够的，需要修改源代码进行修正，<strong>不然即使界面显示的是国内时间，但其实内部定时任务还是会以 UTC 时间进行任务的调度</strong>。</p>
+<ul>
+<li>修改 <code>airflow/utils/timezone.py</code> 文件: 在 <code>utc = pendulum.timezone(&#39;UTC&#39;)</code> 这行(第27行)代码下添加如下代码，并修改 <code>utcnow()</code> 函数 (在第69行)，将 <code>d = dt.datetime.utcnow()</code> 修改为 <code>d = dt.datetime.now()</code>。</li>
+</ul>
+<pre><code class="python">from airflow import configuration as conf
+try:
+    tz = conf.get(&quot;core&quot;, &quot;default_timezone&quot;)
+    if tz == &quot;system&quot;:
+        utc = pendulum.local_timezone()
+    else:
+        utc = pendulum.timezone(tz)
+except Exception:
+    pass
+</code></pre>
+<ul>
+<li>修改 <code>airflow/utils/sqlalchemy.py</code> 文件: 在 <code>utc = pendulum.timezone(&#39;UTC&#39;)</code> 这行(第37行)代码下添加:</li>
+</ul>
+<pre><code class="python">from airflow import configuration as conf
+try:
+    tz = conf.get(&quot;core&quot;, &quot;default_timezone&quot;)
+    if tz == &quot;system&quot;:
+        utc = pendulum.local_timezone()
+    else:
+        utc = pendulum.timezone(tz)
+except Exception:
+    pass
+</code></pre>
+<h2 id="8-2-修改-HTML-文件"><a href="#8-2-修改-HTML-文件" class="headerlink" title="8.2 修改 HTML 文件"></a>8.2 修改 HTML 文件</h2><p>修改 <code>www/templates/admin/master.html</code> 文件中关于时区的 JS 代码:</p>
+<pre><code class="html">&lt;script src=&quot;{{ url_for('static', filename='jqClock.min.js') }}&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    x = new Date();
+    var UTCseconds = (x.getTime() + x.getTimezoneOffset()*60*1000);
+    $(&quot;#clock&quot;).clock({
+        &quot;seconds&quot;:&quot;false&quot;,
+        &quot;calendar&quot;:&quot;false&quot;,
+        &quot;format&quot;:&quot;24&quot;,
+        &quot;timestamp&quot;:UTCseconds
+    }).click(function(){
+        alert(&#39;{{ hostname }}&#39;);
+    });
+    $(&#39;span&#39;).tooltip();
+&lt;/script&gt;
+</code></pre>
+<p>修改为如下内容:</p>
+<pre><code class="html">&lt;script&gt;
+    x = new Date()
+    //var UTCseconds = (x.getTime() + x.getTimezoneOffset()*60*1000);
+    var seconds = x.getTime();
+    $(&quot;#clock&quot;).clock({
+        &quot;dateFormat&quot;:&quot;Y-m-d &quot;,
+        &quot;timeFormat&quot;:&quot;H:i:s&quot;,
+        &quot;timestamp&quot;:seconds
+    }).click(function(){
+        alert(&#39;{{ hostname }}&#39;);
+    });
+
+    $(&#39;span&#39;).tooltip();
+    var CSRF = {{ csrf_token() | tojson }};
+
+    $.ajaxSetup({
+      beforeSend: function(xhr, settings) {
+        if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) &amp;&amp; !this.crossDomain) {
+          xhr.setRequestHeader(&quot;X-CSRFToken&quot;, CSRF);
+        }
+      }
+    });
+&lt;/script&gt;
+</code></pre>
+<h2 id="8-3-修改-jqClock-文件源码"><a href="#8-3-修改-jqClock-文件源码" class="headerlink" title="8.3 修改 jqClock 文件源码"></a>8.3 修改 jqClock 文件源码</h2><p>这是 AirFlow 用来显示时间的 JS 源码，在低版本中能够也是需要进行修改的，但是在 1.10.1 之后貌似就不再需要修改这个文件了。查找 <code>UTC</code> 并将找到的地方去掉，或者将 <code>www/static/jqClock.min.js</code>的全部内容用下面内容替换:</p>
+<pre><code class="javascript">/**
+ * jQuery Clock plugin
+ * Copyright (c) 2010 John R D&#39;Orazio (priest@johnromanodorazio.com)
+ * Licensed under the Apache 2.0 license:
+ * https://www.apache.org/licenses/LICENSE-2.0
+ */
+Date.prototype.hasOwnProperty(&quot;stdTimezoneOffset&quot;)||(Date.prototype.stdTimezoneOffset=function(){var b=this.getFullYear();if(!Date.prototype.stdTimezoneOffset.cache.hasOwnProperty(b)){for(var d=(new Date(b,0,1)).getTimezoneOffset(),h=[6,7,5,8,4,9,3,10,2,11,1],a=0;12&gt;a;a++){var m=(new Date(b,h[a],1)).getTimezoneOffset();if(m!=d){d=Math.max(d,m);break}}Date.prototype.stdTimezoneOffset.cache[b]=d}return Date.prototype.stdTimezoneOffset.cache[b]},Date.prototype.stdTimezoneOffset.cache={});
+Date.prototype.hasOwnProperty(&quot;isDST&quot;)||(Date.prototype.isDST=function(){return this.getTimezoneOffset()&lt;this.stdTimezoneOffset()});Date.prototype.hasOwnProperty(&quot;isLeapYear&quot;)||(Date.prototype.isLeapYear=function(){var b=this.getFullYear();return 0!=(b&amp;3)?!1:0!=b%100||0==b%400});Date.prototype.hasOwnProperty(&quot;getDOY&quot;)||(Date.prototype.getDOY=function(){var b=this.getMonth(),d=this.getDate(),d=[0,31,59,90,120,151,181,212,243,273,304,334][b]+d;1&lt;b&amp;&amp;this.isLeapYear()&amp;&amp;d++;return d});
+Date.prototype.hasOwnProperty(&quot;daysInMonth&quot;)||(Date.prototype.daysInMonth=function(){return[31,this.isLeapYear()?29:28,31,30,31,30,31,31,30,31,30,31][this.getMonth()]});Date.prototype.hasOwnProperty(&quot;getWOY&quot;)||(Date.prototype.getWOY=function(b){var d=new Date(+this);d.setHours(0,0,0,0);d.setDate(d.getDate()+4-(d.getDay()||7));return b?d.getFullYear():Math.ceil(((d-new Date(d.getFullYear(),0,1))/864E5+1)/7)});
+Date.prototype.hasOwnProperty(&quot;swatchTime&quot;)||(Date.prototype.swatchTime=function(){return(&quot;00&quot;+Math.floor((60*((this.getUTCHours()+1)%24*60+this.getUTCMinutes())+this.getUTCSeconds()+.001*this.getUTCMilliseconds())/86.4)).slice(-3)});String.prototype.padStart||(String.prototype.padStart=function(b,d){b&gt;&gt;=0;d=String(d||&quot; &quot;);if(this.length&gt;b)return String(this);b-=this.length;b&gt;d.length&amp;&amp;(d+=d.repeat(b/d.length));return d.slice(0,b)+String(this)});
+(function(b,d){b.clock={version:&quot;2.3.0&quot;,options:[{type:&quot;string&quot;,value:&quot;destroy&quot;,description:&quot;Passing in &#39;destroy&#39; to an already initialized clock will remove the setTimeout for that clock to stop it from ticking, and remove all html markup and data associated with the plugin instance on the dom elements&quot;},{type:&quot;string&quot;,value:&quot;stop&quot;,description:&quot;Passing in &#39;stop&#39; to an already initialized clock will clear the setTimeout for that clock to stop it from ticking&quot;},{type:&quot;string&quot;,value:&quot;start&quot;,description:&quot;Passing in &#39;start&#39; to an already initialized clock will restart the setTimeout for that clock to get it ticking again, as though it had never lost time&quot;},
+{type:&quot;object&quot;,description:&quot;option set {}&quot;,values:[{name:&quot;timestamp&quot;,description:&quot;Either a javascript timestamp as produces by [JAVASCRIPT new Date().getTime()] or a php timestamp as produced by [PHP time()] &quot;,type:&quot;unix timestamp&quot;,values:[&quot;javascript timestamp&quot;,&quot;php timestamp&quot;]},{name:&quot;langSet&quot;,description:&quot;two letter locale to be used for the translation of Day names and Month names&quot;,type:&quot;String&quot;,values:&quot;am ar bn bg ca zh hr cs da nl en et fi fr de el gu hi hu id it ja kn ko lv lt ms ml mr mo ps fa pl pt ro ru sr sk sl es sw sv ta te th tr uk vi&quot;.split(&quot; &quot;)},
+{name:&quot;calendar&quot;,description:&quot;Whether the date should be displayed together with the time&quot;,type:&quot;Boolean&quot;,values:[!0,!1]},{name:&quot;dateFormat&quot;,description:&quot;PHP Style Format string for formatting a local date, see http://php.net/manual/en/function.date.php&quot;,type:&quot;String&quot;,values:&quot;dDjlNSwzWFmMntLoYy&quot;.split(&quot;&quot;)},{name:&quot;timeFormat&quot;,description:&quot;PHP Style Format string for formatting a local date, see http://php.net/manual/en/function.date.php&quot;,type:&quot;String&quot;,values:&quot;aABgGhHisveIOPZcrU&quot;.split(&quot;&quot;)},{name:&quot;isDST&quot;,
+description:&quot;When a client side timestamp is used, whether DST is active will be automatically determined. However this cannot be determined for a server-side timestamp which must be passed in as UTC, in that can case it can be set with this option&quot;,type:&quot;Boolean&quot;,values:[!0,!1]},{name:&quot;rate&quot;,description:&quot;Defines the rate at which the clock will update, in milliseconds&quot;,type:&quot;Integer&quot;,values:&quot;1 - 9007199254740991 (recommended 10-60000)&quot;}]}],methods:{destroy:&quot;Chaining clock().destroy() has the same effect as passing the &#39;destroy&#39; option as in clock(&#39;destroy&#39;)&quot;,
+stop:&quot;Chaining clock().stop() has the same effect as passing the &#39;stop&#39; option as in clock(&#39;stop&#39;)&quot;,start:&quot;Chaining clock().start() has the same effect as passing the &#39;start&#39; option as in clock(&#39;start&#39;)&quot;}};Object.freeze(b.clock);var h=h||{};b.fn.clock=function(a){var m=this;this.initialize=function(){return this};this.destroy=function(){return m.each(function(a){a=b(this).attr(&quot;id&quot;);h.hasOwnProperty(a)&amp;&amp;(clearTimeout(h[a]),delete h[a]);b(this).html(&quot;&quot;);b(this).hasClass(&quot;jqclock&quot;)&amp;&amp;b(this).removeClass(&quot;jqclock&quot;);
+b(this).removeData(&quot;clockoptions&quot;)})};this.stop=function(){return m.each(function(a){a=b(this).attr(&quot;id&quot;);h.hasOwnProperty(a)&amp;&amp;(clearTimeout(h[a]),delete h[a])})};this.start=function(){return m.each(function(a){a=b(this).attr(&quot;id&quot;);var c=b(this).data(&quot;clockoptions&quot;);if(c!==d&amp;&amp;!1===h.hasOwnProperty(a)){var g=this;h[a]=setTimeout(function(){x(b(g))},c.rate)}})};var B=function(){return&quot;xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx&quot;.replace(/[xy]/g,function(a){var b=16*Math.random()|0;return(&quot;x&quot;==a?b:b&amp;3|8).toString(16)}).toUpperCase()},
+x=function(a){var c=b(a).data(&quot;clockoptions&quot;),d=(new Date).getTime()+c.sysdiff,k=new Date(d),g=k.getHours(),m=k.getMinutes(),C=k.getSeconds(),B=k.getMilliseconds(),e=k.getDay(),l=k.getDate(),D=k.getMonth(),y=k.getFullYear(),p=k.isLeapYear(),w=k.getDOY(),q=k.getWOY(),v=k.getWOY(!0),G=k.daysInMonth(),H=k.swatchTime(),n=parseInt(c.tzOffset/60),z=parseInt(60*c.tzOffset),E=&quot;AM&quot;,f=&quot;&quot;,r=&quot;&quot;;11&lt;g&amp;&amp;(E=&quot;PM&quot;);r=g;12&lt;r?r-=12:0===r&amp;&amp;(r=12);if(!0===c.calendar){for(var f=&quot;&quot;,t=0;t&lt;=c.dateFormat.length;t++){var F=
+c.dateFormat.charAt(t);switch(F){case &quot;d&quot;:f+=(&quot;&quot;+l).padStart(2,&quot;0&quot;);break;case &quot;D&quot;:f+=(new Intl.DateTimeFormat(c.langSet,{weekday:&quot;short&quot;})).format(k);break;case &quot;j&quot;:f+=l;break;case &quot;l&quot;:f+=(new Intl.DateTimeFormat(c.langSet,{weekday:&quot;long&quot;})).format(k);break;case &quot;N&quot;:f+=0===e?7:e;break;case &quot;S&quot;:f+=1===l||1===l%10&amp;&amp;11!=l?&quot;st&quot;:2===l||2===l%10&amp;&amp;12!=l?&quot;nd&quot;:3===l||3===l%10&amp;&amp;13!=l?&quot;rd&quot;:&quot;th&quot;;break;case &quot;w&quot;:f+=e;break;case &quot;z&quot;:f+=w-1;break;case &quot;W&quot;:f+=q;break;case &quot;F&quot;:f+=(new Intl.DateTimeFormat(c.langSet,
+{month:&quot;long&quot;})).format(k);break;case &quot;m&quot;:f+=(D+1+&quot;&quot;).padStart(2,&quot;0&quot;);break;case &quot;M&quot;:f+=(new Intl.DateTimeFormat(c.langSet,{month:&quot;short&quot;})).format(k);break;case &quot;n&quot;:f+=D+1;break;case &quot;t&quot;:f+=G;break;case &quot;L&quot;:f+=p?1:0;break;case &quot;o&quot;:f+=v;break;case &quot;Y&quot;:f+=y;break;case &quot;y&quot;:f+=y.toString().substr(2,2);break;case String.fromCharCode(92):f+=c.dateFormat.charAt(++t);break;case &quot;%&quot;:for(var u=t+1,A=c.dateFormat;u&lt;A.length&amp;&amp;&quot;%&quot;!=A.charAt(u);)u++;u&gt;t+1&amp;&amp;u!=A.length?(f+=A.substring(t+1,u),t+=u-t):f+=F;break;
+default:f+=F}}f=&#39;&lt;span class=&quot;clockdate&quot;&gt;&#39;+f+&quot;&lt;/span&gt;&quot;}e=&quot;&quot;;for(p=0;p&lt;=c.timeFormat.length;p++)switch(w=c.timeFormat.charAt(p),w){case &quot;a&quot;:e+=E.toLowerCase();break;case &quot;A&quot;:e+=E;break;case &quot;B&quot;:e+=H;break;case &quot;g&quot;:e+=r;break;case &quot;G&quot;:e+=g;break;case &quot;h&quot;:e+=(&quot;&quot;+r).padStart(2,&quot;0&quot;);break;case &quot;H&quot;:e+=(&quot;&quot;+g).padStart(2,&quot;0&quot;);break;case &quot;i&quot;:e+=(&quot;&quot;+m).padStart(2,&quot;0&quot;);break;case &quot;s&quot;:e+=(&quot;&quot;+C).padStart(2,&quot;0&quot;);break;case &quot;v&quot;:e+=(&quot;&quot;+B).padStart(3,&quot;0&quot;);break;case &quot;e&quot;:e+=c.timezone;break;case &quot;I&quot;:e+=c.isDST?&quot;DST&quot;:
+&quot;&quot;;break;case &quot;O&quot;:e+=(0&gt;n?&quot;+&quot;+(&quot;&quot;+Math.abs(n)).padStart(2,&quot;0&quot;):0&lt;n?(&quot;&quot;+-1*n).padStart(2,&quot;0&quot;):&quot;+00&quot;)+&quot;00&quot;;break;case &quot;P&quot;:e+=(0&gt;n?&quot;+&quot;+(&quot;&quot;+Math.abs(n)).padStart(2,&quot;0&quot;):0&lt;n?(&quot;&quot;+-1*n).padStart(2,&quot;0&quot;):&quot;+00&quot;)+&quot;:00&quot;;break;case &quot;Z&quot;:e+=0&gt;z?&quot;&quot;+Math.abs(z):0&lt;z?&quot;&quot;+-1*z:&quot;0&quot;;break;case &quot;c&quot;:e+=y+&quot;-&quot;+(D+1+&quot;&quot;).padStart(2,&quot;0&quot;)+&quot;-&quot;+(&quot;&quot;+l).padStart(2,&quot;0&quot;)+&quot;T&quot;+(&quot;&quot;+g).padStart(2,&quot;0&quot;)+&quot;:&quot;+(&quot;&quot;+m).padStart(2,&quot;0&quot;)+&quot;:&quot;+(&quot;&quot;+C).padStart(2,&quot;0&quot;)+(0&gt;n?&quot;+&quot;+(&quot;&quot;+Math.abs(n)).padStart(2,&quot;0&quot;):0&lt;tzh?(&quot;&quot;+-1*tzh).padStart(2,&quot;0&quot;):&quot;+00&quot;)+
+&quot;:00&quot;;break;case &quot;r&quot;:e+=(new Intl.DateTimeFormat(c.langSet,{weekday:&quot;short&quot;})).format(k)+&quot;, &quot;+l+&quot; &quot;+(new Intl.DateTimeFormat(c.langSet,{month:&quot;short&quot;})).format(k)+&quot; &quot;+y+&quot; &quot;+(&quot;&quot;+g).padStart(2,&quot;0&quot;)+&quot;:&quot;+(&quot;&quot;+m).padStart(2,&quot;0&quot;)+&quot;:&quot;+(&quot;&quot;+C).padStart(2,&quot;0&quot;)+&quot; &quot;+(0&gt;n?&quot;+&quot;+(&quot;&quot;+Math.abs(n)).padStart(2,&quot;0&quot;):0&lt;tzh?(&quot;&quot;+-1*tzh).padStart(2,&quot;0&quot;):&quot;+00&quot;)+&quot;00&quot;;break;case &quot;U&quot;:e+=Math.floor(d/1E3);break;case String.fromCharCode(92):e+=c.timeFormat.charAt(++p);break;case &quot;%&quot;:q=p+1;for(v=c.timeFormat;q&lt;v.length&amp;&amp;&quot;%&quot;!=v.charAt(q);)q++;
+q&gt;p+1&amp;&amp;q!=v.length?(e+=v.substring(p+1,q),p+=q-p):e+=w;break;default:e+=w}r=&#39;&lt;span class=&quot;clocktime&quot;&gt;&#39;+e+&quot;&lt;/span&gt;&quot;;b(a).html(f+r);d=b(a).attr(&quot;id&quot;);h[d]=setTimeout(function(){x(b(a))},c.rate)};this.each(function(g){if(&quot;undefined&quot;===typeof a||&quot;object&quot;===typeof a){g=new Date;a=a||{};a.timestamp=a.timestamp||&quot;localsystime&quot;;a.langSet=a.langSet||&quot;en&quot;;a.calendar=a.hasOwnProperty(&quot;calendar&quot;)?a.calendar:!0;a.dateFormat=a.dateFormat||(&quot;en&quot;==a.langSet?&quot;l, F j, Y&quot;:&quot;l, j F Y&quot;);a.timeFormat=a.timeFormat||(&quot;en&quot;==
+a.langSet?&quot;h:i:s A&quot;:&quot;H:i:s&quot;);a.timezone=a.timezone||&quot;localsystimezone&quot;;a.isDST=a.hasOwnProperty(&quot;isDST&quot;)?a.isDST:g.isDST();a.rate=a.rate||500;&quot;string&quot;!==typeof a.langSet&amp;&amp;(a.langSet=&quot;&quot;+a.langSet);&quot;string&quot;===typeof a.calendar?a.calendar=&quot;false&quot;==a.calendar?!1:!0:&quot;boolean&quot;!==typeof a.calendar&amp;&amp;(a.calendar=!!a.calendar);&quot;string&quot;!==typeof a.dateFormat&amp;&amp;(a.dateFormat=&quot;&quot;+a.dateFormat);&quot;string&quot;!==typeof a.timeFormat&amp;&amp;(a.timeFormat=&quot;&quot;+a.dateFormat);&quot;string&quot;!==typeof a.timezone&amp;&amp;(a.timezone=&quot;&quot;+a.timezone);
+&quot;string&quot;===typeof a.isDST?a.isDST=&quot;true&quot;==a.isDST?!0:!1:&quot;boolean&quot;!==typeof a.isDST&amp;&amp;(a.isDST=!!a.isDST);&quot;number&quot;!==typeof a.rate&amp;&amp;(a.rate=parseInt(a.rate));a.tzOffset=g.getTimezoneOffset();var c=a.tzOffset/60;a.sysdiff=0;&quot;localsystime&quot;!=a.timestamp?2&lt;(g.getTime()+&quot;&quot;).length-(a.timestamp+&quot;&quot;).length?(a.timestamp*=1E3,a.sysdiff=a.timestamp-g.getTime()+6E4*a.tzOffset):(a.sysdiff=a.timestamp-g.getTime(),&quot;localsystimezone&quot;==a.timezone&amp;&amp;(a.timezone=&quot;UTC&quot;,0&gt;c?a.timezone+=&quot;+&quot;+Math.abs(c):0&lt;c&amp;&amp;(a.timezone+=
+-1*c))):&quot;localsystimezone&quot;==a.timezone&amp;&amp;(a.timezone=&quot;UTC&quot;,0&gt;c?a.timezone+=&quot;+&quot;+Math.abs(c):0&lt;c&amp;&amp;(a.timezone+=-1*c));b(this).hasClass(&quot;jqclock&quot;)||b(this).addClass(&quot;jqclock&quot;);b(this).is(&quot;[id]&quot;)||b(this).attr(&quot;id&quot;,B());b(this).data(&quot;clockoptions&quot;,a);!1===h.hasOwnProperty(b(this).attr(&quot;id&quot;))&amp;&amp;x(b(this))}else if(&quot;string&quot;===typeof a)switch(g=b(this).attr(&quot;id&quot;),a){case &quot;destroy&quot;:h.hasOwnProperty(g)&amp;&amp;(clearTimeout(h[g]),delete h[g]);b(this).html(&quot;&quot;);b(this).hasClass(&quot;jqclock&quot;)&amp;&amp;b(this).removeClass(&quot;jqclock&quot;);
+b(this).removeData(&quot;clockoptions&quot;);break;case &quot;stop&quot;:h.hasOwnProperty(g)&amp;&amp;(clearTimeout(h[g]),delete h[g]);break;case &quot;start&quot;:var m=this,c=b(this).data(&quot;clockoptions&quot;);c!==d&amp;&amp;!1===h.hasOwnProperty(g)&amp;&amp;(h[g]=setTimeout(function(){x(b(m))},c.rate))}});return this.initialize()};return this})(jQuery);
+</code></pre>
+<h1 id="9-Mac安装AirFlow的问题总结"><a href="#9-Mac安装AirFlow的问题总结" class="headerlink" title="9. Mac安装AirFlow的问题总结"></a>9. Mac安装AirFlow的问题总结</h1><h2 id="9-1-库之间不兼容"><a href="#9-1-库之间不兼容" class="headerlink" title="9.1 库之间不兼容"></a>9.1 库之间不兼容</h2><p>Mac 下安装 <code>airflow==1.10.3</code> 版本时，出现安装的包与其他版本的包不兼容的情况，这里列出来记录一下。</p>
+<ul>
+<li>dill : <code>airflow==1.10.3</code> 版本对 dill 版本要求是 <code>0.2.2 &lt;= ver.&lt; 0.3</code>，而安装最新的 <code>pathos==0.2.4</code> 要求 <code>dill&gt;=0.3.0</code>，所以这里只能安装 pathos 的版本是 0.2.4。</li>
+</ul>
+<pre><code class="bash">→ pip install multiprocess==0.70.7
+→ pip install pathos==0.2.4
+</code></pre>
+<ul>
+<li>markdown : <code>airflow==1.10.3</code> 版本对 markdown 版本要求是 <code>2.5.2 &lt;= ver.&lt; 3.0</code>，在你更新 jinja2 一些其他库时，可能会将 markdown 升级到了 3.0 以上的版本，所以建议恢复到 2.6.11。</li>
+</ul>
+<pre><code class="python">→ pip install markdown==2.6.11</code></pre>
+<h2 id="9-2-安装-setproctitle-和-mysqlclient"><a href="#9-2-安装-setproctitle-和-mysqlclient" class="headerlink" title="9.2 安装 setproctitle 和 mysqlclient"></a>9.2 安装 setproctitle 和 mysqlclient</h2><p>使用 <code>pip</code> 安装 <code>setproctitle</code> 和 <code>mysqlclient</code> 都会报错，具体报错信息大致如下:</p>
+<pre><code>ERROR: Command &quot;/Users/yumm/anaconda3/bin/python -u -c &#39;import setuptools, tokenize;__file__=&#39;&quot;&#39;&quot;&#39;/private/var/folders/4n/vx4649dx68gd5pl12pf2j00w0000gn/T/pip-install-6qykxzk2/mysqlclient/setup.py&#39;&quot;&#39;&quot;&#39;;f=getattr(tokenize, &#39;&quot;&#39;&quot;&#39;open&#39;&quot;&#39;&quot;&#39;, open)(__file__);code=f.read().replace(&#39;&quot;&#39;&quot;&#39;\r\n&#39;&quot;&#39;&quot;&#39;, &#39;&quot;&#39;&quot;&#39;\n&#39;&quot;&#39;&quot;&#39;);f.close();exec(compile(code, __file__, &#39;&quot;&#39;&quot;&#39;exec&#39;&quot;&#39;&quot;&#39;))&#39; install --record /private/var/folders/4n/vx4649dx68gd5pl12pf2j00w0000gn/T/pip-record-ikf7lrk_/install-record.txt --single-version-externally-managed --compile&quot; failed with error code 1 in /private/var/folders/4n/vx4649dx68gd5pl12pf2j00w0000gn/T/pip-install-6qykxzk2/mysqlclient/
+</code></pre><p>这时需要借助 <code>conda</code> 的力量，轻松就可以搞定:</p>
+<pre><code class="bash">→ conda install -c conda-forge setproctitle
+→ conda install -c conda-forge mysqlclient
+</code></pre>
+<h2 id="9-3-运行-initdb-初始化数据时报错"><a href="#9-3-运行-initdb-初始化数据时报错" class="headerlink" title="9.3 运行 initdb 初始化数据时报错"></a>9.3 运行 initdb 初始化数据时报错</h2><p>使用 <code>airflow initdb</code> 初始化数据库时，会有 <code>Expected in: flat namespace</code> 类似的报错，之前自己也是数据库删了建，建了再删，一直解决不了。当时重新打开一个终端来运行 <code>airflow initdb</code> 就可以了，大家也可以自己尝试一下。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yu_mingm623@163.com </span>
@@ -840,10 +999,10 @@ exit()</code></pre>
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>AirFlow安装</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">1.9k</span></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">5.6k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
     <p><span class="copy-title">发布时间:</span>2019-12-07, 13:52:21</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-07, 14:02:46</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-07, 23:38:46</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/07/install-airflow/" title="AirFlow安装">http://www.monsteryu.top/2019/12/07/install-airflow/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -946,7 +1105,7 @@ exit()</code></pre>
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['@郁明敏','#Logistic Regression','#Flask','#Python学习资源','#Python小技巧','#强化学习','#随机过程','#3-hexo','#hexo','#AirFlow','#Python关键字','#数据挖掘',],
+            'data': ['@郁明敏','#Logistic Regression','#Flask','#Python学习资源','#Python小技巧','#强化学习','#随机过程','#xshell','#3-hexo','#hexo','#Python关键字','#数据挖掘','#AirFlow',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

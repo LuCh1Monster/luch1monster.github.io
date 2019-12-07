@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>LR建模总结 | 路痴大魔王</title>
-  <meta name="keywords" content=" Logistic Regression ">
-  <meta name="description" content="LR建模总结 | 路痴大魔王">
+  <title>AirFlow安装 | 路痴大魔王</title>
+  <meta name="keywords" content=" AirFlow ">
+  <meta name="description" content="AirFlow安装 | 路痴大魔王">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="页面未找到！">
 <meta property="og:type" content="website">
@@ -381,9 +381,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-build-LR-model-steps" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-install-airflow" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">LR建模总结</h1>
+        <h1 class="article-title">AirFlow安装</h1>
     
     <div class="article-meta">
         
@@ -393,28 +393,28 @@
         
         <span class="book">
             
-                <a  data-rel="数据挖掘">数据挖掘</a>/
+                <a  data-rel="后端">后端</a>/
             
-                <a  data-rel="LR">LR</a>
+                <a  data-rel="Python">Python</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color5">Logistic Regression</a>
+            <a class="color3">AirFlow</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-07 02:24:04'>2019-12-01 22:59</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-07 14:02:46'>2019-12-07 13:52</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:382</span>
+        <span>字数:1.9k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -433,7 +433,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-定义模型的-Target"><span class="toc-text">1. 定义模型的 Target</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建变量"><span class="toc-text">2. 创建变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-EDD"><span class="toc-text">3. EDD</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-通过-LGBM-得到变量的特征重要性以及-Baseline"><span class="toc-text">4. 通过 LGBM 得到变量的特征重要性以及 Baseline</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-结合-FI、WOE-以及-IV-挑选变量"><span class="toc-text">5. 结合 FI、WOE 以及 IV 挑选变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-训练-LR-模型得到-Baseline"><span class="toc-text">6. 训练 LR 模型得到 Baseline</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-解决变量的多重共线性问题"><span class="toc-text">7. 解决变量的多重共线性问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-模型文档表格"><span class="toc-text">8. 模型文档表格</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-设定临时环境变量"><span class="toc-text">1. 设定临时环境变量:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建-airflow-数据库"><span class="toc-text">2. 创建 airflow 数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-初始化airflow"><span class="toc-text">3. 初始化airflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-修改-airflow-cfg-配置文件"><span class="toc-text">4. 修改 airflow.cfg 配置文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-启动-airflow"><span class="toc-text">5. 启动 airflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-启动和停止脚本"><span class="toc-text">6. 启动和停止脚本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-添加-airflow-用户"><span class="toc-text">7. 添加 airflow 用户</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -449,19 +449,384 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-定义模型的-Target"><span class="toc-text">1. 定义模型的 Target</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建变量"><span class="toc-text">2. 创建变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-EDD"><span class="toc-text">3. EDD</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-通过-LGBM-得到变量的特征重要性以及-Baseline"><span class="toc-text">4. 通过 LGBM 得到变量的特征重要性以及 Baseline</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-结合-FI、WOE-以及-IV-挑选变量"><span class="toc-text">5. 结合 FI、WOE 以及 IV 挑选变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-训练-LR-模型得到-Baseline"><span class="toc-text">6. 训练 LR 模型得到 Baseline</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-解决变量的多重共线性问题"><span class="toc-text">7. 解决变量的多重共线性问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-模型文档表格"><span class="toc-text">8. 模型文档表格</span></a></li></ol></div></p>
-<h1 id="1-定义模型的-Target"><a href="#1-定义模型的-Target" class="headerlink" title="1. 定义模型的 Target"></a>1. 定义模型的 Target</h1><p>对于大多数模型开发而言，本质上是为了解决业务上的实际问题，比如客户质量的分群、产品销售量的预测等等，所以理清楚模型应用的业务背景是非常重要的，这涉及到如何去定义模型的 Target，以及将来模型如何在实际场景中进行应用。</p>
-<blockquote>
-<p>关于模型 Target 定义所花费的时间个人认为应该占到整个模型开发时间的 20%，这就好比在解数学题时如果审题不清，即便你洋洋洒洒写了一大篇解题过程，其实答案从一开始就是错误的。花了很多时间和精力去做模型的开发，最终发现模型开发好后没办法进行实际业务的应用。</p>
-</blockquote>
-<p>关于模型 Target 的定义，你需要考虑以下几件事:</p>
-<ol>
-<li>模型的 Target 如何定义？</li>
-<li>Target 的定义是否合理，是否与实际业务常识相悖？</li>
-<li>开发好的模型将来如何在实际业务场景中进行应用？</li>
-</ol>
-<p>下面的内容其实在<a href="https://www.monsteryu.top/2019/12/03/data-mining-common-steps-routines/">数据挖掘下的一般步骤与套路</a> 已经有过非常的详细的描述了。</p>
-<h1 id="2-创建变量"><a href="#2-创建变量" class="headerlink" title="2. 创建变量"></a>2. 创建变量</h1><h1 id="3-EDD"><a href="#3-EDD" class="headerlink" title="3. EDD"></a>3. EDD</h1><h1 id="4-通过-LGBM-得到变量的特征重要性以及-Baseline"><a href="#4-通过-LGBM-得到变量的特征重要性以及-Baseline" class="headerlink" title="4. 通过 LGBM 得到变量的特征重要性以及 Baseline"></a>4. 通过 LGBM 得到变量的特征重要性以及 Baseline</h1><h1 id="5-结合-FI、WOE-以及-IV-挑选变量"><a href="#5-结合-FI、WOE-以及-IV-挑选变量" class="headerlink" title="5. 结合 FI、WOE 以及 IV 挑选变量"></a>5. 结合 FI、WOE 以及 IV 挑选变量</h1><h1 id="6-训练-LR-模型得到-Baseline"><a href="#6-训练-LR-模型得到-Baseline" class="headerlink" title="6. 训练 LR 模型得到 Baseline"></a>6. 训练 LR 模型得到 Baseline</h1><h1 id="7-解决变量的多重共线性问题"><a href="#7-解决变量的多重共线性问题" class="headerlink" title="7. 解决变量的多重共线性问题"></a>7. 解决变量的多重共线性问题</h1><h1 id="8-模型文档表格"><a href="#8-模型文档表格" class="headerlink" title="8. 模型文档表格"></a>8. 模型文档表格</h1>
+        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-设定临时环境变量"><span class="toc-text">1. 设定临时环境变量:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建-airflow-数据库"><span class="toc-text">2. 创建 airflow 数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-初始化airflow"><span class="toc-text">3. 初始化airflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-修改-airflow-cfg-配置文件"><span class="toc-text">4. 修改 airflow.cfg 配置文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-启动-airflow"><span class="toc-text">5. 启动 airflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-启动和停止脚本"><span class="toc-text">6. 启动和停止脚本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-添加-airflow-用户"><span class="toc-text">7. 添加 airflow 用户</span></a></li></ol></div></p>
+<h1 id="1-设定临时环境变量"><a href="#1-设定临时环境变量" class="headerlink" title="1. 设定临时环境变量:"></a>1. 设定临时环境变量:</h1><pre><code class="bash">→ export SLUGIFY_USES_TEXT_UNIDECODE=yes
+→ export AIRFLOW_HOME=~/airflow
+→ pip install apache-airflow
+→ pip install apache-airflow[password]
+→ pip install flask_bcrypt
+</code></pre>
+<p>因为使用环境是 Python3.6.4，安装中出现 <code>ERROR: flask 1.0.3 has requirement Jinja2&gt;=2.10, but you&#39;ll have jinja2 2.8.1 which is incompatible.</code> 报错信息，原因是版本不兼容:</p>
+<pre><code class="bash">→ pip install Jinja2==2.10
+</code></pre>
+<p>1) AirFlow MySQL 安装</p>
+<pre><code class="bash">→ pip install apache-airflow[mysql]
+</code></pre>
+<h1 id="2-创建-airflow-数据库"><a href="#2-创建-airflow-数据库" class="headerlink" title="2. 创建 airflow 数据库"></a>2. 创建 airflow 数据库</h1><pre><code class="sql">&gt; create database airflow;
+&gt; create user &#39;airflow&#39;@&#39;%&#39; identified by &#39;123123&#39;;
+&gt; GRANT all privileges on airflow.* TO &#39;airflow&#39;@&#39;%&#39;  IDENTIFIED BY &#39;123123&#39;;
+&gt; FLUSH PRIVILEGES;
+</code></pre>
+<h1 id="3-初始化airflow"><a href="#3-初始化airflow" class="headerlink" title="3. 初始化airflow"></a>3. 初始化airflow</h1><pre><code class="bash">→ airflow initdb</code></pre>
+<h1 id="4-修改-airflow-cfg-配置文件"><a href="#4-修改-airflow-cfg-配置文件" class="headerlink" title="4. 修改 airflow.cfg 配置文件"></a>4. 修改 airflow.cfg 配置文件</h1><pre><code class="bash">[core]
+# The folder where your airflow pipelines live, most likely a
+# subfolder in a code repository
+# This path must be absolute
+dags_folder = /opt/username/airflow/dags
+airflow_home = /opt/username/airflow
+
+# The folder where airflow should store its log files
+# This path must be absolute
+base_log_folder = /opt/username/airflow/logs
+
+# Airflow can store logs remotely in AWS S3, Google Cloud Storage or Elastic Search.
+# Users must supply an Airflow connection id that provides access to the storage
+# location. If remote_logging is set to true, see UPDATING.md for additional
+# configuration requirements.
+remote_logging = False
+remote_log_conn_id =
+remote_base_log_folder =
+encrypt_s3_logs = False
+
+# Logging level
+logging_level = INFO
+fab_logging_level = WARN
+
+# Logging class
+# Specify the class that will specify the logging configuration
+# This class has to be on the python classpath
+# logging_config_class = my.path.default_local_settings.LOGGING_CONFIG
+logging_config_class =
+
+# Log format
+log_format = [%%(asctime)s] {%%(filename)s:%%(lineno)d} %%(levelname)s - %%(message)s
+simple_log_format = %%(asctime)s %%(levelname)s - %%(message)s
+
+# Log filename format
+log_filename_template = {{ ti.dag_id }}/{{ ti.task_id }}/{{ ts }}/{{ try_number }}.log
+log_processor_filename_template = {{ filename }}.log
+dag_processor_manager_log_location = /opt/username/airflow/logs/dag_processor_manager/dag_processor_manager.log
+
+# Hostname by providing a path to a callable, which will resolve the hostname
+hostname_callable = socket:getfqdn
+
+# Default timezone in case supplied date times are naive
+# can be utc (default), system, or any IANA timezone string (e.g. Europe/Amsterdam)
+default_timezone = Asia/Shanghai
+
+# The executor class that airflow should use. Choices include
+# SequentialExecutor, LocalExecutor, CeleryExecutor, DaskExecutor, KubernetesExecutor
+executor = LocalExecutor
+
+# The SqlAlchemy connection string to the metadata database.
+# SqlAlchemy supports many different database engine, more information
+# their website
+sql_alchemy_conn = mysql://airflow:password@localhost:3306/airflow
+
+# The encoding for the databases
+sql_engine_encoding = utf-8
+
+# If SqlAlchemy should pool database connections.
+sql_alchemy_pool_enabled = True
+
+# The SqlAlchemy pool size is the maximum number of database connections
+# in the pool. 0 indicates no limit.
+sql_alchemy_pool_size = 20
+
+# The SqlAlchemy pool recycle is the number of seconds a connection
+# can be idle in the pool before it is invalidated. This config does
+# not apply to sqlite. If the number of DB connections is ever exceeded,
+# a lower config value will allow the system to recover faster.
+sql_alchemy_pool_recycle = 1800
+
+# How many seconds to retry re-establishing a DB connection after
+# disconnects. Setting this to 0 disables retries.
+sql_alchemy_reconnect_timeout = 300
+
+# The schema to use for the metadata database
+# SqlAlchemy supports databases with the concept of multiple schemas.
+sql_alchemy_schema =
+
+# The amount of parallelism as a setting to the executor. This defines
+# the max number of task instances that should run simultaneously
+# on this airflow installation
+parallelism = 32
+
+# The number of task instances allowed to run concurrently by the scheduler
+dag_concurrency = 16
+
+# Are DAGs paused by default at creation
+dags_are_paused_at_creation = True
+
+# When not using pools, tasks are run in the &quot;default pool&quot;,
+# whose size is guided by this config element
+non_pooled_task_slot_count = 128
+
+# The maximum number of active DAG runs per DAG
+max_active_runs_per_dag = 16
+
+# Whether to load the examples that ship with Airflow. It&#39;s good to
+# get started, but you probably want to set this to False in a production
+# environment
+load_examples = False
+
+# Where your Airflow plugins are stored
+plugins_folder = /opt/username/airflow/plugins
+
+# Secret key to save connection passwords in the db
+fernet_key = KsElH7a1bMp8ibgSejZAxdU20XZ-98rRuTQJhSG13kQ=
+
+# Whether to disable pickling dags
+donot_pickle = False
+
+# How long before timing out a python file import while filling the DagBag
+dagbag_import_timeout = 30
+
+# The class to use for running task instances in a subprocess
+task_runner = StandardTaskRunner
+
+# If set, tasks without a `run_as_user` argument will be run with this user
+# Can be used to de-elevate a sudo user running Airflow when executing tasks
+default_impersonation =
+
+# What security module to use (for example kerberos):
+security =
+
+# If set to False enables some unsecure features like Charts and Ad Hoc Queries.
+# In 2.0 will default to True.
+secure_mode = False
+
+# Turn unit test mode on (overwrites many configuration options with test
+# values at runtime)
+unit_test_mode = False
+
+# Name of handler to read task instance logs.
+# Default to use task handler.
+task_log_reader = task
+
+# Whether to enable pickling for xcom (note that this is insecure and allows for
+# RCE exploits). This will be deprecated in Airflow 2.0 (be forced to False).
+enable_xcom_pickling = True
+
+# When a task is killed forcefully, this is the amount of time in seconds that
+# it has to cleanup after it is sent a SIGTERM, before it is SIGKILLED
+killed_task_cleanup_time = 60
+
+# Whether to override params with dag_run.conf. If you pass some key-value pairs through `airflow backfill -c` or
+# `airflow trigger_dag -c`, the key-value pairs will override the existing ones in params.
+dag_run_conf_overrides_params = False
+
+# Worker initialisation check to validate Metadata Database connection
+worker_precheck = False
+
+# When discovering DAGs, ignore any files that don&#39;t contain the strings `DAG` and `airflow`.
+dag_discovery_safe_mode = True
+
+[cli]
+# In what way should the cli access the API. The LocalClient will use the
+# database directly, while the json_client will use the api running on the
+# webserver
+api_client = airflow.api.client.local_client
+
+# If you set web_server_url_prefix, do NOT forget to append it here, ex:
+# endpoint_url = http://localhost:8080/myroot
+# So api will look like: http://localhost:8080/myroot/api/experimental/...
+endpoint_url = http://localhost:9000
+
+[api]
+# How to authenticate users of the API
+auth_backend = airflow.api.auth.backend.default
+
+[lineage]
+# what lineage backend to use
+backend =
+
+[atlas]
+sasl_enabled = False
+host =
+port = 21000
+username =
+password =
+
+[operators]
+# The default owner assigned to each new operator, unless
+# provided explicitly or passed via `default_args`
+default_owner = airflow
+default_cpus = 1
+default_ram = 512
+default_disk = 512
+default_gpus = 0
+
+[hive]
+# Default mapreduce queue for HiveOperator tasks
+default_hive_mapred_queue =
+
+[webserver]
+# The base url of your website as airflow cannot guess what domain or
+# cname you are using. This is used in automated emails that
+# airflow sends to point links to the right web server
+base_url = http://localhost:9000
+
+# The ip specified when starting the web server
+web_server_host = 0.0.0.0
+
+# The port on which to run the web server
+web_server_port = 9000
+
+# Paths to the SSL certificate and key for the web server. When both are
+# provided SSL will be enabled. This does not change the web server port.
+web_server_ssl_cert =
+web_server_ssl_key =
+
+# Number of seconds the webserver waits before killing gunicorn master that doesn&#39;t respond
+web_server_master_timeout = 120
+
+# Number of seconds the gunicorn webserver waits before timing out on a worker
+web_server_worker_timeout = 120
+
+# Number of workers to refresh at a time. When set to 0, worker refresh is
+# disabled. When nonzero, airflow periodically refreshes webserver workers by
+# bringing up new ones and killing old ones.
+worker_refresh_batch_size = 1
+
+# Number of seconds to wait before refreshing a batch of workers.
+worker_refresh_interval = 30
+
+# Secret key used to run your flask app
+secret_key = temporary_key
+
+# Number of workers to run the Gunicorn web server
+workers = 4
+
+# The worker class gunicorn should use. Choices include
+# sync (default), eventlet, gevent
+worker_class = sync
+
+# Log files for the gunicorn webserver. &#39;-&#39; means log to stderr.
+access_logfile = -
+error_logfile = -
+
+# Expose the configuration file in the web server
+# This is only applicable for the flask-admin based web UI (non FAB-based).
+# In the FAB-based web UI with RBAC feature,
+# access to configuration is controlled by role permissions.
+expose_config = False
+
+# Set to true to turn on authentication:
+# https://airflow.apache.org/security.html#web-authentication
+authenticate = True
+auth_backend = airflow.contrib.auth.backends.password_auth
+
+# Filter the list of dags by owner name (requires authentication to be enabled)
+filter_by_owner = False
+
+# Filtering mode. Choices include user (default) and ldapgroup.
+# Ldap group filtering requires using the ldap backend
+#
+# Note that the ldap server needs the &quot;memberOf&quot; overlay to be set up
+# in order to user the ldapgroup mode.
+
+# Default DAG view.  Valid values are:
+# tree, graph, duration, gantt, landing_times
+dag_default_view = tree
+
+# Default DAG orientation. Valid values are:
+# LR (Left-&gt;Right), TB (Top-&gt;Bottom), RL (Right-&gt;Left), BT (Bottom-&gt;Top)
+dag_orientation = LR
+
+# Puts the webserver in demonstration mode; blurs the names of Operators for
+# privacy.
+demo_mode = False
+
+# The amount of time (in secs) webserver will wait for initial handshake
+# while fetching logs from other worker machine
+log_fetch_timeout_sec = 5
+
+# By default, the webserver shows paused DAGs. Flip this to hide paused
+# DAGs by default
+hide_paused_dags_by_default = False
+
+# Consistent page size across all listing views in the UI
+page_size = 100
+
+# Use FAB-based webserver with RBAC feature
+rbac = False
+
+# Define the color of navigation bar
+navbar_color = #007A87
+
+# Default dagrun to show in UI
+default_dag_run_display_number = 25
+
+# Enable werkzeug `ProxyFix` middleware
+enable_proxy_fix = False
+
+# Set secure flag on session cookie
+cookie_secure = False
+
+# Set samesite policy on session cookie
+cookie_samesite =
+
+
+[email]
+email_backend = airflow.utils.email.send_email_smtp
+
+
+[smtp]
+# If you want airflow to send emails on retries, failure, and you want to use
+# the airflow.utils.email.send_email_smtp function, you have to configure an
+
+# smtp server here
+smtp_host = 
+smtp_starttls = True
+smtp_ssl = False
+# Uncomment and set the user/pass settings if you want to use SMTP AUTH
+smtp_user = 
+smtp_password = 
+smtp_port = 25
+smtp_mail_from = </code></pre>
+<p><strong>注意</strong>: 如果需要启动用户面访问，下面这个地方一定要设置成这样:</p>
+<pre><code class="bash">[webserver]
+authenticate = true
+auth_backend = airflow.contrib.auth.backends.password_auth</code></pre>
+<p>修改 <code>airflow.cfg</code> 文件过后，再执行一遍 <code>airflow initdb</code>，因为之前 mysql 数据库中的 airflow库里面是没有表的。</p>
+<h1 id="5-启动-airflow"><a href="#5-启动-airflow" class="headerlink" title="5. 启动 airflow"></a>5. 启动 airflow</h1><p>执行以下命令，如果终端不报错，能访问 <a href="http://ip:9000" target="_blank" rel="noopener">http://ip:9000</a> 能看到界面就表示安装成功了。</p>
+<pre><code class="bash">→ airflow webserver -p 9000</code></pre>
+<h1 id="6-启动和停止脚本"><a href="#6-启动和停止脚本" class="headerlink" title="6. 启动和停止脚本"></a>6. 启动和停止脚本</h1><p>最后编写两个 bash 脚本，start-airflow-all.sh 和 stop-airflow-all.sh 用于启动和停止 airflow 任务。</p>
+<ul>
+<li>启动脚本 : start-airflow-all.sh</li>
+</ul>
+<pre><code class="bash">#!/bin/bash
+
+nohup airflow webserver &gt;&gt; airflow.log &amp;
+
+nohup airflow scheduler &gt;&gt; airflow.log &amp;
+
+nohup airflow worker &gt;&gt; airflow.log &amp;</code></pre>
+<ul>
+<li>停止脚本 : stop-airflow-all.sh</li>
+</ul>
+<pre><code class="bash">#!/bin/bash
+
+nohup ps -ef|grep -Ei &#39;(airflow-webserver)&#39;| grep master | awk &#39;{print $2}&#39;|xargs -i kill {} &gt; log1.txt &amp;
+
+nohup ps -ef|grep -Ei &#39;(airflow-scheduler)&#39;| grep master | awk &#39;{print $2}&#39;|xargs -i kill {} &gt; log1.txt &amp;</code></pre>
+<h1 id="7-添加-airflow-用户"><a href="#7-添加-airflow-用户" class="headerlink" title="7. 添加 airflow 用户"></a>7. 添加 airflow 用户</h1><p>编写一个 add_user.py 文件:</p>
+<pre><code class="python">import airflow, sys
+from airflow import models, settings
+from airflow.contrib.auth.backends.password_auth import PasswordUser
+user = PasswordUser(models.User())
+user.username = sys.argv[1]
+user.email = sys.argv[2]
+user.password = sys.argv[3]
+session = settings.Session()
+session.add(user)
+session.commit()
+session.close()
+exit()</code></pre>
+<p>在终端下运行:</p>
+<pre><code class="bash">→ python add_user.py admin airflow@airflow.com admin</code></pre>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yu_mingm623@163.com </span>
     </div>
@@ -474,12 +839,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>LR建模总结</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">451</span></p>
+    <p><span class="copy-title">文章标题:</span>AirFlow安装</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">1.9k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-01, 22:59:25</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-07, 02:24:04</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/01/build-LR-model-steps/" title="LR建模总结">http://www.monsteryu.top/2019/12/01/build-LR-model-steps/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-07, 13:52:21</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-07, 14:02:46</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/07/install-airflow/" title="AirFlow安装">http://www.monsteryu.top/2019/12/07/install-airflow/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

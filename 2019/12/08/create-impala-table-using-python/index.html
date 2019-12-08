@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>LR建模总结 | 路痴大魔王</title>
-  <meta name="keywords" content=" Logistic Regression ">
-  <meta name="description" content="LR建模总结 | 路痴大魔王">
+  <title>使用Python在Impala中建表 | 路痴大魔王</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="使用Python在Impala中建表 | 路痴大魔王">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="页面未找到！">
 <meta property="og:type" content="website">
@@ -513,40 +513,24 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-build-LR-model-steps" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-create-impala-table-using-python" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">LR建模总结</h1>
+        <h1 class="article-title">使用Python在Impala中建表</h1>
     
     <div class="article-meta">
         
         
-        <span class="author"><a>郁明敏</a></span>
         
-        
-        <span class="book">
-            
-                <a  data-rel="数据挖掘">数据挖掘</a>/
-            
-                <a  data-rel="LR">LR</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            
-            <a class="color5">Logistic Regression</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-07 02:24:04'>2019-12-01 22:59</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-08 15:14:45'>2019-12-08 15:13</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:382</span>
+        <span>字数:1.1k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -565,7 +549,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-定义模型的-Target"><span class="toc-text">1. 定义模型的 Target</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建变量"><span class="toc-text">2. 创建变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-EDD"><span class="toc-text">3. EDD</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-通过-LGBM-得到变量的特征重要性以及-Baseline"><span class="toc-text">4. 通过 LGBM 得到变量的特征重要性以及 Baseline</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-结合-FI、WOE-以及-IV-挑选变量"><span class="toc-text">5. 结合 FI、WOE 以及 IV 挑选变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-训练-LR-模型得到-Baseline"><span class="toc-text">6. 训练 LR 模型得到 Baseline</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-解决变量的多重共线性问题"><span class="toc-text">7. 解决变量的多重共线性问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-模型文档表格"><span class="toc-text">8. 模型文档表格</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-INSERT语句建表"><span class="toc-text">1. INSERT语句建表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-通过HDFS、Hive-和-Impala-建表"><span class="toc-text">2. 通过HDFS、Hive 和 Impala 建表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Python连接HDFS"><span class="toc-text">2.1 Python连接HDFS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-完整的代码"><span class="toc-text">2.2 完整的代码</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -581,19 +565,162 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-定义模型的-Target"><span class="toc-text">1. 定义模型的 Target</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建变量"><span class="toc-text">2. 创建变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-EDD"><span class="toc-text">3. EDD</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-通过-LGBM-得到变量的特征重要性以及-Baseline"><span class="toc-text">4. 通过 LGBM 得到变量的特征重要性以及 Baseline</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-结合-FI、WOE-以及-IV-挑选变量"><span class="toc-text">5. 结合 FI、WOE 以及 IV 挑选变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-训练-LR-模型得到-Baseline"><span class="toc-text">6. 训练 LR 模型得到 Baseline</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-解决变量的多重共线性问题"><span class="toc-text">7. 解决变量的多重共线性问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-模型文档表格"><span class="toc-text">8. 模型文档表格</span></a></li></ol></div></p>
-<h1 id="1-定义模型的-Target"><a href="#1-定义模型的-Target" class="headerlink" title="1. 定义模型的 Target"></a>1. 定义模型的 Target</h1><p>对于大多数模型开发而言，本质上是为了解决业务上的实际问题，比如客户质量的分群、产品销售量的预测等等，所以理清楚模型应用的业务背景是非常重要的，这涉及到如何去定义模型的 Target，以及将来模型如何在实际场景中进行应用。</p>
-<blockquote>
-<p>关于模型 Target 定义所花费的时间个人认为应该占到整个模型开发时间的 20%，这就好比在解数学题时如果审题不清，即便你洋洋洒洒写了一大篇解题过程，其实答案从一开始就是错误的。花了很多时间和精力去做模型的开发，最终发现模型开发好后没办法进行实际业务的应用。</p>
-</blockquote>
-<p>关于模型 Target 的定义，你需要考虑以下几件事:</p>
-<ol>
-<li>模型的 Target 如何定义？</li>
-<li>Target 的定义是否合理，是否与实际业务常识相悖？</li>
-<li>开发好的模型将来如何在实际业务场景中进行应用？</li>
-</ol>
-<p>下面的内容其实在<a href="https://www.monsteryu.top/2019/12/03/data-mining-common-steps-routines/">数据挖掘下的一般步骤与套路</a> 已经有过非常的详细的描述了。</p>
-<h1 id="2-创建变量"><a href="#2-创建变量" class="headerlink" title="2. 创建变量"></a>2. 创建变量</h1><h1 id="3-EDD"><a href="#3-EDD" class="headerlink" title="3. EDD"></a>3. EDD</h1><h1 id="4-通过-LGBM-得到变量的特征重要性以及-Baseline"><a href="#4-通过-LGBM-得到变量的特征重要性以及-Baseline" class="headerlink" title="4. 通过 LGBM 得到变量的特征重要性以及 Baseline"></a>4. 通过 LGBM 得到变量的特征重要性以及 Baseline</h1><h1 id="5-结合-FI、WOE-以及-IV-挑选变量"><a href="#5-结合-FI、WOE-以及-IV-挑选变量" class="headerlink" title="5. 结合 FI、WOE 以及 IV 挑选变量"></a>5. 结合 FI、WOE 以及 IV 挑选变量</h1><h1 id="6-训练-LR-模型得到-Baseline"><a href="#6-训练-LR-模型得到-Baseline" class="headerlink" title="6. 训练 LR 模型得到 Baseline"></a>6. 训练 LR 模型得到 Baseline</h1><h1 id="7-解决变量的多重共线性问题"><a href="#7-解决变量的多重共线性问题" class="headerlink" title="7. 解决变量的多重共线性问题"></a>7. 解决变量的多重共线性问题</h1><h1 id="8-模型文档表格"><a href="#8-模型文档表格" class="headerlink" title="8. 模型文档表格"></a>8. 模型文档表格</h1>
+        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-INSERT语句建表"><span class="toc-text">1. INSERT语句建表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-通过HDFS、Hive-和-Impala-建表"><span class="toc-text">2. 通过HDFS、Hive 和 Impala 建表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Python连接HDFS"><span class="toc-text">2.1 Python连接HDFS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-完整的代码"><span class="toc-text">2.2 完整的代码</span></a></li></ol></li></ol></div><br>关于 Python 连接 impala 的教程已经在之前讲过，本篇主要讲一下如何通过 Python 如何在 impala 中建表的操作，用过 impyla 的同学应该知道，这个包是不支持将 Dataframe 在 impala 中建表的,，它只支持执行 SQL 语句。但是，我们从 impyla 中拉取数据后，经过一些列数据处理，模型打分，最终得到一个 Dataframe，但是最终我们要把这个表存入 impala，供被人使用。</p>
+<p>这个问题通常有2种解决办法，下面我们分别介绍:</p>
+<h1 id="1-INSERT语句建表"><a href="#1-INSERT语句建表" class="headerlink" title="1. INSERT语句建表"></a>1. INSERT语句建表</h1><p>将你 Dataframe 转化为 sql 插入语句，然后利用 impyla 的 <code>curor.execute(sql)</code> 来完成建表的工作，具体示例如下:</p>
+<p>假设你的 Dataframe 是像下面这样:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+</tbody></table>
+<p>那么首先需要在 impala 执行一段表定义(DDL)语句，即:</p>
+<pre><code class="sql">DROP TABLE IF EXISTS test.t1
+;
+CREATE TABLE IF NOT EXISTS test.t1 
+(a INT,
+ b INT,
+ c INT)
+ ;</code></pre>
+<p>然后利用 python 将你的 Dataframe 转换为 SQL 插入语句，并用 <code>cursor.execute</code> 执行该 sql 语句:</p>
+<pre><code class="python">for raw in df.values:
+    value = &#39;{!r}&#39;.format(list(raw))
+    value = &#39;(&#39; + value.strip(&#39;[&#39;).strip(&#39;]&#39;) + &#39;)&#39;
+    values_list.append(value)
+
+values = &#39;,&#39;.join(x for x in values_list)
+insert_sql = &quot;&quot;&quot;insert into test.t1 values %s&quot;&quot;&quot; % values
+cursor.execute(insert_sql)</code></pre>
+<p>这样就完成了将 Dataframe 存入 impala 中，但是 insert 的方式建表会产生很多小文件，且非常的不方便。下面我们讲一下第2种方式</p>
+<h1 id="2-通过HDFS、Hive-和-Impala-建表"><a href="#2-通过HDFS、Hive-和-Impala-建表" class="headerlink" title="2. 通过HDFS、Hive 和 Impala 建表"></a>2. 通过HDFS、Hive 和 Impala 建表</h1><p>这种方式的核心思想是将 Dataframe 先在本地存成 CSV 文件，然后通过 Python 连接 HDFS 将 CSV 文件  PUT 上去，再通过Hive 执行创建外部表，最后将 Hive 数据同步到 impala 中，这种建表方式不会产生小文件，且后期维护较为简单。</p>
+<h2 id="2-1-Python连接HDFS"><a href="#2-1-Python连接HDFS" class="headerlink" title="2.1 Python连接HDFS"></a>2.1 Python连接HDFS</h2><p>Python 连接 HDFS 主要有两个包: pyhdfs 和 hdfs。<strong>注意</strong>: pyhdfs 的版本一定不要是 0.2.2，该版本经常时好时坏，不建议使用，可以选用 0.2.1 版本。</p>
+<pre><code class="bash">→ pip install pyhdfs==0.2.1
+→ pip install hdfs
+</code></pre>
+<p>第一种是使用 hdfs 的示例代码:</p>
+<pre><code class="python">from hdfs import InsecureClient
+import os
+
+def create_hdfs_dir(hdfs_path, host=&#39;http://ip:port&#39;, user=&#39;hive&#39;):
+
+    hdfs_conn = InsecureClient(url=host, user=user)
+    response = hdfs_conn.makedirs(hdfs_path)
+
+    return response
+
+def upload_to_hdfs(file_path, hdfs_path, 
+                   host=&#39;http://ip:port&#39;, 
+                   user=&#39;hive&#39;, overwrite=True):
+
+    hdfs_conn = InsecureClient(url=host, user=user)
+    response = hdfs_conn.upload(hdfs_path, file_path, overwrite=overwrite)
+
+    return response
+
+def download_from_hdfs(hdfs_path, 
+                       save_path=None, 
+                       host=&#39;http://ip:port&#39;, 
+                       user=&#39;hive&#39;, overwrite=True):
+
+    if save_path is None:
+        save_path = os.path.join(os.getcwd(), &#39;tmp_folder&#39;)     # 存放文件的临时目录
+
+    # 建立存放文件的文件夹，若文件夹已存在则清空其中的文件
+    if not os.path.exists(save_path):
+        os.mkdir(save_path)
+    else:
+        if overwrite:
+            for f in os.listdir(save_path):
+                os.remove(os.path.join(save_path, f))
+
+    # 从HDFS目录下载文件
+    hdfs_conn = InsecureClient(url=host, user=user)
+    start_time = datetime.now()
+    cnt = 0
+    for f in hdfs_conn.list(hdfs_path):
+        if hdfs_conn.status(os.path.join(hdfs_path, f))[&#39;type&#39;] == &#39;FILE&#39;:
+            hdfs_conn.download(os.path.join(hdfs_path, f), os.path.join(save_path, f))
+            cnt += 1
+    print(&#39;Download {0} files, Time cost: {1}&#39;.format(cnt, datetime.now() - start_time))
+</code></pre>
+<p>第二种是使用 pyhdfs 连接 hdfs:</p>
+<pre><code class="python">def create_hdfs_dir(hdfs_path, hdfs_config):
+
+    hdfs_conn = HdfsClient(**hdfs_config)
+    response = hdfs_conn.mkdirs(hdfs_path)
+    return response
+
+
+def upload_to_hdfs(file_path, hdfs_path, hdfs_config, overwrite=True):
+
+    file_name = os.path.basename(file_path)
+    hdfs_conn = HdfsClient(**hdfs_config)
+    response = hdfs_conn.copy_from_local(file_path, os.path.join(hdfs_path, file_name), overwrite=overwrite)
+    return response
+
+def create_external_table(df, dt, tb_name, hdfs_path, hdfs_config, 
+                    impala_user, impala_password, col_list=None, port=&#39;impala&#39;):
+
+    filename = &#39;t1{0}.csv&#39;.format(dt)
+    df.to_csv(filename, header=False, index=False)
+    file_path = os.getcwd() + &#39;/&#39; + filename
+    create_hdfs_dir(hdfs_path, hdfs_config)
+    upload_to_hdfs(file_path, hdfs_path, hdfs_config)
+    os.remove(file_path)
+
+    sql_string = &#39;&#39;&#39;alter table test.{0} drop if exists partition(dt=&quot;{1}&quot;);
+        alter table test.{0} add partition(dt=&quot;{1}&quot;) location &quot;{2}&quot;;
+        &#39;&#39;&#39;.format(tb_name, dt, hdfs_path)
+
+    sql_query(sql_string, user=impala_user, password=impala_password, port=port)
+
+    if port == &#39;hive&#39;:
+        sql_query(&#39;INVALIDATE METADATA test.{0};&#39;.format(table_name), 
+                  user=user, password=password, port=&#39;impala&#39;)
+
+    return True
+</code></pre>
+<h2 id="2-2-完整的代码"><a href="#2-2-完整的代码" class="headerlink" title="2.2 完整的代码"></a>2.2 完整的代码</h2><p>创建一个文件 pyimpala.py，这个文件的完整代码下载地址: <a href="https://download.csdn.net/download/luch1monster/" target="_blank" rel="noopener">https://download.csdn.net/download/luch1monster/</a> ，完整代码如下:</p>
+<pre><code class="python"># coding: utf-8
+
+import sys
+sys.path.append(&#39;~/itools&#39;)
+import datetime
+from pyimpala import create_external_table
+
+
+hdfs_config = {
+    &#39;hosts&#39;: [&#39;ip:port&#39;],
+    &#39;randomize_hosts&#39;: False,
+    &#39;user_name&#39;: &#39;user_name&#39;,
+    &#39;requests_kwargs&#39;: {&#39;headers&#39;: {&#39;content-type&#39;: &#39;application/octet-stream&#39;}}
+}
+dt = datetime.datetime.today().strftime(&#39;%Y-%m-%d&#39;)
+hdfs_path = &#39;/external/cdh/test/dt=%s&#39; % dt
+
+create_external_table(df=df, dt=dt, tb_name=&#39;t1&#39;, 
+                      hdfs_config=hdfs_config,         
+                      hdfs_path=hdfs_path,
+                      impala_user=&#39;user&#39;, impala_password=&#39;passwd&#39;)
+</code></pre>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yu_mingm623@163.com </span>
     </div>
@@ -606,12 +733,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>LR建模总结</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">451</span></p>
+    <p><span class="copy-title">文章标题:</span>使用Python在Impala中建表</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">1.1k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-01, 22:59:25</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-07, 02:24:04</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/01/build-LR-model-steps/" title="LR建模总结">http://www.monsteryu.top/2019/12/01/build-LR-model-steps/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-08, 15:13:02</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-08, 15:14:45</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/08/create-impala-table-using-python/" title="使用Python在Impala中建表">http://www.monsteryu.top/2019/12/08/create-impala-table-using-python/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

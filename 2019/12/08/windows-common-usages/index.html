@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>MAC用法总结 | 路痴大魔王</title>
-  <meta name="keywords" content=" Mac ">
-  <meta name="description" content="MAC用法总结 | 路痴大魔王">
+  <title>Windows总结 | 路痴大魔王</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="Windows总结 | 路痴大魔王">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="有幸参考了《深度实践-Spark机器学习》、《Python深度学习:基于PyTorch》书籍的编写，有兴趣的话大家可以支持一下。">
 <meta property="og:type" content="website">
@@ -716,38 +716,24 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-mac-common-usages" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-windows-common-usages" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">MAC用法总结</h1>
+        <h1 class="article-title">Windows总结</h1>
     
     <div class="article-meta">
         
         
-        <span class="author"><a>郁明敏</a></span>
         
-        
-        <span class="book">
-            
-                <a  data-rel="Mac">Mac</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            
-            <a class="color4">Mac</a>
-            
-        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-08 20:27:13'>2019-12-08 19:49</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-08 20:33:43'>2019-12-08 20:31</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:619</span>
+        <span>字数:540</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -766,7 +752,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Terminal登录root账号"><span class="toc-text">1. Terminal登录root账号</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-安装Scala"><span class="toc-text">2. 安装Scala</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Homebrew方式安装"><span class="toc-text">2.1 Homebrew方式安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-通过环境安装"><span class="toc-text">2.2 通过环境安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-添加环境变量"><span class="toc-text">2.3 添加环境变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-删除文件第1行"><span class="toc-text">3. 删除文件第1行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-常用快捷键"><span class="toc-text">4. 常用快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-应用程序"><span class="toc-text">4.1 应用程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-文本"><span class="toc-text">4.2 文本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Finder"><span class="toc-text">4.3 Finder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-浏览器"><span class="toc-text">4.4 浏览器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-zsh-快捷键"><span class="toc-text">4.5 zsh 快捷键</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-公司笔记本更改密码后无法连接WIFI"><span class="toc-text">1. 公司笔记本更改密码后无法连接WIFI</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-详细教程"><span class="toc-text">1.2 详细教程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-choco和scoop包管理器"><span class="toc-text">2. choco和scoop包管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-安装-choco"><span class="toc-text">2.1 安装 choco</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-安装-scoop"><span class="toc-text">2.2 安装 scoop</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -782,85 +768,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Terminal登录root账号"><span class="toc-text">1. Terminal登录root账号</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-安装Scala"><span class="toc-text">2. 安装Scala</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Homebrew方式安装"><span class="toc-text">2.1 Homebrew方式安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-通过环境安装"><span class="toc-text">2.2 通过环境安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-添加环境变量"><span class="toc-text">2.3 添加环境变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-删除文件第1行"><span class="toc-text">3. 删除文件第1行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-常用快捷键"><span class="toc-text">4. 常用快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-应用程序"><span class="toc-text">4.1 应用程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-文本"><span class="toc-text">4.2 文本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Finder"><span class="toc-text">4.3 Finder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-浏览器"><span class="toc-text">4.4 浏览器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-zsh-快捷键"><span class="toc-text">4.5 zsh 快捷键</span></a></li></ol></li></ol></div></p>
-<h1 id="1-Terminal登录root账号"><a href="#1-Terminal登录root账号" class="headerlink" title="1. Terminal登录root账号"></a>1. Terminal登录root账号</h1><p>Mac终端下执行下面命令，输入密码即可:</p>
-<pre><code class="bash">→ sudo su -</code></pre>
-<h1 id="2-安装Scala"><a href="#2-安装Scala" class="headerlink" title="2. 安装Scala"></a>2. 安装Scala</h1><p>Scala官方下载地址: <a href="https://www.scala-lang.org/download/" target="_blank" rel="noopener">https://www.scala-lang.org/download/</a></p>
-<h2 id="2-1-Homebrew方式安装"><a href="#2-1-Homebrew方式安装" class="headerlink" title="2.1 Homebrew方式安装"></a>2.1 Homebrew方式安装</h2><p>Mac 下安装 scala 最简单的方式就是使用 homebrew 进行安装:</p>
-<pre><code class="bash">→ brew update
-→ brew install scala</code></pre>
-<h2 id="2-2-通过环境安装"><a href="#2-2-通过环境安装" class="headerlink" title="2.2 通过环境安装"></a>2.2 通过环境安装</h2><p>下载对应系统的 scala 版本，这里下载的是 scala-2.12.7.tgz ，下载完成后解压。</p>
-<pre><code class="bash">→ tar zxvf scala-2.12.7.tgz -C ~/bigdata/
-→ mv scala-2.12.7 scala2.12.7</code></pre>
-<h2 id="2-3-添加环境变量"><a href="#2-3-添加环境变量" class="headerlink" title="2.3 添加环境变量"></a>2.3 添加环境变量</h2><p>在 <code>~/.bash_profile</code> 添加 scala 的系统环境变量:</p>
-<pre><code class="bash"># scala settings
-export SCALA_HOME=&quot;/Users/yumm/bigdata/scala2.12.7&quot;
-export PATH=${PATH}:${SCALA_HOME}/bin</code></pre>
-<p>执行 <code>source ~/.bash_profile</code> ，scala 就安装完成了。</p>
-<h1 id="3-删除文件第1行"><a href="#3-删除文件第1行" class="headerlink" title="3. 删除文件第1行"></a>3. 删除文件第1行</h1><p>删除文件的第一行一般使用 <code>sed</code> ，但是 Mac 下使用 <code>sed</code> 删除第一行与 Linux 略有不同:</p>
-<pre><code class="bash">→ sed -i &#39;&#39; &#39;1d&#39; &lt;filename&gt;</code></pre>
-<h1 id="4-常用快捷键"><a href="#4-常用快捷键" class="headerlink" title="4. 常用快捷键"></a>4. 常用快捷键</h1><h2 id="4-1-应用程序"><a href="#4-1-应用程序" class="headerlink" title="4.1 应用程序"></a>4.1 应用程序</h2><ul>
-<li><code>Command-Option-esc</code>: 打开强制退出窗口</li>
-<li><code>Command-H</code>: 隐藏当前正在运行的应用程序窗口</li>
-<li><code>Command-Option-H</code>: 隐藏其他应用程序窗口</li>
-<li><code>Command-Q</code>: 退出最前面的应用程序</li>
-<li><code>Command-Shift-Z</code>: 撤销的逆向操作</li>
-<li><code>Command-Tab</code>: 在打开的应用程序列表中转到下一个最近使用的应用程序</li>
-</ul>
-<h2 id="4-2-文本"><a href="#4-2-文本" class="headerlink" title="4.2 文本"></a>4.2 文本</h2><ul>
-<li><code>fn-⬆️</code>: 上一页(PageUp)</li>
-<li><code>fn-⬇️</code>: 下一页(PageDown)</li>
-<li><code>Command-⬆️</code>: 移动到开始(Home)</li>
-<li><code>Command-⬇️</code>: 移动到末尾(End)</li>
-<li><code>Option-➡️</code>: 移动到下一个单词的末尾</li>
-<li><code>Option-⬅️</code>: 移动到上一个单词的开头</li>
-<li><code>Control-A</code>: 移动到段落开头</li>
-<li><code>Control-E</code>: 移动到段落末尾</li>
-</ul>
-<h2 id="4-3-Finder"><a href="#4-3-Finder" class="headerlink" title="4.3 Finder"></a>4.3 Finder</h2><ul>
-<li><code>Command-Option-V</code>: 剪贴文件</li>
-<li><code>Command-Shift-N</code>: 新建文件夹</li>
-<li><code>Command-Shift-G</code>: 调出窗口，可输入绝对路径直达的文件夹</li>
-<li><code>Command-O</code>: 打开所选项</li>
-<li><code>Command+⬆️</code>: 打开包含当前文件夹</li>
-</ul>
-<h2 id="4-4-浏览器"><a href="#4-4-浏览器" class="headerlink" title="4.4 浏览器"></a>4.4 浏览器</h2><ul>
-<li><code>Control-Tab</code>: 转向下一个标签页</li>
-<li><code>Control-Shift-Tab</code>: 转向上一个标签页</li>
-<li><code>Command-L</code>: 光标直接跳到地址栏</li>
-</ul>
-<h2 id="4-5-zsh-快捷键"><a href="#4-5-zsh-快捷键" class="headerlink" title="4.5 zsh 快捷键"></a>4.5 zsh 快捷键</h2><ul>
-<li><p><code>Control-U</code>: 清空当前行</p>
+        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-公司笔记本更改密码后无法连接WIFI"><span class="toc-text">1. 公司笔记本更改密码后无法连接WIFI</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-详细教程"><span class="toc-text">1.2 详细教程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-choco和scoop包管理器"><span class="toc-text">2. choco和scoop包管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-安装-choco"><span class="toc-text">2.1 安装 choco</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-安装-scoop"><span class="toc-text">2.2 安装 scoop</span></a></li></ol></li></ol></div></p>
+<h1 id="1-公司笔记本更改密码后无法连接WIFI"><a href="#1-公司笔记本更改密码后无法连接WIFI" class="headerlink" title="1. 公司笔记本更改密码后无法连接WIFI"></a>1. 公司笔记本更改密码后无法连接WIFI</h1><h2 id="1-2-详细教程"><a href="#1-2-详细教程" class="headerlink" title="1.2 详细教程"></a>1.2 详细教程</h2><ol>
+<li>首先，点击屏幕右下角的无线图标，再弹出的面板中点击“打开网络和共享中心”链接</li>
+<li>在弹出的“网络和共享中心”窗口中，点击“设置新的连接或网络”链接</li>
+<li>再选择“手动连接到无线网络”，再单击“下一步”按钮</li>
+<li>在对话框中输入SSID，要求严格输入大小写，再选择相应的“安全类型”及其它选项，设置好后单击“下一步”按钮继续</li>
+<li>在成功的对话框中，单击“更改连接设置”</li>
+<li>在弹出的无线网络属性对话框中，切换到“安全”选项卡，并单击“设置”按钮</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20190716125306268.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt=""></p>
+<ol start="7">
+<li>在弹出的对话框中，取消“验证服务器证书”复选框，再单击“配置”按钮，同样取消弹出对话框中的“自动。。。”复选框，再两次“确定”按钮</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20190716125331905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt=""></p>
+<ol start="8">
+<li>在返回的无线网络属性对话框中单击“高级设置”按钮，在弹出的对话框中选中“指定身份验证模式”复选框，再选择“用户身份验证”</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20190716125409595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ol start="9">
+<li>再单击“保存凭据”按钮，在弹出的对话框中完整的带域名的域帐号，并输入密码，完成后一直单击“确定”按钮就完成了配置。</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20190716125434704.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="2-choco和scoop包管理器"><a href="#2-choco和scoop包管理器" class="headerlink" title="2. choco和scoop包管理器"></a>2. choco和scoop包管理器</h1><h2 id="2-1-安装-choco"><a href="#2-1-安装-choco" class="headerlink" title="2.1 安装 choco"></a>2.1 安装 choco</h2><ul>
+<li><p>使用管理员方式打开 PowerShell</p>
 </li>
-<li><p><code>Control-A</code>: 移动到行首</p>
-</li>
-<li><p><code>Control-E</code>: 移动到末尾</p>
-</li>
-<li><p><code>Control-F</code>: 向前移动</p>
-</li>
-<li><p><code>Control-B</code>: 向后移动</p>
-</li>
-<li><p><code>Control-R</code>: 搜索历史命令</p>
-</li>
-<li><p><code>Control-Y</code>: 召回最近命令删除的文字</p>
-</li>
-<li><p><code>Control-H</code>: 删除光标之前的字符</p>
-</li>
-<li><p><code>Control-D</code>: 删除光标所指的字符</p>
-</li>
-<li><p><code>Control-W</code>: 删除光标之前的单词</p>
-</li>
-<li><p><code>Control-K</code>: 删除从光标到行尾的字符</p>
-</li>
-<li><p><code>Command-T</code>: 打开新的标签页</p>
-</li>
-<li><p><code>Command+Enter</code>: 切换全屏</p>
-</li>
-<li><p><code>Command+d</code>: 左右分屏</p>
-</li>
-<li><p><code>Shift-Command-D</code>: 上下分屏</p>
+<li><p>输入 <code>Set-ExecutionPolicy RemoteSigned</code>，输入 <code>Y</code></p>
 </li>
 </ul>
+<pre><code class="re">执行策略更改
+执行策略可帮助你防止执行不信任的脚本。更改执行策略可能会产生安全风险，如 https:/go.microsoft.com/fwlink/?LinkID=135170
+中的 about_Execution_Policies 帮助主题所述。是否要更改执行策略?
+[Y] 是(Y)  [A] 全是(A)  [N] 否(N)  [L] 全否(L)  [S] 暂停(S)  [?] 帮助 (默认值为“N”): Y</code></pre>
+<ul>
+<li>安装 choco，一路 enter 就可以了。</li>
+</ul>
+<pre><code class="powershell">iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex</code></pre>
+<h2 id="2-2-安装-scoop"><a href="#2-2-安装-scoop" class="headerlink" title="2.2 安装 scoop"></a>2.2 安装 scoop</h2><ol>
+<li>使用管理员方式打开 PowerShell</li>
+<li>输入 <code>Set-ExecutionPolicy RemotesSigned -s cu</code>，输入 <code>Y</code></li>
+</ol>
+<p>步骤与安装 <code>choco</code> 几乎一致，只是安装 scoop 命令稍有不同。</p>
+<pre><code class="powershell">iex (new-object net.webclient).downloadstring(&#39;https://get.scoop.sh&#39;)</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yu_mingm623@163.com </span>
@@ -874,12 +823,12 @@ export PATH=${PATH}:${SCALA_HOME}/bin</code></pre>
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>MAC用法总结</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">686</span></p>
+    <p><span class="copy-title">文章标题:</span>Windows总结</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">577</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-08, 19:49:04</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-08, 20:27:13</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/08/mac-common-usages/" title="MAC用法总结">http://www.monsteryu.top/2019/12/08/mac-common-usages/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-08, 20:31:41</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-08, 20:33:43</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/08/windows-common-usages/" title="Windows总结">http://www.monsteryu.top/2019/12/08/windows-common-usages/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

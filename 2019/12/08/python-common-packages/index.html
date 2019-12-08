@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hive总结 | 路痴大魔王</title>
-  <meta name="keywords" content=" hive ">
-  <meta name="description" content="Hive总结 | 路痴大魔王">
+  <title>Python常用库 | 路痴大魔王</title>
+  <meta name="keywords" content=" Python常用库 ">
+  <meta name="description" content="Python常用库 | 路痴大魔王">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="有幸参考了《深度实践-Spark机器学习》、《Python深度学习:基于PyTorch》书籍的编写，有兴趣的话大家可以支持一下。">
 <meta property="og:type" content="website">
@@ -668,9 +668,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-hive-qas" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-python-common-packages" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Hive总结</h1>
+        <h1 class="article-title">Python常用库</h1>
     
     <div class="article-meta">
         
@@ -680,28 +680,28 @@
         
         <span class="book">
             
-                <a  data-rel="数据库">数据库</a>/
+                <a  data-rel="后端">后端</a>/
             
-                <a  data-rel="Hive">Hive</a>
+                <a  data-rel="Python">Python</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color5">hive</a>
+            <a class="color5">Python常用库</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-08 15:17:39'>2019-12-08 14:48</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-08 20:08:07'>2019-12-08 20:04</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:159</span>
+        <span>字数:98</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -720,7 +720,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Spark下Hive启动报错"><span class="toc-text">1. Spark下Hive启动报错</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-邮件"><span class="toc-text">1. 邮件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-爬虫"><span class="toc-text">2. 爬虫</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-绘图"><span class="toc-text">3. 绘图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-数据分析"><span class="toc-text">4. 数据分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-机器学习"><span class="toc-text">5. 机器学习</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-操作-Excel"><span class="toc-text">6. 操作 Excel</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Web-开发"><span class="toc-text">7. Web 开发</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-连接数据库"><span class="toc-text">8. 连接数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-ETL-任务调度"><span class="toc-text">9. ETL 任务调度</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-正则表达式"><span class="toc-text">10. 正则表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-Hadoop相关"><span class="toc-text">11. Hadoop相关</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12-多线程-amp-多进程"><span class="toc-text">12. 多线程 &amp; 多进程</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -736,20 +736,67 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Spark下Hive启动报错"><span class="toc-text">1. Spark下Hive启动报错</span></a></li></ol></div></p>
-<h1 id="1-Spark下Hive启动报错"><a href="#1-Spark下Hive启动报错" class="headerlink" title="1. Spark下Hive启动报错"></a>1. Spark下Hive启动报错</h1><p><strong>问题</strong> : 在启动 Spark 时出现 Hive 无法启动的报错，具体报错信息如下:</p>
-<pre><code>ls: cannot access /home/cuishou01/bigdata/spark/lib/spark-assembly-*.jar: No such file or directory
-</code></pre><p><strong>原因</strong> : spark 升级到 spark2 以后，原有lib目录下的大JAR包被分散成多个小JAR包，原来的<code>spark-assembly-*.jar</code>已经不存在，所以 hive 没有办法找到这个JAR包。</p>
-<p><strong>解决方案</strong>:</p>
-<pre><code class="bash">→ cd ~/bigdata/hive/bin
-→ cp hive hive_bak  # 修改前备份文件</code></pre>
-<p>修改 <code>~/bigdata/hive/bin/hive</code> 文件中相应部分成如下内容:</p>
-<pre><code class="bash"># add Spark assembly jar to the classpath
-if [[ -n &quot;$SPARK_HOME&quot; ]]
-then
-  sparkAssemblyPath=`ls ${SPARK_HOME}/jars/*.jar`
-  CLASSPATH=&quot;${CLASSPATH}:${sparkAssemblyPath}&quot;
-fi</code></pre>
+        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-邮件"><span class="toc-text">1. 邮件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-爬虫"><span class="toc-text">2. 爬虫</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-绘图"><span class="toc-text">3. 绘图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-数据分析"><span class="toc-text">4. 数据分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-机器学习"><span class="toc-text">5. 机器学习</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-操作-Excel"><span class="toc-text">6. 操作 Excel</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Web-开发"><span class="toc-text">7. Web 开发</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-连接数据库"><span class="toc-text">8. 连接数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-ETL-任务调度"><span class="toc-text">9. ETL 任务调度</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-正则表达式"><span class="toc-text">10. 正则表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-Hadoop相关"><span class="toc-text">11. Hadoop相关</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12-多线程-amp-多进程"><span class="toc-text">12. 多线程 &amp; 多进程</span></a></li></ol></div></p>
+<h1 id="1-邮件"><a href="#1-邮件" class="headerlink" title="1. 邮件"></a>1. 邮件</h1><ul>
+<li>smtplib</li>
+<li>email</li>
+</ul>
+<h1 id="2-爬虫"><a href="#2-爬虫" class="headerlink" title="2. 爬虫"></a>2. 爬虫</h1><ul>
+<li>urllib</li>
+<li>Requests</li>
+<li>Scrapy</li>
+<li>PySpider</li>
+<li>Selenium</li>
+<li>BeautifulSoup</li>
+</ul>
+<h1 id="3-绘图"><a href="#3-绘图" class="headerlink" title="3. 绘图"></a>3. 绘图</h1><ul>
+<li>Matplotlib</li>
+<li>Seaborn</li>
+<li>Bokeh</li>
+<li>Holoviews</li>
+<li>Plotly</li>
+</ul>
+<h1 id="4-数据分析"><a href="#4-数据分析" class="headerlink" title="4. 数据分析"></a>4. 数据分析</h1><ul>
+<li>Pandas</li>
+<li>SciPy</li>
+<li>NumPy</li>
+</ul>
+<h1 id="5-机器学习"><a href="#5-机器学习" class="headerlink" title="5. 机器学习"></a>5. 机器学习</h1><ul>
+<li>Scikit-Learn</li>
+<li>TensorFlow</li>
+<li>Keras</li>
+<li>Theano</li>
+</ul>
+<h1 id="6-操作-Excel"><a href="#6-操作-Excel" class="headerlink" title="6. 操作 Excel"></a>6. 操作 Excel</h1><ul>
+<li>xlwings</li>
+</ul>
+<h1 id="7-Web-开发"><a href="#7-Web-开发" class="headerlink" title="7. Web 开发"></a>7. Web 开发</h1><ul>
+<li>Django</li>
+<li>Flask</li>
+<li>Web2Py</li>
+</ul>
+<h1 id="8-连接数据库"><a href="#8-连接数据库" class="headerlink" title="8. 连接数据库"></a>8. 连接数据库</h1><ul>
+<li>PyMySQL</li>
+<li>MySQLdb</li>
+<li>redis</li>
+<li>pymongo</li>
+<li>impyla</li>
+<li>sqlalchemy</li>
+<li>pymysql</li>
+</ul>
+<h1 id="9-ETL-任务调度"><a href="#9-ETL-任务调度" class="headerlink" title="9. ETL 任务调度"></a>9. ETL 任务调度</h1><ul>
+<li>airflow</li>
+</ul>
+<h1 id="10-正则表达式"><a href="#10-正则表达式" class="headerlink" title="10. 正则表达式"></a>10. 正则表达式</h1><ul>
+<li>re</li>
+</ul>
+<h1 id="11-Hadoop相关"><a href="#11-Hadoop相关" class="headerlink" title="11. Hadoop相关"></a>11. Hadoop相关</h1><ul>
+<li>hdfs</li>
+<li>pyhdfs==0.2.1</li>
+</ul>
+<h1 id="12-多线程-amp-多进程"><a href="#12-多线程-amp-多进程" class="headerlink" title="12. 多线程 &amp; 多进程"></a>12. 多线程 &amp; 多进程</h1><ul>
+<li>pathos</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yu_mingm623@163.com </span>
@@ -763,12 +810,12 @@ fi</code></pre>
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Hive总结</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">167</span></p>
+    <p><span class="copy-title">文章标题:</span>Python常用库</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">154</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-08, 14:48:43</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-08, 15:17:39</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/08/hive-qas/" title="Hive总结">http://www.monsteryu.top/2019/12/08/hive-qas/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-08, 20:04:22</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-08, 20:08:07</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/08/python-common-packages/" title="Python常用库">http://www.monsteryu.top/2019/12/08/python-common-packages/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

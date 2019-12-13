@@ -197,11 +197,11 @@
                             
                         </li>
                             
-                        <li><div data-rel="Markdown">Markdown<small>(1)</small></div>
+                        <li><div data-rel="Notepad">Notepad<small>(1)</small></div>
                             
                         </li>
                             
-                        <li><div data-rel="Notepad">Notepad<small>(1)</small></div>
+                        <li><div data-rel="Markdown">Markdown<small>(1)</small></div>
                             
                         </li>
                             
@@ -442,11 +442,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color4">Requests</a>
+        <a class="color2">chrome</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color2">chrome</a>
+        <a class="color4">Requests</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -462,10 +462,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color2">hadoop</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a class="color2">GitHub</a>
     </li>
     
@@ -474,11 +470,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color1">Python学习资源</a>
+        <a class="color2">hadoop</a>
     </li>
     
     <li class="article-tag-list-item">
         <a class="color3">Jupyter</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Python学习资源</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -502,11 +502,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color4">markdown</a>
+        <a class="color3">notepad</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color3">notepad</a>
+        <a class="color4">markdown</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -959,7 +959,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-13 22:38:46'>2019-11-27 16:53</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-13 22:47:49'>2019-11-27 16:53</time>
         
     </div>
     <div class="article-meta">
@@ -1340,7 +1340,10 @@ category:
 </ul>
 <p><strong>第1处</strong> : 修改文章分类导航栏宽度</p>
 <pre><code class="css">.nav-left
-  width 180px</code></pre>
+  width 180px
+
+.hide-list
+  left 582px</code></pre>
 <p><strong>第2处</strong> : 当修改完之后，选中文章目录分类栏时，高亮的部分不全，需要修改下面 <code>ul &gt; li &gt; div &gt; active &gt; box-shadow</code> 的属性，将 <code>165x</code> 修改为 <code>180px</code>:</p>
 <pre><code class="css">&amp;.active
   color #020202
@@ -1399,7 +1402,7 @@ category:
     <p><span class="copy-title">文章字数:</span><span class="post-count">3.6k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
     <p><span class="copy-title">发布时间:</span>2019-11-27, 16:53:35</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-13, 22:38:46</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-13, 22:47:49</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/11/27/3-hexo-usage/" title="3-hexo主题使用补充">http://www.monsteryu.top/2019/11/27/3-hexo-usage/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -1502,7 +1505,7 @@ category:
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['@郁明敏','#AirFlow','#Logistic Regression','#Centos','#MySQL','#蓝鲸','#Requests','#chrome','#impala','#datagrip','#Flask','#hadoop','#GitHub','#hive','#Python学习资源','#Jupyter','#Linux','#LGBM','#GLIBC','#系统','#Mac','#markdown','#notepad','#pandas','#pycharm','#Python常用库','#impyla','#强化学习','#统计基础','#随机过程','#sublime','#windows软件','#windows','#xshell','#3-hexo','#hexo','#Python小技巧','#Python关键字','#数据挖掘',],
+            'data': ['@郁明敏','#AirFlow','#Logistic Regression','#Centos','#MySQL','#蓝鲸','#chrome','#Requests','#impala','#datagrip','#Flask','#GitHub','#hive','#hadoop','#Jupyter','#Python学习资源','#Linux','#LGBM','#GLIBC','#系统','#Mac','#notepad','#markdown','#pandas','#pycharm','#Python常用库','#impyla','#强化学习','#统计基础','#随机过程','#sublime','#windows软件','#windows','#xshell','#3-hexo','#hexo','#Python小技巧','#Python关键字','#数据挖掘',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

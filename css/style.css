@@ -1717,7 +1717,7 @@ h1 {
   transition: margin-left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 .nav.fullscreen {
-  margin-left: -582px;
+  margin-left: -542px;
 }
 .nav:hover .semicircle {
   margin-left: 0;

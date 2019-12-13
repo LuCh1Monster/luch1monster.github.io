@@ -133,6 +133,34 @@
     
         
             
+            <li><div data-rel="数据库"><i class="fold iconfont icon-right"></i>数据库<small>(5)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="蓝鲸">蓝鲸<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="MySQL">MySQL<small>(2)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Hive">Hive<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Impala">Impala<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
             <li><div data-rel="数据挖掘"><i class="fold iconfont icon-right"></i>数据挖掘<small>(4)</small></div>
                 
                     <ul class="sub hide">
@@ -157,34 +185,6 @@
     
         
             
-            <li><div data-rel="数据库"><i class="fold iconfont icon-right"></i>数据库<small>(5)</small></div>
-                
-                    <ul class="sub hide">
-                        
-                        <li><div data-rel="MySQL">MySQL<small>(2)</small></div>
-                            
-                        </li>
-                            
-                        <li><div data-rel="蓝鲸">蓝鲸<small>(1)</small></div>
-                            
-                        </li>
-                            
-                        <li><div data-rel="Hive">Hive<small>(1)</small></div>
-                            
-                        </li>
-                            
-                        <li><div data-rel="Impala">Impala<small>(1)</small></div>
-                            
-                        </li>
-                            
-                    </ul>
-                
-            </li>
-            
-        
-    
-        
-            
         
     
         
@@ -197,11 +197,11 @@
                             
                         </li>
                             
-                        <li><div data-rel="Notepad">Notepad<small>(1)</small></div>
+                        <li><div data-rel="Markdown">Markdown<small>(1)</small></div>
                             
                         </li>
                             
-                        <li><div data-rel="Markdown">Markdown<small>(1)</small></div>
+                        <li><div data-rel="Notepad">Notepad<small>(1)</small></div>
                             
                         </li>
                             
@@ -388,7 +388,7 @@
     <div><a class="about  site_url"  href="/about">关于</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="41">
-<input type="hidden" id="yelog_site_word_count" value="56.7k">
+<input type="hidden" id="yelog_site_word_count" value="56.9k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -426,6 +426,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a class="color3">蓝鲸</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a class="color5">Logistic Regression</a>
     </li>
     
@@ -435,10 +439,6 @@
     
     <li class="article-tag-list-item">
         <a class="color1">MySQL</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">蓝鲸</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -462,15 +462,15 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a class="color2">hadoop</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a class="color2">GitHub</a>
     </li>
     
     <li class="article-tag-list-item">
         <a class="color5">hive</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">hadoop</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -502,11 +502,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color3">notepad</a>
+        <a class="color4">markdown</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color4">markdown</a>
+        <a class="color3">notepad</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -955,12 +955,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-13 22:44:25'>2019-12-08 10:26</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-13 22:54:03'>2019-12-08 10:26</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:6</span>
+        <span>字数:145</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -979,7 +979,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文档"><span class="toc-text">参考文档</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基于Python的假设检验"><span class="toc-text">基于Python的假设检验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他文档"><span class="toc-text">其他文档</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -995,15 +995,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Hey, password is required here.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="c7b3b7bf88acac67cc2d705aaf93d14b88917deedd1e8a140c035f5e10b42afd">d7750ddce6c0e175951b4fed54e9f188a6bce0ee0695f376ed6a759aff5d6398bf02bfe417b29a37fd85247ed3629e31728cb2e19ce2cb689e08e37dfdfdb3d2551adc6ec721ca3c36fef98ab77fa5c0d903502216d1dbb50161e841f51e731ce91f663625bea7ff4af6b21513499251f77257b6c690fb4d0e94dd775e96fc129c0506c809167c41a1e080ee5ed0501947c2c7f6ea16e8ce22863016691bc42f06a21dc24886276b77dc6f794e9224a521306592cef80384ba8e154b149d0aeb2a81344f6cd79d64f3475d469ab5b9f78ba6c492768626f62d35a025fbfd15aed5ad0b65ed05aa24fc29aad27e8d2a2b7d1f2d159b29b31b0629329e7ca91ba728123f2114f1021e36ffb6e55b2584ae8660093e0d4ad104d75df44575479ac989721382fb9a98b89809ee9381e126d534e6c0f938486ac202e687d560baaf0ee5ae54f04494ae429b86a0dbbafcd86daaa39c5fccd3983b310cc6dbc945eb0ee03d0ab9e1b4a0ed4bdaa6a6d6e03ad12c0cc124b02b2d1585656790f459022dbd8119056da6a34c43840d3439dc60c7b5361ceaca69f20ddd9c013fd2835c1521f07a8eeba425afa99a912ae28fa88cf593bb886ca52576cc21bce9d68908b8e8d92a3df985305f59d9d13d02480af17e6b8005c88dd9c9bdccd37925af5b098f7654ca5a7f5b9cc9fdf87e63476abac6ef0807232fb716c126420143a7744ef5ae918e893717cc5fe148b38d40dfc6c4517b834d29704ac7dd6e0bfd09ae315a773b69e0a6aa9a7961536ba5fd1c49bbf6764ab79f57235da84e33fec1fae9065cbea0475b76daea82beae62cb4e0fdade0446009ec2976574854fc7b80d20518b4ad35636e6e3a5cfdcb8c63f76e52cb2c2fffcf261404d5269ce514468c6633e9c186182eebf178e2211f036213f042b3430ff62fbb5b4a662bc8d8592b18e84c2bf077b76798fca54fc53400437107f55f544a55930ac9bc5f07b4bfc9173014859660716f6c34b127f84ab6e7d390c570cfb9436bdecaed8cd46781894701973ae6028610b1522f9e1a452991f3f994c3ca4939b393352f090b056d7779640393e119f936e5d29fcb85c7db462892617315773a1511132152caadf58926236db25885a23e6303e5746edb2a1a0fa02932ab7529a857d1448a0b4bbb9d384bc26b40edf75d14ea12d7b233697d496a61af0b895678a0c106c13a74611ec403dbb21d1a6887885102991f446d047c634fb1706e298a7f92b7a0beea9d1da369f8a3bf22ce75d1178a67173f0d4c53972cf3a6fb1a0c33205cb6eff4c7fc832a1e9aba2cbbf0684fac1d3179be5f1e184e2cada753286e88c78449fdeae428fc49e875753e3063cd5fdd92c739a76ab72c048af2e485ee32fa071c05808d36960ad27721bd78afffb422c7ac635d5073ff4982db31818abcfe0accbe654e186b27928f2b763b99c0b26e137b317c97e5ea4d3c1b77d726b828218c25fd99d0108b939cc7bc0dce030f3a512417df0964ce48490fee272943fe171391a0342939b9111a9664f8befaafa8cac4efe79024d63b506646201b5afbeae5155d3e9a63dca7ef2014d7619a9c4d0484e27bfc5e3fea02770d565183712c5fa4e7e77f2682244543afa4669a65cfb4e6c05f73763e97107008981eae9daf2a7e92f0d17343c9c536d5fec926534ed810029719df82e3b0aaac5bf482bfa65a321d42be9bc3033d87fbd4f7db3a745042ad52f9570f4a4547299d121373ce5eeaab6fa40a46cc9d5001938b7996dbb108b2e55716b8a8f2dede985031e05f7a67a2bfe62484ceb3b24b5d4b793ecd811b1859c718a12a7271f5677cefbb6ad837026a4e80f82fec67d8264f39afaa631d83b6ff05c618ec27cb086eb167b388536ec0ef250ec9ba45632fa0b3b63a2c0beb21f9963313726ade9ec38f2f3391569deb39b23e8a18723185d4dc165951422fa30be1dee4e29f8646daed60d13301774d24c03defc163bdcb03069a6985aa8b75a53ca6f05f0fae031c833cefdf8f4d0cc1d1ab482ff27d1e1d4d85ae85a84c3cc5ea950118ead748a02b1a7c6fecbd0a24fee854442f30f5f1bf4d26c35a4ca916c04f03f6e6169048a273193477734452f23466d82c78a5959fa4fa6401ed7c42bd600d09d22a7b03664bd1869b019ff8e1c5477d774decf18c7f80d7d47727ef56f2ae34686dad99892e990f5479de497c43fa7871a84091be051f0c43dccea24ed1fcc34c79f1e55a73d4b9cedfaf8ea25bb320ddd5692bfe1991875f7c7bc2b31373f958bb8e39a463b486fa0268a38d5cf02ca1cda1e9ab48bbcb259e6007c4577721dcf8a31331504d386d712c342e86020f68d12a3091e9a74eaefbc3617dcaba67fe8f202f93eecf5bbe3fcb32aa6a7a0c95d27793de7036d07a8611f0c0ca99427d3202ed6a4384d2df71cf00a03a3cc41c0aad260baef4448b71492e2249eba83514c51aca76ec052547b0d45cee5336017010a4955395afe506fe0440a5440c229e74382370337faaa703e3e7ff95ef6f2e81cad07476bfaac5235431b763675a1ed240922d41fc53642e49784b2313d2dc727225f51d8ae9d3dc1f05e6f198afd7f9e86aef8928e4e5c3b5ff2493de57a5370652dd41e02acb264bb56aff7a2b9fb433077fa57eaf5dfdcac8b28e9c89a4622a1a763abc734cf7a6dbb771b168c5c685425722819b1f5a3eeaba1400ce6bab25e697a27210574f3def770796c1cd146120d2acaf12657838be16ee6caa3af9d3810617276f2381f5d107acdf50f226f70dbc912304edc94cb957400247d3aeaf6791ad5615590b190c9b2f0eb7c0309bb9d14d23b2fa71890a4df54a5142bf3a5865c8371474ed94910af8ea645ca89bcd783024cce3bbb357ab7557292db349e506aa0ee07f9d57043a7b98877abc8813bdfdbfc2fcdb3e1bf6a9ebd5d4acc5ab2c6894c02b74f6c643ec2a14c4166fe3673c71a125a65e238a790a7ee0aa4821f9b162d7c3ca05649df5c006cb6170e46c2d36bcc324006a38bc17ed197f8a99cf81ec8b76d0f5eda753d9de23fbde371b5c72ce0f65b93f3419351fa14c18f160067e13859fcbcfaec5b392d4193745f5fb17b5801319c07c639367b6f596aa1c5c80b3fa7ab51a29f75481421bf6bd9d0028cbcbb1a110677e119010be816167630f4d098ef5366aa16f8b8ad1bc8814ca2a5f9c2d2c9ab05ebb28ebc69291dec6ef0448829f347bf1e476dc9c8e710d691de635d075b4afb33a331367079b07679c23619f1bca7aeaa950242a7d3d5cdd76c4ed546e4255f2728d58164a985fff5e3300026ce97d5aff2df901c212b6aba2ef17ada8c0c813d32ee147bf9c7059fda122141ca5475edff5c5fb17833f6729ef4a15df563140fc952c7a53890cb7ebf0b388cddba72ea03280064c236b1b7871022a30c96789a3581c3b36cc6e0cd22098404018cf37e9151b8a1ae23ea8da7e212c072595e30248ea64e1322c5ebb050235c52b85eaa86fa33fbca7cf15233823078c02e3dfdaf5c7c21440500d8aa0ddc2885cc27019a4287a80b3b242d152db0498fd0833979522df82f3b9dbbf94260d570b5a6186d9d097e35de7fa5e55d8c385fafac62737f6132b84d44402c4960148e0077356b98c5254268519c780ebb00f29f0dad8a79b670b7540d847be24a35d2c2f87ed8389d22d25b5fd4f69cdcb3ecdead3caae5ff9e06bf7520b3ca760f6e30e702483bf97f6bf9a98917ed5030b9c55b8699e710989512e56f790d82c36795056fd6d30e12bac8f2723718ea28acc682469e857113ea45d534bb03a314069e16cc51529d3e7d4c1e45332e934c3eb202c1246b4bab116212bd04fc86da0cefc6989c168441bfb32f7af4a79dbbb45d7bb8e884009d6dc0c4cd532a9488597b932370b0cf201b18fff2ee31723a09e46e32a27a45b627848bf198fb8a75840afe7b59c0e6406f37d18558bc14d3</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文档"><span class="toc-text">参考文档</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基于Python的假设检验"><span class="toc-text">基于Python的假设检验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他文档"><span class="toc-text">其他文档</span></a></li></ol></li></ol></div></p>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><h2 id="基于Python的假设检验"><a href="#基于Python的假设检验" class="headerlink" title="基于Python的假设检验"></a>基于Python的假设检验</h2><ul>
+<li>基于python的显著性检验 : <a href="https://www.jianshu.com/p/1adc85d6b647" target="_blank" rel="noopener">https://www.jianshu.com/p/1adc85d6b647</a></li>
+<li><a href="https://blog.csdn.net/m0_37777649/article/details/74938120" target="_blank" rel="noopener">https://blog.csdn.net/m0_37777649/article/details/74938120</a></li>
+<li>T-Table查表: <a href="https://www.statisticshowto.datasciencecentral.com/tables/t-distribution-table/" target="_blank" rel="noopener">https://www.statisticshowto.datasciencecentral.com/tables/t-distribution-table/</a></li>
+<li>单边T检验 : <a href="https://blog.csdn.net/u010891397/article/details/83823822" target="_blank" rel="noopener">https://blog.csdn.net/u010891397/article/details/83823822</a></li>
+<li><a href="https://blog.csdn.net/charie411/article/details/100009024" target="_blank" rel="noopener">https://blog.csdn.net/charie411/article/details/100009024</a></li>
+<li></li>
+</ul>
+<h2 id="其他文档"><a href="#其他文档" class="headerlink" title="其他文档"></a>其他文档</h2><ul>
+<li><a href="http://blog.sina.com.cn/s/blog_13ec737150102wx47.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_13ec737150102wx47.html</a></li>
+<li><a href="https://www.cnblogs.com/tangxianwei/p/8409059.html" target="_blank" rel="noopener">https://www.cnblogs.com/tangxianwei/p/8409059.html</a></li>
+<li><a href="https://blog.csdn.net/Raider_zreo/article/details/101076054" target="_blank" rel="noopener">https://blog.csdn.net/Raider_zreo/article/details/101076054</a></li>
+<li><a href="http://www.360doc.com/content/18/0727/08/27499672_773529942.shtml" target="_blank" rel="noopener">http://www.360doc.com/content/18/0727/08/27499672_773529942.shtml</a></li>
+<li><a href="https://www.cnblogs.com/IvyWong/p/10134012.html" target="_blank" rel="noopener">https://www.cnblogs.com/IvyWong/p/10134012.html</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1187254" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1187254</a></li>
+<li><a href="https://blog.csdn.net/guomutian911/article/details/81604545" target="_blank" rel="noopener">https://blog.csdn.net/guomutian911/article/details/81604545</a></li>
+<li><a href="https://blog.csdn.net/bxy5511/article/details/81508262" target="_blank" rel="noopener">https://blog.csdn.net/bxy5511/article/details/81508262</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/54395699" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/54395699</a></li>
+</ul>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yu_mingm623@163.com </span>
     </div>
@@ -1017,10 +1029,10 @@
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>统计假设检验概论</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">6</span></p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">162</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
     <p><span class="copy-title">发布时间:</span>2019-12-08, 10:26:23</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-13, 22:44:25</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-13, 22:54:03</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/08/statistics-hypothesis-testing/" title="统计假设检验概论">http://www.monsteryu.top/2019/12/08/statistics-hypothesis-testing/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -1123,7 +1135,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['@郁明敏','#AirFlow','#Logistic Regression','#Centos','#MySQL','#蓝鲸','#chrome','#Requests','#impala','#datagrip','#Flask','#GitHub','#hive','#hadoop','#Jupyter','#Python学习资源','#Linux','#LGBM','#GLIBC','#系统','#Mac','#notepad','#markdown','#pandas','#pycharm','#Python常用库','#impyla','#强化学习','#统计基础','#随机过程','#sublime','#windows软件','#windows','#xshell','#3-hexo','#hexo','#Python小技巧','#Python关键字','#数据挖掘',],
+            'data': ['@郁明敏','#AirFlow','#蓝鲸','#Logistic Regression','#Centos','#MySQL','#chrome','#Requests','#impala','#datagrip','#Flask','#hadoop','#GitHub','#hive','#Jupyter','#Python学习资源','#Linux','#LGBM','#GLIBC','#系统','#Mac','#markdown','#notepad','#pandas','#pycharm','#Python常用库','#impyla','#强化学习','#统计基础','#随机过程','#sublime','#windows软件','#windows','#xshell','#3-hexo','#hexo','#Python小技巧','#Python关键字','#数据挖掘',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

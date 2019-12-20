@@ -2,19 +2,22 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Impala常规使用 | 路痴大魔王</title>
-  <meta name="keywords" content=" impala ">
-  <meta name="description" content="Impala常规使用 | 路痴大魔王">
+  <title>使用Flask RESTful开发数据API接口 | 路痴大魔王</title>
+  <meta name="keywords" content=" Flask ">
+  <meta name="description" content="使用Flask RESTful开发数据API接口 | 路痴大魔王">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="页面未找到！">
+<meta name="description" content="有幸参考了《深度实践-Spark机器学习》、《Python深度学习:基于PyTorch》书籍的编写，有兴趣的话大家可以支持一下。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="404">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.monsteryu.top&#x2F;404.html">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.monsteryu.top&#x2F;about&#x2F;index.html">
 <meta property="og:site_name" content="路痴大魔王">
-<meta property="og:description" content="页面未找到！">
+<meta property="og:description" content="有幸参考了《深度实践-Spark机器学习》、《Python深度学习:基于PyTorch》书籍的编写，有兴趣的话大家可以支持一下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-01T14:55:52.181Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191203201849591.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191203230521163.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-12-03T15:15:35.732Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191203201849591.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70">
 
 
 <link rel="icon" href="/img/avatar4.jpg">
@@ -109,15 +112,15 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(42)</small></div></li>
+    <li><div class="all active">全部文章<small>(43)</small></div></li>
     
         
             
-            <li><div data-rel="后端"><i class="fold iconfont icon-right"></i>后端<small>(15)</small></div>
+            <li><div data-rel="后端"><i class="fold iconfont icon-right"></i>后端<small>(16)</small></div>
                 
                     <ul class="sub hide">
                         
-                        <li><div data-rel="Python">Python<small>(14)</small></div>
+                        <li><div data-rel="Python">Python<small>(15)</small></div>
                             
                         </li>
                             
@@ -137,11 +140,11 @@
                 
                     <ul class="sub hide">
                         
-                        <li><div data-rel="蓝鲸">蓝鲸<small>(1)</small></div>
+                        <li><div data-rel="MySQL">MySQL<small>(2)</small></div>
                             
                         </li>
                             
-                        <li><div data-rel="MySQL">MySQL<small>(2)</small></div>
+                        <li><div data-rel="蓝鲸">蓝鲸<small>(1)</small></div>
                             
                         </li>
                             
@@ -185,15 +188,15 @@
     
         
             
-        
-    
-        
-            
             <li><div data-rel="工具"><i class="fold iconfont icon-right"></i>工具<small>(9)</small></div>
                 
                     <ul class="sub hide">
                         
                         <li><div data-rel="Chrome">Chrome<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="GitHub">GitHub<small>(1)</small></div>
                             
                         </li>
                             
@@ -210,10 +213,6 @@
                         </li>
                             
                         <li><div data-rel="Sublime">Sublime<small>(1)</small></div>
-                            
-                        </li>
-                            
-                        <li><div data-rel="GitHub">GitHub<small>(1)</small></div>
                             
                         </li>
                             
@@ -253,9 +252,21 @@
     
         
             
+        
+    
+        
+            
+        
+    
+        
+            
             <li><div data-rel="学习资源">学习资源<small>(1)</small></div>
                 
             </li>
+            
+        
+    
+        
             
         
     
@@ -280,14 +291,6 @@
                     </ul>
                 
             </li>
-            
-        
-    
-        
-            
-        
-    
-        
             
         
     
@@ -349,14 +352,6 @@
     
         
             
-        
-    
-        
-            
-        
-    
-        
-            
             <li><div data-rel="前端"><i class="fold iconfont icon-right"></i>前端<small>(1)</small></div>
                 
                     <ul class="sub hide">
@@ -379,6 +374,14 @@
             
         
     
+        
+            
+        
+    
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -387,8 +390,8 @@
     </div>
     <div><a class="about  site_url"  href="/about">关于</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="42">
-<input type="hidden" id="yelog_site_word_count" value="66.6k">
+<input type="hidden" id="yelog_site_posts_number" value="43">
+<input type="hidden" id="yelog_site_word_count" value="78.4k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -434,6 +437,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a class="color2">chrome</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a class="color2">Centos</a>
     </li>
     
@@ -442,11 +449,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color2">chrome</a>
+        <a class="color4">Requests</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color4">Requests</a>
+        <a class="color4">datagrip</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -454,7 +461,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color4">datagrip</a>
+        <a class="color2">hadoop</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -466,11 +473,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color2">hadoop</a>
+        <a class="color5">hive</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color5">hive</a>
+        <a class="color3">Jupyter</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -478,7 +485,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color3">Jupyter</a>
+        <a class="color4">markdown</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -502,15 +509,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color2">pandas</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">markdown</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a class="color3">notepad</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">pandas</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -527,10 +530,6 @@
     
     <li class="article-tag-list-item">
         <a class="color5">强化学习</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">统计基础</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -574,6 +573,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a class="color5">统计基础</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a class="color1">Django用户登录</a>
     </li>
     
@@ -593,6 +596,14 @@
            data-author="郁明敏" >
             <span class="post-title" title="3-hexo主题使用补充">3-hexo主题使用补充</span>
             <span class="post-date" title="2019-11-27 16:53:35">2019/11/27</span>
+        </a>
+        
+        <a  class="后端 Python "
+           href="/2019/12/20/use-flask-develop-data-api/"
+           data-tag="Flask"
+           data-author="郁明敏" >
+            <span class="post-title" title="使用Flask RESTful开发数据API接口">使用Flask RESTful开发数据API接口</span>
+            <span class="post-date" title="2019-12-20 14:42:54">2019/12/20</span>
         </a>
         
         <a  class="后端 Python "
@@ -772,7 +783,7 @@
         </a>
         
         <a  class="数据库 Impala "
-           href="/2019/12/08/impala-commonn-usages/"
+           href="/2019/12/08/impala-common-usages/"
            data-tag="impala"
            data-author="郁明敏" >
             <span class="post-title" title="Impala常规使用">Impala常规使用</span>
@@ -839,7 +850,7 @@
            href="/2019/12/08/statistics-hypothesis-testing/"
            data-tag="统计基础"
            data-author="郁明敏" >
-            <span class="post-title" title="统计假设检验概论">统计假设检验概论</span>
+            <span class="post-title" title="统计假设检验">统计假设检验</span>
             <span class="post-date" title="2019-12-08 10:26:23">2019/12/08</span>
         </a>
         
@@ -939,9 +950,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-impala-commonn-usages" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-use-flask-develop-data-api" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Impala常规使用</h1>
+        <h1 class="article-title">使用Flask RESTful开发数据API接口</h1>
     
     <div class="article-meta">
         
@@ -951,28 +962,28 @@
         
         <span class="book">
             
-                <a  data-rel="数据库">数据库</a>/
+                <a  data-rel="后端">后端</a>/
             
-                <a  data-rel="Impala">Impala</a>
+                <a  data-rel="Python">Python</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color2">impala</a>
+            <a class="color1">Flask</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-08 15:16:42'>2019-12-08 14:56</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-20 23:36:37'>2019-12-20 14:42</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:191</span>
+        <span>字数:1.5k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -991,7 +1002,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-更新-Hive-元数据到-Impala"><span class="toc-text">1. 更新 Hive 元数据到 Impala</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建-Impala-外部表"><span class="toc-text">2. 创建 Impala 外部表</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Web框架的选择"><span class="toc-text">1. Web框架的选择</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-REST-简介"><span class="toc-text">2. REST 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#REST的六个特性："><span class="toc-text">REST的六个特性：</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-简单的-RESTful-API-实现"><span class="toc-text">3. 简单的 RESTful API 实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-实例一"><span class="toc-text">3.1 实例一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-实例二"><span class="toc-text">3.2 实例二</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-使用-flask-restful-扩展库开发-API"><span class="toc-text">4. 使用 flask-restful 扩展库开发 API</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-示例"><span class="toc-text">4.1 示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-具体解释"><span class="toc-text">4.2 具体解释</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-基于-Flask-开发企业级别-REST-API-应用"><span class="toc-text">5. 基于 Flask 开发企业级别 REST API 应用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-参考文档"><span class="toc-text">6.参考文档</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1007,22 +1018,269 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-更新-Hive-元数据到-Impala"><span class="toc-text">1. 更新 Hive 元数据到 Impala</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建-Impala-外部表"><span class="toc-text">2. 创建 Impala 外部表</span></a></li></ol></div></p>
-<h1 id="1-更新-Hive-元数据到-Impala"><a href="#1-更新-Hive-元数据到-Impala" class="headerlink" title="1. 更新 Hive 元数据到 Impala"></a>1. 更新 Hive 元数据到 Impala</h1><p>有时候数据在 Hive 已经更新了，但是 Impala 中却始终获取不到数据，原因在于元数据在 Impala 中没有刷新。需要在 Impala 中执行如下代码来更新数据(在 Hive 中是不可以执行的，且执行是无效的):</p>
-<pre><code class="sql">invalidate metadata [db.tb_name]
-;</code></pre>
-<h1 id="2-创建-Impala-外部表"><a href="#2-创建-Impala-外部表" class="headerlink" title="2. 创建 Impala 外部表"></a>2. 创建 Impala 外部表</h1><ol>
-<li>上传 CSV 文件至 HDFS。<strong>注意</strong>: CSV 文件的列名应该去掉，否则创建出来的表第一行会存在问题。</li>
-<li>每个表应为一个文件夹，文件夹中存放的数据为分区表数据。</li>
-<li>在 Impala 编辑器中执行下面代码。</li>
-</ol>
-<pre><code class="sql">create external table test.test1(
-    字段 类型,
-    ...
-)
-row format delimited fields terminated by &#39;,&#39; 
-stored as textfile
-location &#39;/PATH/to/tb_directory&#39;</code></pre>
+        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Web框架的选择"><span class="toc-text">1. Web框架的选择</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-REST-简介"><span class="toc-text">2. REST 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#REST的六个特性："><span class="toc-text">REST的六个特性：</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-简单的-RESTful-API-实现"><span class="toc-text">3. 简单的 RESTful API 实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-实例一"><span class="toc-text">3.1 实例一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-实例二"><span class="toc-text">3.2 实例二</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-使用-flask-restful-扩展库开发-API"><span class="toc-text">4. 使用 flask-restful 扩展库开发 API</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-示例"><span class="toc-text">4.1 示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-具体解释"><span class="toc-text">4.2 具体解释</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-基于-Flask-开发企业级别-REST-API-应用"><span class="toc-text">5. 基于 Flask 开发企业级别 REST API 应用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-参考文档"><span class="toc-text">6.参考文档</span></a></li></ol></div></p>
+<h1 id="1-Web框架的选择"><a href="#1-Web框架的选择" class="headerlink" title="1. Web框架的选择"></a>1. Web框架的选择</h1><ul>
+<li>Djang : 流行但是笨重，还麻烦，人生苦短，肯定不选</li>
+<li>web.py : 轻量，但据说作者仙逝无人维护</li>
+<li>tornado : 据说倡导自己造轮子，虽然是facebook开源的吧，但听到这个，就算了吧</li>
+<li>flask : 轻量，流行，可以自己定义</li>
+</ul>
+<h1 id="2-REST-简介"><a href="#2-REST-简介" class="headerlink" title="2. REST 简介"></a>2. REST 简介</h1><p><strong>REST</strong>(Representational State Transfer)是一种架构风格，表述了网络中客户端于服务端的一种交互，REST 本身是不实用的，关键的是如何设计它。REST 架构就是为了 HTTP 协议设计的。RESTful web services 的核心概念是管理资源。资源是由 URIs 来表示，客户端使用HTTP当中的 <code>POST,GET, PUT, DELETE</code> 等方法发送请求到服务器，改变相应的资源状态。</p>
+<p><img src="https://img-blog.csdnimg.cn/20191220152421822.png" alt="在这里插入图片描述"></p>
+<h5 id="REST的六个特性："><a href="#REST的六个特性：" class="headerlink" title="REST的六个特性："></a>REST的六个特性：</h5><ul>
+<li>服务器端与客户端分离。</li>
+<li>无状态.</li>
+<li>可缓存</li>
+<li>分层结构</li>
+<li>统一接口</li>
+<li>按需执行代码</li>
+</ul>
+<h1 id="3-简单的-RESTful-API-实现"><a href="#3-简单的-RESTful-API-实现" class="headerlink" title="3. 简单的 RESTful API 实现"></a>3. 简单的 RESTful API 实现</h1><h2 id="3-1-实例一"><a href="#3-1-实例一" class="headerlink" title="3.1 实例一"></a>3.1 实例一</h2><pre><code class="python">from flask import Flask, abort, request, jsonify
+
+app = Flask(__name__)
+
+# 测试数据暂时存放
+tasks = []
+
+@app.route(&#39;/add_task/&#39;, methods=[&#39;POST&#39;])
+def add_task():
+    if not request.json or &#39;id&#39; not in request.json \
+        or &#39;info&#39; not in request.json:
+        abort(400)
+    task = {
+        &#39;id&#39;: request.json[&#39;id&#39;],
+        &#39;info&#39;: request.json[&#39;info&#39;]
+    }
+    tasks.append(task)
+    return jsonify({&#39;result&#39;: &#39;success&#39;})
+
+
+@app.route(&#39;/get_task/&#39;, methods=[&#39;GET&#39;])
+def get_task():
+    if not request.args or &#39;id&#39; not in request.args:
+        # 没有指定id则返回全部
+        return jsonify(tasks)
+    else:
+        task_id = request.args[&#39;id&#39;]
+        task = filter(lambda t: t[&#39;id&#39;] == int(task_id), tasks)
+        return jsonify(task) if task else jsonify({&#39;result&#39;: &#39;not found&#39;})
+
+
+if __name__ == &quot;__main__&quot;:
+    # 将host设置为0.0.0.0，则外网用户也可以访问到这个服务
+    app.run(host=&quot;0.0.0.0&quot;, port=8383, debug=True)
+</code></pre>
+<h2 id="3-2-实例二"><a href="#3-2-实例二" class="headerlink" title="3.2 实例二"></a>3.2 实例二</h2><pre><code class="python">from flask import Flask, jsonify, abort, request
+
+app = Flask(__name__)
+books = [
+    {
+        &#39;id&#39;: 1,
+        &#39;title&#39;: u&#39;论语&#39;,
+        &#39;auther&#39;: u&#39;孔子&#39;,
+        &#39;price&#39;: 18
+    },
+    {
+        &#39;id&#39;: 2,
+        &#39;title&#39;: u&#39;道德经&#39;,
+        &#39;auther&#39;: u&#39;老子&#39;,
+        &#39;price&#39;: 15
+    }
+]
+
+@app.route(&#39;/bookstore/api/v1/books&#39;, methods=[&#39;GET&#39;])
+def get_tasks():
+    return jsonify({&#39;books&#39;: books})
+
+
+@app.route(&#39;/bookstore/api/v1/books/&lt;int:id&gt;&#39;, methods=[&#39;GET&#39;])
+def get_task(id):
+    for book in books:
+        if book[&#39;id&#39;] == id:
+            return jsonify({&#39;book&#39;: book})
+    abort(404)
+
+
+@app.route(&#39;/bookstore/api/v1/books/&#39;, methods=[&#39;POST&#39;])
+def create_task():
+    if not request.form or not &#39;title&#39; in request.form:
+        abort(400)
+    book = {
+        &#39;id&#39;: books[-1][&#39;id&#39;] + 1,
+        &#39;title&#39;: request.form[&#39;title&#39;],
+        &#39;auther&#39;: request.form[&#39;auther&#39;],
+        &#39;price&#39;: request.form[&#39;price&#39;],
+    }
+    books.append(book)
+    return jsonify({&#39;book&#39;: book}), 201
+
+@app.route(&#39;/bookstore/api/v1/books/&lt;int:id&gt;&#39;, methods=[&#39;PUT&#39;])
+def update_book(id):
+    for book in books:
+        if book[&#39;id&#39;] == id:
+            book[&quot;title&quot;] = request.form[&#39;title&#39;]
+            book[&quot;auther&quot;] = request.form[&#39;auther&#39;]
+            book[&quot;price&quot;] = request.form[&#39;price&#39;]
+        return jsonify({&#39;books&#39;: books})
+    abort(400)
+
+
+@app.route(&#39;/bookstore/api/v1/books/&lt;int:id&gt;&#39;, methods=[&#39;DELETE&#39;])
+def delete_task(id):
+    for book in books:
+        if book[&#39;id&#39;] == id:
+            books.remove(book)
+            return jsonify({&#39;result&#39;: True})
+    abort(404)
+
+    return jsonify({&#39;result&#39;: True})
+
+
+if __name__ == &#39;__main__&#39;:
+    app.run(debug=True)
+</code></pre>
+<h1 id="4-使用-flask-restful-扩展库开发-API"><a href="#4-使用-flask-restful-扩展库开发-API" class="headerlink" title="4. 使用 flask-restful 扩展库开发 API"></a>4. 使用 flask-restful 扩展库开发 API</h1><p>首先安装 Flask-RESTful 库:</p>
+<pre><code class="bash">→ pip install flask-restful</code></pre>
+<h2 id="4-1-示例"><a href="#4-1-示例" class="headerlink" title="4.1 示例"></a>4.1 示例</h2><pre><code class="python">from flask import Flask
+from flask_restful import reqparse, abort, Api, Resource
+
+app = Flask(__name__)
+api = Api(app)
+
+TODOS = {
+    &#39;todo1&#39;: {&#39;task&#39;: &#39;build an API&#39;},
+    &#39;todo2&#39;: {&#39;task&#39;: &#39;哈哈哈&#39;},
+    &#39;todo3&#39;: {&#39;task&#39;: &#39;profit!&#39;},
+}
+
+def abort_if_todo_doesnt_exist(todo_id):
+    if todo_id not in TODOS:
+        abort(404, message=&quot;Todo {} doesn&#39;t exist&quot;.format(todo_id))
+
+
+parser = reqparse.RequestParser()
+parser.add_argument(&#39;task&#39;)
+
+# 操作(put / get / delete)单一资源 Todo
+# shows a single todo item and lets you delete a todo item
+class Todo(Resource):
+    def get(self, todo_id):
+        abort_if_todo_doesnt_exist(todo_id)
+        return TODOS[todo_id]
+
+    def delete(self, todo_id):
+        abort_if_todo_doesnt_exist(todo_id)
+        del TODOS[todo_id]
+        return &#39;&#39;, 204
+
+    def put(self, todo_id):
+        args = parser.parse_args()
+        task = {&#39;task&#39;: args[&#39;task&#39;]}
+        TODOS[todo_id] = task
+        return task, 201
+
+# 操作(post / get)资源列表TodoList
+# shows a list of all todos, and lets you POST to add new tasks
+class TodoList(Resource):
+    def get(self):
+        return TODOS
+
+    def post(self):
+        args = parser.parse_args()
+        todo_id = int(max(TODOS.keys()).lstrip(&#39;todo&#39;)) + 1
+        todo_id = &#39;todo%i&#39; % todo_id
+        TODOS[todo_id] = {&#39;task&#39;: args[&#39;task&#39;]}
+        return TODOS[todo_id], 201
+
+# 设置路由
+api.add_resource(TodoList, &#39;/todos&#39;)
+api.add_resource(Todo, &#39;/todos/&lt;todo_id&gt;&#39;)
+
+if __name__ == &#39;__main__&#39;:
+    app.run(debug=True)
+</code></pre>
+<h2 id="4-2-具体解释"><a href="#4-2-具体解释" class="headerlink" title="4.2 具体解释"></a>4.2 具体解释</h2><ul>
+<li>引入需要的库名、函数、变量等，并做简单的 <code>Application</code> 初始化:</li>
+</ul>
+<pre><code class="python">from flask import Flask
+from flask_restful import reqparse, abort, Api, Resource
+
+app = Flask(__name__)
+api = Api(app)
+</code></pre>
+<ul>
+<li>定义我们需要操作的资源类型，注意都是 <code>json</code> 格式的:</li>
+</ul>
+<pre><code class="python">TODOS = {
+    &#39;todo1&#39;: {&#39;task&#39;: &#39;build an API&#39;},
+    &#39;todo2&#39;: {&#39;task&#39;: &#39;哈哈哈&#39;},
+    &#39;todo3&#39;: {&#39;task&#39;: &#39;profit!&#39;},
+}</code></pre>
+<ul>
+<li>Flask-RESTful 提供了一个用于参数解析的 <code>RequestParser</code> 类，类似于 Python 中自带的 <code>argparse</code> 类，可以很方便的解析请求中的 <code>-d</code> 参数，并进行类型转换。</li>
+</ul>
+<pre><code class="python">parser = reqparse.RequestParser()
+parser.add_argument(&#39;task&#39;)
+</code></pre>
+<ul>
+<li>我们观察标准的 API 接口，这里的接口可以分为两类 : 带有 <code>item_id</code> 的，和不带有 <code>item_id</code> 的。前者是操作单一资源，后者是操作资源列表或新建一个资源。从操作单一资源开始，继承<code>Resource</code> 类，并添加 <code>put / get / delete</code> 方法:</li>
+</ul>
+<pre><code class="python">class Todo(Resource):
+    def get(self, todo_id):
+        abort_if_todo_doesnt_exist(todo_id)
+        return TODOS[todo_id]
+
+    def delete(self, todo_id):
+        abort_if_todo_doesnt_exist(todo_id)
+        del TODOS[todo_id]
+        return &#39;&#39;, 204
+
+    def put(self, todo_id):
+        args = parser.parse_args()
+        task = {&#39;task&#39;: args[&#39;task&#39;]}
+        TODOS[todo_id] = task
+        return task, 201
+</code></pre>
+<ul>
+<li>继续操作资源列表，继承 <code>Resource</code> 类，并添加 <code>get / post</code> 方法:</li>
+</ul>
+<pre><code class="python">class TodoList(Resource):
+    def get(self):
+        return TODOS
+
+    def post(self):
+        args = parser.parse_args()
+        todo_id = int(max(TODOS.keys()).lstrip(&#39;todo&#39;)) + 1
+        todo_id = &#39;todo%i&#39; % todo_id
+        TODOS[todo_id] = {&#39;task&#39;: args[&#39;task&#39;]}
+        return TODOS[todo_id], 201
+</code></pre>
+<ul>
+<li>资源操作类定义完毕之后，需要设置路由，即告诉 Python 程序 URL 的对应关系。</li>
+</ul>
+<pre><code class="python">api.add_resource(TodoList, &#39;/todos&#39;)
+api.add_resource(Todo, &#39;/todos/&lt;todo_id&gt;&#39;)
+</code></pre>
+<blockquote>
+<p>  测试的话，可以使用 POSTMAN 软件来进行测试。</p>
+</blockquote>
+<h1 id="5-基于-Flask-开发企业级别-REST-API-应用"><a href="#5-基于-Flask-开发企业级别-REST-API-应用" class="headerlink" title="5. 基于 Flask 开发企业级别 REST API 应用"></a>5. 基于 Flask 开发企业级别 REST API 应用</h1><p><strong>参考博客</strong>:</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/78758013" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/78758013</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/78758238" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/78758238</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/79173036" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/79173036</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/7917343" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/7917343</a></li>
+</ul>
+<h1 id="6-参考文档"><a href="#6-参考文档" class="headerlink" title="6.参考文档"></a>6.参考文档</h1><ul>
+<li><a href="https://www.jianshu.com/p/ed1f819a7b58" target="_blank" rel="noopener">https://www.jianshu.com/p/ed1f819a7b58</a></li>
+<li>Tornado、Nginx部署Flask程序: <a href="https://www.cnblogs.com/ihappycat/p/10368386.html" target="_blank" rel="noopener">https://www.cnblogs.com/ihappycat/p/10368386.html</a></li>
+<li><a href="https://www.jianshu.com/p/bee9e61aca14" target="_blank" rel="noopener">https://www.jianshu.com/p/bee9e61aca14</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/79173036" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/79173036</a></li>
+<li><a href="https://www.jb51.net/article/151175.htm" target="_blank" rel="noopener">https://www.jb51.net/article/151175.htm</a></li>
+<li><a href="https://blog.csdn.net/jx950915/article/details/90672557" target="_blank" rel="noopener">https://blog.csdn.net/jx950915/article/details/90672557</a></li>
+<li>用户认证: <a href="https://www.veryarm.com/19191.html" target="_blank" rel="noopener">https://www.veryarm.com/19191.html</a></li>
+<li><a href="https://www.cnblogs.com/cleven/p/10979068.html" target="_blank" rel="noopener">https://www.cnblogs.com/cleven/p/10979068.html</a></li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yu_mingm623@163.com </span>
@@ -1036,12 +1294,12 @@ location &#39;/PATH/to/tb_directory&#39;</code></pre>
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Impala常规使用</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">207</span></p>
+    <p><span class="copy-title">文章标题:</span>使用Flask RESTful开发数据API接口</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">1.6k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-08, 14:56:27</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-08, 15:16:42</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/08/impala-commonn-usages/" title="Impala常规使用">http://www.monsteryu.top/2019/12/08/impala-commonn-usages/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-20, 14:42:54</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-20, 23:36:37</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/20/use-flask-develop-data-api/" title="使用Flask RESTful开发数据API接口">http://www.monsteryu.top/2019/12/20/use-flask-develop-data-api/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
@@ -1143,7 +1401,7 @@ location &#39;/PATH/to/tb_directory&#39;</code></pre>
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['@郁明敏','#AirFlow','#蓝鲸','#Logistic Regression','#Centos','#MySQL','#chrome','#Requests','#impala','#datagrip','#Flask','#GitHub','#hadoop','#hive','#Python学习资源','#Jupyter','#Linux','#LGBM','#GLIBC','#系统','#Mac','#pandas','#markdown','#notepad','#pycharm','#Python常用库','#impyla','#强化学习','#统计基础','#随机过程','#sublime','#windows软件','#windows','#xshell','#3-hexo','#hexo','#Python小技巧','#Python关键字','#数据挖掘','#Django用户登录',],
+            'data': ['@郁明敏','#AirFlow','#蓝鲸','#Logistic Regression','#chrome','#Centos','#MySQL','#Requests','#datagrip','#impala','#hadoop','#Flask','#GitHub','#hive','#Jupyter','#Python学习资源','#markdown','#Linux','#LGBM','#GLIBC','#系统','#Mac','#notepad','#pandas','#pycharm','#Python常用库','#impyla','#强化学习','#随机过程','#sublime','#windows软件','#windows','#xshell','#3-hexo','#hexo','#Python小技巧','#Python关键字','#数据挖掘','#统计基础','#Django用户登录',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

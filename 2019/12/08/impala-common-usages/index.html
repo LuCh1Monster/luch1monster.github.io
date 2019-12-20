@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Linux总结 | 路痴大魔王</title>
-  <meta name="keywords" content=" Linux , LGBM , GLIBC ">
-  <meta name="description" content="Linux总结 | 路痴大魔王">
+  <title>Impala常规使用 | 路痴大魔王</title>
+  <meta name="keywords" content=" impala ">
+  <meta name="description" content="Impala常规使用 | 路痴大魔王">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="有幸参考了《深度实践-Spark机器学习》、《Python深度学习:基于PyTorch》书籍的编写，有兴趣的话大家可以支持一下。">
 <meta property="og:type" content="website">
@@ -950,9 +950,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-linux-common-usages" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-impala-common-usages" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Linux总结</h1>
+        <h1 class="article-title">Impala常规使用</h1>
     
     <div class="article-meta">
         
@@ -962,32 +962,28 @@
         
         <span class="book">
             
-                <a  data-rel="系统">系统</a>/
+                <a  data-rel="数据库">数据库</a>/
             
-                <a  data-rel="Linux">Linux</a>
+                <a  data-rel="Impala">Impala</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a class="color1">Linux</a>
-            
-            <a class="color5">LGBM</a>
-            
-            <a class="color1">GLIBC</a>
+            <a class="color2">impala</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-12-08 22:30:26'>2019-12-08 18:02</time>
+        创建时间:<time class="date" title='更新时间: 2019-12-20 23:40:17'>2019-12-08 14:56</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:900</span>
+        <span>字数:2.4k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1006,7 +1002,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-nohup后台挂起任务"><span class="toc-text">1. nohup后台挂起任务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-1-终端运行"><span class="toc-text">1.1 终端运行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-2-脚本后台挂起"><span class="toc-text">1.2 脚本后台挂起</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-安装ohmyzsh"><span class="toc-text">2. 安装ohmyzsh</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-安装-zsh"><span class="toc-text">2.1 安装 zsh</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-安装-oh-my-zsh"><span class="toc-text">2.2 安装 oh ~my ~zsh</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Centos源码方式安装-gcc"><span class="toc-text">3.  Centos源码方式安装 gcc</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Centos更新系统时间"><span class="toc-text">4. Centos更新系统时间</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Centos安装glibc-2-14"><span class="toc-text">5. Centos安装glibc-2.14</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Vim-Cheat-Sheet"><span class="toc-text">6. Vim Cheat Sheet</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-更新-Hive-元数据到-Impala"><span class="toc-text">1. 更新 Hive 元数据到 Impala</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建-Impala-外部表"><span class="toc-text">2. 创建 Impala 外部表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-加载分区"><span class="toc-text">3. 加载分区</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-refresh-和-invalidate-metadata-的区别"><span class="toc-text">4. refresh 和 invalidate metadata 的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-外部表和内部表的区别"><span class="toc-text">5. 外部表和内部表的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-表的基本格式"><span class="toc-text">6. 表的基本格式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Impala-统计信息"><span class="toc-text">7. Impala 统计信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-Join策略"><span class="toc-text">8. Join策略</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-broadcast-join"><span class="toc-text">8.1 broadcast join</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-partitioned-join"><span class="toc-text">8.2 partitioned join</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-broadcast-和-partitioned-join-的区别"><span class="toc-text">8.3 broadcast 和 partitioned join 的区别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-SQL优化"><span class="toc-text">9. SQL优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1-Explain-查看执行计划"><span class="toc-text">9.1 Explain 查看执行计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-2-如何调优"><span class="toc-text">9.2 如何调优</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-INSERT-INTO-和-INSERT-OVERWRITE"><span class="toc-text">10. INSERT INTO 和 INSERT OVERWRITE</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-LOAD-DATA"><span class="toc-text">11. LOAD DATA</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12-常用函数"><span class="toc-text">12. 常用函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#13-分析函数"><span class="toc-text">13. 分析函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#14-其他操作"><span class="toc-text">14. 其他操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#14-1-查询数据库包含关键字的表"><span class="toc-text">14.1 查询数据库包含关键字的表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-2-重新命名表名"><span class="toc-text">14.2 重新命名表名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-3-增加一列"><span class="toc-text">14.3 增加一列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-4-更改字段名以及类型"><span class="toc-text">14.4 更改字段名以及类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-5-更改字段类型"><span class="toc-text">14.5 更改字段类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-6-删除表"><span class="toc-text">14.6 删除表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#15-Hive与Impala异同点"><span class="toc-text">15. Hive与Impala异同点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#15-1-相同点"><span class="toc-text">15.1 相同点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-2-不同点"><span class="toc-text">15.2 不同点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#16-相关概念"><span class="toc-text">16. 相关概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#16-1-数据倾斜"><span class="toc-text">16.1 数据倾斜</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#17-WITH"><span class="toc-text">17. WITH</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1022,106 +1018,220 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-nohup后台挂起任务"><span class="toc-text">1. nohup后台挂起任务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-1-终端运行"><span class="toc-text">1.1 终端运行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-2-脚本后台挂起"><span class="toc-text">1.2 脚本后台挂起</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-安装ohmyzsh"><span class="toc-text">2. 安装ohmyzsh</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-安装-zsh"><span class="toc-text">2.1 安装 zsh</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-安装-oh-my-zsh"><span class="toc-text">2.2 安装 oh ~my ~zsh</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Centos源码方式安装-gcc"><span class="toc-text">3.  Centos源码方式安装 gcc</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Centos更新系统时间"><span class="toc-text">4. Centos更新系统时间</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Centos安装glibc-2-14"><span class="toc-text">5. Centos安装glibc-2.14</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Vim-Cheat-Sheet"><span class="toc-text">6. Vim Cheat Sheet</span></a></li></ol></div></p>
-<h1 id="1-nohup后台挂起任务"><a href="#1-nohup后台挂起任务" class="headerlink" title="1. nohup后台挂起任务"></a>1. nohup后台挂起任务</h1><h1 id="1-1-终端运行"><a href="#1-1-终端运行" class="headerlink" title="1.1 终端运行"></a>1.1 终端运行</h1><p>可以使用 nohup 来将 jupyter 挂起在后台:</p>
-<pre><code class="bash">→ nohup jupyter notebook --ip=&#39;*&#39; --no-browser &gt; jupyter.log 2&gt;&amp;1 &amp;</code></pre>
-<h1 id="1-2-脚本后台挂起"><a href="#1-2-脚本后台挂起" class="headerlink" title="1.2 脚本后台挂起"></a>1.2 脚本后台挂起</h1><p>上面终端运行的方式，其实还是需要按下回车键才能将任务在后台挂起。下面介绍一种脚本方式，可以避免这个问题:</p>
-<pre><code class="bash">#!/bin/bash
+        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-更新-Hive-元数据到-Impala"><span class="toc-text">1. 更新 Hive 元数据到 Impala</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-创建-Impala-外部表"><span class="toc-text">2. 创建 Impala 外部表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-加载分区"><span class="toc-text">3. 加载分区</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-refresh-和-invalidate-metadata-的区别"><span class="toc-text">4. refresh 和 invalidate metadata 的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-外部表和内部表的区别"><span class="toc-text">5. 外部表和内部表的区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-表的基本格式"><span class="toc-text">6. 表的基本格式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Impala-统计信息"><span class="toc-text">7. Impala 统计信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-Join策略"><span class="toc-text">8. Join策略</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-broadcast-join"><span class="toc-text">8.1 broadcast join</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-partitioned-join"><span class="toc-text">8.2 partitioned join</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-broadcast-和-partitioned-join-的区别"><span class="toc-text">8.3 broadcast 和 partitioned join 的区别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-SQL优化"><span class="toc-text">9. SQL优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1-Explain-查看执行计划"><span class="toc-text">9.1 Explain 查看执行计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-2-如何调优"><span class="toc-text">9.2 如何调优</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-INSERT-INTO-和-INSERT-OVERWRITE"><span class="toc-text">10. INSERT INTO 和 INSERT OVERWRITE</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11-LOAD-DATA"><span class="toc-text">11. LOAD DATA</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12-常用函数"><span class="toc-text">12. 常用函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#13-分析函数"><span class="toc-text">13. 分析函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#14-其他操作"><span class="toc-text">14. 其他操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#14-1-查询数据库包含关键字的表"><span class="toc-text">14.1 查询数据库包含关键字的表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-2-重新命名表名"><span class="toc-text">14.2 重新命名表名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-3-增加一列"><span class="toc-text">14.3 增加一列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-4-更改字段名以及类型"><span class="toc-text">14.4 更改字段名以及类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-5-更改字段类型"><span class="toc-text">14.5 更改字段类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-6-删除表"><span class="toc-text">14.6 删除表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#15-Hive与Impala异同点"><span class="toc-text">15. Hive与Impala异同点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#15-1-相同点"><span class="toc-text">15.1 相同点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-2-不同点"><span class="toc-text">15.2 不同点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#16-相关概念"><span class="toc-text">16. 相关概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#16-1-数据倾斜"><span class="toc-text">16.1 数据倾斜</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#17-WITH"><span class="toc-text">17. WITH</span></a></li></ol></div></p>
+<h1 id="1-更新-Hive-元数据到-Impala"><a href="#1-更新-Hive-元数据到-Impala" class="headerlink" title="1. 更新 Hive 元数据到 Impala"></a>1. 更新 Hive 元数据到 Impala</h1><p>有时候数据在 Hive 已经更新了，但是 Impala 中却始终获取不到数据，原因在于元数据在 Impala 中没有刷新。需要在 Impala 中执行如下代码来更新数据(在 Hive 中是不可以执行的，且执行是无效的):</p>
+<pre><code class="sql">invalidate metadata [db.tb_name]
+;</code></pre>
+<h1 id="2-创建-Impala-外部表"><a href="#2-创建-Impala-外部表" class="headerlink" title="2. 创建 Impala 外部表"></a>2. 创建 Impala 外部表</h1><ol>
+<li>上传 CSV 文件至 HDFS。<strong>注意</strong>: CSV 文件的列名应该去掉，否则创建出来的表第一行会存在问题。</li>
+<li>如果是<strong>分区表</strong>，表名对应一个文件夹，每个分区应为该文件夹下的一个子文件夹，且文件夹中存放的数据为分区数据。如果不是分区表，只是一张<strong>外部表</strong>，则只需要创建一个文件夹对应该表的数据。</li>
+<li>在 Impala 或者 Hive 的编辑器中执行下面代码。</li>
+</ol>
+<pre><code class="sql">--外部表
+create external table test.table1(
+    字段 类型,
+    ...
+)
+row format delimited fields terminated by &#39;,&#39; 
+stored as textfile
+location &#39;/PATH/to/tb_directory&#39;
 
-str=$&quot;\n&quot;
-nohup jupyter notebook --ip=&#39;*&#39; --no-browser &gt; /dev/null 2&gt;&amp;1 &amp;
-sstr=$(echo -e $str)
-echo $sstr
+--外部分区表
+create external table test.table2(
+    字段 类型,
+    ...
+)
+PARTITIONED BY ( `dt` string)
+row format delimited fields terminated by &#39;,&#39;
+stored as textfile location &#39;/PATH/to/tb_directory&#39;
+;
 </code></pre>
-<h1 id="2-安装ohmyzsh"><a href="#2-安装ohmyzsh" class="headerlink" title="2. 安装ohmyzsh"></a>2. 安装oh<del>my</del>zsh</h1><h2 id="2-1-安装-zsh"><a href="#2-1-安装-zsh" class="headerlink" title="2.1 安装 zsh"></a>2.1 安装 zsh</h2><pre><code class="bash">→ yum install -y zsh</code></pre>
-<p>安装完成后，将默认的 bash 切换到 zsh。</p>
-<pre><code class="bash">→ chsh -s /bin/zsh</code></pre>
-<h2 id="2-2-安装-oh-my-zsh"><a href="#2-2-安装-oh-my-zsh" class="headerlink" title="2.2 安装 oh ~my ~zsh"></a>2.2 安装 oh ~my ~zsh</h2><p>假设大家已经安装了 git 工具了，这里在终端中指向以下代码:</p>
-<pre><code class="bash">→ sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</code></pre>
-<p>至此，oh~ my~ zsh 安装完成。</p>
-<h1 id="3-Centos源码方式安装-gcc"><a href="#3-Centos源码方式安装-gcc" class="headerlink" title="3.  Centos源码方式安装 gcc"></a>3.  Centos源码方式安装 gcc</h1><pre><code class="bash">→ wget wget http://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.gz
-→ tar -zxvf gcc-7.3.0.tar.gz
-→ cd gcc-7.3.0
-→ ./contrib/download_prerequisites
-→ cd ..
-→ mkdir gcc-build-7.3.0
-→ cd gcc-build-7.3.0
-→ ../gcc-7.3.0/configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
-→ make -j4
-→ make install</code></pre>
-<p>但是使用同样方法安装 gcc-8.3.0 会报错。检查是否安装成功: </p>
-<pre><code class="bash">[root@promote ~]# g++ -v
-Using built-in specs.
-COLLECT_GCC=g++
-COLLECT_LTO_WRAPPER=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper
-Target: x86_64-pc-linux-gnu
-Configured with: ../gcc-7.3.0/configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
-Thread model: posix</code></pre>
-<h1 id="4-Centos更新系统时间"><a href="#4-Centos更新系统时间" class="headerlink" title="4. Centos更新系统时间"></a>4. Centos更新系统时间</h1><p>首先修改时区，找到相应的时区文件 <code>/usr/share/zoneinfo/Asia/Shanghai</code> 替换当前的 <code>/etc/localtime</code>。 </p>
-<pre><code class="bash">→ yum -y install ntp ntpdate</code></pre>
-<p>在使用 <code>ntpdate</code> 进行时间更新的时候报错，出现 Can’t adjust the time of day: Operation not permitted，应该是在一些虚拟 vps上，可能存在一些限制，导致此处报错。</p>
-<p><strong>解决办法:</strong></p>
-<pre><code class="bash">→ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</code></pre>
-<p>修改 <code>/etc/sysconfig/clock</code> 文件的内容为： </p>
-<pre><code class="bash">ZONE=”Asia/Shanghai” 
-UTC=false 
-ARC=false</code></pre>
-<h1 id="5-Centos安装glibc-2-14"><a href="#5-Centos安装glibc-2-14" class="headerlink" title="5. Centos安装glibc-2.14"></a>5. Centos安装glibc-2.14</h1><p>Centos 下安装好了 LightGBM 后，运行 <code>import lightgbm as lgb</code> 出现 <code>OSError: /lib64/libc.so.6: version GLIBC_2.14&#39; not found</code> 错误。先看以下我们目前系统版本的 glibc 版本:</p>
-<pre><code class="bash">→ strings /lib64/libc.so.6 |grep GLIBC_
-GLIBC_2.2.5
-GLIBC_2.2.6
-GLIBC_2.3
-GLIBC_2.3.2
-GLIBC_2.3.3
-GLIBC_2.3.4
-GLIBC_2.4
-GLIBC_2.5
-GLIBC_2.6
-GLIBC_2.7
-GLIBC_2.8
-GLIBC_2.9
-GLIBC_2.10
-GLIBC_2.11
-GLIBC_2.12
-GLIBC_PRIVATE</code></pre>
-<p>但是查了网上很多Centos 源码编译安装教程，始终不成功。但是我的 gcc是7.3.0 版本，下载 glibc-2.14 进行编译安装时，又出现这样的错误 :</p>
-<pre><code class="bash">configure: error: *** These critical programs are missing or too old: gcc 
-*** Check the INSTALL file for required versions.</code></pre>
-<p>可以使用编译好的文件进行安装，通过以下方式解决:</p>
-<pre><code class="bash">wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-2.17-55.el6.x86_64.rpm
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-common-2.17-55.el6.x86_64.rpm
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-devel-2.17-55.el6.x86_64.rpm
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-headers-2.17-55.el6.x86_64.rpm
+<h1 id="3-加载分区"><a href="#3-加载分区" class="headerlink" title="3. 加载分区"></a>3. 加载分区</h1><p>我们刚刚创建了一张分区表 <code>test.sales</code> ，对应的 HDFS 目录为 <code>/webhdfs/yumingmin/sales</code>，现在需要给这张表添加 <code>dt</code> 分区数据。首先需要你要确保该目录下存在 <code>dt</code> 的目录，应该是每天一个 <code>dt</code> 文件。例如，我们需要添加 <code>2019-01-01</code> 数据分区，首先确认 <code>dt=2019-01-01</code> 的文件夹存在，且该文件夹存放着 CSV 文件。关于 CSV 文件的格式，可以参考是上面的格式。</p>
+<p>现在可以在 Hive 或者 Impala 中执行以下 SQL 语句，来挂载 <code>2019-01-01</code> 的分区数据:</p>
+<pre><code class="sql">alter table test.sales drop if exists partition(dt=&quot;2019-01-01&quot;)
+;
 
-sudo rpm -Uvh glibc-2.17-55.el6.x86_64.rpm \
-glibc-common-2.17-55.el6.x86_64.rpm \
-glibc-devel-2.17-55.el6.x86_64.rpm \
-glibc-headers-2.17-55.el6.x86_64.rpm</code></pre>
-<p>再次查看系统 glibc 版本:</p>
-<pre><code class="bash">→ strings /lib64/libc.so.6 |grep GLIBC_
-GLIBC_2.2.5
-GLIBC_2.2.6
-GLIBC_2.3
-GLIBC_2.3.2
-GLIBC_2.3.3
-GLIBC_2.3.4
-GLIBC_2.4
-GLIBC_2.5
-GLIBC_2.6
-GLIBC_2.7
-GLIBC_2.8
-GLIBC_2.9
-GLIBC_2.10
-GLIBC_2.11
-GLIBC_2.12
-GLIBC_2.13
-GLIBC_2.14
-GLIBC_2.15
-GLIBC_2.16
-GLIBC_2.17
-GLIBC_PRIVATE</code></pre>
-<p>下面重新编译、安装一下 LightGBM，就可以了。</p>
-<h1 id="6-Vim-Cheat-Sheet"><a href="#6-Vim-Cheat-Sheet" class="headerlink" title="6. Vim Cheat Sheet"></a>6. Vim Cheat Sheet</h1><p>可以访问 : <a href="https://vim.rtorr.com/lang/zh_cn" target="_blank" rel="noopener">https://vim.rtorr.com/lang/zh_cn</a></p>
+alter table test.sales add partition(dt=&quot;2019-12-19&quot;) location &quot;/webhdfs/yumingmin/sales/dt=2019-12-19&quot;
+;
+</code></pre>
+<p>这样就将分区数据挂载好了，如果你在 Hive 执行的上面代码，还需要使用 <code>invalidate metadata test.sales</code> 或者 <code>refresh test.sales</code> 来刷新数据。</p>
+<h1 id="4-refresh-和-invalidate-metadata-的区别"><a href="#4-refresh-和-invalidate-metadata-的区别" class="headerlink" title="4. refresh 和 invalidate metadata 的区别"></a>4. refresh 和 invalidate metadata 的区别</h1><p>这两个操作都是用来刷新元数据，一般有两种情况需要刷新源数据:</p>
+<ul>
+<li>元数据过期</li>
+<li>元数据有缺失</li>
+</ul>
+<p><strong>区别</strong> : 这两个命令都得在 Impala 中使用，Hive 中是不可使用的。</p>
+<ul>
+<li><p><code>refresh</code> 是一个轻量级的操作，适用于表结构没有发生改变时使用。</p>
+</li>
+<li><p><code>invalidate metadata</code> 是当表结构发生了改变后来进行元数据的刷新。</p>
+</li>
+</ul>
+<h1 id="5-外部表和内部表的区别"><a href="#5-外部表和内部表的区别" class="headerlink" title="5. 外部表和内部表的区别"></a>5. 外部表和内部表的区别</h1><ul>
+<li><p>外部表删除后，数据仍然存在</p>
+</li>
+<li><p>内部表删除后，数据也会删除</p>
+</li>
+<li><p>对于外部表，需要挂载分区后才能看到数据。</p>
+</li>
+</ul>
+<h1 id="6-表的基本格式"><a href="#6-表的基本格式" class="headerlink" title="6. 表的基本格式"></a>6. 表的基本格式</h1><p>一般创建表时，有 2 种格式: <code>textfile</code>  和 <code>parquet</code>。如果指定格式，默认使用 <code>stored as textfile</code> 格式进行表数据的存储。<strong>非特殊情况下</strong>，还是使用 <code>parquet</code> 最好。</p>
+<blockquote>
+<p>  <strong>注意</strong> : 在 <code>parquet</code> 格式下，<code>to_date</code> 转换的字段可能无法存储，导致报错，这取决于 Impala 的版本。这种情况下，需要将字段再 <code>cast</code> 成 <code>string</code> 类型。</p>
+</blockquote>
+<h1 id="7-Impala-统计信息"><a href="#7-Impala-统计信息" class="headerlink" title="7. Impala 统计信息"></a>7. Impala 统计信息</h1><ul>
+<li><code>show create table</code> : 查看表的定义语句。这个只能看到表的 DDL，也就是表的字段、字段类型、HDFS 地址等信息，并无法看到表是由哪些上游表得到的。</li>
+<li><code>show table stats</code> : </li>
+<li><code>show columns stats</code> : </li>
+<li><code>show partitions</code> : </li>
+<li><code>describe formatted</code> : 比 <code>describe</code> 查看的信息更全，可以看到表的 Owner、最后一次更新时间等等。</li>
+</ul>
+<h1 id="8-Join策略"><a href="#8-Join策略" class="headerlink" title="8. Join策略"></a>8. Join策略</h1><p>Join 的策略分为 <code>broadcast</code> 和 <code>partitioned</code>。</p>
+<h2 id="8-1-broadcast-join"><a href="#8-1-broadcast-join" class="headerlink" title="8.1 broadcast join"></a>8.1 broadcast join</h2><p><code>broadcast join</code> 主要用于小表的 Join。</p>
+<p><img src="https://img-blog.csdnimg.cn/20191219184857993.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="8-2-partitioned-join"><a href="#8-2-partitioned-join" class="headerlink" title="8.2 partitioned join"></a>8.2 partitioned join</h2><p><code>partitioned join</code>  使用的标志是 <code>[shuffle]</code>，它主要用于大表的 Join。</p>
+<p><img src="https://img-blog.csdnimg.cn/20191219185101172.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="8-3-broadcast-和-partitioned-join-的区别"><a href="#8-3-broadcast-和-partitioned-join-的区别" class="headerlink" title="8.3 broadcast 和 partitioned join 的区别"></a>8.3 broadcast 和 partitioned join 的区别</h2><p>当表缺少统计信息的时候，Impala 默认执行策略是 <code>broadcast join</code>。Broadcast 是将执行计划中<code>join</code> 右侧的表广播到执行 sql 的各个节点。这是 sql 慢的主要原因之一，这种情况会严重占用集群带宽，造成其他简单 sql 也运行缓慢！</p>
+<h1 id="9-SQL优化"><a href="#9-SQL优化" class="headerlink" title="9. SQL优化"></a>9. SQL优化</h1><h2 id="9-1-Explain-查看执行计划"><a href="#9-1-Explain-查看执行计划" class="headerlink" title="9.1 Explain 查看执行计划"></a>9.1 Explain 查看执行计划</h2><p>执行计划会告诉我们:</p>
+<ul>
+<li>SQL 预计需要占用的内存</li>
+<li>SQL 所用的表是否缺少统计信息</li>
+<li>SQL 所扫描的数据量，如果是分区表，会看到使用了多少个分区</li>
+<li>SQL Join 的策略</li>
+<li>…</li>
+</ul>
+<p>当我们的 SQL 运行了超过 30 分钟，还没有出结果，此时需要去使用 <code>explain</code> 来查看执行计划。</p>
+<h2 id="9-2-如何调优"><a href="#9-2-如何调优" class="headerlink" title="9.2 如何调优"></a>9.2 如何调优</h2><p><strong>1) 收集统计信息</strong></p>
+<ul>
+<li>非分区表: <code>compute stats</code></li>
+<li>分区表: <code>compute incremental stats</code>，对于指定的分区，可以使用 <code>compute incremental stats [table] partiton(dt=&quot;2019-01-01&quot;)</code></li>
+</ul>
+<p><strong>2) 使用分区字段来缩小查询范围</strong>，具体可以在 <code>where</code> 和 <code>join</code> 中进行使用</p>
+<p><strong>3) straight join</strong></p>
+<ul>
+<li><strong>自动调优规则</strong>：join query 中部分表<strong>缺少统计信息</strong>时，<strong>有统计信息的表会放在 join 的左侧</strong>，根据总体大小和基数按成本降序排列，<strong>没有统计信息的表放在 join 的右侧</strong>。</li>
+<li>Impala 忽略自动调优，按照 SQL 连接顺序去执行，写在 <code>select</code> 或 <code>distinct</code> 或者其他关键字后</li>
+<li>对内层的子句(嵌套、<code>where</code> 子句)无作用</li>
+</ul>
+<p><strong>4)</strong> <code>[shuffle]</code></p>
+<ul>
+<li>添加在 join 后，将 broadcast 转换成 partitioned</li>
+<li>再次 <code>explain</code> 查看执行计划，确认是否优化成功</li>
+<li>外层 <code>shuffle</code>，对内层的 join 子句是不起作用的</li>
+</ul>
+<p><strong>5) limit</strong></p>
+<ul>
+<li>大表仅筛选几条的情况下使用，否则很容易出现“数据加载中”，进而导致下一条 SQL 无法提交</li>
+<li>结果只有2行，结果越少越要加!</li>
+</ul>
+<p><strong>6) 将频繁使用到的逻辑固化成为特定的中间表，减少查询消耗</strong></p>
+<p><strong>7) 避免使用</strong> <code>SELECT *</code></p>
+<h1 id="10-INSERT-INTO-和-INSERT-OVERWRITE"><a href="#10-INSERT-INTO-和-INSERT-OVERWRITE" class="headerlink" title="10. INSERT INTO 和 INSERT OVERWRITE"></a>10. INSERT INTO 和 INSERT OVERWRITE</h1><pre><code class="sql">INSERT [INTO|OVERWRITE] TABLE tb1
+SELECT * FROM tb2;
+
+INSERT [INTO|OVERWRITE] TABLE tb1 VALUES ...;
+
+insert into t1 partition (dt=&#39;2019-04-18&#39;) select c1 from t2;
+
+insert into t1 partition (dt) select c1, dt from t2;
+</code></pre>
+<p>当需要重新表的全部数据，一种方法是先 <code>DROP</code> 再 <code>CREATE</code>，还有一种方法是 <code>INSERT OVERWRITE</code>，后者更高效、稳定。</p>
+<blockquote>
+<p>  <code>INSERT VALUES</code> 应该尽量规避使用，会产生小文件，应该用 <code>INSERT SELECT</code> 代替。</p>
+</blockquote>
+<h1 id="11-LOAD-DATA"><a href="#11-LOAD-DATA" class="headerlink" title="11. LOAD DATA"></a>11. LOAD DATA</h1><p>在 Terminal 中可以运行以下数据来更新表数据:</p>
+<pre><code class="sql">load data local inpath &quot;/home/hadoop/bj.txt&quot; into table stud;
+
+-- 分区表
+load data local inpath &quot;/home/hadoop/bj.txt&quot; into table stud_ptn partition(city=&quot;bj&quot;)
+</code></pre>
+<h1 id="12-常用函数"><a href="#12-常用函数" class="headerlink" title="12. 常用函数"></a>12. 常用函数</h1><ul>
+<li><code>nvl</code> : <ul>
+<li><code>nvl(expr1, expr2)</code>测试表达式是否空值。如果是空值，返回 <code>expr2</code> 结果；如果不是空值，则返回表达式 <code>expr1</code> 结果值</li>
+<li><code>nvl(expr1, expr2, expr3)</code>测试表达式是否空值。如果是空值，返回 <code>expr2</code> 结果；如果不是空值，则返回表达式 <code>expr3</code> 结果值</li>
+</ul>
+</li>
+<li><code>substr</code></li>
+<li><code>dround</code> : 四舍五入</li>
+<li><code>grest/least</code> : 取最大最小值</li>
+<li><code>concat/concat_ws</code> : 字符串的拼接</li>
+<li><code>add_months(now(), 1)</code> : 当前时间增加一个月</li>
+<li><code>adddate(now(), 1)</code> : 当前日期加一天，等效于 <code>date_add(now(), 1)</code> </li>
+<li><code>datediff(dt1, dt2)</code>: 计算两日期天差</li>
+<li><code>date_sub</code> : 日期减函数</li>
+<li><code>unix_timestamp</code> : 当前日期距离1970年的秒数</li>
+<li><code>from_unixtime(1556108753,“yyyy-MM-dd”)</code> : 秒数转化为日期</li>
+<li><code>year</code>、<code>month</code>、<code>day</code>、<code>hour</code>、<code>minute</code>、<code>second</code></li>
+<li><code>current_timestamp()</code>、<code>now()</code></li>
+</ul>
+<h1 id="13-分析函数"><a href="#13-分析函数" class="headerlink" title="13. 分析函数"></a>13. 分析函数</h1><ul>
+<li><code>RANK</code></li>
+<li><code>ROW_NUMBER</code></li>
+<li><code>LEAD</code></li>
+<li><code>LAG</code></li>
+<li><code>FIRST_VALUE</code></li>
+<li><code>LAST_VALUE</code></li>
+</ul>
+<p>以上为窗口函数，具体结合下面这些函数连用:</p>
+<ul>
+<li><code>OVER</code> : 指定分析函数的规则</li>
+<li><code>PARTITION BY</code> : 指定分析函数应用的分组，类似于 <code>GROUP BY</code></li>
+<li><code>ORDER BY</code> : 指定分组内的排序规则</li>
+<li>时间窗口</li>
+</ul>
+<h1 id="14-其他操作"><a href="#14-其他操作" class="headerlink" title="14. 其他操作"></a>14. 其他操作</h1><h2 id="14-1-查询数据库包含关键字的表"><a href="#14-1-查询数据库包含关键字的表" class="headerlink" title="14.1 查询数据库包含关键字的表"></a>14.1 查询数据库包含关键字的表</h2><pre><code class="sql">SHOW TABLES IN DB_NAME LIKE &#39;*ymm*&#39; ;
+</code></pre>
+<h2 id="14-2-重新命名表名"><a href="#14-2-重新命名表名" class="headerlink" title="14.2 重新命名表名"></a>14.2 重新命名表名</h2><pre><code class="sql">ALTER TABLE tb1 RENAME TO tb2;
+</code></pre>
+<h2 id="14-3-增加一列"><a href="#14-3-增加一列" class="headerlink" title="14.3 增加一列"></a>14.3 增加一列</h2><pre><code class="sql">ALTER TABLE tb3 ADD COLUMNS (SCORE INT);
+</code></pre>
+<h2 id="14-4-更改字段名以及类型"><a href="#14-4-更改字段名以及类型" class="headerlink" title="14.4 更改字段名以及类型"></a>14.4 更改字段名以及类型</h2><pre><code class="sql">ALTER TABLE NEW_STUDENT CHANGE NAME NEW_NAME STRING;
+</code></pre>
+<h2 id="14-5-更改字段类型"><a href="#14-5-更改字段类型" class="headerlink" title="14.5 更改字段类型"></a>14.5 更改字段类型</h2><pre><code class="sql">ALTER TABLE NEW_STUDENT REPLACE COLUMNS (ID INT, NAME STRING, ADDRESS STRING); 
+</code></pre>
+<h2 id="14-6-删除表"><a href="#14-6-删除表" class="headerlink" title="14.6 删除表"></a>14.6 删除表</h2><pre><code class="sql">DROP TABLE tb;
+
+TRUNCATE TABLE tb;
+</code></pre>
+<h1 id="15-Hive与Impala异同点"><a href="#15-Hive与Impala异同点" class="headerlink" title="15. Hive与Impala异同点"></a>15. Hive与Impala异同点</h1><h2 id="15-1-相同点"><a href="#15-1-相同点" class="headerlink" title="15.1 相同点"></a>15.1 相同点</h2><ul>
+<li>数据存储 : 使用相同的存储数据池都支持把数据存储于HDFS, HBase。</li>
+<li>元数据 : 两者使用相同的元数据。</li>
+<li>SQL解释处理 : 比较相似都是通过词法分析生成执行计划。</li>
+</ul>
+<h2 id="15-2-不同点"><a href="#15-2-不同点" class="headerlink" title="15.2 不同点"></a>15.2 不同点</h2><ul>
+<li>执行计划:<ul>
+<li>Hive : 依赖于 <code>MapReduce</code> 执行框架，执行计划分成  <code>map -&gt; shuffle -&gt; reduce -&gt; map -&gt; shuffle -&gt; reduce…</code> 的模型。</li>
+<li>Impala : 把执行计划表现为一棵完整的执行计划树，可以更自然地分发执行计划到各个 <code>Impalad</code> 执行查询</li>
+</ul>
+</li>
+<li>数据流:<ul>
+<li>Hive : 采用推的方式，每一个计算节点计算完成后将数据主动推给后续节点。</li>
+<li>Impala : 采用拉的方式，后续节点通过 <code>getNext</code> 主动向前面节点要数据，数据可以流式的返回给客户端</li>
+</ul>
+</li>
+<li>容错:<ul>
+<li>Hive：依赖 Hadoop 的容错能力</li>
+<li>Impala：没有容错逻辑</li>
+</ul>
+</li>
+<li>适用面:<ul>
+<li>Hive : 复杂的批处理查询任务，数据转换任务</li>
+<li>Impala : 实时数据分析</li>
+</ul>
+</li>
+<li>函数用法：<br>Hive : 全面，符合 SQL 标准</li>
+<li>Impala : Hive中某些函数不支持，比如 <code>count(distinct column)</code> 不能超过一个</li>
+</ul>
+<h1 id="16-相关概念"><a href="#16-相关概念" class="headerlink" title="16. 相关概念"></a>16. 相关概念</h1><h2 id="16-1-数据倾斜"><a href="#16-1-数据倾斜" class="headerlink" title="16.1 数据倾斜"></a>16.1 数据倾斜</h2><ul>
+<li><code>group by</code> 字段上的数据分布不均匀</li>
+<li>Join 字段上的数据分布不均匀</li>
+<li>Left join 以后用有大量空值的字段再做 join</li>
+</ul>
+<h1 id="17-WITH"><a href="#17-WITH" class="headerlink" title="17. WITH"></a>17. WITH</h1><ul>
+<li>同一段 <code>with</code> 子句多次引用会多次执行</li>
+<li>对于会重复引用的 <code>with</code> 子句，建临时表</li>
+<li><code>WITH</code> 应该尽量少用</li>
+</ul>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yu_mingm623@163.com </span>
@@ -1135,12 +1245,12 @@ GLIBC_PRIVATE</code></pre>
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Linux总结</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">959</span></p>
+    <p><span class="copy-title">文章标题:</span>Impala常规使用</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">2.5k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-12-08, 18:02:08</p>
-    <p><span class="copy-title">最后更新:</span>2019-12-08, 22:30:26</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/08/linux-common-usages/" title="Linux总结">http://www.monsteryu.top/2019/12/08/linux-common-usages/</a>
+    <p><span class="copy-title">发布时间:</span>2019-12-08, 14:56:27</p>
+    <p><span class="copy-title">最后更新:</span>2019-12-20, 23:40:17</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/12/08/impala-common-usages/" title="Impala常规使用">http://www.monsteryu.top/2019/12/08/impala-common-usages/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>

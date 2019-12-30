@@ -248,15 +248,15 @@
                             
                         </li>
                             
-                        <li><div data-rel="JetBrains">JetBrains<small>(3)</small></div>
-                            
-                        </li>
-                            
                         <li><div data-rel="Markdown">Markdown<small>(1)</small></div>
                             
                         </li>
                             
                         <li><div data-rel="Notepad">Notepad<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="JetBrains">JetBrains<small>(3)</small></div>
                             
                         </li>
                             
@@ -292,11 +292,11 @@
                             
                         </li>
                             
-                        <li><div data-rel="Hive">Hive<small>(1)</small></div>
+                        <li><div data-rel="Impala">Impala<small>(3)</small></div>
                             
                         </li>
                             
-                        <li><div data-rel="Impala">Impala<small>(3)</small></div>
+                        <li><div data-rel="Hive">Hive<small>(1)</small></div>
                             
                         </li>
                             
@@ -417,11 +417,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color2">chrome</a>
+        <a class="color5">Logistic Regression</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color5">Logistic Regression</a>
+        <a class="color2">chrome</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -429,15 +429,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color2">GitHub</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a class="color2">hadoop</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color5">hive</a>
+        <a class="color2">GitHub</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -445,7 +441,19 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a class="color5">hive</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a class="color3">蓝鲸</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">datagrip</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Python学习资源</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -458,14 +466,6 @@
     
     <li class="article-tag-list-item">
         <a class="color1">GLIBC</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">datagrip</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">Python学习资源</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -505,11 +505,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color3">windows</a>
+        <a class="color3">sublime</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color3">sublime</a>
+        <a class="color3">windows</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -603,14 +603,6 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="中文文档 Sklearn "
-           href="/zh-tutorial/sklearn0.19.0/%E5%A4%A7%E8%A7%84%E6%A8%A1%E8%AE%A1%E7%AE%97%E7%9A%84%E7%AD%96%E7%95%A5-%E6%9B%B4%E5%A4%A7%E9%87%8F%E7%9A%84%E6%95%B0%E6%8D%AE/"
-           data-tag="sklearn"
-           data-author="郁明敏" >
-            <span class="post-title" title="大规模计算的策略:更大量的数据">大规模计算的策略:更大量的数据</span>
-            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="中文文档 Sklearn "
            href="/zh-tutorial/sklearn0.19.0/%E6%95%B0%E6%8D%AE%E9%9B%86%E5%8A%A0%E8%BD%BD%E5%B7%A5%E5%85%B7/"
            data-tag="sklearn"
            data-author="郁明敏" >
@@ -631,6 +623,14 @@
            data-tag="sklearn"
            data-author="郁明敏" >
             <span class="post-title" title="数据集转换">数据集转换</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Sklearn "
+           href="/zh-tutorial/sklearn0.19.0/%E5%A4%A7%E8%A7%84%E6%A8%A1%E8%AE%A1%E7%AE%97%E7%9A%84%E7%AD%96%E7%95%A5-%E6%9B%B4%E5%A4%A7%E9%87%8F%E7%9A%84%E6%95%B0%E6%8D%AE/"
+           data-tag="sklearn"
+           data-author="郁明敏" >
+            <span class="post-title" title="大规模计算的策略:更大量的数据">大规模计算的策略:更大量的数据</span>
             <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
         </a>
         
@@ -1460,7 +1460,7 @@ api.add_resource(Todo, '/todos/&lt;todo_id&gt;')
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['@郁明敏','#AirFlow','#MySQL','#Centos','#chrome','#Logistic Regression','#Flask','#GitHub','#hadoop','#hive','#impala','#蓝鲸','#Linux','#LGBM','#GLIBC','#datagrip','#Python学习资源','#Mac','#markdown','#notepad','#pandas','#pycharm','#Jupyter','#impyla','#Python常用库','#Requests','#windows','#sublime','#windows软件','#xshell','#Django','#Python小技巧','#Python关键字','#数据挖掘','#3-hexo','#hexo','#sklearn','#统计基础','#Django用户登录','#强化学习',],
+            'data': ['@郁明敏','#AirFlow','#MySQL','#Centos','#Logistic Regression','#chrome','#Flask','#hadoop','#GitHub','#impala','#hive','#蓝鲸','#datagrip','#Python学习资源','#Linux','#LGBM','#GLIBC','#Mac','#markdown','#notepad','#pandas','#pycharm','#Jupyter','#impyla','#Python常用库','#Requests','#sublime','#windows','#windows软件','#xshell','#Django','#Python小技巧','#Python关键字','#数据挖掘','#3-hexo','#hexo','#sklearn','#统计基础','#Django用户登录','#强化学习',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

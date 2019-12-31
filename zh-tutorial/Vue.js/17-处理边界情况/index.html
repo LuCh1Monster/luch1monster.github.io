@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>17-处理边界情况 | 路痴大魔王</title>
+  <meta name="keywords" content=" vue ">
+  <meta name="description" content="17-处理边界情况 | 路痴大魔王">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="页面未找到！         document.querySelectorAll(&amp;apos;.github-emoji&amp;apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&amp;apos;img&amp;apos;);             im">
+<meta property="og:type" content="website">
+<meta property="og:title" content="404">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.monsteryu.top&#x2F;404.html">
+<meta property="og:site_name" content="路痴大魔王">
+<meta property="og:description" content="页面未找到！         document.querySelectorAll(&amp;apos;.github-emoji&amp;apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&amp;apos;img&amp;apos;);             im">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-01T14:55:52.181Z">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar4.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/github.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
+
+    <!-- 代码块复制功能 -->
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>郁明敏</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/luch1monster" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="csdn" href="https://blog.csdn.net/LuCh1Monster" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-csdn"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:yu_mingm623@163.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=442523981&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(67)</small></div></li>
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="中文文档"><i class="fold iconfont icon-right"></i>中文文档<small>(22)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Vue">Vue<small>(15)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Sklearn">Sklearn<small>(7)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="前端"><i class="fold iconfont icon-right"></i>前端<small>(3)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Hexo">Hexo<small>(2)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="hexo">hexo<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="后端"><i class="fold iconfont icon-right"></i>后端<small>(17)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Hadoop">Hadoop<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Python">Python<small>(16)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="学习资源">学习资源<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="工具"><i class="fold iconfont icon-right"></i>工具<small>(9)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Chrome">Chrome<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="GitHub">GitHub<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="JetBrains">JetBrains<small>(3)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Markdown">Markdown<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Notepad">Notepad<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Sublime">Sublime<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="XShell">XShell<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="数据库"><i class="fold iconfont icon-right"></i>数据库<small>(6)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="MySQL">MySQL<small>(2)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Hive">Hive<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Impala">Impala<small>(3)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="数据挖掘"><i class="fold iconfont icon-right"></i>数据挖掘<small>(4)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="逻辑回归">逻辑回归<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="数理统计">数理统计<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="强化学习">强化学习<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="系统"><i class="fold iconfont icon-right"></i>系统<small>(5)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Linux">Linux<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Mac">Mac<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Windows">Windows<small>(3)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    </div>
+    <div><a class="about  site_url"  href="/about">关于</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="67">
+<input type="hidden" id="yelog_site_word_count" value="116k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="#">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a class="color2">chrome</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">MySQL</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">AirFlow</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">Centos</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Flask</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">Logistic Regression</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">GitHub</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">hadoop</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">hive</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">蓝鲸</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">impala</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Python学习资源</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">datagrip</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Linux</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">LGBM</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">GLIBC</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">Mac</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">markdown</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">notepad</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">pandas</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">pycharm</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">Requests</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">Jupyter</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">impyla</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">Python常用库</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">sublime</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">windows软件</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">windows</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">xshell</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">Django</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">Python小技巧</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">Python关键字</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">数据挖掘</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">3-hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">vue</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">sklearn</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">统计基础</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Django用户登录</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">强化学习</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a onclick="refreshBtnCopy()" id="top" class="前端 hexo "
+           href="/hexo/3-hexo%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="hexo,3-hexo"
+           data-author="郁明敏" >
+            <span class="post-title" title="3-hexo主题使用总结与补充">3-hexo主题使用总结与补充</span>
+            <span class="post-date" title="2019-11-27 16:53:35">2019/11/27</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/django/django%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E4%B8%8E%E6%B3%A8%E5%86%8C%E7%B3%BB%E7%BB%9F/"
+           data-tag="Django用户登录"
+           data-author="郁明敏" >
+            <span class="post-title" title="Django用户登录与注册系统">Django用户登录与注册系统</span>
+            <span class="post-date" title="2019-12-22 21:22:02">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/django/django%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%98%BE%E7%A4%BA%E8%BF%9B%E5%BA%A6%E6%9D%A1/"
+           data-tag="Django"
+           data-author="郁明敏" >
+            <span class="post-title" title="Django上传文件并显示进度条">Django上传文件并显示进度条</span>
+            <span class="post-date" title="2019-12-22 18:50:01">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/flask/%E4%BD%BF%E7%94%A8flask%E5%BC%80%E5%8F%91%E6%95%B0%E6%8D%AEapi/"
+           data-tag="Flask"
+           data-author="郁明敏" >
+            <span class="post-title" title="使用Flask RESTful开发数据API接口">使用Flask RESTful开发数据API接口</span>
+            <span class="post-date" title="2019-12-22 14:42:54">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/14-%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="14-自定义事件">14-自定义事件</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/10-%E8%A1%A8%E5%8D%95%E8%BE%93%E5%85%A5%E7%BB%91%E5%AE%9A/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="10-表单输入绑定">10-表单输入绑定</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/16-%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E5%92%8C%E5%BC%82%E6%AD%A5%E7%BB%84%E4%BB%B6/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="16-动态组件&amp;异步组件">16-动态组件&amp;异步组件</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/3-Vue%E5%AE%9E%E4%BE%8B/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="3-Vue实例">3-Vue实例</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/5-%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E5%92%8C%E4%BE%A6%E5%90%AC%E5%99%A8/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="5-计算属性和侦听器">5-计算属性和侦听器</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/6-Class%E4%B8%8EStyle%E7%BB%91%E5%AE%9A/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="6-Class与Style绑定">6-Class与Style绑定</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/4-%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="4-模板语法">4-模板语法</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/7-%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="7-条件渲染">7-条件渲染</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Sklearn "
+           href="/zh-tutorial/sklearn0.19.0/%E5%A4%A7%E8%A7%84%E6%A8%A1%E8%AE%A1%E7%AE%97%E7%9A%84%E7%AD%96%E7%95%A5-%E6%9B%B4%E5%A4%A7%E9%87%8F%E7%9A%84%E6%95%B0%E6%8D%AE/"
+           data-tag="sklearn"
+           data-author="郁明敏" >
+            <span class="post-title" title="大规模计算的策略:更大量的数据">大规模计算的策略:更大量的数据</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Sklearn "
+           href="/zh-tutorial/sklearn0.19.0/%E6%95%B0%E6%8D%AE%E9%9B%86%E8%BD%AC%E6%8D%A2/"
+           data-tag="sklearn"
+           data-author="郁明敏" >
+            <span class="post-title" title="数据集转换">数据集转换</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Sklearn "
+           href="/zh-tutorial/sklearn0.19.0/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/"
+           data-tag="sklearn"
+           data-author="郁明敏" >
+            <span class="post-title" title="无监督学习">无监督学习</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Sklearn "
+           href="/zh-tutorial/sklearn0.19.0/%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9%E5%92%8C%E8%AF%84%E4%BC%B0/"
+           data-tag="sklearn"
+           data-author="郁明敏" >
+            <span class="post-title" title="模型选择和评估">模型选择和评估</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Sklearn "
+           href="/zh-tutorial/sklearn0.19.0/%E6%95%B0%E6%8D%AE%E9%9B%86%E5%8A%A0%E8%BD%BD%E5%B7%A5%E5%85%B7/"
+           data-tag="sklearn"
+           data-author="郁明敏" >
+            <span class="post-title" title="数据集加载工具">数据集加载工具</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Sklearn "
+           href="/zh-tutorial/sklearn0.19.0/%E8%AE%A1%E7%AE%97%E6%80%A7%E8%83%BD/"
+           data-tag="sklearn"
+           data-author="郁明敏" >
+            <span class="post-title" title="计算性能">计算性能</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/15-%E6%8F%92%E6%A7%BD/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="15-插槽">15-插槽</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/11-%E7%BB%84%E4%BB%B6%E5%9F%BA%E7%A1%80/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="11-组件基础">11-组件基础</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/13-Prop/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="13-Prop">13-Prop</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/17-%E5%A4%84%E7%90%86%E8%BE%B9%E7%95%8C%E6%83%85%E5%86%B5/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="17-处理边界情况">17-处理边界情况</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/2-%E4%BB%8B%E7%BB%8D/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="2-介绍">2-介绍</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/8-%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="8-列表渲染">8-列表渲染</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Vue "
+           href="/zh-tutorial/Vue.js/9-%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/"
+           data-tag="vue"
+           data-author="郁明敏" >
+            <span class="post-title" title="9-事件处理">9-事件处理</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="中文文档 Sklearn "
+           href="/zh-tutorial/sklearn0.19.0/%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/"
+           data-tag="sklearn"
+           data-author="郁明敏" >
+            <span class="post-title" title="监督学习">监督学习</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/pandas/pandas%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="pandas"
+           data-author="郁明敏" >
+            <span class="post-title" title="Pandas用法总结">Pandas用法总结</span>
+            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="学习资源 "
+           href="/learning-resources/python%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/"
+           data-tag="Python学习资源"
+           data-author="郁明敏" >
+            <span class="post-title" title="Python学习资源">Python学习资源</span>
+            <span class="post-date" title="2019-12-08 22:52:18">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Notepad "
+           href="/notepad/notepad%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="notepad"
+           data-author="郁明敏" >
+            <span class="post-title" title="Notepad++用法总结">Notepad++用法总结</span>
+            <span class="post-date" title="2019-12-08 20:51:47">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
+           href="/pycharm/pycharm%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="pycharm"
+           data-author="郁明敏" >
+            <span class="post-title" title="PyCharm使用总结">PyCharm使用总结</span>
+            <span class="post-date" title="2019-12-08 20:46:04">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Sublime "
+           href="/sublime/sublime%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="sublime"
+           data-author="郁明敏" >
+            <span class="post-title" title="Sublime Text总结">Sublime Text总结</span>
+            <span class="post-date" title="2019-12-08 20:42:31">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/windows/windows%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="windows"
+           data-author="郁明敏" >
+            <span class="post-title" title="Windows使用总结">Windows使用总结</span>
+            <span class="post-date" title="2019-12-08 20:31:41">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Chrome "
+           href="/chrome/chrome%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/"
+           data-tag="chrome"
+           data-author="郁明敏" >
+            <span class="post-title" title="Chrome常用插件">Chrome常用插件</span>
+            <span class="post-date" title="2019-12-08 20:29:18">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/windows/windows%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/"
+           data-tag="windows软件"
+           data-author="郁明敏" >
+            <span class="post-title" title="Window常用软件">Window常用软件</span>
+            <span class="post-date" title="2019-12-08 20:22:58">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/python/python%E5%B8%B8%E7%94%A8%E5%8C%85%E6%80%BB%E7%BB%93/"
+           data-tag="Python常用库"
+           data-author="郁明敏" >
+            <span class="post-title" title="Python常用库">Python常用库</span>
+            <span class="post-date" title="2019-12-08 20:04:22">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Mac "
+           href="/mac/mac%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="Mac"
+           data-author="郁明敏" >
+            <span class="post-title" title="MAC用法总结">MAC用法总结</span>
+            <span class="post-date" title="2019-12-08 19:49:04">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 MySQL "
+           href="/centos/centos%E8%BF%81%E7%A7%BBmysql%E6%95%B0%E6%8D%AE%E5%BA%93/"
+           data-tag="MySQL,Centos"
+           data-author="郁明敏" >
+            <span class="post-title" title="Centos下迁移MySQL数据库">Centos下迁移MySQL数据库</span>
+            <span class="post-date" title="2019-12-08 19:37:05">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/python/python%E5%AE%89%E8%A3%85%E5%8C%85%E6%95%99%E7%A8%8B/"
+           data-tag="impala,impyla"
+           data-author="郁明敏" >
+            <span class="post-title" title="Python安装各种库的教程">Python安装各种库的教程</span>
+            <span class="post-date" title="2019-12-08 19:29:16">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 MySQL "
+           href="/centos/centos%E5%AE%89%E8%A3%85mysql/"
+           data-tag="MySQL"
+           data-author="郁明敏" >
+            <span class="post-title" title="Centos安装MySQL服务">Centos安装MySQL服务</span>
+            <span class="post-date" title="2019-12-08 19:01:46">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Linux "
+           href="/linux/linux%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="Linux,LGBM,GLIBC"
+           data-author="郁明敏" >
+            <span class="post-title" title="Linux总结">Linux总结</span>
+            <span class="post-date" title="2019-12-08 18:02:08">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/python/python%E5%B8%B8%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/"
+           data-tag="Python小技巧"
+           data-author="郁明敏" >
+            <span class="post-title" title="Python常用小技巧">Python常用小技巧</span>
+            <span class="post-date" title="2019-12-08 17:44:20">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/python/jupyter%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="Jupyter"
+           data-author="郁明敏" >
+            <span class="post-title" title="jupyter使用总结">jupyter使用总结</span>
+            <span class="post-date" title="2019-12-08 17:39:50">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/python-crawl/%E4%BD%BF%E7%94%A8python%E6%8A%93%E5%8F%96%E5%B7%A5%E4%BD%9C%E6%97%A5%E4%BF%A1%E6%81%AF%E8%A1%A8/"
+           data-tag="Requests"
+           data-author="郁明敏" >
+            <span class="post-title" title="Requests获取工作日信息">Requests获取工作日信息</span>
+            <span class="post-date" title="2019-12-08 16:03:30">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/airflow/airflow%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/"
+           data-tag="AirFlow"
+           data-author="郁明敏" >
+            <span class="post-title" title="AirFlow参考文档">AirFlow参考文档</span>
+            <span class="post-date" title="2019-12-08 15:59:10">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
+           href="/impala/%E8%93%9D%E9%B2%B8%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="蓝鲸"
+           data-author="郁明敏" >
+            <span class="post-title" title="蓝鲸使用">蓝鲸使用</span>
+            <span class="post-date" title="2019-12-08 15:40:18">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/python/python%E8%BF%9E%E6%8E%A5impala%E8%B6%85%E6%97%B6/"
+           data-tag="impyla"
+           data-author="郁明敏" >
+            <span class="post-title" title="Python连接Impala超时">Python连接Impala超时</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/python/%E4%BD%BF%E7%94%A8python%E5%88%9B%E5%BB%BAimpala%E6%95%B0%E6%8D%AE%E8%A1%A8/"
+           data-tag="impala"
+           data-author="郁明敏" >
+            <span class="post-title" title="使用Python在Impala中建表">使用Python在Impala中建表</span>
+            <span class="post-date" title="2019-12-08 15:13:02">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
+           href="/jetbrains/datagrip%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%9E%E6%8E%A5%E6%BA%90/"
+           data-tag="datagrip"
+           data-author="郁明敏" >
+            <span class="post-title" title="DataGrip自定义连接Hive和Impala">DataGrip自定义连接Hive和Impala</span>
+            <span class="post-date" title="2019-12-08 15:08:00">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据挖掘 "
+           href="/data-mining/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E7%9A%84%E4%B8%80%E8%88%AC%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%A5%97%E8%B7%AF/"
+           data-tag="数据挖掘"
+           data-author="郁明敏" >
+            <span class="post-title" title="数据挖掘的一般步骤与套路">数据挖掘的一般步骤与套路</span>
+            <span class="post-date" title="2019-12-08 14:59:37">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
+           href="/impala/impala%E6%AD%A3%E5%88%99%E5%8C%B9%E9%85%8D/"
+           data-tag="impala"
+           data-author="郁明敏" >
+            <span class="post-title" title="Impala正则匹配">Impala正则匹配</span>
+            <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
+           href="/impala/impala%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="impala"
+           data-author="郁明敏" >
+            <span class="post-title" title="Impala常规使用">Impala常规使用</span>
+            <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/hexo/hexo%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/"
+           data-tag="hexo"
+           data-author="郁明敏" >
+            <span class="post-title" title="Hexo好用的插件">Hexo好用的插件</span>
+            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/hexo/hexo%E6%9B%B4%E6%8D%A2Markdown%E6%B8%B2%E6%9F%93%E5%99%A8/"
+           data-tag="hexo"
+           data-author="郁明敏" >
+            <span class="post-title" title="Hexo更换Markdown渲染器">Hexo更换Markdown渲染器</span>
+            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Hive "
+           href="/hive/hive%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"
+           data-tag="hive"
+           data-author="郁明敏" >
+            <span class="post-title" title="Hive问题总结">Hive问题总结</span>
+            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Hadoop "
+           href="/hadoop/hadoop%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"
+           data-tag="hadoop"
+           data-author="郁明敏" >
+            <span class="post-title" title="Hadoop问题总结">Hadoop问题总结</span>
+            <span class="post-date" title="2019-12-08 14:27:24">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/airflow/airflow%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="AirFlow"
+           data-author="郁明敏" >
+            <span class="post-title" title="AirFlow使用总结">AirFlow使用总结</span>
+            <span class="post-date" title="2019-12-08 14:24:18">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/windows/windows%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD/"
+           data-tag="windows软件"
+           data-author="郁明敏" >
+            <span class="post-title" title="Windows软件下载">Windows软件下载</span>
+            <span class="post-date" title="2019-12-08 13:53:23">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Markdown "
+           href="/markdown/markdown%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="markdown"
+           data-author="郁明敏" >
+            <span class="post-title" title="Markdown用法总结">Markdown用法总结</span>
+            <span class="post-date" title="2019-12-08 13:40:22">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据挖掘 强化学习 "
+           href="/courses/movan/reinforement-learning/%E8%8E%AB%E7%83%A6%E8%AF%BE%E7%A8%8B-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"
+           data-tag="强化学习"
+           data-author="郁明敏" >
+            <span class="post-title" title="莫烦-强化学习课程">莫烦-强化学习课程</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 GitHub "
+           href="/github/github%E6%90%9C%E7%B4%A2%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8A%80%E5%B7%A7/"
+           data-tag="GitHub"
+           data-author="郁明敏" >
+            <span class="post-title" title="GitHub搜索开源项目技巧">GitHub搜索开源项目技巧</span>
+            <span class="post-date" title="2019-12-08 11:10:15">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
+           href="/pycharm/pycharm%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/"
+           data-tag="pycharm"
+           data-author="郁明敏" >
+            <span class="post-title" title="PyCharm2019.2最新激活方式">PyCharm2019.2最新激活方式</span>
+            <span class="post-date" title="2019-12-08 10:27:59">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据挖掘 数理统计 "
+           href="/data-mining/%E7%BB%9F%E8%AE%A1%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/"
+           data-tag="统计基础"
+           data-author="郁明敏" >
+            <span class="post-title" title="统计假设检验">统计假设检验</span>
+            <span class="post-date" title="2019-12-08 10:26:23">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 XShell "
+           href="/xshell/xshell%E8%BF%9E%E6%8E%A5docker%E6%9C%8D%E5%8A%A1%E5%99%A8/"
+           data-tag="xshell"
+           data-author="郁明敏" >
+            <span class="post-title" title="XShell连接Docker服务器下Centos终端">XShell连接Docker服务器下Centos终端</span>
+            <span class="post-date" title="2019-12-07 23:40:55">2019/12/07</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/airflow/airflow%E5%AE%89%E8%A3%85/"
+           data-tag="AirFlow"
+           data-author="郁明敏" >
+            <span class="post-title" title="AirFlow安装">AirFlow安装</span>
+            <span class="post-date" title="2019-12-07 13:52:21">2019/12/07</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/flask/flask%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"
+           data-tag="Flask"
+           data-author="郁明敏" >
+            <span class="post-title" title="Flask问题总结">Flask问题总结</span>
+            <span class="post-date" title="2019-12-07 11:58:54">2019/12/07</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="后端 Python "
+           href="/python/%E5%86%B7%E5%83%BB%E7%9A%84python%E5%85%B3%E9%94%AE%E5%AD%97/"
+           data-tag="Python关键字"
+           data-author="郁明敏" >
+            <span class="post-title" title="冷僻的Python内置关键字">冷僻的Python内置关键字</span>
+            <span class="post-date" title="2019-12-07 02:15:12">2019/12/07</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据挖掘 逻辑回归 "
+           href="/data-mining/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%BB%BA%E6%A8%A1%E4%B8%80%E8%88%AC%E6%AD%A5%E9%AA%A4/"
+           data-tag="Logistic Regression"
+           data-author="郁明敏" >
+            <span class="post-title" title="LR建模一般步骤">LR建模一般步骤</span>
+            <span class="post-date" title="2019-12-01 22:59:25">2019/12/01</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first">
+                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+            </div>
+            <div class="brackets">
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-zh-tutorial/Vue.js/17-处理边界情况" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">17-处理边界情况</h1>
+    
+    <div class="article-meta">
+        
+        
+        <span class="author"><a>郁明敏</a></span>
+        
+        
+        <span class="book">
+            
+                <a  data-rel="中文文档">中文文档</a>/
+            
+                <a  data-rel="Vue">Vue</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color4">vue</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-01-01 01:09:16'>2019-12-22 13:10</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:3.9k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-访问元素-amp-组件"><span class="toc-text">1. 访问元素 &amp; 组件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-访问根实例"><span class="toc-text">1.1 访问根实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-访问父级组件实例"><span class="toc-text">1.2 访问父级组件实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-访问子组件实例或子元素"><span class="toc-text">1.3 访问子组件实例或子元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-依赖注入"><span class="toc-text">1.4 依赖注入</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-程序化的事件侦听器"><span class="toc-text">2. 程序化的事件侦听器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-循环引用"><span class="toc-text">3. 循环引用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-递归组件"><span class="toc-text">3.1 递归组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-组件之间的循环引用"><span class="toc-text">3.2 组件之间的循环引用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-模板定义的替代品"><span class="toc-text">4. 模板定义的替代品</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-内联模板"><span class="toc-text">4.1 内联模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-X-Template"><span class="toc-text">4.2 X-Template</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-控制更新"><span class="toc-text">5. 控制更新</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-强制更新"><span class="toc-text">5.1 强制更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-通过-v-once-创建低开销的静态组件"><span class="toc-text">5.2 通过 v-once 创建低开销的静态组件</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-4 i,
+    .toc-level-4 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-访问元素-amp-组件"><span class="toc-text">1. 访问元素 &amp; 组件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-访问根实例"><span class="toc-text">1.1 访问根实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-访问父级组件实例"><span class="toc-text">1.2 访问父级组件实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-访问子组件实例或子元素"><span class="toc-text">1.3 访问子组件实例或子元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-依赖注入"><span class="toc-text">1.4 依赖注入</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-程序化的事件侦听器"><span class="toc-text">2. 程序化的事件侦听器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-循环引用"><span class="toc-text">3. 循环引用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-递归组件"><span class="toc-text">3.1 递归组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-组件之间的循环引用"><span class="toc-text">3.2 组件之间的循环引用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-模板定义的替代品"><span class="toc-text">4. 模板定义的替代品</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-内联模板"><span class="toc-text">4.1 内联模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-X-Template"><span class="toc-text">4.2 X-Template</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-控制更新"><span class="toc-text">5. 控制更新</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-强制更新"><span class="toc-text">5.1 强制更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-通过-v-once-创建低开销的静态组件"><span class="toc-text">5.2 通过 v-once 创建低开销的静态组件</span></a></li></ol></li></ol></div></p>
+<blockquote>
+<p>  这里记录的都是和处理边界情况有关的功能，即一些需要对 Vue 的规则做一些小调整的特殊情况。不过注意这些功能都是有劣势或危险的场景的。我们会在每个案例中注明，所以当你使用每个功能的时候请稍加留意。</p>
+</blockquote>
+<h1 id="1-访问元素-amp-组件"><a href="#1-访问元素-amp-组件" class="headerlink" title="1. 访问元素 &amp; 组件"></a>1. 访问元素 &amp; 组件</h1><p>在绝大多数情况下，我们最好不要触达另一个组件实例内部或手动操作 DOM 元素。不过也确实在一些情况下做这些事情是合适的。</p>
+<h2 id="1-1-访问根实例"><a href="#1-1-访问根实例" class="headerlink" title="1.1 访问根实例"></a>1.1 访问根实例</h2><p>在每个 <code>new Vue</code> 实例的子组件中，其根实例可以通过 <code>$root</code> 属性进行访问。例如，在这个根实例中:</p>
+<pre><code class="javascript">// Vue 根实例
+new Vue({
+    data: {
+        foo: 1
+    },
+    computed: {
+        bar: function () { /* ... */ }
+    },
+    methods: {
+        baz: function () { /* ... */ }
+    }
+})
+</code></pre>
+<p>所有的子组件都可以将这个实例作为一个全局 store 来访问或使用。</p>
+<pre><code class="javascript">// 获取根组件的数据
+this.$root.foo
+
+// 写入根组件的数据
+this.$root.foo = 2
+
+// 访问根组件的计算属性
+this.$root.bar
+
+// 调用根组件的方法
+this.$root.baz()
+</code></pre>
+<blockquote>
+<p>  对于 demo 或非常小型的有少量组件的应用来说这是很方便的。不过这个模式扩展到中大型应用来说就不然了。因此在绝大多数情况下我们强烈推荐使用 Vuex 来管理应用的状态。</p>
+</blockquote>
+<h2 id="1-2-访问父级组件实例"><a href="#1-2-访问父级组件实例" class="headerlink" title="1.2 访问父级组件实例"></a>1.2 访问父级组件实例</h2><p>和 <code>$root</code> 类似，<code>$parent</code> 属性可以用来从一个子组件访问父组件的实例。它提供了一种机会，可以在后期随时出发父级罪案，以替代将数据以 prop 的方式传入子组件的方式。</p>
+<blockquote>
+<p>  在绝大多数情况下，触达父级组件会使得你的应用更难调试和理解，尤其是当你变更了父级组件的数据的时候。当我们稍后回看那个组件的时候，很难找出那个变更是从哪里发起的。</p>
+</blockquote>
+<p>另外在一些可能适当的时候，你需要特别地共享一些组件库。举个例子，在和 JavaScript API 进行交互而不渲染 HTML 的抽象组件内，诸如这些假设性的 Google 地图组件一样:</p>
+<pre><code class="html">&lt;google-map&gt;
+    &lt;google-map-markers v-bind:places="iceCreamShops"&gt;&lt;/google-map-markers&gt;
+&lt;/google-map&gt;
+</code></pre>
+<p>这个 <code>&lt;google-map&gt;</code> 组件可以定义一个 <code>map</code> 属性，所有的子组件都需要访问它。在这种情况下 <code>&lt;google-map-markers&gt;</code> 可能想要通过类似 <code>this.$parent.getMap</code> 的方式访问那个地图，以便为其添加一组标记。</p>
+<p>请留意，尽管如此，通过这种模式构建出来的那个组件的内部仍然是容易出现问题的。比如，摄像一下我们添加一个新的 <code>&lt;google-map-region&gt;</code> 组件，当 <code>&lt;google-map-markers&gt;</code> 在其内部出现的时候，只会渲染那个区域的标记:</p>
+<pre><code class="html">&lt;google-map&gt;
+    &lt;goole-map-region v-bind:shape="cityBounaries"&gt;
+        &lt;google-map-markers v-bind:places="iceCreamShops"&gt;&lt;/google-map-markers&gt;
+    &lt;/goole-map-region&gt;
+&lt;/google-map&gt;
+</code></pre>
+<p>那么在 <code>&lt;google-map-markers&gt;</code> 内部你可能发现自己需要一些类似这样的 hack:</p>
+<pre><code class="javascript">var map = this.$parent.map || this.$parent.$parent.map</code></pre>
+<p>很快它就会失控。这也是我们针对需要向任意更深层级的组件提供上下文信息时推荐依赖注入的原因。</p>
+<h2 id="1-3-访问子组件实例或子元素"><a href="#1-3-访问子组件实例或子元素" class="headerlink" title="1.3 访问子组件实例或子元素"></a>1.3 访问子组件实例或子元素</h2><p>尽管存在 prop 和事件，有的时候你仍可能需要在 JavaScript 里直接访问一个组件。为了达到这个目的，你可以通过 <code>ref</code> 特性为这个子组件赋予一个 ID 引用。例如:</p>
+<pre><code class="html">&lt;base-input ref="usernameInput"&gt;&lt;/base-input&gt;</code></pre>
+<p>现在你已经定义了这个 <code>ref</code> 的组件里，你可以使用:</p>
+<pre><code class="javascript">this.$refs.usernameInput</code></pre>
+<p>来访问这个 <code>&lt;base-input&gt;</code> 实例，以便不时之需。比如程序化地从一个父组件聚焦这个输入框。在刚才那个例子中，该 <code>&lt;base-input&gt;</code> 组件也可以使用一个类似的 <code>ref</code> 提供对内部这个指定元素的访问，例如:</p>
+<pre><code class="html">&lt;input ref="input"&gt;</code></pre>
+<p>甚至可以通过其父级组件定义方法:</p>
+<pre><code class="javascript">methods: {
+    // 用来从父级组件聚焦输入框
+    focus: function () {
+        this.$refs.input.focus()
+    }
+}
+</code></pre>
+<p>这样就允许父级组件通过下面的代码聚焦 <code>&lt;base-input&gt;</code> 里的输入框:</p>
+<pre><code class="javascript">this.$refs.usernameInput.focus()</code></pre>
+<p>当 <code>ref</code> 和 <code>v-for</code> 一起使用的时候，你得到的引用将会是一个包含了对应数据源的这些子组件的数组。</p>
+<blockquote>
+<p>  <code>$refs</code> 只会在组件渲染完成之后生效，并且它们不是响应式的。这仅作为一个用于直接操作子组件的“逃生舱”——你应该避免在模板或计算属性中访问 <code>$refs</code>。</p>
+</blockquote>
+<h2 id="1-4-依赖注入"><a href="#1-4-依赖注入" class="headerlink" title="1.4 依赖注入"></a>1.4 依赖注入</h2><p>在此之前，在我们描述访问父级组件实例的时候，展示过一个类似这样的例子:</p>
+<pre><code class="html">&lt;google-map&gt;
+    &lt;goole-map-region v-bind:shape="cityBounaries"&gt;
+        &lt;google-map-markers v-bind:places="iceCreamShops"&gt;&lt;/google-map-markers&gt;
+    &lt;/goole-map-region&gt;
+&lt;/google-map&gt;
+</code></pre>
+<p>在这个组件里，所有 <code>&lt;google-map&gt;</code> 的后代都需要访问一个 <code>getMap</code> 方法，所以知道要跟哪个地图进行交互。不幸的是，使用 <code>$parent</code> 属性无法很好的扩展到更深层级的嵌套组件上。这也是依赖注入的用武之地，它用到了两个新的实例选项: <code>provide</code> 和 <code>inject</code>。</p>
+<p><code>provide</code> 选项允许我们制定我们想要<strong>提供</strong>给后代组件的数据/方法。在这个例子中，就是 <code>&lt;google-map&gt;</code> 内部的 <code>getMap</code> 方法:</p>
+<pre><code class="javascript">provide: function () {
+    return {
+        getMap: this.getMap
+    }
+}
+</code></pre>
+<p>然后在任何后代组件里，我们都可以用 <code>inject</code> 选项来接收指定的我们想要添加在这个实例上的属性:</p>
+<pre><code class="javascript">inject: ['getMap']</code></pre>
+<p>你可以在这里看到完整的示例。相比 <code>$parent</code> 来说，这个用法可以让我们在任意后代组件中访问 <code>getMap</code>，而不需要暴露整个 <code>&lt;google-map&gt;</code> 实例。这允许我们更好的持续研发该组件，而不需要担心我们会改变/移除一些子组件依赖的东西。同时这些组件之间的接口是始终明确定义的，就和 <code>props</code> 一样。</p>
+<p>实际上，你可以把依赖注入看作一部分“大范围有效的 prop”，除了:</p>
+<ul>
+<li>祖先组件不需要知道哪些后代组件使用它提供的属性</li>
+<li>后代最贱不需要知道被注入的属性来自哪里</li>
+</ul>
+<blockquote>
+<p>  然而，依赖注入还是有负面影响的。它将你应用程序中的组件与它们当前的组织方式耦合起来，使重构变得更加困难。同时所提供的属性是非响应式的。这是出于设计的考虑，因为使用它们来创建一个中心规模化的数据跟使用 <code>$root</code> 做这件事都是不够好的。如果你想要共享的这个属性是你应用特有的，而不是通用化的，或者如果你想在祖先组件中更新所提供的数据，那么这意味着你可能需要换用一个像 Vuex 这样真正的状态管理方案了。</p>
+</blockquote>
+<h1 id="2-程序化的事件侦听器"><a href="#2-程序化的事件侦听器" class="headerlink" title="2. 程序化的事件侦听器"></a>2. 程序化的事件侦听器</h1><p>现在，你已经知道了 <code>$emit</code> 的用法，它可以被 <code>v-on</code> 侦听，但是 Vue 实例同时在其事件接口中提供了其它的方法。我们可以:</p>
+<ul>
+<li>通过 <code>$on(eventName, eventHandler)</code> 侦听一个事件</li>
+<li>通过 <code>$once(eventName, eventHandler)</code> 一次性侦听一个事件</li>
+<li>通过 <code>$off(eventName, eventHandler)</code> 停止侦听一个事件</li>
+</ul>
+<p>你通常不会用到这些，但是当你需要在一个组件实例上手动侦听事件时，它们是派得上用场的。它们也可以用于代码组织工具。例如，你可能经常看到这种集成一个第三方库的模式:</p>
+<pre><code class="javascript">// 一次性将这个日期选择器附加到一个输入框上]
+// 它会挂在到 DOM 上
+mounted: function () {
+    // Pikaday 是一个第三方日期选择的库
+    this.picker = new Pickaday({
+        field: this.$refs.input,
+        format: 'YYYY-MM-DD'
+    })
+},
+// 在组件被销毁之前,也销毁这个日期选择器
+beforeDestory: function () {
+    this.picker.destory()
+}
+</code></pre>
+<p>这里有两个潜在的问题:</p>
+<ul>
+<li>它需要在这个组件实例中保存这个 <code>picker</code>，如果可以的话最好只有生命周期钩子可以访问到它。这并不算严重的问题，但是它可以被视为杂物。</li>
+<li>我们的建立代码独立于我们的清理代码，这使得我们比较难于程序化地清理我们建立的所有东西。</li>
+</ul>
+<p>你应该通过一个程序化的侦听器解决两个问题:</p>
+<pre><code class="javascript">mounted: function () {
+    var picker = new Pickaday({
+        field: this.$refs.input,
+        format: 'YYYY-MM-DD'
+    })
+    this.$once('hook:beforeDestory', function() {
+        picker.destory()
+    })
+}
+</code></pre>
+<p>使用这个策略，我甚至可以让多个输入框元素同时使用不同的 Pikaday，每个新的实例都程序化地在后期清理它自己:</p>
+<pre><code class="javascript">mounted: function () {
+    this.attachDatepicker('startDateInput'),
+    this.attachDatepicker('endDateInput'),
+},
+methods: {
+    attachDatepicker: function (refName) {
+        var picker = new Pikaday({
+            field: this.$refs[refName],
+            format: 'YYYY-MM-DD'
+        })
+        this.$once('hook:beforeDestory', function () {
+            picker.destory()
+        })
+    }
+}
+</code></pre>
+<p>查阅这个 fiddle 可以了解到完整的代码。注意，即便如此，如果你发现自己不得不在单个组件里做很多简历和清理的工作，最好的方式通常还是创建更多的模块化组件。在这个例子中，我们推荐创建一个可复用的 <code>&lt;input-datepicker&gt;</code> 组件。</p>
+<p>想了解更多程序化侦听器的内容，请查阅<strong>实例方法/事件</strong>相关的API。</p>
+<blockquote>
+<p>  注意 Vue 的事件系统不同于浏览器的 EventTarget API。尽管它们工作起来是相似的，但是 <code>$emit</code>、<code>$on</code> 和 <code>$off</code> 并不是 <code>dispatchEvent</code>、<code>addEventListener</code> 和 <code>removeEventListener</code> 的别名。</p>
+</blockquote>
+<h1 id="3-循环引用"><a href="#3-循环引用" class="headerlink" title="3. 循环引用"></a>3. 循环引用</h1><h2 id="3-1-递归组件"><a href="#3-1-递归组件" class="headerlink" title="3.1 递归组件"></a>3.1 递归组件</h2><p>组件是可以在它们自己的模板中调用自身的。不过它们只能通过 <code>name</code> 选项来做这件事:</p>
+<pre><code class="javascript">name: 'unique-name-of-my-component'</code></pre>
+<p>当你使用 <code>Vue.component</code> 全局注册一个组件时，这个全局的 ID 会自动设置为该组件的 <code>name</code> 选项。</p>
+<pre><code class="javascript">Vue.component('unique-name-of-my-component', {
+    // ...
+})</code></pre>
+<p>稍有不慎，递归钻进就可能导致无限循环:</p>
+<pre><code class="javascript">name: 'stack-overflow',
+template: '&lt;div&gt;&lt;stack-overflow&gt;&lt;/stack-overflow&gt;&lt;/div&gt;'
+</code></pre>
+<p>类似上述的组件将会导致 “max stack size exceeded” 错误，所以请确保递归调用是条件性的(例如使用一个最终得到的 <code>false</code> 的 <code>v-if</code>)。</p>
+<h2 id="3-2-组件之间的循环引用"><a href="#3-2-组件之间的循环引用" class="headerlink" title="3.2 组件之间的循环引用"></a>3.2 组件之间的循环引用</h2><p>假设你需要构建一个文件目录树，像访达或资源管理器那样的。你可能有一个 <code>&lt;tree-folder&gt;</code> 组件，模板是这样的:</p>
+<pre><code class="html">&lt;p&gt;
+    &lt;span&gt;{{ fold.name }}&lt;/span&gt;
+    &lt;tree-folder-contents :children="folder.children" /&gt;
+&lt;/p&gt;
+</code></pre>
+<p>还有一个 <code>&lt;tree-folder-contents&gt;</code> 组件，模板是这样的:</p>
+<pre><code class="html">&lt;ul&gt;
+    &lt;li v-for="child in children"&gt;
+        &lt;tree-folder v-if="child.children" :folder="child" /&gt;
+        &lt;span v-else&gt;{{ child.name }}&lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>当你解释这里发生了什么，我们先把两个组件称为 A 和 B。模块系统发现它需要 A。但是首先 A 依赖 B，但是 B 又依赖 A，但是 A 又依赖 B。如此往复。这变成了一个循环，不知道如何不经过其中一个组件，而完全解析出另一个组件。为了解决这个问题，我们需要给模块系统一个点，在那里 “A反正是需要 B的，但是我们不需要先解析 B”。</p>
+<p>在我们的例子中，把 <code>&lt;tree-folder&gt;</code> 组件设为了那个点。我们知道那个产生悖论的子组件是 <code>&lt;tree-folder-contents&gt;</code> 组件，所以我们会等到生命周期钩子 <code>beforeCreate</code> 时区注册它:</p>
+<pre><code class="javascript">beforeCreate: function () {
+    this.$options.components.TreeFolderContents = require('./tree-folder-contents.vue').default
+}
+</code></pre>
+<p>这样问题就解决了。</p>
+<h1 id="4-模板定义的替代品"><a href="#4-模板定义的替代品" class="headerlink" title="4. 模板定义的替代品"></a>4. 模板定义的替代品</h1><h2 id="4-1-内联模板"><a href="#4-1-内联模板" class="headerlink" title="4.1 内联模板"></a>4.1 内联模板</h2><p>当 <code>inline-template</code> 这个特殊的特性出现在一个子组件上时，这个组件将会使用里面的内容作为模板，而不是将其作为被分发的内容。这使得模板的撰写工作更加灵活。</p>
+<pre><code class="html">&lt;my-component&gt;
+    &lt;div&gt;
+        &lt;p&gt;These are compiled as the component's own template.&lt;/p&gt;
+        &lt;p&gt;Not parent's transclusion content.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/my-component&gt;</code></pre>
+<p>内联模板需要定义在 Vue 所属的 DOM 元素内。</p>
+<blockquote>
+<p>  不过，<code>inline-template</code> 会模板的作用域变得更加难以理解。所以作为最佳实践，请在组件内优先选择 <code>template</code> 选项或 <code>.vue</code> 文件里的一个 <code>&lt;template&gt;</code> 元素来定义模板。</p>
+</blockquote>
+<h2 id="4-2-X-Template"><a href="#4-2-X-Template" class="headerlink" title="4.2 X-Template"></a>4.2 X-Template</h2><p>另一个定义模板的方式是一个 <code>&lt;script&gt;</code> 元素中，并为其带上 <code>text/x-template</code> 的类型，然后通过一个 id 将模板引用过去。例如:</p>
+<pre><code class="html">&lt;script type="text-x-template" id="hello-world-template"&gt;
+    &lt;p&gt;Hello hello hello&lt;/p&gt;
+&lt;/script&gt;
+&lt;script&gt;
+    Vue.component('hello-world', {
+        template: '#hello-world-template'
+    })
+&lt;/script&gt;
+</code></pre>
+<p>x-template 需要定义在 Vue 所属的 DOM 元素外。</p>
+<blockquote>
+<p>  这些可以用于模板特别大的 demo 或极小型的应用，但是其他情况下请避免使用，因为这会将模板和该组件的其他定义分离开。</p>
+</blockquote>
+<h1 id="5-控制更新"><a href="#5-控制更新" class="headerlink" title="5. 控制更新"></a>5. 控制更新</h1><p>感谢 Vue 的响应系统，它始终知道何时进行更新(如果你用对了的话)。不过还是有一些边界情况，你想要强制更新，尽管表面上看响应式的数据没有发生改变。也有一些情况是你想阻止不必要的更新。</p>
+<h2 id="5-1-强制更新"><a href="#5-1-强制更新" class="headerlink" title="5.1 强制更新"></a>5.1 强制更新</h2><blockquote>
+<p>  如果你发现你自己需要在 Vue 中做一次强制更新，99.9% 的情况，是你在某个地方做错了事。</p>
+</blockquote>
+<p>你可能还没有留意到数组或对象的变更检测注意事项，或者你可能依赖了一个未被 Vue 的响应式系统追踪的状态。</p>
+<p>然后，如果你已经做到了上述的事项仍然发现在极少数的情况下需要手动强制更新，那么你可以通过 <code>$forceUpdate</code> 来做这件事。</p>
+<h2 id="5-2-通过-v-once-创建低开销的静态组件"><a href="#5-2-通过-v-once-创建低开销的静态组件" class="headerlink" title="5.2 通过 v-once 创建低开销的静态组件"></a>5.2 通过 v-once 创建低开销的静态组件</h2><p>渲染普通的 HTML 元素在 Vue 中是非常快速的，但有的时候你可能有一个组件，这个组件包含了<strong>大量</strong>静态内容。在这种情况下，你可以在根元素上添加 <code>v-once</code> 特性以确保这些内容只计算一次然后缓存起来，就像这样:</p>
+<pre><code class="javascript">Vue.component('term-of-service', {
+    template: `
+        &lt;div v-once&gt;
+            &lt;h1&gt;Terms of Service&lt;/h1&gt;
+            ... a lot of static content ...
+        &lt;/div&gt;
+    `
+})
+</code></pre>
+<blockquote>
+<p>  再说一次，试着不要过度使用这个模式。当你需要渲染大量静态内容时，极少数的情况下它会给你带来便利，除非你非常留意渲染变慢了，不然它完全是没有必要的——再加上它在后期会带来很多困惑。例如，设想另一个开发者并不熟悉 <code>v-once</code> 或漏看了它在模板中，他们可能会花很多个小时去找出模板为什么无法正确更新。</p>
+</blockquote>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yu_mingm623@163.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>17-处理边界情况</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">4k</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-12-22, 13:10:28</p>
+    <p><span class="copy-title">最后更新:</span>2020-01-01, 01:09:16</p>
+    <!-- <span class="copy-title">原始链接:</span><a class="post-url" href="/zh-tutorial/Vue.js/17-%E5%A4%84%E7%90%86%E8%BE%B9%E7%95%8C%E6%83%85%E5%86%B5/" title="17-处理边界情况">http://www.monsteryu.top/zh-tutorial/Vue.js/17-%E5%A4%84%E7%90%86%E8%BE%B9%E7%95%8C%E6%83%85%E5%86%B5/</a> -->
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2019.11 路痴大魔王</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+<script src="/js/clipboard.min.js?v=1.0.1" ></script>
+<script src="/js/clipboard-use.js?v=1.0.1" ></script>
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['@郁明敏','#chrome','#MySQL','#AirFlow','#Centos','#Flask','#Logistic Regression','#GitHub','#hadoop','#hexo','#hive','#蓝鲸','#impala','#Python学习资源','#datagrip','#Linux','#LGBM','#GLIBC','#Mac','#markdown','#notepad','#pandas','#pycharm','#Requests','#Jupyter','#impyla','#Python常用库','#sublime','#windows软件','#windows','#xshell','#Django','#Python小技巧','#Python关键字','#数据挖掘','#3-hexo','#vue','#sklearn','#统计基础','#Django用户登录','#强化学习',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 602px;
+    }
+    .nav.fullscreen {
+        margin-left: -602px;
+    }
+    .nav-left {
+        width: 180px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 532px;
+        }
+        .nav.fullscreen {
+            margin-left: -532px;
+        }
+        .nav-left {
+            width: 140px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 532px;
+            margin-left: -532px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 532px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

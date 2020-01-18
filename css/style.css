@@ -1552,6 +1552,7 @@ div.ac > ul > li:before,
   text-align: left;
   margin: 0;
   padding: 6px 13px;
+  min-width: 100px;
 }
 .post .pjax article table tr td:first-child,
 .post .pjax article table tr td:last-child {

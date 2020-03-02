@@ -633,7 +633,7 @@ div.ac > ul > li:before,
   color: #f00;
 }
 .nav-left {
-  width: 180px;
+  width: 200px;
   height: 100%;
   background: #2a2935;
   box-shadow: inset -15px 0 15px -15px #222;
@@ -759,7 +759,7 @@ div.ac > ul > li:before,
 }
 .nav-left ul li>div.active {
   color: #020202;
-  box-shadow: inset 180px 0 0 #fff;
+  box-shadow: inset 200px 0 0 #fff;
   position: relative;
 }
 .nav-left ul li>div>.fold {
@@ -1716,7 +1716,7 @@ h1 {
   font-size: 1.8em;
 }
 .nav {
-  width: 582px;
+  width: 602px;
   height: 100%;
   float: left;
   background-color: #fff;
@@ -1733,7 +1733,7 @@ h1 {
   height: 40px;
   position: absolute;
   z-index: 30;
-  left: 582px;
+  left: 602px;
   top: 50vh;
   overflow: hidden;
   transition: left 0.5s cubic-bezier(0.77, 0, 0.175, 1);

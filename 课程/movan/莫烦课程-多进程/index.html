@@ -6,12 +6,12 @@
   <meta name="keywords" content="">
   <meta name="description" content="莫烦-多进程课程 | 路痴大魔王">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="页面未找到！         document.querySelectorAll(&amp;apos;.github-emoji&amp;apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&amp;apos;img&amp;apos;);             im">
+<meta name="description" content="页面未找到！          document.querySelectorAll(&amp;apos;.github-emoji&amp;apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&amp;apos;img&amp;apos;);             i">
 <meta property="og:type" content="website">
 <meta property="og:title" content="404">
 <meta property="og:url" content="http:&#x2F;&#x2F;www.monsteryu.top&#x2F;404.html">
 <meta property="og:site_name" content="路痴大魔王">
-<meta property="og:description" content="页面未找到！         document.querySelectorAll(&amp;apos;.github-emoji&amp;apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&amp;apos;img&amp;apos;);             im">
+<meta property="og:description" content="页面未找到！          document.querySelectorAll(&amp;apos;.github-emoji&amp;apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&amp;apos;img&amp;apos;);             i">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-12-01T14:55:52.000Z">
 <meta name="twitter:card" content="summary">
@@ -29,7 +29,7 @@
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
 
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/10.2.0/highlight.min.js"></script>
 <script>
     hljs.initHighlightingOnLoad();
 </script>
@@ -42,7 +42,14 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-    <!-- 代码块复制功能 -->
+    <!-- 自定义语言高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/dockerfile.min.js" integrity="sha512-PkYx44XPGihIBrIcdSUHi9gVPtedxVU4MiAxcdH3kG1B1ZA/2UZLLXg84gLWoFojIC2srDBjoOxNrJKGINwELw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/erlang.min.js" integrity="sha512-0iy22+YGFhY48ue0lJMYdG+LXe/cJl4j2wDj1baKN3aA1qXBhwKPJ7OUY/pwoCZ1TzYeT+DcpeV5hunTLHgwKQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js" integrity="sha512-gkjUi+DiIv/a5wcQ6swX1zdLKzzw574dF5oOw9d5/YQ5iJlrBD8/Ot3Zimwf2zq5HOpVmrh6HbpiRnWVIcr8Ow==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js" integrity="sha512-g7s7OCSU5BSCSTfgHPwJT6s2VTiwGO6JxFOVLEB4WaikcJs4WHNJXsB3WVB8JSRHUrBckMl0LGRrQ65eBv7qKw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/powershell.min.js" integrity="sha512-PwV5Q67iPMuWqs6aDWCmrGm7keyzorPmleIF2Qe27hvQIvwxL7RUSCR4ChRjTZYYMM60FxrGOOhudyNYhqTdYw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/stylus.min.js" integrity="sha512-gGSIt6YSrlrKHnilz7/jhYCZrJDZFdCG00FHOnjh42Y7DA7I6/yUaDAVXSRjYm8DCKwQxq3P9fkmEj7+TbSs8A==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/django.min.js" integrity="sha512-YvGW9XF+0wGDv43Gwr9AUSCFL0yHPjgOiHjsTirik7+3DazLtqh90T3r2E6D31wRtlJolnPn3T75a4Z1Sc7wPA==" crossorigin="anonymous"></script>
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -108,7 +115,7 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(133)</small></div></li>
+    <li><div class="all active">全部文章<small>(136)</small></div></li>
     
         
             
@@ -128,9 +135,17 @@
     
         
             
-        
-    
-        
+            <li><div data-rel="Docker"><i class="fold iconfont icon-right"></i>Docker<small>(4)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Docker基础">Docker基础<small>(4)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
             
         
     
@@ -144,6 +159,22 @@
     
         
             
+            <li><div data-rel="Git"><i class="fold iconfont icon-right"></i>Git<small>(1)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Git课程">Git课程<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
         
     
         
@@ -152,11 +183,31 @@
     
         
             
-            <li><div data-rel="Go语言"><i class="fold iconfont icon-right"></i>Go语言<small>(1)</small></div>
+            <li><div data-rel="Go"><i class="fold iconfont icon-right"></i>Go<small>(1)</small></div>
                 
                     <ul class="sub hide">
                         
                         <li><div data-rel="Go基础">Go基础<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="Hadoop"><i class="fold iconfont icon-right"></i>Hadoop<small>(1)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Hadoop基础">Hadoop基础<small>(1)</small></div>
                             
                         </li>
                             
@@ -232,11 +283,11 @@
                 
                     <ul class="sub hide">
                         
-                        <li><div data-rel="数据库LC">数据库LC<small>(3)</small></div>
+                        <li><div data-rel="算法">算法<small>(4)</small></div>
                             
                         </li>
                             
-                        <li><div data-rel="算法">算法<small>(4)</small></div>
+                        <li><div data-rel="数据库LC">数据库LC<small>(3)</small></div>
                             
                         </li>
                             
@@ -288,23 +339,35 @@
     
         
             
-        
-    
-        
-            
-        
-    
-        
-            
-            <li><div data-rel="Python"><i class="fold iconfont icon-right"></i>Python<small>(45)</small></div>
+            <li><div data-rel="Portainer"><i class="fold iconfont icon-right"></i>Portainer<small>(1)</small></div>
                 
                     <ul class="sub hide">
                         
-                        <li><div data-rel="Python小工具">Python小工具<small>(16)</small></div>
+                        <li><div data-rel="Portainer基础">Portainer基础<small>(1)</small></div>
                             
                         </li>
                             
-                        <li><div data-rel="AirFlow">AirFlow<small>(3)</small></div>
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="Python"><i class="fold iconfont icon-right"></i>Python<small>(43)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Python基础">Python基础<small>(8)</small></div>
                             
                         </li>
                             
@@ -312,26 +375,23 @@
                             
                         </li>
                             
+                        <li><div data-rel="AirFlow">AirFlow<small>(3)</small></div>
+                            
+                        </li>
+                            
                         <li><div data-rel="Python爬虫">Python爬虫<small>(1)</small></div>
                             
                         </li>
                             
-                        <li><div data-rel="PyCharm">PyCharm<small>(2)</small></div>
+                        <li><div data-rel="Python小工具">Python小工具<small>(16)</small></div>
                             
                         </li>
                             
-                        <li><div data-rel="Python基础">Python基础<small>(8)</small></div>
-                            
-                        </li>
-                            
-                        <li><div data-rel="PythonWeb"><i class="fold iconfont icon-right"></i>PythonWeb<small>(4)</small></div>
+                        <li><div data-rel="Python数据库"><i class="fold iconfont icon-right"></i>Python数据库<small>(1)</small></div>
                             
                                 <ul class="sub hide">
                                     
-                                    <li><div data-rel="Flask">Flask<small>(2)</small></div>
-                                    </li>
-                                    
-                                    <li><div data-rel="Django">Django<small>(2)</small></div>
+                                    <li><div data-rel="Impyla">Impyla<small>(1)</small></div>
                                     </li>
                                     
                                 </ul>
@@ -349,6 +409,20 @@
                             
                         </li>
                             
+                        <li><div data-rel="PythonWeb"><i class="fold iconfont icon-right"></i>PythonWeb<small>(4)</small></div>
+                            
+                                <ul class="sub hide">
+                                    
+                                    <li><div data-rel="Django">Django<small>(2)</small></div>
+                                    </li>
+                                    
+                                    <li><div data-rel="Flask">Flask<small>(2)</small></div>
+                                    </li>
+                                    
+                                </ul>
+                            
+                        </li>
+                            
                         <li><div data-rel="Python科学计算"><i class="fold iconfont icon-right"></i>Python科学计算<small>(8)</small></div>
                             
                                 <ul class="sub hide">
@@ -360,17 +434,6 @@
                             
                         </li>
                             
-                        <li><div data-rel="Python数据库"><i class="fold iconfont icon-right"></i>Python数据库<small>(1)</small></div>
-                            
-                                <ul class="sub hide">
-                                    
-                                    <li><div data-rel="Impyla">Impyla<small>(1)</small></div>
-                                    </li>
-                                    
-                                </ul>
-                            
-                        </li>
-                            
                     </ul>
                 
             </li>
@@ -415,11 +478,7 @@
     
         
             
-        
-    
-        
-            
-            <li><div data-rel="R语言"><i class="fold iconfont icon-right"></i>R语言<small>(1)</small></div>
+            <li><div data-rel="R"><i class="fold iconfont icon-right"></i>R<small>(1)</small></div>
                 
                     <ul class="sub hide">
                         
@@ -430,6 +489,10 @@
                     </ul>
                 
             </li>
+            
+        
+    
+        
             
         
     
@@ -475,19 +538,15 @@
     
         
             
-        
-    
-        
-            
-            <li><div data-rel="前端"><i class="fold iconfont icon-right"></i>前端<small>(7)</small></div>
+            <li><div data-rel="前端"><i class="fold iconfont icon-right"></i>前端<small>(10)</small></div>
                 
                     <ul class="sub hide">
                         
-                        <li><div data-rel="Hexo">Hexo<small>(6)</small></div>
+                        <li><div data-rel="Hexo">Hexo<small>(7)</small></div>
                             
                         </li>
                             
-                        <li><div data-rel="Node.js">Node.js<small>(1)</small></div>
+                        <li><div data-rel="Nodejs">Nodejs<small>(3)</small></div>
                             
                         </li>
                             
@@ -511,31 +570,7 @@
     
         
             
-            <li><div data-rel="大数据"><i class="fold iconfont icon-right"></i>大数据<small>(3)</small></div>
-                
-                    <ul class="sub hide">
-                        
-                        <li><div data-rel="Docker">Docker<small>(1)</small></div>
-                            
-                        </li>
-                            
-                        <li><div data-rel="Hadoop">Hadoop<small>(1)</small></div>
-                            
-                        </li>
-                            
-                        <li><div data-rel="Portainer">Portainer<small>(1)</small></div>
-                            
-                        </li>
-                            
-                    </ul>
-                
-            </li>
-            
-        
-    
-        
-            
-            <li><div data-rel="学习资源"><i class="fold iconfont icon-right"></i>学习资源<small>(5)</small></div>
+            <li><div data-rel="学习资源"><i class="fold iconfont icon-right"></i>学习资源<small>(4)</small></div>
                 
                     <ul class="sub hide">
                         
@@ -543,7 +578,7 @@
                             
                         </li>
                             
-                        <li><div data-rel="大佬博客">大佬博客<small>(2)</small></div>
+                        <li><div data-rel="大佬博客">大佬博客<small>(1)</small></div>
                             
                         </li>
                             
@@ -563,7 +598,7 @@
     
         
             
-            <li><div data-rel="工具"><i class="fold iconfont icon-right"></i>工具<small>(11)</small></div>
+            <li><div data-rel="工具"><i class="fold iconfont icon-right"></i>工具<small>(14)</small></div>
                 
                     <ul class="sub hide">
                         
@@ -575,7 +610,7 @@
                             
                         </li>
                             
-                        <li><div data-rel="JetBrains">JetBrains<small>(3)</small></div>
+                        <li><div data-rel="JetBrains">JetBrains<small>(5)</small></div>
                             
                         </li>
                             
@@ -583,7 +618,7 @@
                             
                         </li>
                             
-                        <li><div data-rel="Notepad">Notepad<small>(1)</small></div>
+                        <li><div data-rel="Notepad">Notepad<small>(2)</small></div>
                             
                         </li>
                             
@@ -631,23 +666,27 @@
     
         
             
-            <li><div data-rel="数据挖掘"><i class="fold iconfont icon-right"></i>数据挖掘<small>(6)</small></div>
+        
+    
+        
+            
+            <li><div data-rel="机器学习"><i class="fold iconfont icon-right"></i>机器学习<small>(4)</small></div>
                 
                     <ul class="sub hide">
                         
-                        <li><div data-rel="基本套路">基本套路<small>(2)</small></div>
+                        <li><div data-rel="基本知识">基本知识<small>(1)</small></div>
                             
                         </li>
                             
-                        <li><div data-rel="数理统计">数理统计<small>(1)</small></div>
-                            
-                        </li>
-                            
-                        <li><div data-rel="模型原理">模型原理<small>(2)</small></div>
+                        <li><div data-rel="Model模板代码">Model模板代码<small>(1)</small></div>
                             
                         </li>
                             
                         <li><div data-rel="超参调优">超参调优<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="数理统计">数理统计<small>(1)</small></div>
                             
                         </li>
                             
@@ -663,15 +702,7 @@
     
         
             
-        
-    
-        
-            
-        
-    
-        
-            
-            <li><div data-rel="系统"><i class="fold iconfont icon-right"></i>系统<small>(9)</small></div>
+            <li><div data-rel="系统"><i class="fold iconfont icon-right"></i>系统<small>(11)</small></div>
                 
                     <ul class="sub hide">
                         
@@ -683,7 +714,7 @@
                             
                         </li>
                             
-                        <li><div data-rel="Windows">Windows<small>(4)</small></div>
+                        <li><div data-rel="Windows">Windows<small>(6)</small></div>
                             
                         </li>
                             
@@ -699,7 +730,7 @@
     
         
             
-            <li><div data-rel="课程"><i class="fold iconfont icon-right"></i>课程<small>(22)</small></div>
+            <li><div data-rel="课程"><i class="fold iconfont icon-right"></i>课程<small>(18)</small></div>
                 
                     <ul class="sub hide">
                         
@@ -707,19 +738,11 @@
                             
                         </li>
                             
-                        <li><div data-rel="Django课程">Django课程<small>(1)</small></div>
-                            
-                        </li>
-                            
-                        <li><div data-rel="Git与GitHub课程">Git与GitHub课程<small>(1)</small></div>
+                        <li><div data-rel="Linux基础课程">Linux基础课程<small>(2)</small></div>
                             
                         </li>
                             
                         <li><div data-rel="Matplotlib课程">Matplotlib课程<small>(2)</small></div>
-                            
-                        </li>
-                            
-                        <li><div data-rel="Linux基础课程">Linux基础课程<small>(2)</small></div>
                             
                         </li>
                             
@@ -735,15 +758,11 @@
                             
                         </li>
                             
-                        <li><div data-rel="WordPress课程">WordPress课程<small>(2)</small></div>
+                        <li><div data-rel="Hadoop基础课程">Hadoop基础课程<small>(1)</small></div>
                             
                         </li>
                             
                         <li><div data-rel="Scala基础课程">Scala基础课程<small>(1)</small></div>
-                            
-                        </li>
-                            
-                        <li><div data-rel="Hadoop基础课程">Hadoop基础课程<small>(1)</small></div>
                             
                         </li>
                             
@@ -769,8 +788,8 @@
     </div>
     <div><a class="about  site_url"  href="/about">关于</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="133">
-<input type="hidden" id="yelog_site_word_count" value="263k">
+<input type="hidden" id="yelog_site_posts_number" value="136">
+<input type="hidden" id="yelog_site_word_count" value="265.6k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -812,55 +831,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color4">数据库</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">算法</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">AirFlow</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">Jupyter</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">3-hexo</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">hexo</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">hexo-live2d</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">hadoop</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">chrome</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">markdown</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">notepad</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">sublime</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">xshell</a>
+        <a class="color5">LGBM</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -876,15 +847,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color5">Logistic Regression</a>
+        <a class="color1">MySQL</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color5">统计基础</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">LGBM</a>
+        <a class="color2">Centos</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -900,35 +867,43 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color1">MySQL</a>
+        <a class="color2">chrome</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color2">Centos</a>
+        <a class="color3">sublime</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color3">windows</a>
+        <a class="color2">xshell</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color5">windows软件</a>
+        <a class="color5">统计基础</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color4">CDH</a>
+        <a class="color3">Jupyter</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color3">sklearn</a>
+        <a class="color3">AirFlow</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color2">Django</a>
+        <a class="color3">算法</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">数据库</a>
     </li>
     
     <li class="article-tag-list-item">
         <a class="color5">Java</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">Django</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -946,15 +921,31 @@
     <nav id="title-list-nav">
         
         <a onclick="refreshBtnCopy()" id="top" class="前端 Hexo "
-           href="/%E5%89%8D%E7%AB%AF/hexo/3-hexo%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
-           data-tag="3-hexo,hexo"
+           href="/web/hexo/build_personal_site_using_3-hexo_github/"
+           data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="3-hexo主题使用总结与补充">3-hexo主题使用总结与补充</span>
+            <span class="post-title" title="使用3-hexo和GitHub搭建个人博客">使用3-hexo和GitHub搭建个人博客</span>
             <span class="post-date" title="2019-11-27 16:53:35">2019/11/27</span>
         </a>
         
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/systems/windows/wins_chocolatey/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Chocolatey包管理器">Chocolatey包管理器</span>
+            <span class="post-date" title="2020-09-04 00:00:01">2020/09/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/systems/windows/wins_scoop/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Scoop包管理器">Scoop包管理器</span>
+            <span class="post-date" title="2020-09-04 00:00:01">2020/09/04</span>
+        </a>
+        
         <a onclick="refreshBtnCopy()"  class="LeetCode 算法 "
-           href="/LeetCode/%E7%AE%97%E6%B3%95/%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"
+           href="/learning/leetcode/algorithms/%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"
            data-tag="算法"
            data-author="郁明敏" >
             <span class="post-title" title="无重复字符的最长子串">无重复字符的最长子串</span>
@@ -962,15 +953,31 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="LeetCode 算法 "
-           href="/LeetCode/%E7%AE%97%E6%B3%95/%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/"
+           href="/learning/leetcode/algorithms/%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/"
            data-tag="算法"
            data-author="郁明敏" >
             <span class="post-title" title="三数之和">三数之和</span>
             <span class="post-date" title="2020-03-25 00:00:01">2020/03/25</span>
         </a>
         
+        <a onclick="refreshBtnCopy()"  class="LeetCode 算法 "
+           href="/learning/leetcode/algorithms/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"
+           data-tag="算法"
+           data-author="郁明敏" >
+            <span class="post-title" title="两数之和">两数之和</span>
+            <span class="post-date" title="2020-03-01 00:00:01">2020/03/01</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="LeetCode 算法 "
+           href="/learning/leetcode/algorithms/%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/"
+           data-tag="算法"
+           data-author="郁明敏" >
+            <span class="post-title" title="两数相加">两数相加</span>
+            <span class="post-date" title="2020-03-01 00:00:01">2020/03/01</span>
+        </a>
+        
         <a onclick="refreshBtnCopy()"  class="LeetCode 数据库LC "
-           href="/LeetCode/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%ACN%E9%AB%98%E7%9A%84%E8%96%AA%E6%B0%B4/"
+           href="/learning/leetcode/databases/%E7%AC%ACN%E9%AB%98%E7%9A%84%E8%96%AA%E6%B0%B4/"
            data-tag="数据库"
            data-author="郁明敏" >
             <span class="post-title" title="第N高的薪水">第N高的薪水</span>
@@ -978,55 +985,39 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="LeetCode 数据库LC "
-           href="/LeetCode/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%BA%8C%E9%AB%98%E7%9A%84%E8%96%AA%E6%B0%B4/"
-           data-tag="数据库"
-           data-author="郁明敏" >
-            <span class="post-title" title="第二高的薪水">第二高的薪水</span>
-            <span class="post-date" title="2020-03-01 00:00:01">2020/03/01</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="LeetCode 数据库LC "
-           href="/LeetCode/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/"
+           href="/learning/leetcode/databases/%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/"
            data-tag="数据库"
            data-author="郁明敏" >
             <span class="post-title" title="组合两个表">组合两个表</span>
             <span class="post-date" title="2020-03-01 00:00:01">2020/03/01</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="LeetCode 算法 "
-           href="/LeetCode/%E7%AE%97%E6%B3%95/%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/"
-           data-tag="算法"
+        <a onclick="refreshBtnCopy()"  class="LeetCode 数据库LC "
+           href="/learning/leetcode/databases/%E7%AC%AC%E4%BA%8C%E9%AB%98%E7%9A%84%E8%96%AA%E6%B0%B4/"
+           data-tag="数据库"
            data-author="郁明敏" >
-            <span class="post-title" title="两数相加">两数相加</span>
-            <span class="post-date" title="2020-03-01 00:00:01">2020/03/01</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="LeetCode 算法 "
-           href="/LeetCode/%E7%AE%97%E6%B3%95/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"
-           data-tag="算法"
-           data-author="郁明敏" >
-            <span class="post-title" title="两数之和">两数之和</span>
+            <span class="post-title" title="第二高的薪水">第二高的薪水</span>
             <span class="post-date" title="2020-03-01 00:00:01">2020/03/01</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="前端 Hexo "
-           href="/%E5%89%8D%E7%AB%AF/hexo/hexo%E4%BD%BF%E7%94%A8emoji%E8%A1%A8%E6%83%85/"
-           data-tag="hexo-live2d"
-           data-author="郁明敏" >
-            <span class="post-title" title="Hexo使用emoji表情">Hexo使用emoji表情</span>
-            <span class="post-date" title="2020-01-01 14:48:43">2020/01/01</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
-           href="/%E5%89%8D%E7%AB%AF/hexo/hexo%E5%AE%89%E8%A3%85live2d%E6%A8%A1%E5%9E%8B%E6%8F%92%E4%BB%B6/"
-           data-tag="hexo-live2d"
+           href="/web/hexo/hexo_install_live2d_model_plugins/"
+           data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Hexo安装live2d动态模型">Hexo安装live2d动态模型</span>
             <span class="post-date" title="2020-01-01 14:48:43">2020/01/01</span>
         </a>
         
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/web/hexo/hexo_using_emoji/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Hexo使用emoji表情">Hexo使用emoji表情</span>
+            <span class="post-date" title="2020-01-01 14:48:43">2020/01/01</span>
+        </a>
+        
         <a onclick="refreshBtnCopy()"  class="Python PythonWeb Django "
-           href="/Python/PythonWeb/Django/django%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E4%B8%8E%E6%B3%A8%E5%86%8C%E7%B3%BB%E7%BB%9F/"
+           href="/bigdata/python/python_web/Django/django%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E4%B8%8E%E6%B3%A8%E5%86%8C%E7%B3%BB%E7%BB%9F/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Django用户登录与注册系统">Django用户登录与注册系统</span>
@@ -1034,7 +1025,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python PythonWeb Django "
-           href="/Python/PythonWeb/Django/django%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%98%BE%E7%A4%BA%E8%BF%9B%E5%BA%A6%E6%9D%A1/"
+           href="/bigdata/python/python_web/Django/django%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%98%BE%E7%A4%BA%E8%BF%9B%E5%BA%A6%E6%9D%A1/"
            data-tag="Django"
            data-author="郁明敏" >
             <span class="post-title" title="Django上传文件并显示进度条">Django上传文件并显示进度条</span>
@@ -1042,7 +1033,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python PythonWeb Flask "
-           href="/Python/PythonWeb/Flask/%E4%BD%BF%E7%94%A8flask%E5%BC%80%E5%8F%91%E6%95%B0%E6%8D%AEapi/"
+           href="/bigdata/python/python_web/Flask/%E4%BD%BF%E7%94%A8flask%E5%BC%80%E5%8F%91%E6%95%B0%E6%8D%AEapi/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="使用Flask RESTful开发数据API接口">使用Flask RESTful开发数据API接口</span>
@@ -1051,17 +1042,9 @@
         
         <a onclick="refreshBtnCopy()"  class="课程 CDH基础课程 "
            href="/%E8%AF%BE%E7%A8%8B/cdh/cdh%E5%9F%BA%E7%A1%80fg/"
-           data-tag="CDH"
+           data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="CDH基础">CDH基础</span>
-            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="课程 Django课程 "
-           href="/%E8%AF%BE%E7%A8%8B/django/django%E5%9F%BA%E7%A1%80/"
-           data-tag="sklearn"
-           data-author="郁明敏" >
-            <span class="post-title" title="Django基础">Django基础</span>
             <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
         </a>
         
@@ -1070,14 +1053,6 @@
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Linux基础">Linux基础</span>
-            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="课程 Scala基础课程 "
-           href="/%E8%AF%BE%E7%A8%8B/scala/scala%E5%9F%BA%E7%A1%80/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="Scala基础【飞谷】">Scala基础【飞谷】</span>
             <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
         </a>
         
@@ -1097,6 +1072,14 @@
             <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
         </a>
         
+        <a onclick="refreshBtnCopy()"  class="课程 Scala基础课程 "
+           href="/bigdata/scala/scala_courses/scala_basic_feigu/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Scala基础【飞谷】">Scala基础【飞谷】</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
         <a onclick="refreshBtnCopy()"  class="课程 Java课程 "
            href="/%E8%AF%BE%E7%A8%8B/java/java%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91fg/"
            data-tag="Java"
@@ -1106,7 +1089,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python科学计算 Pandas "
-           href="/Python/Python%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/Pandas/DataFrame%E8%A1%8C%E8%BD%AC%E5%88%97/"
+           href="/bigdata/python/python_processing_data/Pandas/DataFrame%E8%A1%8C%E8%BD%AC%E5%88%97/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="DataFrame行转列">DataFrame行转列</span>
@@ -1114,15 +1097,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python科学计算 Pandas "
-           href="/Python/Python%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/Pandas/Pandas-%E6%A0%B9%E6%8D%AE%E6%A8%A1%E5%9E%8B%E5%88%86%E5%88%87%E7%BB%9D%E5%AF%B9bin%E5%92%8C%E7%9B%B8%E5%AF%B9bin/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="Pandas根据模型分切绝对bin和相对bin">Pandas根据模型分切绝对bin和相对bin</span>
-            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="Python Python科学计算 Pandas "
-           href="/Python/Python%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/Pandas/Pandas%E8%AE%BE%E7%BD%AE%E6%98%BE%E7%A4%BA%E6%9C%80%E5%A4%A7%E8%A1%8C%E6%95%B0%E5%92%8C%E5%88%97%E6%95%B0/"
+           href="/bigdata/python/python_processing_data/Pandas/Pandas%E8%AE%BE%E7%BD%AE%E6%98%BE%E7%A4%BA%E6%9C%80%E5%A4%A7%E8%A1%8C%E6%95%B0%E5%92%8C%E5%88%97%E6%95%B0/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Pandas设置显示最大行数和列数">Pandas设置显示最大行数和列数</span>
@@ -1130,7 +1105,15 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python科学计算 Pandas "
-           href="/Python/Python%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/Pandas/numpy%E5%92%8Cpandas%E5%85%B3%E9%97%AD%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95%E6%98%BE%E7%A4%BA/"
+           href="/bigdata/python/python_processing_data/Pandas/Pandas-%E6%A0%B9%E6%8D%AE%E6%A8%A1%E5%9E%8B%E5%88%86%E5%88%87%E7%BB%9D%E5%AF%B9bin%E5%92%8C%E7%9B%B8%E5%AF%B9bin/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Pandas根据模型分切绝对bin和相对bin">Pandas根据模型分切绝对bin和相对bin</span>
+            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python科学计算 Pandas "
+           href="/bigdata/python/python_processing_data/Pandas/numpy%E5%92%8Cpandas%E5%85%B3%E9%97%AD%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95%E6%98%BE%E7%A4%BA/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="NumPy和Pandas关闭科学计数显示">NumPy和Pandas关闭科学计数显示</span>
@@ -1138,15 +1121,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python科学计算 Pandas "
-           href="/Python/Python%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/Pandas/pandas%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E6%97%B6%E8%A7%A3%E6%9E%90%E6%97%B6%E9%97%B4%E5%88%97/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="Pandas读取文件时解析时间列">Pandas读取文件时解析时间列</span>
-            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="Python Python科学计算 Pandas "
-           href="/Python/Python%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/Pandas/pandas%E6%8C%89%E7%85%A7%E5%AD%97%E6%AE%B5%E8%81%9A%E5%90%88%E6%8E%92%E5%BA%8F/"
+           href="/bigdata/python/python_processing_data/Pandas/pandas%E6%8C%89%E7%85%A7%E5%AD%97%E6%AE%B5%E8%81%9A%E5%90%88%E6%8E%92%E5%BA%8F/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Pandas按照字段聚合排序">Pandas按照字段聚合排序</span>
@@ -1154,7 +1129,15 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python科学计算 Pandas "
-           href="/Python/Python%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/Pandas/%E5%B0%86Dataframe%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%82%AE%E4%BB%B6%E6%AD%A3%E6%96%87%E4%B8%AD/"
+           href="/bigdata/python/python_processing_data/Pandas/pandas%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E6%97%B6%E8%A7%A3%E6%9E%90%E6%97%B6%E9%97%B4%E5%88%97/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Pandas读取文件时解析时间列">Pandas读取文件时解析时间列</span>
+            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python科学计算 Pandas "
+           href="/bigdata/python/python_processing_data/Pandas/%E5%B0%86Dataframe%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%82%AE%E4%BB%B6%E6%AD%A3%E6%96%87%E4%B8%AD/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="将DataFrame添加到邮件正文">将DataFrame添加到邮件正文</span>
@@ -1162,7 +1145,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python科学计算 Pandas "
-           href="/Python/Python%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/Pandas/%E5%B0%86%E5%A4%9A%E4%B8%AADataFrame%E5%86%99%E5%85%A5%E4%B8%80%E4%B8%AAExcel%E5%A4%9A%E4%B8%AASheet/"
+           href="/bigdata/python/python_processing_data/Pandas/%E5%B0%86%E5%A4%9A%E4%B8%AADataFrame%E5%86%99%E5%85%A5%E4%B8%80%E4%B8%AAExcel%E5%A4%9A%E4%B8%AASheet/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="将多个DataFrame写入一个Excel多个Sheet">将多个DataFrame写入一个Excel多个Sheet</span>
@@ -1170,31 +1153,39 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="系统 Windows "
-           href="/%E7%B3%BB%E7%BB%9F/windows/windows%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD/"
-           data-tag="windows软件"
+           href="/systems/windows/wins_softwares_download_sources/"
+           data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Windows软件下载">Windows软件下载</span>
             <span class="post-date" title="2019-12-12 13:53:23">2019/12/12</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="工具 Notepad "
-           href="/%E5%B7%A5%E5%85%B7/notepad/notepad%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
-           data-tag="notepad"
+           href="/tools/notepad/notepad_nppftp_plugin/"
+           data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="Notepad++用法总结">Notepad++用法总结</span>
+            <span class="post-title" title="NppFTP插件连接远程服务器">NppFTP插件连接远程服务器</span>
             <span class="post-date" title="2019-12-08 20:51:47">2019/12/08</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="Python PyCharm "
-           href="/Python/PyCharm/pycharm%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+        <a onclick="refreshBtnCopy()"  class="工具 Notepad "
+           href="/tools/notepad/notepad_plugins/"
            data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="PyCharm基础使用">PyCharm基础使用</span>
+            <span class="post-title" title="Notepad++插件列表">Notepad++插件列表</span>
+            <span class="post-date" title="2019-12-08 20:51:47">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
+           href="/tools/jetbrains/pycharm_questions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="PyCharm常见问题">PyCharm常见问题</span>
             <span class="post-date" title="2019-12-08 20:46:04">2019/12/08</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Java SpringBoot "
-           href="/Java/SpringBoot/Windows%E6%90%AD%E5%BB%BAspringboot%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"
+           href="/bigdata/springboot/build_springboot_dev_env_in_wins/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Windows搭建SpringBoot开发环境">Windows搭建SpringBoot开发环境</span>
@@ -1202,7 +1193,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="工具 Sublime "
-           href="/%E5%B7%A5%E5%85%B7/sublime/sublime%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           href="/tools/sublime/sublime%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
            data-tag="sublime"
            data-author="郁明敏" >
             <span class="post-title" title="Sublime Text总结">Sublime Text总结</span>
@@ -1210,23 +1201,15 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="系统 Windows "
-           href="/%E7%B3%BB%E7%BB%9F/windows/windows%E4%BD%BF%E7%94%A8IDM%E7%A0%B4%E8%A7%A3%E7%99%BE%E5%BA%A6%E4%BA%91%E7%9B%98%E9%99%90%E9%80%9F/"
-           data-tag="windows"
+           href="/systems/windows/wins_network_questions/"
+           data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="Windows使用IDM破解百度网盘限速">Windows使用IDM破解百度网盘限速</span>
-            <span class="post-date" title="2019-12-08 20:31:41">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="系统 Windows "
-           href="/%E7%B3%BB%E7%BB%9F/windows/windows%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/"
-           data-tag="windows"
-           data-author="郁明敏" >
-            <span class="post-title" title="Windows使用总结">Windows使用总结</span>
+            <span class="post-title" title="Windows网络常见问题">Windows网络常见问题</span>
             <span class="post-date" title="2019-12-08 20:31:41">2019/12/08</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="工具 Chrome "
-           href="/%E5%B7%A5%E5%85%B7/chrome/chrome%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/"
+           href="/tools/chrome/chrome_common_plugins/"
            data-tag="chrome"
            data-author="郁明敏" >
             <span class="post-title" title="Chrome常用插件">Chrome常用插件</span>
@@ -1234,15 +1217,23 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="系统 Windows "
-           href="/%E7%B3%BB%E7%BB%9F/windows/windows%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/"
-           data-tag="windows软件"
+           href="/systems/windows/wins_bat/"
+           data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="Window常用软件">Window常用软件</span>
+            <span class="post-title" title="bat脚本">bat脚本</span>
+            <span class="post-date" title="2019-12-08 20:22:58">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/systems/windows/wins_softwares_list/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Windows软件列表">Windows软件列表</span>
             <span class="post-date" title="2019-12-08 20:22:58">2019/12/08</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python基础 "
-           href="/Python/Python%E5%9F%BA%E7%A1%80/python%E5%B8%B8%E7%94%A8%E5%BA%93/"
+           href="/bigdata/python/python_basic/python%E5%B8%B8%E7%94%A8%E5%BA%93/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python常用库">Python常用库</span>
@@ -1250,23 +1241,15 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="系统 Mac "
-           href="/%E7%B3%BB%E7%BB%9F/mac/Mac%E5%AE%89%E8%A3%85ZSH/"
+           href="/systems/mac/build_a_perfect_prgraming_mac/"
            data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="Mac安装Zsh">Mac安装Zsh</span>
+            <span class="post-title" title="打造强大的Mac系统">打造强大的Mac系统</span>
             <span class="post-date" title="2019-12-08 19:49:04">2019/12/08</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="系统 Mac "
-           href="/%E7%B3%BB%E7%BB%9F/mac/Mac%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="MAC常用快捷键">MAC常用快捷键</span>
-            <span class="post-date" title="2019-12-08 19:49:04">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="系统 Mac "
-           href="/%E7%B3%BB%E7%BB%9F/mac/mac%E4%B8%8Btypora%E6%9B%B4%E6%8D%A2vue%E4%B8%BB%E9%A2%98/"
+           href="/systems/mac/mac_change_typora_vue_theme/"
            data-tag="Mac"
            data-author="郁明敏" >
             <span class="post-title" title="Mac下Typora更换Vue主题">Mac下Typora更换Vue主题</span>
@@ -1274,15 +1257,23 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="系统 Mac "
-           href="/%E7%B3%BB%E7%BB%9F/mac/%E6%89%93%E9%80%A0%E4%BD%A0%E7%9A%84Mac%E7%B3%BB%E7%BB%9F/"
+           href="/systems/mac/mac_install_zsh/"
            data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="打造强大的Mac系统">打造强大的Mac系统</span>
+            <span class="post-title" title="Mac安装Zsh">Mac安装Zsh</span>
+            <span class="post-date" title="2019-12-08 19:49:04">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Mac "
+           href="/systems/mac/mac_common_keyshort/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="MAC常用快捷键">MAC常用快捷键</span>
             <span class="post-date" title="2019-12-08 19:49:04">2019/12/08</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="数据库 MySQL "
-           href="/%E7%B3%BB%E7%BB%9F/centos/centos%E8%BF%81%E7%A7%BBmysql%E6%95%B0%E6%8D%AE%E5%BA%93/"
+           href="/systems/centos/centos_migrate_mysql_databases/"
            data-tag="MySQL,Centos"
            data-author="郁明敏" >
             <span class="post-title" title="Centos下迁移MySQL数据库">Centos下迁移MySQL数据库</span>
@@ -1290,7 +1281,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python基础 "
-           href="/Python/Python%E5%9F%BA%E7%A1%80/python%E5%AE%89%E8%A3%85%E5%8C%85%E6%95%99%E7%A8%8B/"
+           href="/bigdata/python/python_basic/python%E5%AE%89%E8%A3%85%E5%8C%85%E6%95%99%E7%A8%8B/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python安装库">Python安装库</span>
@@ -1298,7 +1289,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="数据库 MySQL "
-           href="/%E7%B3%BB%E7%BB%9F/centos/centos%E5%AE%89%E8%A3%85mysql/"
+           href="/systems/centos/centos_install_mysql/"
            data-tag="MySQL"
            data-author="郁明敏" >
             <span class="post-title" title="Centos安装MySQL服务">Centos安装MySQL服务</span>
@@ -1306,7 +1297,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="系统 Linux "
-           href="/%E7%B3%BB%E7%BB%9F/linux/linux%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/"
+           href="/systems/linux/linux_common_usages/"
            data-tag="LGBM,Linux,GLIBC"
            data-author="郁明敏" >
             <span class="post-title" title="Linux总结">Linux总结</span>
@@ -1314,39 +1305,47 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Jupyter基础 "
-           href="/Python/JupyterNotebook/jupyter%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/"
+           href="/bigdata/python/jupyter_notebook/jupyter%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/"
            data-tag="Jupyter"
            data-author="郁明敏" >
             <span class="post-title" title="Jupyter基础使用">Jupyter基础使用</span>
             <span class="post-date" title="2019-12-08 17:39:50">2019/12/08</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="数据挖掘 模型原理 "
-           href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E6%A8%A1%E5%9E%8B%E5%8E%9F%E7%90%86/%E3%80%90%E5%88%86%E7%B1%BB%E3%80%91%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/"
+        <a onclick="refreshBtnCopy()"  class="前端 Nodejs "
+           href="/web/nodejs/mac_install_npm_cnpm/"
            data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="【分类】支持向量机">【分类】支持向量机</span>
-            <span class="post-date" title="2019-12-08 17:39:50">2019/12/08</span>
+            <span class="post-title" title="Mac下安装NPM和CNPM">Mac下安装NPM和CNPM</span>
+            <span class="post-date" title="2019-12-08 16:03:30">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Nodejs "
+           href="/web/nodejs/node_install_packages/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Node安装开发环境">Node安装开发环境</span>
+            <span class="post-date" title="2019-12-08 16:03:30">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Nodejs "
+           href="/web/nodejs/ubuntu_install_nodejs/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Ubuntu下安装Nodejs">Ubuntu下安装Nodejs</span>
+            <span class="post-date" title="2019-12-08 16:03:30">2019/12/08</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python爬虫 "
-           href="/Python/Python%E7%88%AC%E8%99%AB/%E4%BD%BF%E7%94%A8python%E6%8A%93%E5%8F%96%E5%B7%A5%E4%BD%9C%E6%97%A5%E4%BF%A1%E6%81%AF%E8%A1%A8/"
+           href="/bigdata/python/python_crawler/python_crawl_workday_info/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Requests获取工作日信息">Requests获取工作日信息</span>
             <span class="post-date" title="2019-12-08 16:03:30">2019/12/08</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="前端 Node.js "
-           href="/%E5%89%8D%E7%AB%AF/nodejs/npm%E4%B8%8Ecnpm%E5%AE%89%E8%A3%85/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="NPM和CNPM安装">NPM和CNPM安装</span>
-            <span class="post-date" title="2019-12-08 16:03:30">2019/12/08</span>
-        </a>
-        
         <a onclick="refreshBtnCopy()"  class="Python AirFlow "
-           href="/Python/AirFlow/airflow%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/"
+           href="/bigdata/python/airflow/airflow%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/"
            data-tag="AirFlow"
            data-author="郁明敏" >
             <span class="post-title" title="AirFlow参考文档">AirFlow参考文档</span>
@@ -1354,15 +1353,47 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="数据库 Impala "
-           href="/%E6%95%B0%E6%8D%AE%E5%BA%93/impala/%E8%93%9D%E9%B2%B8%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           href="/databases/impala/impala_bluewhale/"
            data-tag="蓝鲸"
            data-author="郁明敏" >
             <span class="post-title" title="蓝鲸使用">蓝鲸使用</span>
             <span class="post-date" title="2019-12-08 15:40:18">2019/12/08</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="Go语言 Go基础 "
-           href="/Go%E5%9F%BA%E7%A1%80/Go%E5%AE%89%E8%A3%85/"
+        <a onclick="refreshBtnCopy()"  class="Docker Docker基础 "
+           href="/bigdata/docker/anaconda_dockerfile/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="基于Centos7下Anaconda的dockerfile">基于Centos7下Anaconda的dockerfile</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Docker Docker基础 "
+           href="/bigdata/docker/docker_install/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Docker安装">Docker安装</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Docker Docker基础 "
+           href="/bigdata/docker/docker_mirrors/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Docker镜像源">Docker镜像源</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Docker Docker基础 "
+           href="/bigdata/docker/docker_questions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Docker问题总结">Docker问题总结</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Go Go基础 "
+           href="/bigdata/go/go_install/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Go语言安装">Go语言安装</span>
@@ -1370,7 +1401,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Java Java基础 "
-           href="/Java/Java%E5%9F%BA%E7%A1%80/JDK%E5%AE%89%E8%A3%85/"
+           href="/bigdata/java/java_basic/jdk_install/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="JDK安装">JDK安装</span>
@@ -1378,7 +1409,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python基础 "
-           href="/Python/Python%E5%9F%BA%E7%A1%80/Python%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"
+           href="/bigdata/python/python_basic/Python%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python命令行参数">Python命令行参数</span>
@@ -1386,7 +1417,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python基础 "
-           href="/Python/Python%E5%9F%BA%E7%A1%80/pip%E4%BD%BF%E7%94%A8%E8%B1%86%E7%93%A3%E9%95%9C%E5%83%8F/"
+           href="/bigdata/python/python_basic/pip%E4%BD%BF%E7%94%A8%E8%B1%86%E7%93%A3%E9%95%9C%E5%83%8F/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Pip使用豆瓣镜像源">Pip使用豆瓣镜像源</span>
@@ -1394,7 +1425,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python基础 "
-           href="/Python/Python%E5%9F%BA%E7%A1%80/python%E4%BD%BF%E7%94%A8%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90/"
+           href="/bigdata/python/python_basic/python%E4%BD%BF%E7%94%A8%E6%B8%85%E5%8D%8E%E9%95%9C%E5%83%8F%E6%BA%90/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python使用清华镜像源">Python使用清华镜像源</span>
@@ -1402,7 +1433,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python基础 "
-           href="/Python/Python%E5%9F%BA%E7%A1%80/python%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E9%A5%B0%E5%99%A8/"
+           href="/bigdata/python/python_basic/python%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BF%AE%E9%A5%B0%E5%99%A8/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python自定义装饰器">Python自定义装饰器</span>
@@ -1410,7 +1441,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python基础 "
-           href="/Python/Python%E5%9F%BA%E7%A1%80/yield%E8%AF%A6%E8%A7%A3/"
+           href="/bigdata/python/python_basic/yield%E8%AF%A6%E8%A7%A3/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="yield详解">yield详解</span>
@@ -1418,7 +1449,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/Python%E5%B0%86%E6%95%B0%E5%AD%97%E7%99%BE%E5%88%86%E6%AF%94%E6%98%BE%E7%A4%BA/"
+           href="/bigdata/python/python_tools/Python%E5%B0%86%E6%95%B0%E5%AD%97%E7%99%BE%E5%88%86%E6%AF%94%E6%98%BE%E7%A4%BA/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python将数字百分比显示">Python将数字百分比显示</span>
@@ -1426,7 +1457,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/python%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E7%9B%91%E6%8E%A7%E6%B6%88%E6%81%AF/"
+           href="/bigdata/python/python_tools/python%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%E7%9B%91%E6%8E%A7%E6%B6%88%E6%81%AF/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python企业微信推送监控消息">Python企业微信推送监控消息</span>
@@ -1434,7 +1465,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/python%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/"
+           href="/bigdata/python/python_tools/python%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python使用Outlook发送邮件">Python使用Outlook发送邮件</span>
@@ -1442,7 +1473,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/python%E5%B0%86MP3%E6%96%87%E4%BB%B6%E8%BD%AC%E5%8C%96%E6%88%90WAV%E6%96%87%E4%BB%B6/"
+           href="/bigdata/python/python_tools/python%E5%B0%86MP3%E6%96%87%E4%BB%B6%E8%BD%AC%E5%8C%96%E6%88%90WAV%E6%96%87%E4%BB%B6/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python将MP3文件转换为WAV文件">Python将MP3文件转换为WAV文件</span>
@@ -1450,7 +1481,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Scala Scala基础 "
-           href="/Scala/Scala%E5%9F%BA%E7%A1%80/scala%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"
+           href="/bigdata/scala/scala_basic/scala_command_line_parameters/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="scala命令行参数">scala命令行参数</span>
@@ -1458,39 +1489,31 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Scala Scala基础 "
-           href="/Scala/Scala%E5%9F%BA%E7%A1%80/scala%E5%AE%89%E8%A3%85/"
+           href="/bigdata/scala/scala_basic/scala_install/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Scala安装">Scala安装</span>
             <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="大数据 Docker "
-           href="/%E5%A4%A7%E6%95%B0%E6%8D%AE/Docker/docker%E5%AE%89%E8%A3%85/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="Docker安装">Docker安装</span>
-            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="Python Python可视化 PyEcharts "
-           href="/Python/Python%E5%8F%AF%E8%A7%86%E5%8C%96/PyEcharts/pyecharts%E7%AE%80%E5%8D%95%E5%9B%BE%E7%A4%BA%E4%BE%8B/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="PyEcharts简单图示例">PyEcharts简单图示例</span>
-            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
-        </a>
-        
         <a onclick="refreshBtnCopy()"  class="Python Python数据库 Impyla "
-           href="/Python/Python%E6%95%B0%E6%8D%AE%E5%BA%93/Impyla/python%E8%BF%9E%E6%8E%A5impala%E8%B6%85%E6%97%B6/"
+           href="/bigdata/python/python_databases/Impyla/python%E8%BF%9E%E6%8E%A5impala%E8%B6%85%E6%97%B6/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python连接Impala超时">Python连接Impala超时</span>
             <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
         </a>
         
+        <a onclick="refreshBtnCopy()"  class="Python Python可视化 PyEcharts "
+           href="/bigdata/python/python_visualization/PyEcharts/pyecharts%E7%AE%80%E5%8D%95%E5%9B%BE%E7%A4%BA%E4%BE%8B/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="PyEcharts简单图示例">PyEcharts简单图示例</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Python%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%A4%B9/"
+           href="/bigdata/python/python_tools/%E4%BD%BF%E7%94%A8Python%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6%E5%A4%B9/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="使用Python压缩文件夹">使用Python压缩文件夹</span>
@@ -1498,7 +1521,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8python%E5%88%9B%E5%BB%BAimpala%E6%95%B0%E6%8D%AE%E8%A1%A8/"
+           href="/bigdata/python/python_tools/%E4%BD%BF%E7%94%A8python%E5%88%9B%E5%BB%BAimpala%E6%95%B0%E6%8D%AE%E8%A1%A8/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="使用Python在Impala中建表">使用Python在Impala中建表</span>
@@ -1506,15 +1529,15 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
-           href="/%E5%B7%A5%E5%85%B7/jetbrains/IDE%E4%BD%BF%E7%94%A8JetBrains%E6%96%B0%E5%AD%97%E4%BD%93/"
+           href="/tools/jetbrains/datagrip_user_define_connect_sources/"
            data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="IDE使用JetBrains新字体">IDE使用JetBrains新字体</span>
+            <span class="post-title" title="DataGrip自定义连接Hive和Impala">DataGrip自定义连接Hive和Impala</span>
             <span class="post-date" title="2019-12-08 15:08:00">2019/12/08</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
-           href="/%E5%B7%A5%E5%85%B7/jetbrains/IDEA%E6%8F%92%E4%BB%B6-LeetCode%E5%88%B7%E9%A2%98/"
+           href="/tools/jetbrains/idea_plugins_leetcode/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="IDEA插件-LeetCode刷题">IDEA插件-LeetCode刷题</span>
@@ -1522,31 +1545,15 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
-           href="/%E5%B7%A5%E5%85%B7/jetbrains/datagrip%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%9E%E6%8E%A5%E6%BA%90/"
+           href="/tools/jetbrains/jetbrains_ide_using_mono_font/"
            data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="DataGrip自定义连接Hive和Impala">DataGrip自定义连接Hive和Impala</span>
+            <span class="post-title" title="IDE使用JetBrains新字体">IDE使用JetBrains新字体</span>
             <span class="post-date" title="2019-12-08 15:08:00">2019/12/08</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="数据库 Impala "
-           href="/%E6%95%B0%E6%8D%AE%E5%BA%93/impala/impala%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
-           data-tag="impala"
-           data-author="郁明敏" >
-            <span class="post-title" title="Impala常规使用">Impala常规使用</span>
-            <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
-           href="/%E6%95%B0%E6%8D%AE%E5%BA%93/impala/impala%E6%93%8D%E4%BD%9C%E6%97%A5%E6%9C%9F/"
-           data-tag="impala"
-           data-author="郁明敏" >
-            <span class="post-title" title="Impala操作日期函数">Impala操作日期函数</span>
-            <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
-           href="/%E6%95%B0%E6%8D%AE%E5%BA%93/impala/impala%E8%81%9A%E5%90%88%E6%93%8D%E4%BD%9C/"
+           href="/databases/impala/impala_aggregation/"
            data-tag="impala"
            data-author="郁明敏" >
             <span class="post-title" title="Impala聚合操作">Impala聚合操作</span>
@@ -1554,7 +1561,23 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="数据库 Impala "
-           href="/%E6%95%B0%E6%8D%AE%E5%BA%93/impala/impala%E8%A7%A3%E6%9E%90json%E5%AD%97%E7%AC%A6%E4%B8%B2/"
+           href="/databases/impala/impala_common_usages/"
+           data-tag="impala"
+           data-author="郁明敏" >
+            <span class="post-title" title="Impala常规使用">Impala常规使用</span>
+            <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
+           href="/databases/impala/impala_date/"
+           data-tag="impala"
+           data-author="郁明敏" >
+            <span class="post-title" title="Impala操作日期函数">Impala操作日期函数</span>
+            <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
+           href="/databases/impala/impala_json/"
            data-tag="impala"
            data-author="郁明敏" >
             <span class="post-title" title="Impala解析JSON字符串">Impala解析JSON字符串</span>
@@ -1562,7 +1585,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="数据库 Impala "
-           href="/%E6%95%B0%E6%8D%AE%E5%BA%93/impala/impala%E6%AD%A3%E5%88%99%E5%8C%B9%E9%85%8D/"
+           href="/databases/impala/impala_regexp/"
            data-tag="impala"
            data-author="郁明敏" >
             <span class="post-title" title="Impala正则匹配">Impala正则匹配</span>
@@ -1570,63 +1593,63 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="数据库 Impala "
-           href="/%E6%95%B0%E6%8D%AE%E5%BA%93/impala/impala%E8%A7%A3%E6%9E%90url/"
+           href="/databases/impala/impala_url/"
            data-tag="impala"
            data-author="郁明敏" >
             <span class="post-title" title="Impala解析URL">Impala解析URL</span>
             <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
-           href="/%E5%89%8D%E7%AB%AF/hexo/hexo%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99/"
-           data-tag="hexo"
-           data-author="郁明敏" >
-            <span class="post-title" title="Hexo启动报错">Hexo启动报错</span>
-            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
-           href="/%E5%89%8D%E7%AB%AF/hexo/hexo%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6/"
-           data-tag="hexo"
-           data-author="郁明敏" >
-            <span class="post-title" title="Hexo好用的插件">Hexo好用的插件</span>
-            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
-           href="/%E5%89%8D%E7%AB%AF/hexo/hexo%E6%9B%B4%E6%8D%A2Markdown%E6%B8%B2%E6%9F%93%E5%99%A8/"
-           data-tag="hexo"
-           data-author="郁明敏" >
-            <span class="post-title" title="Hexo更换Markdown渲染器">Hexo更换Markdown渲染器</span>
-            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
-        </a>
-        
         <a onclick="refreshBtnCopy()"  class="数据库 Hive "
-           href="/%E6%95%B0%E6%8D%AE%E5%BA%93/hive/hive%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"
+           href="/databases/hive/hive_common_questions/"
            data-tag="hive"
            data-author="郁明敏" >
             <span class="post-title" title="Hive问题总结">Hive问题总结</span>
             <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="大数据 Hadoop "
-           href="/%E5%A4%A7%E6%95%B0%E6%8D%AE/Hadoop/hadoop%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"
-           data-tag="hadoop"
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/web/hexo/hexo_plugins/"
+           data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="Hadoop问题总结">Hadoop问题总结</span>
-            <span class="post-date" title="2019-12-08 14:27:24">2019/12/08</span>
+            <span class="post-title" title="Hexo好用的插件">Hexo好用的插件</span>
+            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="大数据 Portainer "
-           href="/%E5%A4%A7%E6%95%B0%E6%8D%AE/Portainer/portainer%E5%AE%89%E8%A3%85/"
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/web/hexo/hexo_questions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Hexo问题总结">Hexo问题总结</span>
+            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/web/hexo/hexo_user_defined_languages_highlight/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Hexo添加自定义语言高亮">Hexo添加自定义语言高亮</span>
+            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Portainer Portainer基础 "
+           href="/bigdata/portainer/portainer_install/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Portainer安装">Portainer安装</span>
             <span class="post-date" title="2019-12-08 14:27:24">2019/12/08</span>
         </a>
         
+        <a onclick="refreshBtnCopy()"  class="Hadoop Hadoop基础 "
+           href="/bigdata/hadoop/hadoop%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Hadoop问题总结">Hadoop问题总结</span>
+            <span class="post-date" title="2019-12-08 14:27:24">2019/12/08</span>
+        </a>
+        
         <a onclick="refreshBtnCopy()"  class="Python AirFlow "
-           href="/Python/AirFlow/airflow%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           href="/bigdata/python/airflow/airflow%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
            data-tag="AirFlow"
            data-author="郁明敏" >
             <span class="post-title" title="AirFlow基础使用">AirFlow基础使用</span>
@@ -1634,27 +1657,19 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="工具 Markdown "
-           href="/%E5%B7%A5%E5%85%B7/markdown/latex%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
-           data-tag="markdown"
+           href="/tools/markdown/latex_usages/"
+           data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="LaTex使用总结">LaTex使用总结</span>
             <span class="post-date" title="2019-12-08 13:40:22">2019/12/08</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="工具 Markdown "
-           href="/%E5%B7%A5%E5%85%B7/markdown/markdown%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
-           data-tag="markdown"
+           href="/tools/markdown/markdown_usages/"
+           data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Markdown用法总结">Markdown用法总结</span>
             <span class="post-date" title="2019-12-08 13:40:22">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="课程 Git与GitHub课程 "
-           href="/%E8%AF%BE%E7%A8%8B/git/Git%E4%B8%8EGitHub/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="Git与GitHub基础课程">Git与GitHub基础课程</span>
-            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="课程 Matplotlib课程 "
@@ -1662,6 +1677,14 @@
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Matplitlib可视化">Matplitlib可视化</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="课程 莫烦 "
+           href="/%E8%AF%BE%E7%A8%8B/movan/%E8%8E%AB%E7%83%A6%E8%AF%BE%E7%A8%8B-%E5%A4%9A%E8%BF%9B%E7%A8%8B/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="莫烦-多进程课程">莫烦-多进程课程</span>
             <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
         </a>
         
@@ -1678,14 +1701,6 @@
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="莫烦-多线程课程">莫烦-多线程课程</span>
-            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="课程 莫烦 "
-           href="/%E8%AF%BE%E7%A8%8B/movan/%E8%8E%AB%E7%83%A6%E8%AF%BE%E7%A8%8B-%E5%A4%9A%E8%BF%9B%E7%A8%8B/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="莫烦-多进程课程">莫烦-多进程课程</span>
             <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
         </a>
         
@@ -1713,14 +1728,6 @@
             <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="课程 Python爬虫课程 "
-           href="/%E8%AF%BE%E7%A8%8B/python-crawl/scrapy%E5%88%9D%E6%8E%A2/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="Scrapy初探">Scrapy初探</span>
-            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
-        </a>
-        
         <a onclick="refreshBtnCopy()"  class="课程 Python基础课程 "
            href="/%E8%AF%BE%E7%A8%8B/python-basics/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E5%BA%93Pandas/"
            data-tag=""
@@ -1730,26 +1737,18 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="课程 Python爬虫课程 "
+           href="/%E8%AF%BE%E7%A8%8B/python-crawl/scrapy%E5%88%9D%E6%8E%A2/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Scrapy初探">Scrapy初探</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="课程 Python爬虫课程 "
            href="/%E8%AF%BE%E7%A8%8B/python-crawl/Python%E5%8D%95%E7%BA%BF%E7%A8%8B%E7%88%AC%E8%99%AB/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python单线程爬虫">Python单线程爬虫</span>
-            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="课程 WordPress课程 "
-           href="/%E8%AF%BE%E7%A8%8B/wordpress/wordpress%E6%96%87%E7%AB%A0%E3%80%81%E6%A0%87%E7%AD%BE%E5%8F%8A%E5%88%86%E7%B1%BB/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="WordPress文章、标签及分类">WordPress文章、标签及分类</span>
-            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="课程 WordPress课程 "
-           href="/%E8%AF%BE%E7%A8%8B/wordpress/wordpress%E6%A6%82%E8%BF%B0%E5%92%8C%E5%AE%89%E8%A3%85/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="WordPress概述和安装">WordPress概述和安装</span>
             <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
         </a>
         
@@ -1769,8 +1768,16 @@
             <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
         </a>
         
+        <a onclick="refreshBtnCopy()"  class="Git Git课程 "
+           href="/bigdata/git/git_courses/course_git_github/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Git与GitHub基础课程">Git与GitHub基础课程</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
         <a onclick="refreshBtnCopy()"  class="工具 GitHub "
-           href="/%E5%B7%A5%E5%85%B7/github/github%E6%90%9C%E7%B4%A2%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8A%80%E5%B7%A7/"
+           href="/tools/github/github_advanced_tips_in_searching_open_projects/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="GitHub搜索开源项目技巧">GitHub搜索开源项目技巧</span>
@@ -1778,15 +1785,23 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="工具 GitHub "
-           href="/%E5%B7%A5%E5%85%B7/github/GitHub%E6%8F%90%E9%80%9F%E7%9A%84%E6%96%B9%E6%B3%95/"
+           href="/tools/github/the_way_improving_github_speed/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="GitHub提速的方法">GitHub提速的方法</span>
             <span class="post-date" title="2019-12-08 11:10:15">2019/12/08</span>
         </a>
         
+        <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
+           href="/tools/jetbrains/pycharm_latest_activation_method/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="PyCharm2019.2最新激活方式">PyCharm2019.2最新激活方式</span>
+            <span class="post-date" title="2019-12-08 10:27:59">2019/12/08</span>
+        </a>
+        
         <a onclick="refreshBtnCopy()"  class="Java Java基础 "
-           href="/Java/Java%E5%9F%BA%E7%A1%80/javac%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"
+           href="/bigdata/java/java_basic/javac_command_line_parameters/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="javac虚拟机参数">javac虚拟机参数</span>
@@ -1794,47 +1809,39 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Java Java基础 "
-           href="/Java/Java%E5%9F%BA%E7%A1%80/java%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"
+           href="/bigdata/java/java_basic/java_command_line_parameters/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="java虚拟机参数">java虚拟机参数</span>
             <span class="post-date" title="2019-12-08 10:27:59">2019/12/08</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="Python PyCharm "
-           href="/Python/PyCharm/pycharm%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="PyCharm2019.2最新激活方式">PyCharm2019.2最新激活方式</span>
-            <span class="post-date" title="2019-12-08 10:27:59">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="R语言 R基础 "
-           href="/R%E8%AF%AD%E8%A8%80/R%E5%9F%BA%E7%A1%80/R%E5%AE%89%E8%A3%85/"
+        <a onclick="refreshBtnCopy()"  class="R R基础 "
+           href="/bigdata/r/r_basic/r_install/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="R语言安装">R语言安装</span>
             <span class="post-date" title="2019-12-08 10:27:59">2019/12/08</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="数据挖掘 数理统计 "
-           href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/%E7%BB%9F%E8%AE%A1%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C/"
-           data-tag="统计基础"
-           data-author="郁明敏" >
-            <span class="post-title" title="统计假设检验">统计假设检验</span>
-            <span class="post-date" title="2019-12-08 10:26:23">2019/12/08</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="数据挖掘 超参调优 "
-           href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E8%B6%85%E5%8F%82%E8%B0%83%E4%BC%98/LGBM%E8%B6%85%E5%8F%82%E8%B0%83%E4%BC%98/"
+        <a onclick="refreshBtnCopy()"  class="机器学习 超参调优 "
+           href="/data_mining/optimization_parameters/lgbm_optimizaton_parameters/"
            data-tag="LGBM"
            data-author="郁明敏" >
             <span class="post-title" title="LGBM超参调优">LGBM超参调优</span>
             <span class="post-date" title="2019-12-08 10:26:23">2019/12/08</span>
         </a>
         
+        <a onclick="refreshBtnCopy()"  class="机器学习 数理统计 "
+           href="/data_mining/mathematical_statistics/statistics_hypothesis_test/"
+           data-tag="统计基础"
+           data-author="郁明敏" >
+            <span class="post-title" title="统计假设检验">统计假设检验</span>
+            <span class="post-date" title="2019-12-08 10:26:23">2019/12/08</span>
+        </a>
+        
         <a onclick="refreshBtnCopy()"  class="工具 XShell "
-           href="/%E5%B7%A5%E5%85%B7/xshell/xshell%E8%BF%9E%E6%8E%A5docker%E6%9C%8D%E5%8A%A1%E5%99%A8/"
+           href="/tools/xshell/xshell%E8%BF%9E%E6%8E%A5docker%E6%9C%8D%E5%8A%A1%E5%99%A8/"
            data-tag="xshell"
            data-author="郁明敏" >
             <span class="post-title" title="XShell连接Docker服务器下Centos终端">XShell连接Docker服务器下Centos终端</span>
@@ -1842,15 +1849,15 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python AirFlow "
-           href="/Python/AirFlow/airflow%E5%AE%89%E8%A3%85/"
-           data-tag="AirFlow"
+           href="/bigdata/python/airflow/airflow%E5%AE%89%E8%A3%85/"
+           data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="AirFlow安装">AirFlow安装</span>
             <span class="post-date" title="2019-12-07 13:52:21">2019/12/07</span>
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python PythonWeb Flask "
-           href="/Python/PythonWeb/Flask/flask%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"
+           href="/bigdata/python/python_web/Flask/flask%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Flask问题总结">Flask问题总结</span>
@@ -1858,7 +1865,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python基础 "
-           href="/Python/Python%E5%9F%BA%E7%A1%80/%E5%86%B7%E5%83%BB%E7%9A%84python%E5%85%B3%E9%94%AE%E5%AD%97/"
+           href="/bigdata/python/python_basic/%E5%86%B7%E5%83%BB%E7%9A%84python%E5%85%B3%E9%94%AE%E5%AD%97/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="冷僻的Python内置关键字">冷僻的Python内置关键字</span>
@@ -1866,7 +1873,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="学习资源 基础技术 "
-           href="/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/%E5%9F%BA%E7%A1%80%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/"
+           href="/learning/%E5%9F%BA%E7%A1%80%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/"
            data-tag="常用网址"
            data-author="郁明敏" >
             <span class="post-title" title="基础技术学习网站">基础技术学习网站</span>
@@ -1874,15 +1881,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="学习资源 大佬博客 "
-           href="/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/%E5%A4%A7%E4%BD%AC%E4%BB%AC%E7%9A%84%E5%8D%9A%E5%AE%A2/"
-           data-tag=""
-           data-author="郁明敏" >
-            <span class="post-title" title="大佬们的博客">大佬们的博客</span>
-            <span class="post-date" title="2019-12-06 22:52:18">2019/12/06</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="学习资源 大佬博客 "
-           href="/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/%E5%AF%92%E5%B0%8F%E9%98%B3%E7%9A%84%E5%8D%9A%E5%AE%A2/"
+           href="/learning/%E5%AF%92%E5%B0%8F%E9%98%B3%E7%9A%84%E5%8D%9A%E5%AE%A2/"
            data-tag="文档学习资源"
            data-author="郁明敏" >
             <span class="post-title" title="寒小阳的个人博客">寒小阳的个人博客</span>
@@ -1890,7 +1889,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="学习资源 "
-           href="/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/%E6%96%87%E6%A1%A3%E8%B5%84%E6%BA%90/"
+           href="/learning/%E6%96%87%E6%A1%A3%E8%B5%84%E6%BA%90/"
            data-tag="文档学习资源"
            data-author="郁明敏" >
             <span class="post-title" title="文档资源">文档资源</span>
@@ -1898,7 +1897,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="学习资源 学习路线 "
-           href="/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF-Java%E5%90%8E%E7%AB%AF/"
+           href="/learning/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF-Java%E5%90%8E%E7%AB%AF/"
            data-tag="Java后端学习路线"
            data-author="郁明敏" >
             <span class="post-title" title="学习路线【Java后端】">学习路线【Java后端】</span>
@@ -1906,7 +1905,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/Python%E4%BD%BF%E7%94%A8SQLAlchmey%E8%BF%9E%E6%8E%A5MySQL/"
+           href="/bigdata/python/python_tools/Python%E4%BD%BF%E7%94%A8SQLAlchmey%E8%BF%9E%E6%8E%A5MySQL/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python使用SQLAlchmey连接MySQL">Python使用SQLAlchmey连接MySQL</span>
@@ -1914,7 +1913,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/Python%E4%BD%BF%E7%94%A8md5%E5%8A%A0%E5%AF%86/"
+           href="/bigdata/python/python_tools/Python%E4%BD%BF%E7%94%A8md5%E5%8A%A0%E5%AF%86/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python使用md5加密">Python使用md5加密</span>
@@ -1922,7 +1921,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/Python%E5%B0%86%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8C%85%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83/"
+           href="/bigdata/python/python_tools/Python%E5%B0%86%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8C%85%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="自定义Python包添加到环境中">自定义Python包添加到环境中</span>
@@ -1930,7 +1929,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/Python%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E5%AF%86%E7%A0%81/"
+           href="/bigdata/python/python_tools/Python%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E5%AF%86%E7%A0%81/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python生成随机密码">Python生成随机密码</span>
@@ -1938,7 +1937,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/Python%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84/"
+           href="/bigdata/python/python_tools/Python%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python获取当前文件的路径">Python获取当前文件的路径</span>
@@ -1946,7 +1945,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/Python%E9%9A%8F%E6%9C%BA%E4%BB%8E%E9%9B%86%E5%90%88%E4%B8%AD%E5%8F%96%E6%95%B0/"
+           href="/bigdata/python/python_tools/Python%E9%9A%8F%E6%9C%BA%E4%BB%8E%E9%9B%86%E5%90%88%E4%B8%AD%E5%8F%96%E6%95%B0/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python随机从集合中取数">Python随机从集合中取数</span>
@@ -1954,7 +1953,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Python%E5%B0%86%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%88%B0Windows%E5%85%B1%E4%BA%AB/"
+           href="/bigdata/python/python_tools/%E4%BD%BF%E7%94%A8Python%E5%B0%86%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%88%B0Windows%E5%85%B1%E4%BA%AB/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="使用Python将文件上传到Windows共享文件夹">使用Python将文件上传到Windows共享文件夹</span>
@@ -1962,7 +1961,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Python%E6%89%B9%E9%87%8F%E6%B7%BB%E5%8A%A0Hive%E5%88%86%E5%8C%BA/"
+           href="/bigdata/python/python_tools/%E4%BD%BF%E7%94%A8Python%E6%89%B9%E9%87%8F%E6%B7%BB%E5%8A%A0Hive%E5%88%86%E5%8C%BA/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="使用Python批量添加Hive分区">使用Python批量添加Hive分区</span>
@@ -1970,7 +1969,7 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Python%E7%BB%99%E7%A8%8B%E5%BA%8F%E5%8A%A0%E4%B8%80%E4%B8%AA%E8%BF%9B%E5%BA%A6%E6%9D%A1/"
+           href="/bigdata/python/python_tools/%E4%BD%BF%E7%94%A8Python%E7%BB%99%E7%A8%8B%E5%BA%8F%E5%8A%A0%E4%B8%80%E4%B8%AA%E8%BF%9B%E5%BA%A6%E6%9D%A1/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="使用Python给程序加一个进度条">使用Python给程序加一个进度条</span>
@@ -1978,35 +1977,35 @@
         </a>
         
         <a onclick="refreshBtnCopy()"  class="Python Python小工具 "
-           href="/Python/Python%E5%B0%8F%E5%B7%A5%E5%85%B7/%E4%BD%BF%E7%94%A8Requests%E5%92%8CXML%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81/"
+           href="/bigdata/python/python_tools/%E4%BD%BF%E7%94%A8Requests%E5%92%8CXML%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81/"
            data-tag=""
            data-author="郁明敏" >
             <span class="post-title" title="Python使用Requests和XML测试服务器状态">Python使用Requests和XML测试服务器状态</span>
             <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="数据挖掘 基本套路 "
-           href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%9F%BA%E6%9C%AC%E5%A5%97%E8%B7%AF/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E7%9A%84%E4%B8%80%E8%88%AC%E6%AD%A5%E9%AA%A4%E4%B8%8E%E5%A5%97%E8%B7%AF/"
+        <a onclick="refreshBtnCopy()"  class="机器学习 基本知识 "
+           href="/data_mining/machine_learning/common_steps_and_tricks/"
            data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="数据挖掘的一般步骤与套路">数据挖掘的一般步骤与套路</span>
+            <span class="post-title" title="机器学习步骤与套路">机器学习步骤与套路</span>
             <span class="post-date" title="2019-12-03 14:59:37">2019/12/03</span>
         </a>
         
-        <a onclick="refreshBtnCopy()"  class="数据挖掘 基本套路 "
-           href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E5%9F%BA%E6%9C%AC%E5%A5%97%E8%B7%AF/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%BB%BA%E6%A8%A1%E4%B8%80%E8%88%AC%E6%AD%A5%E9%AA%A4/"
-           data-tag="Logistic Regression"
-           data-author="郁明敏" >
-            <span class="post-title" title="LR建模一般步骤">LR建模一般步骤</span>
-            <span class="post-date" title="2019-12-01 22:59:25">2019/12/01</span>
-        </a>
-        
-        <a onclick="refreshBtnCopy()"  class="数据挖掘 模型原理 "
-           href="/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E6%A8%A1%E5%9E%8B%E5%8E%9F%E7%90%86/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB/"
+        <a onclick="refreshBtnCopy()"  class="机器学习 Model模板代码 "
+           href="/data_mining/model_template_code/lr_code_by_statsmodels/"
            data-tag=""
            data-author="郁明敏" >
-            <span class="post-title" title="强化学习分类">强化学习分类</span>
-            <span class="post-date" title="2019-12-01 22:59:25">2019/12/01</span>
+            <span class="post-title" title="LR代码模板">LR代码模板</span>
+            <span class="post-date" title="2019-12-03 14:59:37">2019/12/03</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/web/hexo/hexo_optimization_markdown/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="hexo优化markdown使用">hexo优化markdown使用</span>
+            <span class="post-date" title="2019-11-27 16:53:35">2019/11/27</span>
         </a>
         
     </nav>
@@ -2047,7 +2046,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-07-12 22:02:42'>2019-12-08 12:49</time>
+        创建时间:<time class="date" title='更新时间: 2020-09-08 20:53:35'>2019-12-08 12:49</time>
         
     </div>
     <div class="article-meta">
@@ -2071,7 +2070,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-什么是Multiprocessing"><span class="toc-text">1. 什么是Multiprocessing</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-添加进程Process"><span class="toc-text">2. 添加进程Process</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-导入线程进程标准模块"><span class="toc-text">2.1 导入线程进程标准模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-创建线程和进程"><span class="toc-text">2.2 创建线程和进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-完整的线程和进程创建使用对比代码"><span class="toc-text">2.3 完整的线程和进程创建使用对比代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-运用"><span class="toc-text">2.4 运用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-存储进程输出Queue"><span class="toc-text">3. 存储进程输出Queue</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-把结果放在-Queue-里"><span class="toc-text">3.1 把结果放在 Queue 里</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-主函数"><span class="toc-text">3.2 主函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-完整的代码"><span class="toc-text">3.3 完整的代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-效率对比-threading-amp-multiprocessing"><span class="toc-text">4. 效率对比 threading &amp; multiprocessing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-创建多进程-multiprocessing"><span class="toc-text">4.1 创建多进程 multiprocessing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-创建多线程-multithread"><span class="toc-text">4.2 创建多线程 multithread</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-创建普通函数"><span class="toc-text">4.3 创建普通函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-运行时间"><span class="toc-text">4.4 运行时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-结果对比"><span class="toc-text">4.5 结果对比</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-进程池Pool"><span class="toc-text">5. 进程池Pool</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-进程池-Pool-和-map"><span class="toc-text">5.1 进程池 Pool 和 map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-自定义核数量"><span class="toc-text">5.2 自定义核数量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-apply-async"><span class="toc-text">5.3 apply_async</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-用-apply-async-输出多个结果"><span class="toc-text">5.4 用 apply_async 输出多个结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-总结"><span class="toc-text">5.5 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-共享内存shared-memory"><span class="toc-text">6. 共享内存shared memory</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Shared-Value"><span class="toc-text">6.1 Shared Value</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Shared-Array"><span class="toc-text">6.2 Shared Array</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-参考数据形式"><span class="toc-text">6.3 参考数据形式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-进程锁Lock"><span class="toc-text">7. 进程锁Lock</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-不加进程锁"><span class="toc-text">7.1 不加进程锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-加进程锁"><span class="toc-text">7.2 加进程锁</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">1. 什么是Multiprocessing</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">2. 添加进程Process</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-导入线程进程标准模块"><span class="toc-text">2.1 导入线程进程标准模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-创建线程和进程"><span class="toc-text">2.2 创建线程和进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-完整的线程和进程创建使用对比代码"><span class="toc-text">2.3 完整的线程和进程创建使用对比代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-运用"><span class="toc-text">2.4 运用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">3. 存储进程输出Queue</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-把结果放在-Queue-里"><span class="toc-text">3.1 把结果放在 Queue 里</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-主函数"><span class="toc-text">3.2 主函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-完整的代码"><span class="toc-text">3.3 完整的代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">4. 效率对比 threading &amp; multiprocessing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-创建多进程-multiprocessing"><span class="toc-text">4.1 创建多进程 multiprocessing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-创建多线程-multithread"><span class="toc-text">4.2 创建多线程 multithread</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-创建普通函数"><span class="toc-text">4.3 创建普通函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-运行时间"><span class="toc-text">4.4 运行时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-结果对比"><span class="toc-text">4.5 结果对比</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">5. 进程池Pool</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-进程池-Pool-和-map"><span class="toc-text">5.1 进程池 Pool 和 map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-自定义核数量"><span class="toc-text">5.2 自定义核数量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-apply-async"><span class="toc-text">5.3 apply_async</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-用-apply-async-输出多个结果"><span class="toc-text">5.4 用 apply_async 输出多个结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-总结"><span class="toc-text">5.5 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">6. 共享内存shared memory</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Shared-Value"><span class="toc-text">6.1 Shared Value</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Shared-Array"><span class="toc-text">6.2 Shared Array</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-参考数据形式"><span class="toc-text">6.3 参考数据形式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">7. 进程锁Lock</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-不加进程锁"><span class="toc-text">7.1 不加进程锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-加进程锁"><span class="toc-text">7.2 加进程锁</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -2087,28 +2086,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-什么是Multiprocessing"><span class="toc-text">1. 什么是Multiprocessing</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-添加进程Process"><span class="toc-text">2. 添加进程Process</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-导入线程进程标准模块"><span class="toc-text">2.1 导入线程进程标准模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-创建线程和进程"><span class="toc-text">2.2 创建线程和进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-完整的线程和进程创建使用对比代码"><span class="toc-text">2.3 完整的线程和进程创建使用对比代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-运用"><span class="toc-text">2.4 运用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-存储进程输出Queue"><span class="toc-text">3. 存储进程输出Queue</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-把结果放在-Queue-里"><span class="toc-text">3.1 把结果放在 Queue 里</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-主函数"><span class="toc-text">3.2 主函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-完整的代码"><span class="toc-text">3.3 完整的代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-效率对比-threading-amp-multiprocessing"><span class="toc-text">4. 效率对比 threading &amp; multiprocessing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-创建多进程-multiprocessing"><span class="toc-text">4.1 创建多进程 multiprocessing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-创建多线程-multithread"><span class="toc-text">4.2 创建多线程 multithread</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-创建普通函数"><span class="toc-text">4.3 创建普通函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-运行时间"><span class="toc-text">4.4 运行时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-结果对比"><span class="toc-text">4.5 结果对比</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-进程池Pool"><span class="toc-text">5. 进程池Pool</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-进程池-Pool-和-map"><span class="toc-text">5.1 进程池 Pool 和 map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-自定义核数量"><span class="toc-text">5.2 自定义核数量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-apply-async"><span class="toc-text">5.3 apply_async</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-用-apply-async-输出多个结果"><span class="toc-text">5.4 用 apply_async 输出多个结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-总结"><span class="toc-text">5.5 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-共享内存shared-memory"><span class="toc-text">6. 共享内存shared memory</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Shared-Value"><span class="toc-text">6.1 Shared Value</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Shared-Array"><span class="toc-text">6.2 Shared Array</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-参考数据形式"><span class="toc-text">6.3 参考数据形式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-进程锁Lock"><span class="toc-text">7. 进程锁Lock</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-不加进程锁"><span class="toc-text">7.1 不加进程锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-加进程锁"><span class="toc-text">7.2 加进程锁</span></a></li></ol></li></ol></div></p>
-<p>本教程参考莫烦个人博客，<a href="https://morvanzhou.github.io/tutorials/python-basic/multiprocessing/" target="_blank" rel="noopener">https://morvanzhou.github.io/tutorials/python-basic/multiprocessing/</a> ，大家可以去观看莫烦大佬的视频课程。</p>
-<h1 id="1-什么是Multiprocessing"><a href="#1-什么是Multiprocessing" class="headerlink" title="1. 什么是Multiprocessing"></a>1. 什么是Multiprocessing</h1><p>多进程 <code>Multiprocessing</code> 和多线程 <code>threading</code> 类似，他们都是在 python 中用来并行运算的。不过既然有了 <code>threading</code>，为什么 Python 还要出一个 <code>multiprocessing</code> 呢？原因很简单，就是用来弥补 <code>threading</code> 的一些劣势，比如在 <code>threading</code> 中存在的 GIL 锁。</p>
+        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">1. 什么是Multiprocessing</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">2. 添加进程Process</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-导入线程进程标准模块"><span class="toc-text">2.1 导入线程进程标准模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-创建线程和进程"><span class="toc-text">2.2 创建线程和进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-完整的线程和进程创建使用对比代码"><span class="toc-text">2.3 完整的线程和进程创建使用对比代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-运用"><span class="toc-text">2.4 运用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">3. 存储进程输出Queue</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-把结果放在-Queue-里"><span class="toc-text">3.1 把结果放在 Queue 里</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-主函数"><span class="toc-text">3.2 主函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-完整的代码"><span class="toc-text">3.3 完整的代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">4. 效率对比 threading &amp; multiprocessing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-创建多进程-multiprocessing"><span class="toc-text">4.1 创建多进程 multiprocessing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-创建多线程-multithread"><span class="toc-text">4.2 创建多线程 multithread</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-创建普通函数"><span class="toc-text">4.3 创建普通函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-运行时间"><span class="toc-text">4.4 运行时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-结果对比"><span class="toc-text">4.5 结果对比</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">5. 进程池Pool</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-进程池-Pool-和-map"><span class="toc-text">5.1 进程池 Pool 和 map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-自定义核数量"><span class="toc-text">5.2 自定义核数量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-apply-async"><span class="toc-text">5.3 apply_async</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-用-apply-async-输出多个结果"><span class="toc-text">5.4 用 apply_async 输出多个结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-总结"><span class="toc-text">5.5 总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">6. 共享内存shared memory</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Shared-Value"><span class="toc-text">6.1 Shared Value</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Shared-Array"><span class="toc-text">6.2 Shared Array</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-参考数据形式"><span class="toc-text">6.3 参考数据形式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">7. 进程锁Lock</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-不加进程锁"><span class="toc-text">7.1 不加进程锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-加进程锁"><span class="toc-text">7.2 加进程锁</span></a></li></ol></li></ol></div></p>
+<p>本教程参考莫烦个人博客，https://morvanzhou.github.io/tutorials/python-basic/multiprocessing/ ，大家可以去观看莫烦大佬的视频课程。</p>
+<h1>1. 什么是Multiprocessing</h1>
+<p>多进程 <code>Multiprocessing</code> 和多线程 <code>threading</code> 类似，他们都是在 python 中用来并行运算的。不过既然有了 <code>threading</code>，为什么 Python 还要出一个 <code>multiprocessing</code> 呢？原因很简单，就是用来弥补 <code>threading</code> 的一些劣势，比如在 <code>threading</code> 中存在的 GIL 锁。</p>
 <p>使用 <code>multiprocessing</code> 也非常简单，如果对 <code>threading</code> 有一定了解的朋友，你们的享受时间就到了。因为 python 把 <code>multiprocessing</code> 和 <code>threading</code> 的使用方法做的几乎差不多。这样我们就更容易上手，也更容易发挥你电脑多核系统的威力了！</p>
-<h1 id="2-添加进程Process"><a href="#2-添加进程Process" class="headerlink" title="2. 添加进程Process"></a>2. 添加进程Process</h1><h2 id="2-1-导入线程进程标准模块"><a href="#2-1-导入线程进程标准模块" class="headerlink" title="2.1 导入线程进程标准模块"></a>2.1 导入线程进程标准模块</h2><pre><code class="python">import multiprocessing as mp
+<h1>2. 添加进程Process</h1>
+<h2 id="2-1-导入线程进程标准模块">2.1 导入线程进程标准模块</h2>
+<pre><code class="language-python">import multiprocessing as mp
 import threading as td
+
 </code></pre>
-<h2 id="2-2-创建线程和进程"><a href="#2-2-创建线程和进程" class="headerlink" title="2.2 创建线程和进程"></a>2.2 创建线程和进程</h2><pre><code class="python">t1 = td.Thread(target=job,args=(1,2))
+<h2 id="2-2-创建线程和进程">2.2 创建线程和进程</h2>
+<pre><code class="language-python">t1 = td.Thread(target=job,args=(1,2))
 p1 = mp.Process(target=job,args=(1,2))
+
 </code></pre>
 <blockquote>
-<p>  <strong>注意</strong>: <code>Thread</code> 和 <code>Process</code> 的首字母都要大写，被调用的函数没有括号，被调用的函数的参数放在 <code>args(…)</code> 中。</p>
+<p><strong>注意</strong>: <code>Thread</code> 和 <code>Process</code> 的首字母都要大写，被调用的函数没有括号，被调用的函数的参数放在 <code>args(…)</code> 中。</p>
 </blockquote>
 <p>分别启动线程和进程:</p>
-<pre><code class="python">t1.start()
+<pre><code class="language-python">t1.start()
 p1.start()
+
 </code></pre>
 <p>分别连接线程和进程:</p>
-<pre><code class="python">t1.join()
+<pre><code class="language-python">t1.join()
 p1.join()
+
 </code></pre>
-<h2 id="2-3-完整的线程和进程创建使用对比代码"><a href="#2-3-完整的线程和进程创建使用对比代码" class="headerlink" title="2.3 完整的线程和进程创建使用对比代码"></a>2.3 完整的线程和进程创建使用对比代码</h2><pre><code class="python">import multiprocessing as mp
+<h2 id="2-3-完整的线程和进程创建使用对比代码">2.3 完整的线程和进程创建使用对比代码</h2>
+<pre><code class="language-python">import multiprocessing as mp
 import threading as td
 
 def job(a,d):
@@ -2120,9 +2128,11 @@ t1.start()
 p1.start()
 t1.join()
 p1.join()
+
 </code></pre>
 <p>从上面的使用对比代码可以看出，线程和进程的使用方法相似。</p>
-<h2 id="2-4-运用"><a href="#2-4-运用" class="headerlink" title="2.4 运用"></a>2.4 运用</h2><pre><code class="python">import multiprocessing as mp
+<h2 id="2-4-运用">2.4 运用</h2>
+<pre><code class="language-python">import multiprocessing as mp
 
 def job(a,d):
     print('aaaaa')
@@ -2132,33 +2142,42 @@ if __name__=='__main__':
     p1.start()
     p1.join()
 </code></pre>
-<h1 id="3-存储进程输出Queue"><a href="#3-存储进程输出Queue" class="headerlink" title="3. 存储进程输出Queue"></a>3. 存储进程输出Queue</h1><p><code>Queue</code> 的功能是将每个核或线程的运算结果放在队里中， 等到每个线程或核运行完毕后再从队列中取出结果， 继续加载运算。原因很简单，多线程调用的函数不能有返回值，所以使用 <code>Queue</code> 存储多个线程运算的结果。</p>
-<h2 id="3-1-把结果放在-Queue-里"><a href="#3-1-把结果放在-Queue-里" class="headerlink" title="3.1 把结果放在 Queue 里"></a>3.1 把结果放在 Queue 里</h2><p>定义一个被多线程调用的函数，<code>q</code> 就像一个队列，用来保存每次函数运行的结果。</p>
-<pre><code class="python">def job(q):
+<h1>3. 存储进程输出Queue</h1>
+<p><code>Queue</code> 的功能是将每个核或线程的运算结果放在队里中， 等到每个线程或核运行完毕后再从队列中取出结果， 继续加载运算。原因很简单，多线程调用的函数不能有返回值，所以使用 <code>Queue</code> 存储多个线程运算的结果。</p>
+<h2 id="3-1-把结果放在-Queue-里">3.1 把结果放在 Queue 里</h2>
+<p>定义一个被多线程调用的函数，<code>q</code> 就像一个队列，用来保存每次函数运行的结果。</p>
+<pre><code class="language-python">def job(q):
     res=0
     for i in range(1000):
         res += i + i ** 2 + i ** 3
     q.put(res)  # queue
+
 </code></pre>
-<h2 id="3-2-主函数"><a href="#3-2-主函数" class="headerlink" title="3.2 主函数"></a>3.2 主函数</h2><p>定义一个多线程队列，用来存储结果</p>
-<pre><code class="python">if __name__ == '__main__':
+<h2 id="3-2-主函数">3.2 主函数</h2>
+<p>定义一个多线程队列，用来存储结果</p>
+<pre><code class="language-python">if __name__ == '__main__':
     q = mp.Queue()
+
 </code></pre>
 <p>定义两个线程函数，用来处理同一个任务，<code>args</code> 的参数只要一个值的时候，参数后面需要加一个逗号，表示 <code>args</code> 是可迭代的，后面可能还有别的参数，不加逗号会出错。</p>
-<pre><code class="python">p1 = mp.Process(target=job,args=(q,))
+<pre><code class="language-python">p1 = mp.Process(target=job,args=(q,))
 p2 = mp.Process(target=job,args=(q,))
+
 </code></pre>
 <p>分别启动、连接两个线程:</p>
-<pre><code class="python">p1.start()
+<pre><code class="language-python">p1.start()
 p2.start()
 p1.join()
 p2.join()
+
 </code></pre>
 <p>上面是分两批处理的，所以这里分两批输出，将结果分别保存:</p>
-<pre><code class="python">res1 = q.get()
+<pre><code class="language-python">res1 = q.get()
 res2 = q.get()
+
 </code></pre>
-<h2 id="3-3-完整的代码"><a href="#3-3-完整的代码" class="headerlink" title="3.3 完整的代码"></a>3.3 完整的代码</h2><pre><code class="python">import multiprocessing as mp
+<h2 id="3-3-完整的代码">3.3 完整的代码</h2>
+<pre><code class="language-python">import multiprocessing as mp
 
 def job(q):
     res=0
@@ -2177,19 +2196,24 @@ if __name__=='__main__':
     res1 = q.get()
     res2 = q.get()
     print(res1 + res2)
+
 </code></pre>
 <p>运行的时候还是要在 terminal 中，最后运行结果为:</p>
-<pre><code class="bash">499667166000</code></pre>
-<h1 id="4-效率对比-threading-amp-multiprocessing"><a href="#4-效率对比-threading-amp-multiprocessing" class="headerlink" title="4. 效率对比 threading &amp; multiprocessing"></a>4. 效率对比 threading &amp; multiprocessing</h1><p>上篇讲了<strong>多进程/多核</strong>的运算，这次我们来对比下多进程，多线程和什么都不做时的消耗时间，看看哪种方式更有效率。</p>
-<h2 id="4-1-创建多进程-multiprocessing"><a href="#4-1-创建多进程-multiprocessing" class="headerlink" title="4.1 创建多进程 multiprocessing"></a>4.1 创建多进程 multiprocessing</h2><p>和上节一样，首先 <code>import multiprocessing</code> 并定义要实现的 <code>job()</code>，同时为了容易比较，我们将计算的次数增加到 1000000。</p>
-<pre><code class="python">def job(q):
+<pre><code class="language-bash">499667166000
+</code></pre>
+<h1>4. 效率对比 threading &amp; multiprocessing</h1>
+<p>上篇讲了<strong>多进程/多核</strong>的运算，这次我们来对比下多进程，多线程和什么都不做时的消耗时间，看看哪种方式更有效率。</p>
+<h2 id="4-1-创建多进程-multiprocessing">4.1 创建多进程 multiprocessing</h2>
+<p>和上节一样，首先 <code>import multiprocessing</code> 并定义要实现的 <code>job()</code>，同时为了容易比较，我们将计算的次数增加到 1000000。</p>
+<pre><code class="language-python">def job(q):
     res=0
     for i in range(1000000):
         res += i + i ** 2 + i ** 3
     q.put(res)  # queue
+
 </code></pre>
 <p>因为多进程是多核运算，所以我们将上节的多进程代码命名为 <code>multicore()</code>。</p>
-<pre><code class="python">def multicore():
+<pre><code class="language-python">def multicore():
     q = mp.Queue()
     p1 = mp.Process(target=job, args=(q,))
     p2 = mp.Process(target=job, args=(q,))
@@ -2200,9 +2224,11 @@ if __name__=='__main__':
     res1 = q.get()
     res2 = q.get()
     print('multicore:',res1 + res2)
+
 </code></pre>
-<h2 id="4-2-创建多线程-multithread"><a href="#4-2-创建多线程-multithread" class="headerlink" title="4.2 创建多线程 multithread"></a>4.2 创建多线程 multithread</h2><p>接下来创建多线程程序，创建多线程和多进程有很多相似的地方。首先 <code>import threading</code>，然后定义 <code>multithread()</code> 完成同样的任务。</p>
-<pre><code class="python">import threading as td
+<h2 id="4-2-创建多线程-multithread">4.2 创建多线程 multithread</h2>
+<p>接下来创建多线程程序，创建多线程和多进程有很多相似的地方。首先 <code>import threading</code>，然后定义 <code>multithread()</code> 完成同样的任务。</p>
+<pre><code class="language-python">import threading as td
 
 def multithread():
     # thread可放入process同样的queue中
@@ -2216,17 +2242,21 @@ def multithread():
     res1 = q.get()
     res2 = q.get()
     print('multithread:', res1 + res2)
+
 </code></pre>
-<h2 id="4-3-创建普通函数"><a href="#4-3-创建普通函数" class="headerlink" title="4.3 创建普通函数"></a>4.3 创建普通函数</h2><p>最后我们定义最普通的函数。注意，在上面例子中我们建立了两个进程或线程，均对 <code>job()</code> 进行了两次运算，所以在 <code>normal()</code> 中我们也让它循环两次。</p>
-<pre><code class="python">def normal():
+<h2 id="4-3-创建普通函数">4.3 创建普通函数</h2>
+<p>最后我们定义最普通的函数。注意，在上面例子中我们建立了两个进程或线程，均对 <code>job()</code> 进行了两次运算，所以在 <code>normal()</code> 中我们也让它循环两次。</p>
+<pre><code class="language-python">def normal():
     res = 0
     for _ in range(2):
         for i in range(1000000):
             res += i + i ** 2 + i ** 3
     print('normal:', res)
+
 </code></pre>
-<h2 id="4-4-运行时间"><a href="#4-4-运行时间" class="headerlink" title="4.4 运行时间"></a>4.4 运行时间</h2><p>最后，为了对比各函数运行时间，我们需要 <code>import time</code>， 然后依次运行定义好函数:</p>
-<pre><code class="python">import time
+<h2 id="4-4-运行时间">4.4 运行时间</h2>
+<p>最后，为了对比各函数运行时间，我们需要 <code>import time</code>， 然后依次运行定义好函数:</p>
+<pre><code class="language-python">import time
 
 if __name__ == '__main__':
     st = time.time()
@@ -2238,81 +2268,102 @@ if __name__ == '__main__':
     print('multithread time:', st2 - st1)
     multicore()
     print('multicore time:', time.time() - st2)
+
 </code></pre>
 <p>大功告成，下面我们来看下实际运行对比。</p>
-<h2 id="4-5-结果对比"><a href="#4-5-结果对比" class="headerlink" title="4.5 结果对比"></a>4.5 结果对比</h2><pre><code class="bash">('normal:', 499999666667166666000000L)
+<h2 id="4-5-结果对比">4.5 结果对比</h2>
+<pre><code class="language-bash">('normal:', 499999666667166666000000L)
 ('normal time:', 1.1306169033050537)
 ('thread:', 499999666667166666000000L)
 ('multithread time:', 1.3054230213165283)
 ('multicore:', 499999666667166666000000L)
-('multicore time:', 0.646507978439331)</code></pre>
+('multicore time:', 0.646507978439331)
+</code></pre>
 <p>普通/多线程/多进程的运行时间分别是 <code>1.13</code>，<code>1.3</code>和<code>0.64</code>秒。 我们发现多核/多进程最快，说明在同时间运行了多个任务。 而多线程的运行时间居然比什么都不做的程序还要慢一点，说明多线程还是有一定的短板的。</p>
 <p>我们将运算次数加十倍，再来看看三种方法的运行时间:</p>
-<pre><code class="bash">('normal:', 4999999666666716666660000000L)
+<pre><code class="language-bash">('normal:', 4999999666666716666660000000L)
 ('normal time:', 40.041773080825806)
 ('thread:', 4999999666666716666660000000L)
 ('multithread time:', 41.777158975601196)
 ('multicore:', 4999999666666716666660000000L)
-('multicore time:', 22.4337899684906)</code></pre>
+('multicore time:', 22.4337899684906)
+</code></pre>
 <p>这次运行时间依然是<strong>多进程 &lt; 普通 &lt; 多线程</strong>，由此我们可以清晰地看出哪种方法更有效率。</p>
-<h1 id="5-进程池Pool"><a href="#5-进程池Pool" class="headerlink" title="5. 进程池Pool"></a>5. 进程池Pool</h1><p>这次我们讲进程池 <code>Pool</code>。进程池就是我们将所要运行的东西，放到池子里，Python 会自行解决多进程的问题。</p>
+<h1>5. 进程池Pool</h1>
+<p>这次我们讲进程池 <code>Pool</code>。进程池就是我们将所要运行的东西，放到池子里，Python 会自行解决多进程的问题。</p>
 <p>首先 <code>import multiprocessing</code> 和定义 <code>job()</code>:</p>
-<pre><code class="python">import multiprocessing as mp
+<pre><code class="language-python">import multiprocessing as mp
 
 def job(x):
     return x * x
+
 </code></pre>
-<h2 id="5-1-进程池-Pool-和-map"><a href="#5-1-进程池-Pool-和-map" class="headerlink" title="5.1 进程池 Pool 和 map"></a>5.1 进程池 Pool 和 map</h2><p>然后我们定义一个 <code>Pool</code>:</p>
-<pre><code class="python">pool = mp.Pool()</code></pre>
+<h2 id="5-1-进程池-Pool-和-map">5.1 进程池 Pool 和 map</h2>
+<p>然后我们定义一个 <code>Pool</code>:</p>
+<pre><code class="language-python">pool = mp.Pool()
+</code></pre>
 <p>有了池子之后，就可以让池子对应某一个函数，我们向池子里丢数据，池子就会返回函数返回的值。 <code>Pool</code> 和之前的 <code>Process</code> 的不同点是丢向 <code>Pool</code> 的函数有返回值，而 <code>Process</code> 的没有返回值。</p>
 <p>接下来用 <code>map()</code> 获取结果，在 <code>map()</code> 中需要放入函数和需要迭代运算的值，然后它会自动分配给CPU核，返回结果。</p>
-<pre><code class="python">res = pool.map(job, range(10))</code></pre>
+<pre><code class="language-python">res = pool.map(job, range(10))
+</code></pre>
 <p>让我们来运行一下:</p>
-<pre><code class="python">def multicore():
+<pre><code class="language-python">def multicore():
     pool = mp.Pool()
     res = pool.map(job, range(10))
     print(res)
-
+    
 if __name__ == '__main__':
     multicore()
+
 </code></pre>
 <p>运行结果:</p>
-<pre><code class="python">[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre>
-<h2 id="5-2-自定义核数量"><a href="#5-2-自定义核数量" class="headerlink" title="5.2 自定义核数量"></a>5.2 自定义核数量</h2><p>我们怎么知道 <code>Pool</code> 是否真的调用了多个核呢？我们可以把迭代次数增大些，然后打开CPU负载看下CPU运行情况:</p>
+<pre><code class="language-python">[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+</code></pre>
+<h2 id="5-2-自定义核数量">5.2 自定义核数量</h2>
+<p>我们怎么知道 <code>Pool</code> 是否真的调用了多个核呢？我们可以把迭代次数增大些，然后打开CPU负载看下CPU运行情况:</p>
 <blockquote>
-<p>  打开CPU负载(Mac): 活动监视器 &gt; CPU &gt; CPU负载(单击一下即可)</p>
+<p>打开CPU负载(Mac): 活动监视器 &gt; CPU &gt; CPU负载(单击一下即可)</p>
 </blockquote>
 <p><code>Pool</code> 默认大小是 CPU 的核数，我们也可以通过在 <code>Pool</code> 中传入<code>processes</code>参数即可自定义需要的核数量:</p>
-<pre><code class="python">def multicore():
+<pre><code class="language-python">def multicore():
     pool = mp.Pool(processes=3)  # 定义CPU核数量为3
     res = pool.map(job, range(10))
     print(res)
+
 </code></pre>
-<h2 id="5-3-apply-async"><a href="#5-3-apply-async" class="headerlink" title="5.3 apply_async"></a>5.3 apply_async</h2><p><code>Pool</code> 除了 <code>map()</code> 外，还有可以返回结果的方式，那就是 <code>apply_async()</code>。</p>
+<h2 id="5-3-apply-async">5.3 apply_async</h2>
+<p><code>Pool</code> 除了 <code>map()</code> 外，还有可以返回结果的方式，那就是 <code>apply_async()</code>。</p>
 <p><code>apply_async()</code> 中只能传递一个值，它只会放入一个核进行运算，但是传入值时要注意是可迭代的，所以在传入值后需要加逗号, 同时需要用 <code>get()</code> 方法获取返回值。</p>
-<pre><code class="python">def multicore():
+<pre><code class="language-python">def multicore():
     pool = mp.Pool() 
     res = pool.map(job, range(10))
     print(res)
     res = pool.apply_async(job, (2,))
     # 用get获得结果
     print(res.get())
+
 </code></pre>
 <p>运行结果:</p>
-<pre><code class="python">[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]   # map
-4  # apply_async()</code></pre>
-<h2 id="5-4-用-apply-async-输出多个结果"><a href="#5-4-用-apply-async-输出多个结果" class="headerlink" title="5.4 用 apply_async 输出多个结果"></a>5.4 用 apply_async 输出多个结果</h2><p>那么如何用 <code>apply_async()</code> 输出多个迭代呢？</p>
+<pre><code class="language-python">[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]   # map
+4  # apply_async()
+</code></pre>
+<h2 id="5-4-用-apply-async-输出多个结果">5.4 用 apply_async 输出多个结果</h2>
+<p>那么如何用 <code>apply_async()</code> 输出多个迭代呢？</p>
 <p>我们在 <code>apply_async()</code> 中多传入几个值试试:</p>
-<pre><code class="python">res = pool.apply_async(job, (2,3,4,))</code></pre>
+<pre><code class="language-python">res = pool.apply_async(job, (2,3,4,))
+</code></pre>
 <p>结果会报错:</p>
-<pre><code class="python">TypeError: job() takes exactly 1 argument (3 given)</code></pre>
+<pre><code class="language-python">TypeError: job() takes exactly 1 argument (3 given)
+</code></pre>
 <p>即 <code>apply_async()</code> 只能输入一组参数。</p>
 <p>在此我们将 <code>apply_async()</code> 放入迭代器中，定义一个新的 <code>multi_res</code>:</p>
-<pre><code class="python">multi_res = [pool.apply_async(job, (i,)) for i in range(10)]</code></pre>
+<pre><code class="language-python">multi_res = [pool.apply_async(job, (i,)) for i in range(10)]
+</code></pre>
 <p>同样在取出值时需要一个一个取出来:</p>
-<pre><code class="python">print([res.get() for res in multi_res])</code></pre>
+<pre><code class="language-python">print([res.get() for res in multi_res])
+</code></pre>
 <p>合并代码:</p>
-<pre><code class="python">def multicore():
+<pre><code class="language-python">def multicore():
     pool = mp.Pool() 
     res = pool.map(job, range(10))
     print(res)
@@ -2323,37 +2374,47 @@ if __name__ == '__main__':
     multi_res = [pool.apply_async(job, (i,)) for i in range(10)]
     # 从迭代器中取出
     print([res.get() for res in multi_res])
+
 </code></pre>
 <p>运行结果:</p>
-<pre><code class="python">[0, 1, 4, 9, 16, 25, 36, 49, 64, 81] # map
+<pre><code class="language-python">[0, 1, 4, 9, 16, 25, 36, 49, 64, 81] # map
 4 
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81] # multi_res
+
 </code></pre>
 <p>可以看出在 <code>apply</code> 用迭代器的得到的结果和用 <code>map</code> 得到的结果是一样的。</p>
-<h2 id="5-5-总结"><a href="#5-5-总结" class="headerlink" title="5.5 总结"></a>5.5 总结</h2><ol>
+<h2 id="5-5-总结">5.5 总结</h2>
+<ol>
 <li><code>Pool</code> 默认调用是CPU的核数，传入 <code>processes</code> 参数可自定义CPU核数</li>
 <li><code>map</code> 放入迭代参数，返回多个结果</li>
 <li><code>apply_async()</code> 只能放入一组参数，并返回一个结果，如果想得到 <code>map</code> 的效果需要通过迭代</li>
 </ol>
-<h1 id="6-共享内存shared-memory"><a href="#6-共享内存shared-memory" class="headerlink" title="6. 共享内存shared memory"></a>6. 共享内存shared memory</h1><p>这节我们学习如何定义共享内存，只有用共享内存才能让CPU之间有交流。</p>
-<h2 id="6-1-Shared-Value"><a href="#6-1-Shared-Value" class="headerlink" title="6.1 Shared Value"></a>6.1 Shared Value</h2><p>我们可以通过使用 <code>Value</code> 数据存储在一个共享的内存表中。</p>
-<pre><code class="python">import multiprocessing as mp
+<h1>6. 共享内存shared memory</h1>
+<p>这节我们学习如何定义共享内存，只有用共享内存才能让CPU之间有交流。</p>
+<h2 id="6-1-Shared-Value">6.1 Shared Value</h2>
+<p>我们可以通过使用 <code>Value</code> 数据存储在一个共享的内存表中。</p>
+<pre><code class="language-python">import multiprocessing as mp
 
 value1 = mp.Value('i', 0) 
 value2 = mp.Value('d', 3.14)
+
 </code></pre>
 <p>其中 <code>d</code> 和 <code>i</code> 参数用来设置数据类型的，<code>d</code> 表示一个双精浮点类型，<code>i</code> 表示一个带符号的整型。更多的形式请查看本页最后的表。</p>
-<h2 id="6-2-Shared-Array"><a href="#6-2-Shared-Array" class="headerlink" title="6.2 Shared Array"></a>6.2 Shared Array</h2><p>在Python的 <code>mutiprocessing</code> 中，有还有一个 <code>Array</code> 类，可以和共享内存交互，来实现在进程之间共享数据。</p>
-<pre><code class="python">array = mp.Array('i', [1, 2, 3, 4])</code></pre>
+<h2 id="6-2-Shared-Array">6.2 Shared Array</h2>
+<p>在Python的 <code>mutiprocessing</code> 中，有还有一个 <code>Array</code> 类，可以和共享内存交互，来实现在进程之间共享数据。</p>
+<pre><code class="language-python">array = mp.Array('i', [1, 2, 3, 4])
+</code></pre>
 <p>这里的 <code>Array</code> 和 <code>numpy</code> 中的不同，它只能是一维的，不能是多维的。同样和 <code>Value</code> 一样，需要定义数据形式，否则会报错。 我们会在后一节举例说明这两种的使用方法。</p>
 <p><strong>错误形式</strong>:</p>
-<pre><code class="python">array = mp.Array('i', [[1, 2], [3, 4]])  # 2维list
+<pre><code class="language-python">array = mp.Array('i', [[1, 2], [3, 4]])  # 2维list
 
 """
 TypeError: an integer is required
 """
+
 </code></pre>
-<h2 id="6-3-参考数据形式"><a href="#6-3-参考数据形式" class="headerlink" title="6.3 参考数据形式"></a>6.3 参考数据形式</h2><p>各参数代表的数据类型:</p>
+<h2 id="6-3-参考数据形式">6.3 参考数据形式</h2>
+<p>各参数代表的数据类型:</p>
 <table>
 <thead>
 <tr>
@@ -2363,7 +2424,8 @@ TypeError: an integer is required
 <th>Minimum size in bytes</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>'b'</code></td>
 <td>signed char</td>
 <td>int</td>
@@ -2441,10 +2503,13 @@ TypeError: an integer is required
 <td>float</td>
 <td>8</td>
 </tr>
-</tbody></table>
-<h1 id="7-进程锁Lock"><a href="#7-进程锁Lock" class="headerlink" title="7. 进程锁Lock"></a>7. 进程锁Lock</h1><p>这次我们讲进程锁的运用。</p>
-<h2 id="7-1-不加进程锁"><a href="#7-1-不加进程锁" class="headerlink" title="7.1 不加进程锁"></a>7.1 不加进程锁</h2><p>让我们看看没有加进程锁时会产生什么样的结果。</p>
-<pre><code class="python">import multiprocessing as mp
+</tbody>
+</table>
+<h1>7. 进程锁Lock</h1>
+<p>这次我们讲进程锁的运用。</p>
+<h2 id="7-1-不加进程锁">7.1 不加进程锁</h2>
+<p>让我们看看没有加进程锁时会产生什么样的结果。</p>
+<pre><code class="language-python">import multiprocessing as mp
 import time
 
 def job(v, num):
@@ -2452,7 +2517,7 @@ def job(v, num):
         time.sleep(0.1)  # 暂停0.1秒，让输出效果更明显
         v.value += num  # v.value获取共享变量值
         print(v.value, end="")
-
+        
 def multicore():
     v = mp.Value('i', 0)  # 定义共享变量
     p1 = mp.Process(target=job, args=(v,1))
@@ -2462,13 +2527,14 @@ def multicore():
     p2.start()
     p1.join()
     p2.join()
-
+    
 if __name__ == '__main__':
     multicore()
+
 </code></pre>
 <p>在上面的代码中，我们定义了一个共享变量 <code>v</code>，两个进程都可以对它进行操作。 在 <code>job()</code> 中我们想让 <code>v</code> 每隔 0.1 秒输出一次累加 <code>num</code> 的结果，但是在两个进程 <code>p1</code> 和 <code>p2</code> 中设定了不同的累加值。所以接下来让我们来看下这两个进程是否会出现冲突。</p>
 <p>运行一下:</p>
-<pre><code class="python">1
+<pre><code class="language-python">1
 4
 5
 8
@@ -2478,26 +2544,31 @@ if __name__ == '__main__':
 16
 17
 20
+
 </code></pre>
 <p>我们可以看到，<strong>进程1</strong>和<strong>进程2</strong>在相互抢着使用共享内存 <code>v</code>。</p>
-<h2 id="7-2-加进程锁"><a href="#7-2-加进程锁" class="headerlink" title="7.2 加进程锁"></a>7.2 加进程锁</h2><p>为了解决上述不同进程抢共享资源的问题，我们可以用加进程锁来解决。</p>
+<h2 id="7-2-加进程锁">7.2 加进程锁</h2>
+<p>为了解决上述不同进程抢共享资源的问题，我们可以用加进程锁来解决。</p>
 <p>首先需要定义一个进程锁:</p>
-<pre><code class="python">l = mp.Lock()  # 定义一个进程锁</code></pre>
+<pre><code class="language-python">l = mp.Lock()  # 定义一个进程锁
+</code></pre>
 <p>然后将进程锁的信息传入各个进程中:</p>
-<pre><code class="python">p1 = mp.Process(target=job, args=(v, 1, l))  # 需要将Lock传入
+<pre><code class="language-python">p1 = mp.Process(target=job, args=(v, 1, l))  # 需要将Lock传入
 p2 = mp.Process(target=job, args=(v, 3, l))
+
 </code></pre>
 <p>在 <code>job()</code> 中设置进程锁的使用，保证运行时一个进程的对锁内内容的独占:</p>
-<pre><code class="python">def job(v, num, l):
+<pre><code class="language-python">def job(v, num, l):
     l.acquire()  # 锁住
     for _ in range(5):
         time.sleep(0.1) 
         v.value += num  # v.value获取共享内存
         print(v.value)
     l.release()  # 释放
+
 </code></pre>
 <p>完整代码:</p>
-<pre><code class="python">def job(v, num, l):
+<pre><code class="language-python">def job(v, num, l):
     l.acquire()  # 锁住
     for _ in range(5):
         time.sleep(0.1) 
@@ -2517,9 +2588,10 @@ def multicore():
 
 if __name__ == '__main__':
     multicore()
+
 </code></pre>
 <p>运行一下，让我们看看是否还会出现抢占资源的情况:</p>
-<pre><code class="python">1
+<pre><code class="language-python">1
 2
 3
 4
@@ -2528,7 +2600,8 @@ if __name__ == '__main__':
 11
 14
 17
-20</code></pre>
+20
+</code></pre>
 <p>显然，进程锁保证了进程 <code>p1</code> 的完整运行，然后才进行了进程 <code>p2</code> 的运行。</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -2565,7 +2638,7 @@ if __name__ == '__main__':
     <p><span class="copy-title">文章字数:</span><span class="post-count">3.5k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
     <p><span class="copy-title">发布时间:</span>2019-12-08, 12:49:03</p>
-    <p><span class="copy-title">最后更新:</span>2020-07-12, 22:02:42</p>
+    <p><span class="copy-title">最后更新:</span>2020-09-08, 20:53:35</p>
     <!-- <span class="copy-title">原始链接:</span><a class="post-url" href="/%E8%AF%BE%E7%A8%8B/movan/%E8%8E%AB%E7%83%A6%E8%AF%BE%E7%A8%8B-%E5%A4%9A%E8%BF%9B%E7%A8%8B/" title="莫烦-多进程课程">http://www.monsteryu.top/%E8%AF%BE%E7%A8%8B/movan/%E8%8E%AB%E7%83%A6%E8%AF%BE%E7%A8%8B-%E5%A4%9A%E8%BF%9B%E7%A8%8B/</a> -->
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -2671,7 +2744,7 @@ if __name__ == '__main__':
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['@郁明敏','#常用网址','#文档学习资源','#数据库','#算法','#AirFlow','#Jupyter','#3-hexo','#hexo','#hexo-live2d','#hadoop','#chrome','#markdown','#notepad','#sublime','#xshell','#impala','#hive','#蓝鲸','#Logistic Regression','#统计基础','#LGBM','#Linux','#GLIBC','#Mac','#MySQL','#Centos','#windows','#windows软件','#CDH','#sklearn','#Django','#Java','#Java后端学习路线',],
+            'data': ['@郁明敏','#常用网址','#文档学习资源','#LGBM','#impala','#hive','#蓝鲸','#MySQL','#Centos','#Linux','#GLIBC','#Mac','#chrome','#sublime','#xshell','#统计基础','#Jupyter','#AirFlow','#算法','#数据库','#Java','#Django','#Java后端学习路线',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

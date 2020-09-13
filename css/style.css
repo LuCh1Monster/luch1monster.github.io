@@ -1277,6 +1277,7 @@ div.ac > ul > li:before,
   font-size: 18px;
   line-height: 1.6;
   background: #fff;
+  overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   color: #2f2f2f;
@@ -1292,6 +1293,7 @@ div.ac > ul > li:before,
   max-width: 1200px;
   min-height: calc(100vh - 143px);
   margin: 0 auto;
+  overflow-x: hidden;
   overflow-y: auto;
   transition: padding-right 0.5s;
   opacity: 1;

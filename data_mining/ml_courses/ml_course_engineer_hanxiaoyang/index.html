@@ -1,0 +1,3292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>【寒小阳】机器学习工程师 | 路痴大魔王</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="【寒小阳】机器学习工程师 | 路痴大魔王">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="有幸参与了《深度实践-Spark机器学习》、《Python深度学习:基于PyTorch》书籍的编写，有兴趣的话大家可以支持一下。            document.querySelectorAll(&amp;apos;.github-emoji&amp;apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.monsteryu.top&#x2F;about&#x2F;index.html">
+<meta property="og:site_name" content="路痴大魔王">
+<meta property="og:description" content="有幸参与了《深度实践-Spark机器学习》、《Python深度学习:基于PyTorch》书籍的编写，有兴趣的话大家可以支持一下。            document.querySelectorAll(&amp;apos;.github-emoji&amp;apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191203201849591.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191203230521163.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2020-01-13T15:28:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;img-blog.csdnimg.cn&#x2F;20191203201849591.png?x-oss-process=image&#x2F;watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70">
+
+
+<link rel="icon" href="/img/avatar4.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/rainbow.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/10.2.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
+
+    <!-- 自定义语言高亮 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/dockerfile.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/erlang.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/powershell.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/stylus.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/django.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/scala.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/ini.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>郁明敏</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/luch1monster" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="csdn" href="https://blog.csdn.net/LuCh1Monster" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-csdn"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:yu_mingm623@163.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=442523981&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(158)</small></div></li>
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="CDH"><i class="fold iconfont icon-right"></i>CDH<small>(1)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="CDH课程">CDH课程<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="Docker"><i class="fold iconfont icon-right"></i>Docker<small>(5)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Docker基础">Docker基础<small>(4)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Docker课程">Docker课程<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="Git"><i class="fold iconfont icon-right"></i>Git<small>(2)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Git基础">Git基础<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Git课程">Git课程<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="Go"><i class="fold iconfont icon-right"></i>Go<small>(1)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Go基础">Go基础<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="Hadoop"><i class="fold iconfont icon-right"></i>Hadoop<small>(2)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Hadoop基础">Hadoop基础<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Hadoop课程">Hadoop课程<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="Java"><i class="fold iconfont icon-right"></i>Java<small>(5)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="SpringBoot">SpringBoot<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Java基础">Java基础<small>(3)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Java课程">Java课程<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="LeetCode"><i class="fold iconfont icon-right"></i>LeetCode<small>(7)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="算法">算法<small>(4)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="数据库LC">数据库LC<small>(3)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="Linux"><i class="fold iconfont icon-right"></i>Linux<small>(3)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Linux基础">Linux基础<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Linux课程">Linux课程<small>(2)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="Portainer"><i class="fold iconfont icon-right"></i>Portainer<small>(7)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Portainer基础">Portainer基础<small>(7)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="Python"><i class="fold iconfont icon-right"></i>Python<small>(56)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Python基础">Python基础<small>(17)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Impyla">Impyla<small>(3)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="AirFlow">AirFlow<small>(3)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Python课程">Python课程<small>(11)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Jupyter">Jupyter<small>(6)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Requests">Requests<small>(4)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Python爬虫">Python爬虫<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Pandas">Pandas<small>(8)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="PyDub">PyDub<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="PyPrind">PyPrind<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="PyEcharts">PyEcharts<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="R"><i class="fold iconfont icon-right"></i>R<small>(1)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="R基础">R基础<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="Scala"><i class="fold iconfont icon-right"></i>Scala<small>(3)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Scala基础">Scala基础<small>(2)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Scala课程">Scala课程<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="前端"><i class="fold iconfont icon-right"></i>前端<small>(12)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Hexo">Hexo<small>(7)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Nodejs">Nodejs<small>(3)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="WordPress">WordPress<small>(2)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="学习资源"><i class="fold iconfont icon-right"></i>学习资源<small>(4)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="基础技术">基础技术<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="大佬博客">大佬博客<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="学习路线">学习路线<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="工具"><i class="fold iconfont icon-right"></i>工具<small>(17)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Chrome">Chrome<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="GitHub">GitHub<small>(2)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="JetBrains">JetBrains<small>(5)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Markdown">Markdown<small>(2)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Notepad">Notepad<small>(2)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Sublime">Sublime<small>(4)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="XShell">XShell<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="数据库"><i class="fold iconfont icon-right"></i>数据库<small>(11)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Hive">Hive<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Impala">Impala<small>(7)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="MySQL">MySQL<small>(3)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="机器学习"><i class="fold iconfont icon-right"></i>机器学习<small>(6)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="基本知识">基本知识<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="数理统计">数理统计<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="ML课程">ML课程<small>(2)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="超参调优">超参调优<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Model模板代码">Model模板代码<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="系统"><i class="fold iconfont icon-right"></i>系统<small>(14)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="Windows">Windows<small>(9)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="Mac">Mac<small>(5)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    </div>
+    <div><a class="about  site_url"  href="/about">关于</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="158">
+<input type="hidden" id="yelog_site_word_count" value="264.2k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="#">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a class="color5">常用网址</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">文档学习资源</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">统计基础</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">LGBM</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">hive</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">impala</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">蓝鲸</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">chrome</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">xshell</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">Mac</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">AirFlow</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">算法</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">数据库</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Java后端学习路线</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a onclick="refreshBtnCopy()" id="top" class="前端 Hexo "
+           href="/web/hexo/build_personal_site_using_3-hexo_github/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="使用3-hexo和GitHub搭建个人博客">使用3-hexo和GitHub搭建个人博客</span>
+            <span class="post-date" title="2019-11-27 16:53:35">2019/11/27</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class=""
+           href="/bigdata/python/jupyter/jupyter_uninstall_laguages_kernel/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="bigdata/python/jupyter/jupyter_uninstall_laguages_kernel">bigdata/python/jupyter/jupyter_uninstall_laguages_kernel</span>
+            <span class="post-date" title="2020-09-10 22:39:20">2020/09/10</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/systems/windows/wins_chocolatey/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Chocolatey包管理器">Chocolatey包管理器</span>
+            <span class="post-date" title="2020-09-04 00:00:01">2020/09/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/systems/windows/wins_install_windows_terminal/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Win10安装Windows Terminal">Win10安装Windows Terminal</span>
+            <span class="post-date" title="2020-09-04 00:00:01">2020/09/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/systems/windows/wins_scoop/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Scoop包管理器">Scoop包管理器</span>
+            <span class="post-date" title="2020-09-04 00:00:01">2020/09/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="LeetCode 算法 "
+           href="/learning/leetcode/algorithms/%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"
+           data-tag="算法"
+           data-author="郁明敏" >
+            <span class="post-title" title="无重复字符的最长子串">无重复字符的最长子串</span>
+            <span class="post-date" title="2020-03-27 00:00:01">2020/03/27</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="LeetCode 算法 "
+           href="/learning/leetcode/algorithms/%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/"
+           data-tag="算法"
+           data-author="郁明敏" >
+            <span class="post-title" title="三数之和">三数之和</span>
+            <span class="post-date" title="2020-03-25 00:00:01">2020/03/25</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="LeetCode 算法 "
+           href="/learning/leetcode/algorithms/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"
+           data-tag="算法"
+           data-author="郁明敏" >
+            <span class="post-title" title="两数之和">两数之和</span>
+            <span class="post-date" title="2020-03-01 00:00:01">2020/03/01</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="LeetCode 算法 "
+           href="/learning/leetcode/algorithms/%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/"
+           data-tag="算法"
+           data-author="郁明敏" >
+            <span class="post-title" title="两数相加">两数相加</span>
+            <span class="post-date" title="2020-03-01 00:00:01">2020/03/01</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="LeetCode 数据库LC "
+           href="/learning/leetcode/databases/%E7%AC%ACN%E9%AB%98%E7%9A%84%E8%96%AA%E6%B0%B4/"
+           data-tag="数据库"
+           data-author="郁明敏" >
+            <span class="post-title" title="第N高的薪水">第N高的薪水</span>
+            <span class="post-date" title="2020-03-01 00:00:01">2020/03/01</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="LeetCode 数据库LC "
+           href="/learning/leetcode/databases/%E7%AC%AC%E4%BA%8C%E9%AB%98%E7%9A%84%E8%96%AA%E6%B0%B4/"
+           data-tag="数据库"
+           data-author="郁明敏" >
+            <span class="post-title" title="第二高的薪水">第二高的薪水</span>
+            <span class="post-date" title="2020-03-01 00:00:01">2020/03/01</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="LeetCode 数据库LC "
+           href="/learning/leetcode/databases/%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/"
+           data-tag="数据库"
+           data-author="郁明敏" >
+            <span class="post-title" title="组合两个表">组合两个表</span>
+            <span class="post-date" title="2020-03-01 00:00:01">2020/03/01</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/web/hexo/hexo_install_live2d_model_plugins/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Hexo安装live2d动态模型">Hexo安装live2d动态模型</span>
+            <span class="post-date" title="2020-01-01 14:48:43">2020/01/01</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/web/hexo/hexo_using_emoji/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Hexo使用emoji表情">Hexo使用emoji表情</span>
+            <span class="post-date" title="2020-01-01 14:48:43">2020/01/01</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="CDH CDH课程 "
+           href="/bigdata/cdh/cdh_courses/cdh_basic_feiguyun/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【飞谷云】CDH基础">【飞谷云】CDH基础</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Linux Linux课程 "
+           href="/bigdata/linux/linux_courses/linux_couse_mooc/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Linux基础">Linux基础</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Scala Scala课程 "
+           href="/bigdata/scala/scala_courses/scala_basic_feiguyun/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【飞谷云】Scala基础">【飞谷云】Scala基础</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Hadoop Hadoop课程 "
+           href="/bigdata/hadoop/hadoop_courses/hadoop_course_feiguyun/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【飞谷云】Hadoop基础">【飞谷云】Hadoop基础</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Linux Linux课程 "
+           href="/bigdata/linux/linux_courses/linux_course_feiguyun/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【飞谷云】Linux基础">【飞谷云】Linux基础</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Java Java课程 "
+           href="/bigdata/java/java_courses/java_course_feiguyun/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【飞谷云】Java大数据开发">【飞谷云】Java大数据开发</span>
+            <span class="post-date" title="2019-12-22 13:10:28">2019/12/22</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Pandas "
+           href="/bigdata/python/pandas/add_dataframe_to_email/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="将DataFrame添加到邮件正文">将DataFrame添加到邮件正文</span>
+            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Pandas "
+           href="/bigdata/python/pandas/dataframe_turn_columns_rows/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="DataFrame行转列">DataFrame行转列</span>
+            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Pandas "
+           href="/bigdata/python/pandas/multi_dataFrame_write_to_one_excel_with_severval_sheet/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="将多个DataFrame写入一个Excel多个Sheet">将多个DataFrame写入一个Excel多个Sheet</span>
+            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Pandas "
+           href="/bigdata/python/pandas/numpy_pandas_close_scientific_notion_display/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="NumPy和Pandas关闭科学计数显示">NumPy和Pandas关闭科学计数显示</span>
+            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Pandas "
+           href="/bigdata/python/pandas/pandas_aggregation_ranking/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Pandas按照字段聚合排序">Pandas按照字段聚合排序</span>
+            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Pandas "
+           href="/bigdata/python/pandas/pandas_cut_relative_absolue_bin_by_score/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Pandas根据模型分切绝对bin和相对bin">Pandas根据模型分切绝对bin和相对bin</span>
+            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Pandas "
+           href="/bigdata/python/pandas/pandas_read_files/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Pandas读取文件">Pandas读取文件</span>
+            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Pandas "
+           href="/bigdata/python/pandas/pandas_set_max_rows_columns/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Pandas设置set_option">Pandas设置set_option</span>
+            <span class="post-date" title="2019-12-12 19:30:49">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/tools/cmder/cmder_config_default_open_fold/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Cmder设置默认打开目录">Cmder设置默认打开目录</span>
+            <span class="post-date" title="2019-12-12 13:53:23">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/systems/windows/wins_softwares_download_sources/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Windows软件下载">Windows软件下载</span>
+            <span class="post-date" title="2019-12-12 13:53:23">2019/12/12</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Notepad "
+           href="/tools/notepad/notepad_nppftp_plugin/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="NppFTP插件连接远程服务器">NppFTP插件连接远程服务器</span>
+            <span class="post-date" title="2019-12-08 20:51:47">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Notepad "
+           href="/tools/notepad/notepad_plugins/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Notepad++插件列表">Notepad++插件列表</span>
+            <span class="post-date" title="2019-12-08 20:51:47">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
+           href="/tools/jetbrains/pycharm_questions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="PyCharm常见问题">PyCharm常见问题</span>
+            <span class="post-date" title="2019-12-08 20:46:04">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Java SpringBoot "
+           href="/bigdata/springboot/build_springboot_dev_env_in_wins/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Windows搭建SpringBoot开发环境">Windows搭建SpringBoot开发环境</span>
+            <span class="post-date" title="2019-12-08 20:42:31">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Sublime "
+           href="/tools/sublime/sublime_activation/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Sublime激活">Sublime激活</span>
+            <span class="post-date" title="2019-12-08 20:42:31">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Sublime "
+           href="/tools/sublime/sublime_cancel_update/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Sublime取消升级">Sublime取消升级</span>
+            <span class="post-date" title="2019-12-08 20:42:31">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Sublime "
+           href="/tools/sublime/sublime_plugins/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Sublime插件">Sublime插件</span>
+            <span class="post-date" title="2019-12-08 20:42:31">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Sublime "
+           href="/tools/sublime/sublime_questions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Sublime常见问题">Sublime常见问题</span>
+            <span class="post-date" title="2019-12-08 20:42:31">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/systems/windows/wins_install_wsl/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Windows安装WSL">Windows安装WSL</span>
+            <span class="post-date" title="2019-12-08 20:31:41">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/systems/windows/wins_network_questions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Windows网络常见问题">Windows网络常见问题</span>
+            <span class="post-date" title="2019-12-08 20:31:41">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Chrome "
+           href="/tools/chrome/chrome_common_plugins/"
+           data-tag="chrome"
+           data-author="郁明敏" >
+            <span class="post-title" title="Chrome常用插件">Chrome常用插件</span>
+            <span class="post-date" title="2019-12-08 20:29:18">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/systems/windows/wins_bat/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="bat脚本">bat脚本</span>
+            <span class="post-date" title="2019-12-08 20:22:58">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Windows "
+           href="/systems/windows/wins_softwares_list/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Windows软件列表">Windows软件列表</span>
+            <span class="post-date" title="2019-12-08 20:22:58">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_common_packages/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python常用库">Python常用库</span>
+            <span class="post-date" title="2019-12-08 20:04:22">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Mac "
+           href="/systems/mac/build_a_perfect_prgraming_mac/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="打造强大的Mac系统">打造强大的Mac系统</span>
+            <span class="post-date" title="2019-12-08 19:49:04">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Mac "
+           href="/systems/mac/mac_common_keyshort/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="MAC常用快捷键">MAC常用快捷键</span>
+            <span class="post-date" title="2019-12-08 19:49:04">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Mac "
+           href="/systems/mac/mac_change_typora_vue_theme/"
+           data-tag="Mac"
+           data-author="郁明敏" >
+            <span class="post-title" title="Mac下Typora更换Vue主题">Mac下Typora更换Vue主题</span>
+            <span class="post-date" title="2019-12-08 19:49:04">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Mac "
+           href="/systems/mac/mac_install_zsh/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Mac安装Zsh">Mac安装Zsh</span>
+            <span class="post-date" title="2019-12-08 19:49:04">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="系统 Mac "
+           href="/systems/mac/mac_use_frp/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Mac使用FRP">Mac使用FRP</span>
+            <span class="post-date" title="2019-12-08 19:49:04">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 MySQL "
+           href="/databases/mysql/centos_migrate_mysql_databases/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Centos下迁移MySQL数据库">Centos下迁移MySQL数据库</span>
+            <span class="post-date" title="2019-12-08 19:37:05">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 MySQL "
+           href="/databases/mysql/wins_install_mysql/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Windows下迁移MySQL数据库">Windows下迁移MySQL数据库</span>
+            <span class="post-date" title="2019-12-08 19:37:05">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_install_complex_packages/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python安装第三方库">Python安装第三方库</span>
+            <span class="post-date" title="2019-12-08 19:29:16">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 MySQL "
+           href="/databases/mysql/centos_install_mysql/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Centos安装MySQL服务">Centos安装MySQL服务</span>
+            <span class="post-date" title="2019-12-08 19:01:46">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Linux Linux基础 "
+           href="/bigdata/linux/linux_basic/linux_common_usages/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Linux总结">Linux总结</span>
+            <span class="post-date" title="2019-12-08 18:02:08">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Jupyter "
+           href="/bigdata/python/jupyter/jupyter_install_languages_kernel/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Jupyter安装其他语言内核">Jupyter安装其他语言内核</span>
+            <span class="post-date" title="2019-12-08 17:39:50">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Jupyter "
+           href="/bigdata/python/jupyter/jupyter_nohup/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Jupyter后台运行">Jupyter后台运行</span>
+            <span class="post-date" title="2019-12-08 17:39:50">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Jupyter "
+           href="/bigdata/python/jupyter/jupyter_plugins_nbdime/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="nbdime插件">nbdime插件</span>
+            <span class="post-date" title="2019-12-08 17:39:50">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Jupyter "
+           href="/bigdata/python/jupyter/jupyter_reload_user_defined_packages/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Jupyter重新导入自定义包">Jupyter重新导入自定义包</span>
+            <span class="post-date" title="2019-12-08 17:39:50">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Jupyter "
+           href="/bigdata/python/jupyter/jupyter_plugins_nbextensions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="nbextensions插件">nbextensions插件</span>
+            <span class="post-date" title="2019-12-08 17:39:50">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Jupyter "
+           href="/bigdata/python/jupyter/jupyter_set_password/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Jupyter设置访问密码">Jupyter设置访问密码</span>
+            <span class="post-date" title="2019-12-08 17:39:50">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Nodejs "
+           href="/web/nodejs/mac_install_npm_cnpm/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Mac下安装NPM和CNPM">Mac下安装NPM和CNPM</span>
+            <span class="post-date" title="2019-12-08 16:03:30">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Nodejs "
+           href="/web/nodejs/node_install_packages/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Node安装开发环境">Node安装开发环境</span>
+            <span class="post-date" title="2019-12-08 16:03:30">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Nodejs "
+           href="/web/nodejs/ubuntu_install_nodejs/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Ubuntu下安装Nodejs">Ubuntu下安装Nodejs</span>
+            <span class="post-date" title="2019-12-08 16:03:30">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 WordPress "
+           href="/web/wordpress/wp_plugins/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="WordPress常用插件">WordPress常用插件</span>
+            <span class="post-date" title="2019-12-08 16:03:30">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 WordPress "
+           href="/web/wordpress/wp_themes/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="WordPress主题">WordPress主题</span>
+            <span class="post-date" title="2019-12-08 16:03:30">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python爬虫 "
+           href="/bigdata/python/python_crawler/python_crawl_workday_info/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Requests获取工作日信息">Requests获取工作日信息</span>
+            <span class="post-date" title="2019-12-08 16:03:30">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python AirFlow "
+           href="/bigdata/python/airflow/airflow%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3/"
+           data-tag="AirFlow"
+           data-author="郁明敏" >
+            <span class="post-title" title="AirFlow参考文档">AirFlow参考文档</span>
+            <span class="post-date" title="2019-12-08 15:59:10">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
+           href="/databases/impala/impala_bluewhale/"
+           data-tag="蓝鲸"
+           data-author="郁明敏" >
+            <span class="post-title" title="蓝鲸使用">蓝鲸使用</span>
+            <span class="post-date" title="2019-12-08 15:40:18">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Go Go基础 "
+           href="/bigdata/go/go_install/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Go语言安装">Go语言安装</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Docker Docker基础 "
+           href="/bigdata/docker/docker_basic/docker_install/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Docker安装">Docker安装</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Docker Docker基础 "
+           href="/bigdata/docker/docker_basic/anaconda_dockerfile/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="基于Centos7下Anaconda的dockerfile">基于Centos7下Anaconda的dockerfile</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Docker Docker基础 "
+           href="/bigdata/docker/docker_basic/docker_mirrors/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Docker镜像源">Docker镜像源</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Docker Docker基础 "
+           href="/bigdata/docker/docker_basic/docker_questions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Docker问题总结">Docker问题总结</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Docker Docker课程 "
+           href="/bigdata/docker/docker_courses/docker_course_qianfeng/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【千锋学院】Docker基础">【千锋学院】Docker基础</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Java Java基础 "
+           href="/bigdata/java/java_basic/jdk_install/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="JDK安装">JDK安装</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Impyla "
+           href="/bigdata/python/Impyla/python_connect_impala_timeout/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python连接Impala超时">Python连接Impala超时</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python PyDub "
+           href="/bigdata/python/pydub/python_convert_mp3_into_wav/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python将MP3文件转换为WAV文件">Python将MP3文件转换为WAV文件</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python PyEcharts "
+           href="/bigdata/python/pyecharts/pyecharts_plot_examples/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="PyEcharts简单图示例">PyEcharts简单图示例</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_command_line_parameters/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python命令行参数">Python命令行参数</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_config_tunatsinghua_mirror/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python使用清华镜像源">Python使用清华镜像源</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_display_percent_num/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python将数字百分比显示">Python将数字百分比显示</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_send_emial/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python使用Outlook发送邮件">Python使用Outlook发送邮件</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_user_defined_decrator/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python自定义装饰器">Python自定义装饰器</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Requests "
+           href="/bigdata/python/requests/requests_send_messages_to_workchat/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Requests企业微信推送监控消息">Requests企业微信推送监控消息</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Scala Scala基础 "
+           href="/bigdata/scala/scala_basic/scala_command_line_parameters/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="scala命令行参数">scala命令行参数</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Scala Scala基础 "
+           href="/bigdata/scala/scala_basic/scala_install/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Scala安装">Scala安装</span>
+            <span class="post-date" title="2019-12-08 15:34:09">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Impyla "
+           href="/bigdata/python/Impyla/python_create_table_in_impala/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="使用Python在Impala中建表">使用Python在Impala中建表</span>
+            <span class="post-date" title="2019-12-08 15:13:02">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_zip_fold/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="使用Python压缩文件夹">使用Python压缩文件夹</span>
+            <span class="post-date" title="2019-12-08 15:13:02">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Requests "
+           href="/bigdata/python/requests/requests_headers/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="requests headers">requests headers</span>
+            <span class="post-date" title="2019-12-08 15:13:02">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Requests "
+           href="/bigdata/python/requests/requests_questions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="requests问题总结">requests问题总结</span>
+            <span class="post-date" title="2019-12-08 15:13:02">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
+           href="/tools/jetbrains/datagrip_user_define_connect_sources/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="DataGrip自定义连接Hive和Impala">DataGrip自定义连接Hive和Impala</span>
+            <span class="post-date" title="2019-12-08 15:08:00">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
+           href="/tools/jetbrains/idea_plugins_leetcode/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="IDEA插件-LeetCode刷题">IDEA插件-LeetCode刷题</span>
+            <span class="post-date" title="2019-12-08 15:08:00">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
+           href="/tools/jetbrains/jetbrains_ide_using_mono_font/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="IDE使用JetBrains新字体">IDE使用JetBrains新字体</span>
+            <span class="post-date" title="2019-12-08 15:08:00">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
+           href="/databases/impala/impala_aggregation/"
+           data-tag="impala"
+           data-author="郁明敏" >
+            <span class="post-title" title="Impala聚合操作">Impala聚合操作</span>
+            <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
+           href="/databases/impala/impala_common_usages/"
+           data-tag="impala"
+           data-author="郁明敏" >
+            <span class="post-title" title="Impala常规使用">Impala常规使用</span>
+            <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
+           href="/databases/impala/impala_date/"
+           data-tag="impala"
+           data-author="郁明敏" >
+            <span class="post-title" title="Impala操作日期函数">Impala操作日期函数</span>
+            <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
+           href="/databases/impala/impala_json/"
+           data-tag="impala"
+           data-author="郁明敏" >
+            <span class="post-title" title="Impala解析JSON字符串">Impala解析JSON字符串</span>
+            <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
+           href="/databases/impala/impala_regexp/"
+           data-tag="impala"
+           data-author="郁明敏" >
+            <span class="post-title" title="Impala正则匹配">Impala正则匹配</span>
+            <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Impala "
+           href="/databases/impala/impala_url/"
+           data-tag="impala"
+           data-author="郁明敏" >
+            <span class="post-title" title="Impala解析URL">Impala解析URL</span>
+            <span class="post-date" title="2019-12-08 14:56:27">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="数据库 Hive "
+           href="/databases/hive/hive_common_questions/"
+           data-tag="hive"
+           data-author="郁明敏" >
+            <span class="post-title" title="Hive问题总结">Hive问题总结</span>
+            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/web/hexo/hexo_plugins/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Hexo好用的插件">Hexo好用的插件</span>
+            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/web/hexo/hexo_questions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Hexo问题总结">Hexo问题总结</span>
+            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/web/hexo/hexo_user_defined_languages_highlight/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Hexo添加自定义语言高亮">Hexo添加自定义语言高亮</span>
+            <span class="post-date" title="2019-12-08 14:48:43">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Portainer Portainer基础 "
+           href="/bigdata/portainer/portainer_basic_configuration/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Portainer基础配置">Portainer基础配置</span>
+            <span class="post-date" title="2019-12-08 14:27:24">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Portainer Portainer基础 "
+           href="/bigdata/portainer/portainer_create_centos_container/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Portainer创建CentOS容器">Portainer创建CentOS容器</span>
+            <span class="post-date" title="2019-12-08 14:27:24">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Portainer Portainer基础 "
+           href="/bigdata/portainer/portainer_create_mirrors/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Portainer创建镜像">Portainer创建镜像</span>
+            <span class="post-date" title="2019-12-08 14:27:24">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Portainer Portainer基础 "
+           href="/bigdata/portainer/portainer_create_mysql_container/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Portainer创建MySQL容器">Portainer创建MySQL容器</span>
+            <span class="post-date" title="2019-12-08 14:27:24">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Portainer Portainer基础 "
+           href="/bigdata/portainer/portainer_create_wp_container/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Portainer创建WordPress容器">Portainer创建WordPress容器</span>
+            <span class="post-date" title="2019-12-08 14:27:24">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Portainer Portainer基础 "
+           href="/bigdata/portainer/portainer_install/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Portainer安装">Portainer安装</span>
+            <span class="post-date" title="2019-12-08 14:27:24">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Portainer Portainer基础 "
+           href="/bigdata/portainer/portainer_user_access/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Portainer权限管理">Portainer权限管理</span>
+            <span class="post-date" title="2019-12-08 14:27:24">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Hadoop Hadoop基础 "
+           href="/bigdata/hadoop/hadoop_basic/hadoop%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Hadoop问题总结">Hadoop问题总结</span>
+            <span class="post-date" title="2019-12-08 14:27:24">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python AirFlow "
+           href="/bigdata/python/airflow/airflow%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"
+           data-tag="AirFlow"
+           data-author="郁明敏" >
+            <span class="post-title" title="AirFlow基础使用">AirFlow基础使用</span>
+            <span class="post-date" title="2019-12-08 14:24:18">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Markdown "
+           href="/tools/markdown/latex_usages/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="LaTex使用总结">LaTex使用总结</span>
+            <span class="post-date" title="2019-12-08 13:40:22">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 Markdown "
+           href="/tools/markdown/markdown_usages/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Markdown用法总结">Markdown用法总结</span>
+            <span class="post-date" title="2019-12-08 13:40:22">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="机器学习 ML课程 "
+           href="/data_mining/ml_courses/ml_course_engineer_hanxiaoyang/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【寒小阳】机器学习工程师">【寒小阳】机器学习工程师</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Git Git基础 "
+           href="/bigdata/git/git_basic/git_questions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Git问题总结">Git问题总结</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python课程 "
+           href="/bigdata/python/python_courses/python_course_basic_regexp_expression/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python基本正则表达式">Python基本正则表达式</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python课程 "
+           href="/bigdata/python/python_courses/python_course_gui_introduction/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【极客学院】Python图形程序入门">【极客学院】Python图形程序入门</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python课程 "
+           href="/bigdata/python/python_courses/python_course_matplotlib_visualization/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【极客学院】Matplitlib可视化">【极客学院】Matplitlib可视化</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python课程 "
+           href="/bigdata/python/python_courses/python_course_multi_processing_mofan/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【莫烦Python】Python多进程">【莫烦Python】Python多进程</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python课程 "
+           href="/bigdata/python/python_courses/python_course_multi_threading_mofan/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【莫烦Python】Python多线程">【莫烦Python】Python多线程</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python课程 "
+           href="/bigdata/python/python_courses/python_course_pandas_package/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="bigdata/python/python_courses/python_course_pandas_package">bigdata/python/python_courses/python_course_pandas_package</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python课程 "
+           href="/bigdata/python/python_courses/python_course_scientific_computation/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【极客学院】Python科学计算">【极客学院】Python科学计算</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python课程 "
+           href="/bigdata/python/python_courses/python_course_scrapy_first_exploration/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【极客学院】Scrapy初探">【极客学院】Scrapy初探</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python课程 "
+           href="/bigdata/python/python_courses/python_course_single_thread_crawler/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【极客学院】Python单线程爬虫">【极客学院】Python单线程爬虫</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python课程 "
+           href="/bigdata/python/python_courses/python_course_tkinter_mofan/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【莫烦Python】Tkinter">【莫烦Python】Tkinter</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Git Git课程 "
+           href="/bigdata/git/git_courses/course_git_github/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Git与GitHub基础课程">Git与GitHub基础课程</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python课程 "
+           href="/bigdata/python/python_courses/python_course_matplotlib_visualization_data_analysis/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Matplitlib数据可视化分析">Matplitlib数据可视化分析</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="机器学习 ML课程 "
+           href="/data_mining/ml_courses/ml_course_reinforcement_leanring_mofan/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="【莫烦Python】强化学习">【莫烦Python】强化学习</span>
+            <span class="post-date" title="2019-12-08 12:49:03">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 GitHub "
+           href="/tools/github/github_advanced_tips_in_searching_open_projects/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="GitHub搜索开源项目技巧">GitHub搜索开源项目技巧</span>
+            <span class="post-date" title="2019-12-08 11:10:15">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 GitHub "
+           href="/tools/github/the_way_improving_github_speed/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="GitHub提速的方法">GitHub提速的方法</span>
+            <span class="post-date" title="2019-12-08 11:10:15">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 JetBrains "
+           href="/tools/jetbrains/pycharm_latest_activation_method/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="PyCharm2019.2最新激活方式">PyCharm2019.2最新激活方式</span>
+            <span class="post-date" title="2019-12-08 10:27:59">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Java Java基础 "
+           href="/bigdata/java/java_basic/java_command_line_parameters/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="java虚拟机参数">java虚拟机参数</span>
+            <span class="post-date" title="2019-12-08 10:27:59">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Java Java基础 "
+           href="/bigdata/java/java_basic/javac_command_line_parameters/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="javac虚拟机参数">javac虚拟机参数</span>
+            <span class="post-date" title="2019-12-08 10:27:59">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="R R基础 "
+           href="/bigdata/r/r_basic/r_install/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="R语言安装">R语言安装</span>
+            <span class="post-date" title="2019-12-08 10:27:59">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="机器学习 数理统计 "
+           href="/data_mining/mathematical_statistics/statistics_hypothesis_test/"
+           data-tag="统计基础"
+           data-author="郁明敏" >
+            <span class="post-title" title="统计假设检验">统计假设检验</span>
+            <span class="post-date" title="2019-12-08 10:26:23">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="机器学习 超参调优 "
+           href="/data_mining/optimization_parameters/lgbm_optimizaton_parameters/"
+           data-tag="LGBM"
+           data-author="郁明敏" >
+            <span class="post-title" title="LGBM超参调优">LGBM超参调优</span>
+            <span class="post-date" title="2019-12-08 10:26:23">2019/12/08</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="工具 XShell "
+           href="/tools/xshell/xshell%E8%BF%9E%E6%8E%A5docker%E6%9C%8D%E5%8A%A1%E5%99%A8/"
+           data-tag="xshell"
+           data-author="郁明敏" >
+            <span class="post-title" title="XShell连接Docker服务器下Centos终端">XShell连接Docker服务器下Centos终端</span>
+            <span class="post-date" title="2019-12-07 23:40:55">2019/12/07</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python AirFlow "
+           href="/bigdata/python/airflow/airflow_install_linux/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Linux下AirFlow安装">Linux下AirFlow安装</span>
+            <span class="post-date" title="2019-12-07 13:52:21">2019/12/07</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_inbuilt_keywords/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="冷僻的Python内置关键字">冷僻的Python内置关键字</span>
+            <span class="post-date" title="2019-12-07 02:15:12">2019/12/07</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="学习资源 基础技术 "
+           href="/learning/%E5%9F%BA%E7%A1%80%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/"
+           data-tag="常用网址"
+           data-author="郁明敏" >
+            <span class="post-title" title="基础技术学习网站">基础技术学习网站</span>
+            <span class="post-date" title="2019-12-06 22:52:18">2019/12/06</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="学习资源 大佬博客 "
+           href="/learning/%E5%AF%92%E5%B0%8F%E9%98%B3%E7%9A%84%E5%8D%9A%E5%AE%A2/"
+           data-tag="文档学习资源"
+           data-author="郁明敏" >
+            <span class="post-title" title="寒小阳的个人博客">寒小阳的个人博客</span>
+            <span class="post-date" title="2019-12-06 22:52:18">2019/12/06</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="学习资源 "
+           href="/learning/%E6%96%87%E6%A1%A3%E8%B5%84%E6%BA%90/"
+           data-tag="文档学习资源"
+           data-author="郁明敏" >
+            <span class="post-title" title="文档资源">文档资源</span>
+            <span class="post-date" title="2019-12-06 22:52:18">2019/12/06</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="学习资源 学习路线 "
+           href="/learning/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF-Java%E5%90%8E%E7%AB%AF/"
+           data-tag="Java后端学习路线"
+           data-author="郁明敏" >
+            <span class="post-title" title="学习路线【Java后端】">学习路线【Java后端】</span>
+            <span class="post-date" title="2019-12-06 22:52:18">2019/12/06</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Impyla "
+           href="/bigdata/python/Impyla/python_add_multi_hive_partitions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="使用Python批量添加Hive分区">使用Python批量添加Hive分区</span>
+            <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python PyPrind "
+           href="/bigdata/python/pyprind/python_add_progress_bar_with_pyprind_in_tasks/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="使用Python给程序加一个进度条">使用Python给程序加一个进度条</span>
+            <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_add_user_defined_packages_in_env/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="自定义Python包添加到环境中">自定义Python包添加到环境中</span>
+            <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_generate_random_password/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python生成随机密码">Python生成随机密码</span>
+            <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_get_random_data_from_collections/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python随机从集合中取数">Python随机从集合中取数</span>
+            <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_md5_encryption/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python使用md5加密">Python使用md5加密</span>
+            <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_obtain_current_file_path/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python获取当前文件的路径">Python获取当前文件的路径</span>
+            <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_questions/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python问题总结">Python问题总结</span>
+            <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_sqlalchmey_connect_mysql/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="Python使用SQLAlchmey连接MySQL">Python使用SQLAlchmey连接MySQL</span>
+            <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Python基础 "
+           href="/bigdata/python/python_basic/python_upload_files_windows_share_fold/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="使用Python将文件上传到Windows共享文件夹">使用Python将文件上传到Windows共享文件夹</span>
+            <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="Python Requests "
+           href="/bigdata/python/requests/requests_xml_test_servers_status/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="使用Requests和XML测试服务器状态">使用Requests和XML测试服务器状态</span>
+            <span class="post-date" title="2019-12-04 17:44:20">2019/12/04</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="机器学习 基本知识 "
+           href="/data_mining/machine_learning/common_steps_and_tricks/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="机器学习步骤与套路">机器学习步骤与套路</span>
+            <span class="post-date" title="2019-12-03 14:59:37">2019/12/03</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="机器学习 Model模板代码 "
+           href="/data_mining/model_template_code/lr_code_by_statsmodels/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="LR代码模板">LR代码模板</span>
+            <span class="post-date" title="2019-12-03 14:59:37">2019/12/03</span>
+        </a>
+        
+        <a onclick="refreshBtnCopy()"  class="前端 Hexo "
+           href="/web/hexo/hexo_optimization_markdown/"
+           data-tag=""
+           data-author="郁明敏" >
+            <span class="post-title" title="hexo优化markdown使用">hexo优化markdown使用</span>
+            <span class="post-date" title="2019-11-27 16:53:35">2019/11/27</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first">
+                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+            </div>
+            <div class="brackets">
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-data_mining/ml_courses/ml_course_engineer_hanxiaoyang" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">【寒小阳】机器学习工程师</h1>
+    
+    <div class="article-meta">
+        
+        
+        <span class="author"><a>郁明敏</a></span>
+        
+        
+        <span class="book">
+            
+                <a  data-rel="机器学习">机器学习</a>/
+            
+                <a  data-rel="ML课程">ML课程</a>
+            
+        </span>
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-09-13 16:21:22'>2019-12-08 12:49</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:5.3k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">一、机器学习的概念理解和基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-机器学习概念"><span class="toc-text">1.1 机器学习概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-机器学习是什么"><span class="toc-text">1.1.1 机器学习是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-要点总结"><span class="toc-text">1.1.2 要点总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-机器学习基本概念"><span class="toc-text">1.2 机器学习基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-不同类型的问题"><span class="toc-text">1.2.1 不同类型的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-基本术语与概念"><span class="toc-text">1.2.2 基本术语与概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-3-实际应用场景"><span class="toc-text">1.2.3 实际应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-4-要点总结"><span class="toc-text">1.2.4 要点总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-机器学习基本流程与工作环节"><span class="toc-text">1.3 机器学习基本流程与工作环节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-机器学习应用几大环节"><span class="toc-text">1.3.1 机器学习应用几大环节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-机器学习不同阶段与作用"><span class="toc-text">1.3.2 机器学习不同阶段与作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-机器学习中的评估方法"><span class="toc-text">1.4 机器学习中的评估方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-机器学习的目标"><span class="toc-text">1.4.1 机器学习的目标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-机器学习的评估方法"><span class="toc-text">1.4.2 机器学习的评估方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1️⃣-留出法"><span class="toc-text">1️⃣ 留出法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2️⃣-K折交叉验证"><span class="toc-text">2️⃣ K折交叉验证</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3️⃣-自助法"><span class="toc-text">3️⃣ 自助法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-3-机器学习的评估度量指标"><span class="toc-text">1.4.3 机器学习的评估度量指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-4-总结"><span class="toc-text">1.4.4 总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-机器学习算法一览"><span class="toc-text">1.5 机器学习算法一览</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-1-算法一览"><span class="toc-text">1.5.1 算法一览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-2-机器学习算法可视化理解"><span class="toc-text">1.5.2 机器学习算法可视化理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-3-要点总结"><span class="toc-text">1.5.3 要点总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-总结"><span class="toc-text">1.6 总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-参考资料"><span class="toc-text">1.7 参考资料</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">二、线性回归与逻辑回归</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-线性模型、线性回归与广义线性模型"><span class="toc-text">2.1 线性模型、线性回归与广义线性模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-线性模型"><span class="toc-text">2.1.1 线性模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-线性回归"><span class="toc-text">2.1.2 线性回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-一个简单的例子"><span class="toc-text">1) 一个简单的例子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-房价预测例子-一元"><span class="toc-text">2) 房价预测例子(一元)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-房价预测例子-多元"><span class="toc-text">3) 房价预测例子(多元)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-多元线性回归的表示"><span class="toc-text">4) 多元线性回归的表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-损失函数-loss-function"><span class="toc-text">5) 损失函数(loss function)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-梯度下降"><span class="toc-text">6) 梯度下降</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-欠拟合与过拟合-以多项式回归为例"><span class="toc-text">7) 欠拟合与过拟合(以多项式回归为例)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-广义线性模型"><span class="toc-text">1.3 广义线性模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-要点总结"><span class="toc-text">1.4 要点总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-逻辑回归"><span class="toc-text">2.2 逻辑回归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-从线性回归到逻辑回归"><span class="toc-text">2.2.1 从线性回归到逻辑回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-逻辑回归的决策边界"><span class="toc-text">2.2.2 逻辑回归的决策边界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-逻辑回归损失函数"><span class="toc-text">2.2.3 逻辑回归损失函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-从二分类到多分类"><span class="toc-text">2.4 从二分类到多分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-要点总结"><span class="toc-text">2.5 要点总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">3. 工程应用经验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-逻辑回归-VS-其他模型"><span class="toc-text">3.1 逻辑回归 VS. 其他模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-样本处理"><span class="toc-text">3.2 样本处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-工具包与库"><span class="toc-text">3.3 工具包与库</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">4️⃣ 数据案例讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Python完成线性回归与逻辑回归"><span class="toc-text">4.1 Python完成线性回归与逻辑回归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-线性回归"><span class="toc-text">1) 线性回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-逻辑回归"><span class="toc-text">2) 逻辑回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-多项式回归"><span class="toc-text">3) 多项式回归</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-要点总结"><span class="toc-text">4.2 要点总结</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-4 i,
+    .toc-level-4 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><div class='inner-toc'><h2>目录</h2><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">一、机器学习的概念理解和基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-机器学习概念"><span class="toc-text">1.1 机器学习概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-机器学习是什么"><span class="toc-text">1.1.1 机器学习是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-要点总结"><span class="toc-text">1.1.2 要点总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-机器学习基本概念"><span class="toc-text">1.2 机器学习基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-不同类型的问题"><span class="toc-text">1.2.1 不同类型的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-基本术语与概念"><span class="toc-text">1.2.2 基本术语与概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-3-实际应用场景"><span class="toc-text">1.2.3 实际应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-4-要点总结"><span class="toc-text">1.2.4 要点总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-机器学习基本流程与工作环节"><span class="toc-text">1.3 机器学习基本流程与工作环节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-机器学习应用几大环节"><span class="toc-text">1.3.1 机器学习应用几大环节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-机器学习不同阶段与作用"><span class="toc-text">1.3.2 机器学习不同阶段与作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-机器学习中的评估方法"><span class="toc-text">1.4 机器学习中的评估方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-机器学习的目标"><span class="toc-text">1.4.1 机器学习的目标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-机器学习的评估方法"><span class="toc-text">1.4.2 机器学习的评估方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1️⃣-留出法"><span class="toc-text">1️⃣ 留出法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2️⃣-K折交叉验证"><span class="toc-text">2️⃣ K折交叉验证</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3️⃣-自助法"><span class="toc-text">3️⃣ 自助法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-3-机器学习的评估度量指标"><span class="toc-text">1.4.3 机器学习的评估度量指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-4-总结"><span class="toc-text">1.4.4 总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-机器学习算法一览"><span class="toc-text">1.5 机器学习算法一览</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-1-算法一览"><span class="toc-text">1.5.1 算法一览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-2-机器学习算法可视化理解"><span class="toc-text">1.5.2 机器学习算法可视化理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-3-要点总结"><span class="toc-text">1.5.3 要点总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-总结"><span class="toc-text">1.6 总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-参考资料"><span class="toc-text">1.7 参考资料</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">二、线性回归与逻辑回归</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-线性模型、线性回归与广义线性模型"><span class="toc-text">2.1 线性模型、线性回归与广义线性模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-线性模型"><span class="toc-text">2.1.1 线性模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-线性回归"><span class="toc-text">2.1.2 线性回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-一个简单的例子"><span class="toc-text">1) 一个简单的例子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-房价预测例子-一元"><span class="toc-text">2) 房价预测例子(一元)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-房价预测例子-多元"><span class="toc-text">3) 房价预测例子(多元)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-多元线性回归的表示"><span class="toc-text">4) 多元线性回归的表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-损失函数-loss-function"><span class="toc-text">5) 损失函数(loss function)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-梯度下降"><span class="toc-text">6) 梯度下降</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-欠拟合与过拟合-以多项式回归为例"><span class="toc-text">7) 欠拟合与过拟合(以多项式回归为例)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-广义线性模型"><span class="toc-text">1.3 广义线性模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-要点总结"><span class="toc-text">1.4 要点总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-逻辑回归"><span class="toc-text">2.2 逻辑回归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-从线性回归到逻辑回归"><span class="toc-text">2.2.1 从线性回归到逻辑回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-逻辑回归的决策边界"><span class="toc-text">2.2.2 逻辑回归的决策边界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-逻辑回归损失函数"><span class="toc-text">2.2.3 逻辑回归损失函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-从二分类到多分类"><span class="toc-text">2.4 从二分类到多分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-要点总结"><span class="toc-text">2.5 要点总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">3. 工程应用经验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-逻辑回归-VS-其他模型"><span class="toc-text">3.1 逻辑回归 VS. 其他模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-样本处理"><span class="toc-text">3.2 样本处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-工具包与库"><span class="toc-text">3.3 工具包与库</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">4️⃣ 数据案例讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Python完成线性回归与逻辑回归"><span class="toc-text">4.1 Python完成线性回归与逻辑回归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-线性回归"><span class="toc-text">1) 线性回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-逻辑回归"><span class="toc-text">2) 逻辑回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-多项式回归"><span class="toc-text">3) 多项式回归</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-要点总结"><span class="toc-text">4.2 要点总结</span></a></li></ol></li></ol></div></p>
+<h1>一、机器学习的概念理解和基础知识</h1>
+<h2 id="1-1-机器学习概念">1.1 机器学习概念</h2>
+<h3 id="1-1-1-机器学习是什么">1.1.1 机器学习是什么</h3>
+<p>人工智能的一个重要学科分支领域交叉学科。数据驱动，在数据上通过算法总结规律模式，应用在新数据上。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200911182707900.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>机器学习研究的是计算机怎样模拟人类的学习行为，以获取新的知识或技能，并重新组织已有的知识结构使之不断改善自身。</p>
+<p>就是计算机从数据中学习出规律和模式，以应用在新数据上做预测的任务。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200911182725247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200517211925219.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt=""></p>
+<p>省略</p>
+<h3 id="1-1-2-要点总结">1.1.2 要点总结</h3>
+<ul>
+<li>机器学习：计算机从数据中学习出规律和模式，以应用在新数据上做预测的任务。</li>
+<li>作为一套数据驱动的方法，在互联网、生物、医疗、金融、能源、交通等领域有广泛应用。</li>
+</ul>
+<h2 id="1-2-机器学习基本概念">1.2 机器学习基本概念</h2>
+<h3 id="1-2-1-不同类型的问题">1.2.1 不同类型的问题</h3>
+<p><img src="https://img-blog.csdnimg.cn/20200911182808974.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70#pic_center" alt="机器学习四大场景"></p>
+<p><strong>分类问题</strong>(监督学习)：</p>
+<ul>
+<li>根据数据样本中抽取出的特征，判定其属于有限个类别中的哪一个</li>
+<li>垃圾邮件识别(结果类别：1、垃圾邮件；2、正常邮件)</li>
+<li>文本情感褒贬分析(结果类别：1、褒义；2、贬义)</li>
+<li>图像内容识别(结果类别：1、喵星人；2、汪星人；3、人类；4、草泥马；5、都不是)</li>
+</ul>
+<p><strong>回归问题</strong>(监督学习)：</p>
+<ul>
+<li>根据数据样本上抽取的特征，预测连续值结果</li>
+<li>《芳华》票房值</li>
+<li>魔都房价具体值</li>
+<li>刘德华和吴彦祖的具体颜值分</li>
+</ul>
+<p><strong>聚类问题</strong>(无监督学习)：</p>
+<ul>
+<li>根据数据样本上抽取的特征，挖掘数据的关联模式</li>
+<li>相似用户挖掘 / 社区发现</li>
+<li>新闻发现</li>
+</ul>
+<p><strong>强化问题</strong>：</p>
+<ul>
+<li>研究如何与环境而行动，以取得大化的预期利益</li>
+<li>游戏“吃鸡”最高得分</li>
+<li>机器人完成任务</li>
+</ul>
+<h3 id="1-2-2-基本术语与概念">1.2.2 基本术语与概念</h3>
+<p><img src="https://img-blog.csdnimg.cn/2020051723013330.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt=""></p>
+<h3 id="1-2-3-实际应用场景">1.2.3 实际应用场景</h3>
+<p><img src="https://img-blog.csdnimg.cn/20200911182939627.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70#pic_center" alt="机器学习的应用场景"></p>
+<h3 id="1-2-4-要点总结">1.2.4 要点总结</h3>
+<p>机器学习分类：</p>
+<ul>
+<li>监督学习：特征 + 标签
+<ul>
+<li>分类：离散个结果中做选择</li>
+<li>回归：输出连续值结果</li>
+</ul>
+</li>
+<li>无监督学习：特征
+<ul>
+<li>聚类：抱团学习</li>
+<li>关联规则</li>
+</ul>
+</li>
+<li>强化学习：
+<ul>
+<li>从环境到行为映射的学习</li>
+</ul>
+</li>
+</ul>
+<p>机器学习概念：样本 / 示例 / 样例、特征 / 属性、训练集、测试集</p>
+<p>机器学习工业应用方向：自然语言处理、计算机视觉、电商推荐与预估</p>
+<h2 id="1-3-机器学习基本流程与工作环节">1.3 机器学习基本流程与工作环节</h2>
+<h3 id="1-3-1-机器学习应用几大环节">1.3.1 机器学习应用几大环节</h3>
+<p>机器学习的应用工作是围绕着数据与算法展开的。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200911183346637.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="1-3-2-机器学习不同阶段与作用">1.3.2 机器学习不同阶段与作用</h3>
+<p><img src="https://img-blog.csdnimg.cn/20200911183435291.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200517222705845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt=""></p>
+<p><strong>数据驱动</strong>：数据 + 机器学习算法 = 预测模型</p>
+<p><strong>机器学习应用阶段</strong>：</p>
+<ul>
+<li>数据预处理：数据采样、数据切分、特征抽取、特征选择、降维</li>
+<li>模型学习：超参选择、交叉验证、结果评估、模型选择、模型训练</li>
+<li>模型评估：分类、回归、排序评估标准</li>
+<li>模型上线</li>
+</ul>
+<h2 id="1-4-机器学习中的评估方法">1.4 机器学习中的评估方法</h2>
+<h3 id="1-4-1-机器学习的目标">1.4.1 机器学习的目标</h3>
+<p><img src="https://img-blog.csdnimg.cn/20200911183529403.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>❓ 问题：什么模型好？解答：泛化能力强！能很好地适用于没见过的样本，例如错误率低、精度高。</p>
+</blockquote>
+<h3 id="1-4-2-机器学习的评估方法">1.4.2 机器学习的评估方法</h3>
+<p>我们手上没有未知的样本，如何可靠地进行评估？</p>
+<p><strong>关键</strong>：如何获得可靠的测试集数据(test set)？</p>
+<p>测试集(用于评估)应该与训练集(用于模型学习) 互斥。</p>
+<p><strong>常见方法</strong>：</p>
+<ul>
+<li>留出法(hold-out)</li>
+<li>交叉验证法(cross validation)</li>
+<li>自助法(bootstrap)</li>
+</ul>
+<h4 id="1️⃣-留出法">1️⃣ 留出法</h4>
+<p>注意点：</p>
+<ul>
+<li>保持数据分布一致性(例如：分层采样)</li>
+<li>多次重复划分(例如：100 次随机划分)</li>
+<li>测试集不能太大，也不能太小(例如：1/5 ~ 1/3)</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200508113039695.png" alt="https://img-blog.csdnimg.cn/20200508113039695.png"></p>
+<h4 id="2️⃣-K折交叉验证">2️⃣ K折交叉验证</h4>
+<p><img src="https://img-blog.csdnimg.cn/20200911183753873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h4 id="3️⃣-自助法">3️⃣ 自助法</h4>
+<p><img src="https://img-blog.csdnimg.cn/20200911183723491.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="1-4-3-机器学习的评估度量指标">1.4.3 机器学习的评估度量指标</h3>
+<p><strong>性能度量</strong>(performance measure) 是衡量模型泛化能力的数值评价标准，反映了当前问题(任务需求)。</p>
+<p>使用不用的性能度量可能导致不同的评价结果。</p>
+<blockquote>
+<p>💡 关于模型的“好坏”的判断，不仅取决于算法和数据，还取决于当前任务需求。</p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200911183944525.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>比如：回归(regression) 任务常用均方误差  $E(f; D) = \frac{1}{m} \sum_{i=1}^m (f(x_i) - y_i)^2$</p>
+<p><strong>分类问题</strong>的常用性能度量：</p>
+<ul>
+<li>
+<p>错误率：$E(f; D) = \frac{1}{m} \sum_{i=1}^m (f(x_i) \neq y_i)$</p>
+</li>
+<li>
+<p>精度：$Accuracy(f; D) = \frac{1}{m} \sum_{i=1}^m (f(x_i) = y_i))= 1 - E(f; D)$</p>
+</li>
+<li>
+<p>二分类的混淆矩阵：Confusion Matrix</p>
+<table>
+<thead>
+<tr>
+<th>真实情况</th>
+<th>预测结果 / 正例</th>
+<th>预测结果 / 反例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正例</td>
+<td>TP(真正例)</td>
+<td>FN(假反例)</td>
+</tr>
+<tr>
+<td>反例</td>
+<td>FP(假正例)</td>
+<td>TN(真反例)</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>查准率(准确率)：$P= \frac{TP}{TP+FP}$</p>
+</li>
+<li>
+<p>查全率(召回率)：$R = \frac{TP}{TP+FN}$</p>
+</li>
+<li>
+<p>$F_1$值：当 $\beta &gt; 1$ 时查全率有更大影响；$\beta &lt; 1$ 时查准率有更大影响<br>
+$$<br>
+F_1 = \frac{2 \times R \times R}{P+R}<br>
+\\ = \frac{2 \times TP}{样例总数+TP-TN}<br>
+\\ F_{\beta} = \frac{(1+\beta^2) \times P \times R}{(\beta^2 \times P) + R}<br>
+$$</p>
+</li>
+<li>
+<p>ROC &amp; AUC：</p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200911185717342.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><strong>回归问题</strong>的常用性能度量：</p>
+<ul>
+<li>MAE(Mean Absolute Error)：平均绝对误差  $MAE = \frac{1}{n} \sum_{i=1}^n \vert f_i -y_i \vert$</li>
+<li>MSE(Mean Square Error)：均方误差  $MSE = \frac{1}{n} \sum_{i=1}^n (f_i -y_i)^2$</li>
+<li>RMSE(Root Mean Square Error)：均方根误差  $RMSE = \sqrt{MSE}$</li>
+<li>R 平方：$r^2 = 1 - \frac{SS_{res}}{SS_{tot}} = 1 - \frac{\sum (y_i - f_i)^2}{\sum (y_i - \overline y)^2}$</li>
+</ul>
+<h3 id="1-4-4-总结">1.4.4 总结</h3>
+<p>机器学习目标：拿到有泛化能力的“好模型”</p>
+<p>机器学习的评估方法：<em>留出法</em>、<em>交叉验证法</em>、<em>自助法</em></p>
+<p>机器学习的评估度量标准：</p>
+<ul>
+<li>分类问题：错误率、精度、召回率/准确率、混淆矩阵、$F_1$值、AUC</li>
+<li>回归问题：MAE、MSE、RMSE、R平方</li>
+</ul>
+<h2 id="1-5-机器学习算法一览">1.5 机器学习算法一览</h2>
+<h3 id="1-5-1-算法一览">1.5.1 算法一览</h3>
+<p><img src="https://img-blog.csdnimg.cn/2020050812315220.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt="https://img-blog.csdnimg.cn/2020050812315220.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70"></p>
+<p><img src="https://images0.cnblogs.com/blog/360116/201301/28084526-8bfb0a8be99f45d08a71c38fc09ba744.png" alt="https://images0.cnblogs.com/blog/360116/201301/28084526-8bfb0a8be99f45d08a71c38fc09ba744.png"></p>
+<h3 id="1-5-2-机器学习算法可视化理解">1.5.2 机器学习算法可视化理解</h3>
+<p>不同的算法在完成分类与回归问题的时候，有不同的处理方式。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200508214058186.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt=""></p>
+<h3 id="1-5-3-要点总结">1.5.3 要点总结</h3>
+<p><strong>机器学习算法</strong></p>
+<ul>
+<li>监督学习
+<ul>
+<li>分类：K最近邻、逻辑回归、朴素贝叶斯、支持向量机、树模型</li>
+<li>回归：线性回归、多项式回归、岭回归、树模型回归</li>
+</ul>
+</li>
+<li>无监督学习
+<ul>
+<li>聚类：K-Means、层次聚类、密度聚类、GMM</li>
+<li>关联规则：FP-growth</li>
+</ul>
+</li>
+</ul>
+<p><strong>机器学习算法可视化理解</strong></p>
+<ul>
+<li>分类问题
+<ul>
+<li>不同的算法在尝试生成不同的决策边界，从而完成分类</li>
+<li>回归问题有不同的拟合方式</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-6-总结">1.6 总结</h2>
+<p>数学基础：讲授具体算法时对涉及数学部分有针对的查漏补缺</p>
+<p>算法理解：理解算法核心概念与原理，不同算法差异，不同场景与算法选择</p>
+<p>编程基础：结合课程算法的配套案例与代码实例，巩固编程能力</p>
+<p>动手实践：结合微专业综合应用部分，案例与机器学习应用“套路”学习</p>
+<p>积累项目经验：组织大家积极参与数据科学比赛和讨论</p>
+<h2 id="1-7-参考资料">1.7 参考资料</h2>
+<ul>
+<li>Prof. Andrew Ng. Machine Learning. Stanford University</li>
+<li>李航，统计学习方法，清华大学出版社，2012</li>
+<li>周志华，机器学习，清华大学出版社，2016</li>
+<li>Thomas M. Cover, Joy A. Thomas. Elements of Information Theory. 2006.</li>
+<li>Christopher M. Bishop. Pattern Recognition and Machine Learning. Spring-Verlag. 2006.</li>
+<li>Scikit-Learn：http://scikit-learn.org/stable/index.html</li>
+</ul>
+<h1>二、线性回归与逻辑回归</h1>
+<h2 id="2-1-线性模型、线性回归与广义线性模型">2.1 线性模型、线性回归与广义线性模型</h2>
+<h3 id="2-1-1-线性模型">2.1.1 线性模型</h3>
+<p><strong>线性模型</strong>(linear model) 试图学得一个通过属性的线性组合来进行目标值的预测。</p>
+<p>预测的函数：$f(x) = w_1x_1 + w_2x_2 + \dots + w_dx_d +b$</p>
+<p>向量形式：$f(x) = w^Tx + b$</p>
+<h3 id="2-1-2-线性回归">2.1.2 线性回归</h3>
+<ul>
+<li>有监督学习 ➜ 学习样本为 $D=\lbrace (x_i, y_i) \rbrace_{i=1}^N$</li>
+<li>输出/预测的结果 $y_i$ 为<strong>连续值变量</strong></li>
+<li>需要学习<strong>映射</strong></li>
+<li>假定输入 $x$ 和输出 $y$ 之间有线性关系：$f: x \rightarrow y$</li>
+</ul>
+<h3 id="1-一个简单的例子"><strong>1) 一个简单的例子</strong></h3>
+<p>让一个六年级的孩子在<strong>不问</strong>同学具体<strong>体重</strong>多少的情况下，把班上同学按照<strong>体重从轻到重</strong>排队。这个孩子会怎么做？</p>
+<blockquote>
+<p>他可能会通过观察大家的身高和体格来排队。</p>
+</blockquote>
+<h3 id="2-房价预测例子-一元"><strong>2) 房价预测例子(一元)</strong></h3>
+<p><a href="https://www.notion.so/1f1f05a37c38461c8ad014f22e968112" target="_blank" rel="noopener">房屋价格数据示例</a></p>
+<h3 id="3-房价预测例子-多元"><strong>3) 房价预测例子(多元)</strong></h3>
+<p><a href="https://www.notion.so/afd9c6366a074055835ea4798632076a" target="_blank" rel="noopener">房屋价格数据示例</a></p>
+<p>$$h_{\theta}(x) = \theta_0 + \theta_1x_1 + \theta_2x_2\ h_{\theta}(x)= \sum_{i=0}^n \theta_ix_i=\theta^T x$$</p>
+<h3 id="4-多元线性回归的表示"><strong>4) 多元线性回归的表示</strong></h3>
+<blockquote>
+<p>问题：如何表示 $f$ ？</p>
+</blockquote>
+<p>线性回归：假设函数 $f$ 为输入 $x$ 的线性函数：</p>
+<p>$$f(x) = \theta_0x_0 + \theta_1x_1 + \theta_2x_2 + \dots + \theta_nx_n$$</p>
+<p>写成向量形式(在特征 $x$ 中增加一维 $x_0=1$，表示截距项)：</p>
+<p>$$f(x) = \theta^T X$$</p>
+<h3 id="5-损失函数-loss-function"><strong>5) 损失函数(loss function)</strong></h3>
+<p>我们希望找到最好的权重 / 参数 $\theta = [\theta_0, \theta_1, \dots, \theta_n]$</p>
+<p>如何衡量最好？</p>
+<p>我们把 $x$ 到 $y$ 的映射函数 $f$ 记作 $\theta$ 的函数 $h_\theta(x)$ 定义<strong>损失函数</strong>为：</p>
+<p>$$J(\theta_0, \theta_1, \dots, \theta_n) = \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y<sup>{(i)})</sup>2$$</p>
+<p><strong>最小化损失函数</strong>：均方误差损失是一个凸函数</p>
+<h3 id="6-梯度下降"><strong>6) 梯度下降</strong></h3>
+<p>逐步迭代减少损失函数(凸函数)，如同下山，找准方向(斜率)，每次迈进一小步，直至山底。</p>
+<p>一元线性回归的损失函数：</p>
+<p>$$\theta_1 := \theta_1 -\alpha \frac{\partial}{\partial \theta_1} J(\theta_1)$$</p>
+<p>其中 $\alpha$ 为学习率。</p>
+<p>两个参数的情形</p>
+<p>梯度下降学习率的影响</p>
+<ul>
+<li>太小收敛速度太慢</li>
+<li>太大会震荡甚至不收敛</li>
+</ul>
+<h3 id="7-欠拟合与过拟合-以多项式回归为例"><strong>7) 欠拟合与过拟合(以多项式回归为例)</strong></h3>
+<p><img src="https://img-blog.csdnimg.cn/20200509132155221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt=""></p>
+<p><strong>欠拟合</strong>：模型没有很好地捕捉到数据特征，不能够很好地拟合数据</p>
+<p><strong>过拟合</strong>：把样本中的一些噪声也学习下来了，泛化能力差</p>
+<p>实际工业界使用的各种模型都存在过拟合的风险：</p>
+<ul>
+<li>更多的参数/特征，更复杂的模型，通常有更强的学习能力，但是更容易失去控制</li>
+<li>训练集中有一些噪声，并不代表全量真实数据的分布，死记硬背会丧失泛化能力</li>
+</ul>
+<p><strong>过拟合与正则化</strong>：通过正则化添加惩罚参数，控制参数幅度，限制参数搜索空间，减小过拟合风险。</p>
+<p>$$J(\theta) = \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y<sup>{(i)})</sup>2\ \Downarrow\\ J(\theta) = \frac{1}{2m} [\sum_{i=1}^m (h_\theta(x^{(i)}) - y<sup>{(i)})</sup>2 + \lambda \sum_{j=1}^n \theta_j^2]$$</p>
+<h2 id="1-3-广义线性模型"><strong>1.3 广义线性模型</strong></h2>
+<p>对于样本 $(x, y), y \in \mathbb R$，如果我们希望用线性的映射关系去逼近 $y$ 值，可以得到线性回归模型：</p>
+<p>$$y = w^T x + b$$</p>
+<blockquote>
+<p>有时候关系不一定是线性的，如何逼近  的衍生物？</p>
+</blockquote>
+<p>比如令 $\ln y = w^T x + b$，则得到<strong>对数线性回归</strong>(log-linear regression)，实际是在用  逼近 。</p>
+<h2 id="1-4-要点总结"><strong>1.4 要点总结</strong></h2>
+<p>线性回归：</p>
+<ul>
+<li>线性映射关系：</li>
+<li>损失函数：MSE，评估与标准答案之间的差距</li>
+<li>梯度下降：
+<ul>
+<li>沿着损失函数梯度下降逐步修正参数</li>
+<li>学习率影响</li>
+</ul>
+</li>
+</ul>
+<p>模型状态：</p>
+<ul>
+<li>欠拟合</li>
+<li>过拟合</li>
+</ul>
+<p>广义线性回归：</p>
+<ul>
+<li>对线性映射的结果进行数学变换，去逼近  值</li>
+<li>指数(exp) 或者对数(log) 变换处理</li>
+</ul>
+<h2 id="2-2-逻辑回归">2.2 逻辑回归</h2>
+<h3 id="2-2-1-从线性回归到逻辑回归">2.2.1 从线性回归到逻辑回归</h3>
+<blockquote>
+<p>❓问题：分类问题可以通过线性回归➕阈值去解决么？</p>
+</blockquote>
+<p>分类问题在有噪声点的情况下，阈值偏移大，健壮性不够。</p>
+<h3 id="2-2-2-逻辑回归的决策边界">2.2.2 逻辑回归的决策边界</h3>
+<p>在<strong>逻辑回归</strong>(Logistic Regression) 里，通常我们并不拟合样本分布，而是确定<strong>决策边界</strong>。</p>
+<p>下面为各式各样的决策边界：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200509155318634.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70" alt="https://img-blog.csdnimg.cn/20200509155318634.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0x1Q2gxTW9uc3Rlcg==,size_16,color_FFFFFF,t_70"></p>
+<p><strong>线性决策边界</strong>：$$h_\theta(x) = g(\theta_0 + \theta_1x_1 \theta_2x_2)$$，则 $-3 + x_1 +x_2 \ge 0$ 时，$h_\theta(x)$ 结果如何？判定结果如何？</p>
+<p><strong>非线性决策边界</strong>：</p>
+<h3 id="2-2-3-逻辑回归损失函数">2.2.3 逻辑回归损失函数</h3>
+<p><strong>均方误差</strong>：$J(\theta) = \frac{1}{2m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y<sup>{(i)})</sup>2$</p>
+<p>我们希望损失函数式凸函数。</p>
+<p><strong>损失函数与正则化</strong></p>
+<p>依旧存在过拟合问题，决策边界“抖动很厉害”！<br>
+$$<br>
+J(\theta) = \frac{1}{m} \text{Cost}(h_\theta(x^{(i)}), y^{(i)})\ -\frac{1}{m}[\sum_{i=1}^m y^{(i)} \log h_\theta(x^{(i)}) + (1-y^{(i)}) \log (1 - h_\theta(x^{(i)}))]\ \Downarrow \text{添加正则化项}\ J(\theta) = [-\frac{1}{m} \sum_{i=1}^m y^{(i)} \log h_\theta(x^{(i)}) + (1-y^{(i)}) \log (1 - h_\theta(x^{(i)}))] + \frac{\lambda}{2m} \sum_{j=1}^n \theta_j^2<br>
+$$</p>
+<p><strong>如何最小化损失函数</strong></p>
+<p>对于凸函数，依旧可以用梯度下降！</p>
+<p>$$J(\theta) = -\frac{1}{m} [\sum_{i=1}^m y^{(i)} \log h_\theta(x^{(i)}) + (1-y^{(i)}) \log (1 - h_\theta(x^{(i)}))] + \frac{\lambda}{2m} \sum_{j=1}^n \theta_j^2\ \Downarrow\ \theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)$$</p>
+<h2 id="2-4-从二分类到多分类"><strong>2.4 从二分类到多分类</strong></h2>
+<p>我们已经知道了二分类问题如何处理了，那么多分类呢？</p>
+<ul>
+<li>One VS. One</li>
+<li>One VS. Rest</li>
+</ul>
+<h2 id="2-5-要点总结"><strong>2.5 要点总结</strong></h2>
+<p>逻辑回归</p>
+<ul>
+<li>线性回归+阈值：解决分类问题鲁棒性不行</li>
+<li>Sigmoid 函数与决策边界：
+<ul>
+<li>Sigmoid 函数：压缩至 0-1 之间</li>
+<li>根据阈值，产生对应的决策边界</li>
+</ul>
+</li>
+<li>损失函数：最大似然到对数损失</li>
+<li>梯度下降：沿着损失函数梯度方向逐步修正参数</li>
+<li>二分类到多分类
+<ul>
+<li>One VS. One</li>
+<li>One VS. Rest</li>
+</ul>
+</li>
+</ul>
+<h1>3. 工程应用经验</h1>
+<h2 id="3-1-逻辑回归-VS-其他模型"><strong>3.1 逻辑回归 VS. 其他模型</strong></h2>
+<blockquote>
+<p>❓ 问题：LR 弱于 SVM / GBDT / RandomForest / …  ？</p>
+</blockquote>
+<p><strong>模型本身并没有好坏之分</strong>：</p>
+<ul>
+<li>LR 能以概率的形式输出结果，而非只是 0 / 1 判断</li>
+<li>LR 的可解释性强，可控度高</li>
+<li>训练快，特征工程(feature engineering) 之后效果赞</li>
+<li>因为结果是概率，可以做排序模型</li>
+<li>添加特征非常简单</li>
+</ul>
+<p><strong>应用</strong>：</p>
+<ul>
+<li>CTR 预估 / 推荐系统的 learning to rank / 各种分类场景</li>
+<li>很多搜索引擎厂的 CTR 预估基线版是 LR</li>
+<li>电商搜索排序 / 广告 CTR 预估基线版是 LR</li>
+<li>新闻 APP 的推荐和排序基线也是 LR</li>
+</ul>
+<h2 id="3-2-样本处理"><strong>3.2 样本处理</strong></h2>
+<ul>
+<li>样本特征处理：离散化后用<strong>独热向量编码</strong>(one-hot encoding) 处理成 0 / 1值</li>
+<li>处理大量样本量：
+<ul>
+<li>试试 Spark MLlib</li>
+<li>试试采样(注意是否需要分层抽样)</li>
+</ul>
+</li>
+<li>注意样本的平衡：
+<ul>
+<li>对样本分布敏感</li>
+<li>欠采样 / 过采样</li>
+<li>修改损失函数，给不同权重</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-3-工具包与库"><strong>3.3 工具包与库</strong></h2>
+<ul>
+<li>Liblinear</li>
+<li>Spark MLlib</li>
+<li>Scikit-Learn</li>
+</ul>
+<h1>4️⃣ <strong>数据案例讲解</strong></h1>
+<h2 id="4-1-Python完成线性回归与逻辑回归"><strong>4.1 Python完成线性回归与逻辑回归</strong></h2>
+<h3 id="1-线性回归"><strong>1) 线性回归</strong></h3>
+<ul>
+<li>基础导入和设定</li>
+</ul>
+<pre><code class="language-python"> # %load .../../standard_import.txt
+ import pandas as pd
+ import numpy as np
+ import matplotlib.pyplot as plt
+ 
+ from sklearn.linear_model import LinearRegression
+ from mpl_toolkits.mplot3d import axes3d
+ 
+ pd.set_option('display.notebook_repr_html', False)
+ pd.set_option('display.max_columns', None)
+ pd.set_option('display.max_rows', 150)
+ pd.set_option('display.max_seq_items', None)
+ 
+ # %config InlineBackend.figure_formats = {'pdf'}
+ %matplotlib inline
+ 
+ import seaborn as sns
+ sns.set_context('notebook')
+ sns.set_style('white')
+</code></pre>
+<ul>
+<li>数据预览</li>
+</ul>
+<pre><code class="language-python"> data = np.loadtxt('linear_regression_data1.txt', delimiter=',')
+ 
+ X = np.c_[np.ones(data.shape[0]), data[:, 0]]
+ y = np.c_[data[:, 1]]
+ 
+ plt.scatter(X[:, 1], y, s=30, c='r', marker='x', linewidths=1)
+ plt.xlim(4,,24)
+ plt.xlabel('Population of City in 10,000s')
+ plt.ylabel('Profit in $10,000s')
+</code></pre>
+<ul>
+<li>自定函数</li>
+</ul>
+<pre><code class="language-python"> # 计算损失函数
+ def computeCost(X, y, theta=[[0], [0]]):
+     m = y.size
+     J = 0
+     
+     h = X.dot(theta)
+     J = 1.0 / (2 * m) * (np.sum(np.square(h - y)))
+     
+     return J
+ 
+ # 梯度下降
+ def gradientDescent(X, y, theta=[[0], [0]], alpha=0.01, num_iters=1500):
+     m = y.size
+     J_history = np.zeros(num_iters)
+     
+     for i in np.arange(num_iters):
+         h = X.dot(theta)
+         theta = theta - alpha * (1.0 / m) * (X.T.dot(h - y))
+         J_history[i] = computeCost(X, y, theta)
+     
+     return (theta, J_history)
+</code></pre>
+<ul>
+<li>过程</li>
+</ul>
+<pre><code class="language-python"> # 画出每一次迭代和损失函数变化
+ theta, Cost_J = gradientDescent(X, y)
+ print('theta: ', theta.ravel())
+ 
+ plt.plot(Cost_J)
+ plt.ylabel('Cost J')
+ plt.xlabel('Iterations')
+ 
+ xx = np.arange(5, 23)
+ yy = theta[0] + theta[1] * xx
+ 
+ # 画出我们自己写的线性回归梯度下降收敛的情况
+ plt.scatter(X[:, 1], y, s=30, c='r', marker='x', linewidths=1)
+ plt.plot(xx, yy, label='Linear regression(Gradient descent)')
+ 
+ # 和 scikit-learn 中的线性回归对比一下
+ regr = LinearRegression()
+ repr.fit(X[:, 1].reshape(-1, 1), y.ravel())
+ plt.plot(xx, regr.intercept + regr.coef_ * xx, label='Linear regression (Scikit-learn GLM)')
+ 
+ plt.xlim(4, 24)
+ plt.xlabel('Population of City in 10,000s')
+ plt.ylabel('Profit in $10,000s')
+ plt.legend(loc=4)
+ 
+ # 预测一下人口为 35000 和 7000 的城市的结果
+ print(theta.T.dot([1, 3.5]) * 10000)
+ print(theta.T.dot([1, 7]) * 10000)
+</code></pre>
+<h3 id="2-逻辑回归"><strong>2) 逻辑回归</strong></h3>
+<ul>
+<li>基础导入和设定</li>
+</ul>
+<pre><code class="language-python"> # %load .../../standard_import.txt
+ import pandas as pd
+ import numpy as np
+ import matplotlib as mpl
+ import matplotlib.pyplot as plt
+ 
+ from scipy.optimize import minimize
+ from sklearn.preprocessing import PolynomialFeatures
+ 
+ pd.set_option('display.notebook_repr_html', False)
+ pd.set_option('display.max_columns', None)
+ pd.set_option('display.max_rows', 150)
+ pd.set_option('display.max_seq_items', None)
+ 
+ # %config InlineBackend.figure_formats = {'pdf'}
+ %matplotlib inline
+ 
+ import seaborn as sns
+ sns.set_context('notebook')
+ sns.set_style('white')
+</code></pre>
+<ul>
+<li>自定义函数</li>
+</ul>
+<pre><code class="language-python"> def loaddata(file, delimeter):
+     data = np.loadtxt(file, delimeter=delimeter)
+     print('Dimensions: ', data.shape)
+     print(data[1:6, :])
+     return (data)
+ 
+ def plotData(data, label_x, label_y, label_pos, label_neg, axes=None):
+     # 获得正负样本的下标(即哪些是正样本，哪些是负样本)
+     neg = data[:, 2] == 0
+     pos = data[:, 2] == 1
+     
+     if axes is None:
+         axes = plt.gca()
+         
+     axes.scatter(data[pos][:, 0], data[pos][:, 1], marker='+', c='k', s=60, lw=2, label=label_pos)
+     axes.scatter(data[neg][:, 0], data[neg][:, 1], c='y', s=60, label=label_neg)
+     
+     axes.set_xlabel(label_x)
+     axes.set_ylabel(label_y)
+     
+     axes.legend(frameon=True, fancybox=True)
+</code></pre>
+<ul>
+<li>逻辑回归假设</li>
+</ul>
+<pre><code class="language-python"> # 定义 sigmoid 函数
+ def sigmoid(z):
+     return (1 / (1 + np.exp(-z)))
+</code></pre>
+<p>其实 scipy 包里有一个函数可以完成一样的功能：<strong>https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.expit.html</strong></p>
+<p><strong>损失函数</strong>：</p>
+<p>$$J(\theta) = - \frac{1}{m} \sum_{i=1}^m [y^{(i)} \log (h_\theta (x^{(i)})) + (1 - y^{(i)}) \log (1 - h_\theta (x^{(i)}))]$$</p>
+<p><strong>向量化的损失函数</strong>(矩阵形式)：</p>
+<pre><code class="language-python"> # 定义损失函数
+ def costFunction(theta, X, y):
+     m = y.size
+     h = sigmoid(X.dot(theta))
+     
+     J = -1.0 * (1.0 / m) * (np.log(h).T.dot(y) + np.log(1 - h).T.dot(1 - y))
+     
+     if np.isnan(J[0]):
+         return (np.inf)
+     
+     return J[0]
+</code></pre>
+<ul>
+<li>
+<p>梯度</p>
+<p><strong>求偏导</strong>(梯度)</p>
+<p>$$\frac{\partial J(\theta)}{\partial \theta_j} = \frac{1}{m} \sum_{i=1}^m (h_\theta (x^{(i)})- y^{(i)}) x_j^{(i)}$$</p>
+<p><strong>向量化的偏导</strong>(梯度)</p>
+<p>$$\frac{\partial J(\theta)}{\partial \theta} = \frac{1}{m} X^T (g(X\theta) - y)$$</p>
+</li>
+</ul>
+<pre><code class="language-python"> # 求解梯度
+ def gradient(theta, X, y):
+     m = y.size
+     h = sigmoid(X.dot(theta.reshape(-1, 1)))
+     
+     grad = (1.0 / m) * X.T.dot(h - y)
+     return (grad.flatten())
+ 
+ initial_theta = np.zeros(X.shape[0])
+ cost = costFunction(initial_theta, X, y)
+ grad = gradient(initial_theta, X, y)
+ print('Cost: \\n', cost)
+ print('Grad: \\n', grad)
+</code></pre>
+<ul>
+<li>最小化损失函数</li>
+</ul>
+<pre><code class="language-python"> res = minimize(costFunction, initial_theta, args=(X, y), jac=gradient, options={'maxiter': 400})
+ # 预测
+ def predict(theta, X, threshold=0.5):
+     p = sigmoid(X.dot(theta.T)) &gt;= threshold
+     return (p.astype(int))
+ 
+ print(sigmoid(np.array([1, 45, 85]).dot(res.x.T)))
+</code></pre>
+<ul>
+<li>画决策边界</li>
+</ul>
+<pre><code class="language-python"> plt.scatter(45, 85, s=60, c='r', marker='v', label='(45, 85)')
+ plotData(data, 'Exam 1 score', 'Exam 2 score', 'Admitted', 'Not admitted')
+ x1_min, x1_max = X[:, 1].min(), X[:, 1].max()
+ x2_min, x2_max = X[:, 2].min(), X[:, 2].max()
+ xx1, xx2 = np.meshgrid(np.linspace(x1_min, x1_max), np.linspace(x2_min, x2_max))
+ 
+ h = sigmoid(np.c_[np.ones((xx1.ravel().shape[0], 1)), xx1.ravel(), xx2.ravel()].dot(res.x))
+ h = h.reshape(xx1.shape)
+ plt.contour(xx1, xx2, h, [0.5], lw=1, colors='b')
+</code></pre>
+<ul>
+<li>加正则化的逻辑回归</li>
+</ul>
+<pre><code class="language-python"> data2 = loaddata('data2.txt', ',')
+ 
+ y = np.c_[data2[:, 2]]
+ X = data2[:, 0:2]
+ 
+ plotData(data2, 'Microchip Test 1', 'Microchip Test 2', 'y = 1', 'y = 0')
+</code></pre>
+<h3 id="3-多项式回归"><strong>3) 多项式回归</strong></h3>
+<pre><code class="language-python"> poly = PolynomialFeatures(6)
+ XX = poly.fit_transform(data2[:, 0:2])
+</code></pre>
+<ul>
+<li>
+<p>正则化损失函数</p>
+<p>$$J(\theta) = -\frac{1}{m} [\sum_{i=1}^m y^{(i)} \log h_\theta(x^{(i)}) + (1-y^{(i)}) \log (1 - h_\theta(x^{(i)}))] + \frac{\lambda}{2m} \sum_{j=1}^n \theta_j^2$$</p>
+</li>
+<li>
+<p>向量化的损失函数(矩阵形式)</p>
+<p>$$J(\theta) = \frac{1}{m} [(\log(g(X\theta)))^T y + (\log (1 - g(X \theta)))^T(1-y)]+ \frac{\lambda}{2m} \sum_{j=1}^n \theta_j^2$$</p>
+</li>
+</ul>
+<pre><code class="language-python"> # 定义损失函数
+ def costFunctionReg(theta, reg, *args):
+     m = y.size
+     h = sigmoid(XX.dot(\\theta))
+     
+     J = -1.0 * (1.0 / m) * (np.log(h).T.dot(y) + np.log(1 - h).T.dot(1 - y)) +
+         (reg / (2 * m)) * np.sum(np.square(theta[1:]))
+         
+     if np.isnan(J[0]):
+         return (np.inf)
+     
+     return (J[0])
+</code></pre>
+<ul>
+<li>
+<p>偏导(梯度)</p>
+<p>$$\frac{\partial J(\theta)}{\partial \theta_j} = \frac{1}{m} \sum_{i=1}^m (h_\theta(x^{(i)}) - y<sup>{(i)})x_j</sup>{(i)} + \frac{\lambda}{m} \theta_j$$</p>
+</li>
+<li>
+<p>向量化的偏导(梯度)</p>
+<p>$$\frac{\partial J(\theta)}{\partial \theta_j} = \frac{1}{m}X^T(g(X \theta) - y) + \frac{\lambda}{m} \theta_j$$</p>
+</li>
+</ul>
+<p><strong>注意</strong>，我们另外自己加的参数  不需要正则化</p>
+<pre><code class="language-python"> def gradientReg(theta, reg, *args):
+     m = y.size
+     h = sigmoid(XX.dot(theta.reshape(-1, 1)))
+     grad = (1.0 / m) * XX.T.dot(h - y) + (reg / m) * np.r_[[[0]], theta[1:].reshape(-1, 1)]
+     return (grad.flatten())
+ 
+ initial_theta = np.zeros(XX.shape[1])
+ print(costFunction(initial_theta, 1, XX, y))
+ 
+ fig, axes = plt.subplots(1, 3, sharey=True, figsize=(17, 5))
+ # 决策边界，咱们分别看看正则化系数 lambda 太大太小会出现什么情况
+ # Lambda=0 : 就是没有正则化，这样的话，就过拟合
+ # Lambda=1 : 这才是正确的打开方式
+ # Lambda=100 : 正则化太激进，导致基本没拟合出决策边界
+ 
+ for i, c in enumerate([0.0, 1.0, 100.0]):
+     # 最优化 costFunctionReg
+     res2 = minimize(costFunctionReg, initial_theta, args=(C, XX, y), 
+                     jac=gradientReg, options={'maxiter': 1500})
+     # 准确率
+     accuracy = 100.0 * sum(predict(res2.x, XX) == y.ravel()) / y.size
+     x1_min, x1_max = X[:, 0].min(), X[:, 0].max()
+     x2_min, x2_max = X[:, 1].min(), X[:, 1].max()
+     xx1, xx2 = np.meshgrid(np.linspace(x1_min, x1_max), np.linspace(x2_min, x2_max))
+ 
+     h = sigmoid(poly.fit_transform(np.c_[xx1.ravel(),  xx2.ravel()]).dot(res2.x))
+     h = h.reshape(xx1.shape)
+     axes.flatten()[i].contour(xx1, xx2, h, [0.5], lw=1, colors='g')
+     axes.flatten()[i].set_title('Train accuracy {} % with Lambda={}'.format(
+             np.round(accuracy, 4), c))
+</code></pre>
+<h2 id="4-2-要点总结"><strong>4.2 要点总结</strong></h2>
+<p>逻辑回归</p>
+<ul>
+<li>优点：可解释性强，输出概率结果、可用于排序、添加特征方便</li>
+<li>缺点：模型效果与特征工程程度有关系、数据工程要做好处理</li>
+<li>样本与预处理：
+<ul>
+<li>数据样本采样</li>
+<li>特征离散化、独热向量编码</li>
+</ul>
+</li>
+<li>工具包
+<ul>
+<li>Liblinear</li>
+<li>Spark</li>
+<li>Scikit-learn</li>
+</ul>
+</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 yu_mingm623@163.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>【寒小阳】机器学习工程师</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">5.8k</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="郁明敏">郁明敏</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-12-08, 12:49:03</p>
+    <p><span class="copy-title">最后更新:</span>2020-09-13, 16:21:22</p>
+    <!-- <span class="copy-title">原始链接:</span><a class="post-url" href="/data_mining/ml_courses/ml_course_engineer_hanxiaoyang/" title="【寒小阳】机器学习工程师">http://www.monsteryu.top/data_mining/ml_courses/ml_course_engineer_hanxiaoyang/</a> -->
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2019.11 路痴大魔王</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+<script src="/js/clipboard.min.js?v=1.0.1" ></script>
+<script src="/js/clipboard-use.js?v=1.0.1" ></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":400},"mobile":{"show":false},"log":false});</script></body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['@郁明敏','#常用网址','#文档学习资源','#统计基础','#LGBM','#hive','#impala','#蓝鲸','#chrome','#xshell','#Mac','#AirFlow','#算法','#数据库','#Java后端学习路线',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: ;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 622px;
+    }
+    .nav.fullscreen {
+        margin-left: -622px;
+    }
+    .nav-left {
+        width: 200px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 552px;
+        }
+        .nav.fullscreen {
+            margin-left: -552px;
+        }
+        .nav-left {
+            width: 160px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 552px;
+            margin-left: -552px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 552px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

@@ -1290,7 +1290,7 @@ div.ac > ul > li:before,
   text-shadow: none;
 }
 .post .pjax {
-  max-width: 1100px;
+  max-width: 1000px;
   min-height: calc(100vh - 143px);
   margin: 0 auto;
   overflow-x: hidden;

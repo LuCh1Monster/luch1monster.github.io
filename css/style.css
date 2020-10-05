@@ -1582,8 +1582,9 @@ div.ac > ul > li:before,
   text-align: center;
 }
 .post .pjax article pre > ul {
-  width: 25px;
+  width: 40px;
   font-size: 16px;
+  margin-top: 11px;
 }
 .post .pjax article pre > code {
   font-size: 16px;
